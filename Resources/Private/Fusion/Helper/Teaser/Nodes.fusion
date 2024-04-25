@@ -1,0 +1,17 @@
+prototype(Litespeed.Theme:Helper.Teaser.Nodes) < prototype(Neos.Fusion:Component) {
+    limit = 3
+    rootNode = null
+
+    nodeType = null
+
+    @if {
+        hasRootNode = ${Type.instance(this.rootNode, 'Neos\\ContentRepository\\Domain\\Model\\Node')}
+        hasNodeType = ${this.nodeType}
+    }
+
+    // This conversion is needed if the limit is passed as argument
+    limit.@process.toInteger = ${Type.isString(value) ? String.toInteger(value) : value}
+
+    renderer = ${q(props.rootNode).find('[instanceof ' + props.nodeType + ']')}
+    renderer.@process.limit = ${props.limit && Type.isInteger(props.limit) ? value.slice(0, props.limit) : value}
+}

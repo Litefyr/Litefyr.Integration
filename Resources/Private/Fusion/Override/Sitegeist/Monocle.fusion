@@ -1,0 +1,39 @@
+prototype(Sitegeist.Monocle:Preview.Page) {
+    htmlTag.attributes.class = '-monocle'
+   // bodyTag.attributes.class = '-content'
+
+    prototype(Jonnitto.PhotoSwipe:IncludeCase) {
+        renderer >
+        renderer = true
+    }
+
+    carbonIncludeAssetsHeadStart = Carbon.IncludeAssets:MonocleAssets {
+        @position = 'before head'
+        location = 'HeadStart'
+    }
+
+    carbonIncludeAssetsHead = Carbon.IncludeAssets:MonocleAssets {
+        @position = 'before closingHeadTag'
+        location = 'Head'
+    }
+
+    carbonIncludeAssetsBodyStart = Carbon.IncludeAssets:MonocleAssets {
+        @position = 'before body'
+        location = 'BodyStart'
+    }
+
+    carbonIncludeAssetsBody = Carbon.IncludeAssets:MonocleAssets {
+        @position = 'before closingBodyTag'
+        location = 'Body'
+    }
+}
+
+prototype(Sitegeist.Monocle:Preview.Prototypes) < prototype(Neos.Fusion:Component) {
+    items = ''
+    renderer = Neos.Fusion:Loop {
+        items = ${String.split(props.items, ',')}
+        itemRenderer = Sitegeist.Monocle:Preview.Prototype {
+            prototypeName = ${item}
+        }
+    }
+}

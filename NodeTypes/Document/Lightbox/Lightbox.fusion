@@ -1,0 +1,3 @@
+prototype(Litespeed.Theme:Document.Lightbox) < prototype(Litespeed.Theme:Document.AbstractPage) {
+    content = Litespeed.Theme:ContentCollection
+}

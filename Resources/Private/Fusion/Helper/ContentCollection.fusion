@@ -1,0 +1,16 @@
+prototype(Litespeed.Theme:ContentCollection) < prototype(Neos.Fusion:Case) {
+  nodePath = 'main'
+
+  @context.nodePath = ${this.nodePath}
+  @ignoreProperties = ${['nodePath']}
+
+  default {
+    condition = true
+    renderer = Neos.Neos:ContentCollection {
+      nodePath = ${nodePath}
+      tagName = 'main'
+      attributes.class = '-collection -collection--main'
+    }
+    @position = 'end'
+  }
+}

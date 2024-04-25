@@ -1,0 +1,15 @@
+'Neos.Seo:TitleTagMixin':
+  abstract: true
+  properties:
+    titleOverride:
+      validation: ~
+
+'Neos.Seo:SeoMetaTagsMixin':
+  properties:
+    metaDescription:
+      validation: ~
+
+'Neos.Neos:Document':
+  superTypes:
+    'Neos.Seo:XmlSitemapMixin': false
+    'Neos.Seo:TwitterCardMixin': false

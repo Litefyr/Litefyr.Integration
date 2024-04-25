@@ -1,0 +1,5 @@
+Base:
+  Theme:
+    flowCommandsOnStartup:
+      AssetUsage: assetusage:update
+      PrettyEmbed: prettyembed:metadata

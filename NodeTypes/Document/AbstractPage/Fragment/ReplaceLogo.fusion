@@ -1,0 +1,6 @@
+replaceLogo = Litespeed.Theme:Component.Logo {
+    size = 600
+    height = null
+    width = ${this.size * 2}
+    inContent = true
+}

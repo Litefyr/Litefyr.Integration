@@ -1,0 +1,45 @@
+'Litespeed.Theme:Mixin.BackendDocument':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+    'Litespeed.Theme:Constraint.Document.Restricted': true
+    'Litespeed.Theme:Constraint.Document.NoSubDocument': true
+    'Litespeed.Theme:Mixin.NotInMenu': true
+    'Litespeed.Theme:Mixin.SynUriPathSegmentWithTitle': true
+    'Litespeed.Theme:Mixin.DisableSearch': true
+    'Carbon.Plausible:Mixin.CustomEvent': false
+    'Litespeed.Theme:Mixin.HideSeo': true
+  ui:
+    icon: tags
+    group: ~
+    inspector:
+      groups:
+        seometa:
+          tab: hidden
+        timebased:
+          tab: hidden
+        generalInfo:
+          tab: hidden
+        types:
+          tab: hidden
+        outlinks:
+          tab: hidden
+        visibility:
+          tab: hidden
+        nodeInfo:
+          tab: hidden
+        type:
+          tab: hidden
+  properties:
+    titleOverride: []
+    metaDescription: []
+    metaKeywords: []
+    metaRobotsNoindex:
+      defaultValue: true
+    metaRobotsNofollow:
+      defaultValue: true
+    uriPathSegment:
+      ui:
+        inspector:
+          editorOptions:
+            disabled: true

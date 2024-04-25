@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.look" xml:space="preserve">
+                <source><![CDATA[Look & Feel]]></source>
+            </trans-unit>
+            <trans-unit id="properties.breakout" xml:space="preserve">
+                <source>Width</source>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Content width</source>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.values.wide" xml:space="preserve">
+                <source>Wide</source>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.values.full" xml:space="preserve">
+                <source>Screen width</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

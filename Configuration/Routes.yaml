@@ -1,0 +1,63 @@
+- name: 'Node with vCard format'
+  uriPattern: '{node}.vcf'
+  defaults:
+    '@package': 'Neos.Neos'
+    '@controller': 'Frontend\Node'
+    '@action': 'show'
+    '@format': 'vcard'
+  appendExceedingArguments: true
+  routeParts:
+    node:
+      handler: 'Neos\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
+
+- name: 'Node JSON API'
+  uriPattern: '{node}.json'
+  defaults:
+    '@package': 'Neos.Neos'
+    '@controller': 'Frontend\Node'
+    '@action': 'show'
+    '@format': 'html'
+    json: true
+  appendExceedingArguments: true
+  routeParts:
+    node:
+      handler: 'Neos\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
+
+- name: 'Node PhotoSwipe API'
+  uriPattern: '{node}.lightbox'
+  defaults:
+    '@package': 'Neos.Neos'
+    '@controller': 'Frontend\Node'
+    '@action': 'show'
+    '@format': 'html'
+    lightbox: true
+  appendExceedingArguments: true
+  routeParts:
+    node:
+      handler: 'Neos\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
+
+- name: 'Node Preview API'
+  uriPattern: '{node}.preview'
+  defaults:
+    '@package': 'Neos.Neos'
+    '@controller': 'Frontend\Node'
+    '@action': 'show'
+    '@format': 'html'
+    'preview': true
+  appendExceedingArguments: true
+  routeParts:
+    node:
+      handler: 'Neos\Neos\Routing\FrontendNodeRoutePartHandlerInterface'
+
+- name: 'Flowpack.Listable currentPage'
+  uriPattern: '{node}(~{currentPage})'
+  defaults:
+    '@package': 'Neos.Neos'
+    '@controller': 'Frontend\Node'
+    '@format': 'html'
+    '@action': 'show'
+    'currentPage': '1'
+  appendExceedingArguments: true
+  routeParts:
+    node:
+      handler: 'Neos\Neos\Routing\FrontendNodeRoutePartHandlerInterface'

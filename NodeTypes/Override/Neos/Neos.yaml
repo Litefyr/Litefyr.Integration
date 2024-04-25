@@ -1,0 +1,40 @@
+'Neos.Neos:Node':
+  label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text')}"
+
+'Neos.Neos:Document':
+  superTypes:
+    'Carbon.Plausible:Mixin.DoNotTrack': true
+    'Carbon.Plausible:Mixin.CustomEvent': true
+    'Garagist.Mautic:Mixin.DoNotTrack': true
+  properties:
+    title:
+      ui:
+        inspector:
+          position: 10
+    uriPathSegment:
+      ui:
+        inspector:
+          position: 20
+      validation:
+        'Neos.Neos/Validation/RegularExpressionValidator':
+          regularExpression: '/^[a-z0-9\-]+$/'
+
+'Neos.Neos:Shortcut':
+  abstract: true
+  search:
+    fulltext:
+      isRoot: false
+      enable: false
+  properties:
+    titleOverride: {}
+
+'Neos.Neos:Content':
+  options:
+    fusion:
+      prototypeGenerator: ~
+
+'Neos.Neos:PluginView':
+  abstract: true
+
+'Neos.Neos:ContentCollection':
+  label: "${I18n.translate('contentcollection.label', null, [q(node).children().count()], 'Main', 'Litespeed.Theme', q(node).children().count())}"

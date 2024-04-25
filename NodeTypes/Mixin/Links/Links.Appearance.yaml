@@ -1,0 +1,34 @@
+'Litespeed.Theme:Mixin.Links.Appearance':
+  abstract: true
+  superTypes:
+    'Litespeed.Theme:Mixin.Links': true
+  properties:
+    links:
+      ui:
+        inspector:
+          editorOptions:
+            properties:
+              appearance:
+                label: 'Litespeed.Theme:NodeTypes.Colors:appearance'
+                editor: 'Carbon.ColorValues/Editor'
+                defaultValue: ghost
+                editorOptions:
+                  allowEmpty: false
+                  values:
+                    main:
+                      label: 'Litespeed.Theme:NodeTypes.Colors:button.main'
+                      color: 'var(--color-theme-main)'
+                    minor:
+                      label: 'Litespeed.Theme:NodeTypes.Colors:button.minor'
+                      color: 'var(--color-theme-minor)'
+                    minor2:
+                      label: 'Litespeed.Theme:NodeTypes.Colors:button.minor2'
+                      color: 'var(--color-theme-minor2)'
+                    ghost:
+                      label: 'Litespeed.Theme:NodeTypes.Colors:button.ghost'
+                      color: '#fff'
+                    link:
+                      label: 'Litespeed.Theme:NodeTypes.Colors:button.link'
+                      color: 'var(--color-theme-main)'
+                validation:
+                  Neos.Neos/Validation/NotEmptyValidator: {}

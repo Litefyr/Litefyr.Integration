@@ -1,0 +1,18 @@
+##
+# Constraint-supertype that makes contents available in sliders
+#
+# this allows to define the usage on the content nodetypes and
+# is recommended if a collection contains many different types
+#
+'Litespeed.Slider:Constraint.Content.Slider':
+  abstract: true
+
+'Neos.Neos:ContentCollection':
+  constraints:
+    nodeTypes:
+      'Litespeed.Slider:Constraint.Content.Slider': false
+
+# This is just to make everything works if the Slider package is not installed
+
+'Litespeed.Slider:Mixin.Interval':
+  abstract: true

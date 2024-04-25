@@ -1,0 +1,26 @@
+'Litespeed.Theme:Mixin.ScreenHeight':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        look:
+          label: i18n
+          icon: paint-brush
+          position: 200
+  properties:
+    screenHeight:
+      type: integer
+      defaultValue: 0
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 530
+          editor: 'Carbon.RangeEditor/Editor'
+          editorOptions:
+            minLabel: 'Litespeed.Theme:NodeTypes.Mixin.ScreenHeight:properties.screenHeight.minLabel'
+            min: 0
+            max: 100
+            step: 5
+            unit: 'vh'

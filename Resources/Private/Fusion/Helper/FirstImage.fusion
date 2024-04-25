@@ -1,0 +1,25 @@
+prototype(Litespeed.Theme:Helper.FirstImage) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+    properties = ${['image']}
+
+    renderer = Neos.Fusion:Reduce {
+        items = ${props.properties}
+        itemName = 'property'
+        itemReducer = Neos.Fusion:Case {
+            hasAlreadyNode {
+                condition = ${carry}
+                renderer = ${carry}
+            }
+            pageImage {
+                imageNode = ${q(props.node).filter('[' + property + ' instanceof "Neos\\Media\\Domain\\Model\\ImageInterface"]').get(0)}
+                condition = ${this.imageNode}
+                renderer = ${{node: this.imageNode, property: property, asset: q(this.imageNode).property(property), alternativeText: q(this.imageNode).property('alternativeText')}}
+            }
+            firstContentWithImage {
+                imageNode = ${q(props.node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Neos:Content][' + property + ' instanceof "Neos\\Media\\Domain\\Model\\ImageInterface"]').get(0)}
+                condition = ${this.imageNode}
+                renderer = ${{node: this.imageNode, property: property, asset: q(this.imageNode).property(property), alternativeText: q(this.imageNode).property('alternativeText')}}
+            }
+        }
+    }
+}

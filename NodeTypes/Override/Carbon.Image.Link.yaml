@@ -1,0 +1,21 @@
+'Carbon.Image:Link':
+  properties:
+    link:
+      ui:
+        inspector:
+          editor: Sitegeist.Archaeopteryx/Inspector/Editors/LinkEditor
+          editorOptions:
+            linkTypes:
+              'Sitegeist.Archaeopteryx:PhoneNumber':
+                defaultCountry: AT
+                favoredCountries:
+                  - AT
+                  - CH
+                  - DE
+                  - FR
+              'Sitegeist.Archaeopteryx:MailTo':
+                enabledFields:
+                  subject: true
+                  cc: false
+                  bcc: false
+                  body: true

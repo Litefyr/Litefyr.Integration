@@ -1,0 +1,11 @@
+'Litespeed.Theme:Mixin.TeaserDocument.Category':
+  abstract: true
+  properties:
+    category:
+      type: references
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: document
+          position: end

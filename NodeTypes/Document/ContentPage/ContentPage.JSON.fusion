@@ -1,0 +1,79 @@
+prototype(Litespeed.Theme:Document.ContentPage.JSON.Single) < prototype(Litespeed.Theme:Document.ContentPage.JSON) {
+    single = true
+    limit = false
+}
+
+prototype(Litespeed.Theme:Document.ContentPage.JSON) < prototype(Neos.Fusion:Component) {
+    # If this page or the subsites should be shown as teaser
+    single = ${request.arguments.single || false}
+    limit = ${request.arguments.limit || false}
+    variant = ${request.arguments.variant || false}
+    teaserNodeType = ${request.arguments.nodeType || ('Litespeed.Presentation:Block.Teaser' + (this.variant ? ('.' + this.variant) : ''))}
+
+    nodeType = 'Neos.Neos:Document'
+    node = ${documentNode}
+    useFind = false
+    sortBy = null
+
+    renderer = Neos.Fusion:Http.Message {
+        httpResponseHead.headers.Content-Type = 'application/json'
+        data = Neos.Fusion:Map {
+            items = ${props.single ? [props.node] : props.useFind ? q(props.node).find('[instanceof ' + props.nodeType + '][_hiddenInIndex=false]') : q(props.node).children('[instanceof ' + props.nodeType + '][_hiddenInIndex=false]')}
+            items.@process {
+                sortBy = ${!props.single && props.sortBy ? value.sort(props.sortBy[0], props.sortBy[1]) : value}
+                // If limit is set, add one to the limit to check if there are more items
+                limit = ${!props.single && props.limit ? value.slice(0, String.toInteger(props.limit) + 1) : value}
+            }
+            keyRenderer = ${q(node).property('_identifier')}
+            itemName = 'node'
+            itemRenderer = Neos.Fusion:Component {
+                data = Litespeed.Theme:Helper.Teaser.Data
+                teaserNodeType = ${props.teaserNodeType}
+                @if.hasImageOrPlain = ${props.variant == 'Plain' || this.data.image}
+                renderer = Neos.Fusion:DataStructure {
+                    markup = Neos.Fusion:Renderer {
+                        type = ${props.teaserNodeType}
+                        element.@apply.applyValues = ${props.data}
+                    }
+                    url = ${props.data.href}
+                }
+            }
+
+            @process {
+                convert = ${Array.values(Array.filter(value))}
+                stringify = ${Json.stringify(value)}
+            }
+        }
+    }
+
+    @context {
+        node = ${this.node}
+        single = ${this.single}
+        limit = ${this.limit}
+        teaserNodeType = ${this.teaserNodeType}
+        variant = ${this.variant ? this.variant : 'images'}
+    }
+    @cache {
+        mode = 'dynamic'
+        entryIdentifier {
+            documentNode = ${node}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+            json = 'JSON'
+            arguments = ${single ? 'single' : 'subsites'}
+            limit = ${limit || 'all'}
+            variant = ${variant}
+            teaserNodeType = ${teaserNodeType}
+        }
+        maximumLifetime = ${single ? q(node).context({'invisibleContentShown': true}).cacheLifetime() : q(node).context({'invisibleContentShown': true}).children('[instanceof Neos.Neos:Document]').cacheLifetime()}
+        entryDiscriminator = ${single ? 'single' : 'subsites' + (limit || 'all') + teaserNodeType + variant}
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+            3 = 'site'
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${single ? null : Neos.Caching.descendantOfTag(node)}
+        }
+    }
+}

@@ -1,0 +1,8 @@
+prototype(Neos.Neos:Page) {
+    lastVisitedNodeScript >
+    htmlTag.attributes.class.@process.clipPath = ${Array.push(value, 'is-flat')}
+    head.stylesheets.carbonNotification = Carbon.Notification:Style
+    container = Litespeed.Presentation:Atom.Tooltip {
+        @position = 'before closingBodyTag'
+    }
+}

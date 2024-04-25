@@ -1,0 +1,4 @@
+prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) {
+    breakout.@if.enableText = ${this.enableText}
+    wrapper.@process.rounded = ${value}
+}

@@ -1,0 +1,25 @@
+prototype(Breadlesscode.NodeTypes.Folder:Document.Folder) >
+prototype(Breadlesscode.NodeTypes.Folder:Document.Folder) < prototype(Carbon.BackendDocument:Document) {
+    singleline = false
+    content = Neos.Fusion:Component {
+        title = ${q(node).property('title')}
+        children = ${q(node).children('[instanceof Neos.Neos:Document]')}
+        styleAndIcon = ${Configuration.setting('Litespeed.Presentation.icons.backend.folder')}
+
+        renderer = afx`
+            <main class="mx-auto max-w-2xl">
+                <header class="flex gap-4 flex-wrap items-center">
+                    <h1 class="text-3xl">{props.title}</h1>
+                    <Garagist.Fontawesome:Component.Icon styleAndIcon={props.styleAndIcon} attributes.class="order-first size-10" />
+                </header>
+                <ul class="mt-4 inline-flex flex-col gap-2">
+                    <Neos.Fusion:Loop items={props.children} itemName="child">
+                        <li>
+                            <Neos.Neos:NodeLink node={child} attributes.class="hover:bg-black/20 px-4 py-2 block" />
+                        </li>
+                    </Neos.Fusion:Loop>
+                </ul>
+            </main>
+        `
+    }
+}

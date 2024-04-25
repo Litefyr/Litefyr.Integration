@@ -1,0 +1,30 @@
+prototype(Litespeed.Theme:Document.Lightbox.PhotoSwipe) < prototype(Neos.Fusion:Component) {
+    replaceLogo = Neos.Fusion:Renderer {
+        renderPath = '/replaceLogo'
+    }
+
+    content = Litespeed.Theme:ContentCollection
+
+    renderer = Neos.Fusion:Http.Message {
+        httpResponseHead.headers.Content-Type = 'text/html'
+
+        content = Litespeed.Theme:Helper.ReplaceTextWithComponent {
+            search = '⚑'
+            replace = ${props.replaceLogo}
+            value = ${props.content}
+        }
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            documentNode = ${node}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+        }
+    }
+    @process.debugDump = Neos.Fusion:DebugDump
+    @exceptionHandler = 'Neos\\Neos\\Fusion\\ExceptionHandlers\\PageHandler'
+}

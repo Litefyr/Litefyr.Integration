@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme"  source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="insertLogo" xml:space="preserve">
+                <source>Insert logo</source>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.teaserView" xml:space="preserve">
+                <source>Teaser view</source>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.tabletLandscape" xml:space="preserve">
+                <source>Tablet (landscape)</source>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.tabletLandscape" xml:space="preserve">
+                <source>Tablet (landscape)</source>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.tabletPortrait" xml:space="preserve">
+                <source>Tablet (portrait)</source>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.mobile" xml:space="preserve">
+                <source>Mobile</source>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.mobile" xml:space="preserve">
+                <source>Mobile</source>
+            </trans-unit>
+            <trans-unit id="nodeTypes.teaser" xml:space="preserve">
+                <source>Teaser</source>
+            </trans-unit>
+            <trans-unit id="nodeTypes.gallery" xml:space="preserve">
+                <source>Gallery</source>
+            </trans-unit>
+            <trans-unit id="nodeTypes.form" xml:space="preserve">
+                <source>Forms</source>
+            </trans-unit>
+            <trans-unit id="nodeTypes.special" xml:space="preserve">
+                <source>Special content</source>
+            </trans-unit>
+            <trans-unit id="nodeTypes.system" xml:space="preserve">
+                <source>System elements</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

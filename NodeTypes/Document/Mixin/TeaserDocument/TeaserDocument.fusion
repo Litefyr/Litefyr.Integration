@@ -1,0 +1,17 @@
+teaserView = Carbon.BackendDocument:Document {
+    singleline = false
+    content = Neos.Fusion:Component {
+        headline = ${q(node).property('title')}
+        image = ${q(node).property('image')}
+        alternativeText = ${q(node).property('alternativeText')}
+        text = ${String.stripTags(q(node).property('teaserText') || q(node).property('lead'))}
+        date = ${q(node).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Date]') ? q(node).property('_hiddenBeforeDateTime') : null}
+        href = '#'
+
+        renderer = afx`
+            <div class="max-w-xs text-black mx-auto">
+                <Litespeed.Presentation:Block.Teaser {...props} />
+            </div>
+        `
+    }
+}

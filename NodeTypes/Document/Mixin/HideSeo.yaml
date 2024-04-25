@@ -1,0 +1,37 @@
+##
+# Mixin for hiding all seo props
+#
+##
+
+'Litespeed.Theme:Mixin.HideSeo':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        yoast:
+          tab: hidden
+  properties:
+    titleOverride: {}
+    canonicalLink: {}
+    openGraphType: {}
+    openGraphTitle: {}
+    openGraphDescription: {}
+    openGraphImage: {}
+    metaDescription: {}
+    metaKeywords: {}
+    metaRobotsNoindex:
+      defaultValue: true
+      ui:
+        inspector:
+          hidden: true
+          editorOptions:
+            disabled: true
+    metaRobotsNofollow: {}
+    mauticDoNotTrack: {}
+    xmlSitemapChangeFrequency: {}
+    xmlSitemapPriority: {}
+    plausibleDoNotTrack: {}
+    plausibleCustomEventName: {}
+    plausibleCustomEventJSON: {}
+    focusKeyword: {}
+    isCornerstone: {}

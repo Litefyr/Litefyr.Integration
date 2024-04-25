@@ -1,0 +1,32 @@
+'Litespeed.Theme:Mixin.TextWithContent':
+  abstract: true
+  superTypes:
+    'Litespeed.Theme:Mixin.TextWithContent.Plain': true
+  search:
+    fulltext:
+      enable: true
+  properties:
+    enableText:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 'start'
+    textLeft:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText ? false : true'
+    leftColSize:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText ? false : true'
+    theme:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText ? !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/)) : true'
+    links:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.enableText ? false : true'

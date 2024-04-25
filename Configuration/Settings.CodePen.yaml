@@ -1,0 +1,114 @@
+Neos:
+  Neos:
+    Ui:
+      frontendConfiguration:
+        'Carbon.CodePen':
+          tailwindcss:
+            enabled: true
+            clientConfig: "${StaticResource.uri('Litespeed.Theme', 'Public/Scripts/TailwindConfig.js')}"
+          afx:
+            fusionObjects:
+              'Background':
+                documentation: Add a background container
+                snippet: |
+                  <Litespeed.Presentation:Background
+                    ${1|main,minor,minor2,gray,nested|}
+                    ${2:padding}
+                    ${3:waveSpacing}
+                    ${4:augmenter}
+                    ${5:firstHeaderCollapse}
+                    ${6:tailwind="${7}"}
+                  >
+                    ${8}
+                  </Litespeed.Presentation:Background>
+              'Spacing':
+                documentation: Add a spacing container
+                snippet: |
+                  <Litespeed.Presentation:Spacing
+                    ${1|default,wide,full|}
+                    ${2:waveSpacing}
+                    ${3:padding=${4|"auto","autoForce","force",{true},{false}|}}
+                    ${5:augmenter}
+                    ${6:tailwind="${7}"}
+                  >
+                    ${8}
+                  </Litespeed.Presentation:Spacing>
+              'Link':
+                documentation: Add a button-like link
+                snippet: |
+                  <Litespeed.Presentation:Atom.Link
+                    href="${1}"
+                    ${2|main,minor,minor2,ghost,link,nested|}
+                    ${3:inline}
+                  >
+                    ${4}
+                  </Litespeed.Presentation:Atom.Link>
+              'Button':
+                documentation: Add a button
+                snippet: |
+                  <Litespeed.Presentation:Atom.Button
+                    ${1|main,minor,minor2,ghost,link,nested|}
+                    ${2:inline}
+                  >
+                    ${3}
+                  </Litespeed.Presentation:Atom.Button>
+              'DateAndTime':
+                documentation: Add a date and time
+                snippet: '<Litespeed.Presentation:Atom.DateAndTime date={Date.now()}${1: time="${2}"}${3: class="${4}"} />'
+              'Image':
+                documentation: Add a image
+                snippet: |
+                  <Litespeed.Presentation:Atom.Image
+                    image={assets[0]}
+                    width={maximumWidth}
+                    ${3:height={${4}}}
+                    ${5:breakout="${6|wide,full|}"}
+                    ${7:screenHeight={${8}}}
+                    ${9:rounded}
+                  >
+                    ${10}
+                  </Litespeed.Presentation:Atom.Image>
+              'Label':
+                documentation: Add a label
+                snippet: |
+                  <Litespeed.Presentation:Atom.Label
+                    label="${1}"
+                    ${2:currentColor}
+                    ${3:class="${4}"}
+                  />
+              'CountNumbersInText':
+                documentation: Count up numbers in text
+                snippet: |
+                  <Litespeed.Presentation:Block.CountNumbersInText>
+                    ${1}
+                  </Litespeed.Presentation:Block.CountNumbersInText>
+              'HeadlineAndLead':
+                documentation: Add a headline and lead
+                snippet: |
+                  <Litespeed.Presentation:Block.HeadlineAndLead
+                    headline="${1}"
+                    ${2:lead="${3}"}
+                    ${4:label="${5}"}
+                  />
+              'TextWithContent':
+                documentation: Add a text with content
+                snippet: |
+                  <Litespeed.Presentation:Module.TextWithContent
+                    ${1:breakpoint="${2|sm,md,lg,xl|}"}
+                    ${3:theme="${4|main,minor,minor2,gray|}"}
+                    ${5:align="${6|stretch,start,center,end,baseline|}"}
+                    leftColSize={50}
+                    textLeft={false}
+                    ${7:headline="${8}"}
+                    ${9:label="${10}"}
+                    ${11:stretchContent}
+                  >
+                    ${12:<Neos.Fusion:Fragment @path="singleContent">${13}</Neos.Fusion:Fragment>}
+                    ${14}
+                    <Neos.Fusion:Fragment @path="text">
+                      <p>${15}</p>
+                    </Neos.Fusion:Fragment>
+                    <Neos.Fusion:Fragment @path="aside">
+                      ${16}
+                    </Neos.Fusion:Fragment>
+                  </Litespeed.Presentation:Module.TextWithContent>

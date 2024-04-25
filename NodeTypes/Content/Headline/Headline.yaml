@@ -1,0 +1,21 @@
+'Litespeed.Theme:Content.Headline':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Carbon.FirstElement:Mixin': true
+  ui:
+    label: i18n
+    icon: heading
+    position: 10
+  search:
+    fulltext:
+      enable: true
+  properties:
+    headline:
+      options:
+        preset: 'text.headline'
+    label:
+      options:
+        preset: 'text.label'
+    lead:
+      options:
+        preset: 'text.lead'

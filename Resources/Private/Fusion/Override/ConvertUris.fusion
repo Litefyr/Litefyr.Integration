@@ -1,0 +1,8 @@
+prototype(Neos.Neos:ConvertUris) {
+    @class = 'Litespeed\\Theme\\Fusion\\ConvertUrisImplementation'
+
+    lightboxAttributes = Neos.Fusion:DataStructure {
+        data-pswp-type = 'fetch'
+    }
+    internAttributes = Neos.Fusion:DataStructure
+}

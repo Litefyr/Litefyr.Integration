@@ -1,0 +1,71 @@
+prototype(Litespeed.Theme:Document.DataPrivacy) < prototype(Litespeed.Theme:Document.AbstractPage) {
+    content = Neos.Neos:ContentComponent {
+        useDefaultDataPrivacy = ${q(node).property('useDefaultDataPrivacy')}
+        hasNewsletter = ${q(node).property('hasNewsletter')}
+        hasPlausible = ${q(node).property('hasPlausible')}
+        hasMembers = ${q(node).property('hasMembers')}
+        hasForms = ${q(node).property('hasForms')}
+        webmasterEmail = ${q(node).property('webmasterEmail')}
+        responsibleEmail = ${q(node).property('responsibleEmail')}
+        responsibleAddress = ${q(node).property('responsibleAddress')}
+        name = ${q(node).property('name') || q(site).property('legalName') || q(site).property('addressName')}
+        plural = ${q(site).property('typeOfContact') != 'single'}
+        salutation = ${q(site).property('salutation')}
+
+        responsibleHeadline = Neos.Neos:Editable {
+            property = 'responsibleHeadline'
+            block = false
+            fallback = ${Translation.translate('responsible.headline', null, [], 'DataPrivacy', 'Litespeed.Theme')}
+        }
+        responsibleText = Neos.Neos:Editable {
+            property = 'responsibleText'
+            block = false
+        }
+        text = Neos.Neos:Editable {
+            property = 'text'
+            block = true
+        }
+        imprintUrl = Neos.Neos:NodeUri {
+            node = ${q(site).children('imprint').get(0)}
+        }
+
+        address = Neos.Fusion:DataStructure {
+            addressName = ${q(node).property('name') || q(site).property('addressName')}
+            phone = ${q(site).property('phone')}
+            mobile = ${q(site).property('mobile')}
+            email = ${q(node).property('responsibleEmail') || q(site).property('email')}
+            street = ${q(site).property('street')}
+            postCode = ${q(site).property('postCode')}
+            city = ${q(site).property('city')}
+            country = ${q(site).property('country')}
+            plural = ${q(site).property('typeOfContact') != 'single'}
+            formal = ${q(site).property('salutation') != 'informal'}
+        }
+
+        class = null
+
+        renderer = afx`
+            <main class={props.class}>
+                <Neos.Neos:ContentCollection attributes.class="-collection -collection--top mb-20" nodePath="before" />
+                <Litespeed.Presentation:Module.DataPrivacy @if={props.useDefaultDataPrivacy || props.text} {...props} />
+                <Neos.Neos:ContentCollection attributes.class="-collection -collection--bottom empty:mb-12" nodePath="main" />
+            </main>
+        `
+    }
+
+    prototype(Neos.Neos:Page) {
+        @cache.mode = 'embed'
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+            2 = ${Neos.Caching.nodeTag(node)}
+        }
+    }
+}

@@ -1,0 +1,9 @@
+'Litespeed.Theme:Mixin.HideNodeTypeSelector':
+  abstract: true
+  properties:
+    _nodeType:
+      ui:
+        inspector:
+          hidden: true
+          editorOptions:
+            disabled: true

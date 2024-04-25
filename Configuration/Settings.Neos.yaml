@@ -1,0 +1,114 @@
+Neos:
+  ContentRepository:
+    labelGenerator:
+      eel:
+        defaultContext:
+          Carbon.String: 'Carbon\Eel\EelHelper\StringHelper'
+          Carbon.Array: 'Carbon\Eel\EelHelper\ArrayHelper'
+  Fusion:
+    defaultContext:
+      Theme: 'Litespeed\Theme\EelHelper\ThemeHelper'
+  Flow:
+    http:
+      trustedProxies:
+        proxies: '*'
+    core:
+      subRequestIniEntries:
+        memory_limit: 2048M
+    persistence:
+      backendOptions:
+        driver: '%env:NEOS_DB_DRIVER%'
+        dbname: '%env:NEOS_DB_NAME%'
+        user: '%env:NEOS_DB_USER%'
+        password: '%env:NEOS_DB_PASSWORD%'
+        host: '%env:NEOS_DB_HOST%'
+        port: '%env:NEOS_DB_PORT%'
+        charset: '%env:NEOS_DB_CHARSET%'
+        defaultTableOptions:
+          charset: '%env:NEOS_DB_CHARSET%'
+    i18n:
+      defaultLocale: de
+      fallbackRule:
+        order: ['de', 'en']
+    mvc:
+      routes:
+        'Litespeed.Theme':
+          position: 'start'
+        'Neos.Neos':
+          variables:
+            defaultUriSuffix: ''
+  Neos:
+    fusion:
+      autoInclude:
+        Litespeed.Theme: true
+    Ui:
+      frontendConfiguration:
+        Flowpack.Media.Ui:
+          showSimilarAssets: true
+          queryAssetUsage: true
+      resources:
+        javascript:
+          Litespeed.Theme:
+            resource: resource://Litespeed.Theme/Public/Editors/Plugin.js
+    userInterface:
+      editPreviewModes:
+        teaserView:
+          isEditingMode: true
+          isPreviewMode: false
+          fusionRenderingPath: teaserView
+          title: 'Litespeed.Theme:Backend.Main:editPreviewModes.teaserView'
+          position: 'after inPlace'
+        tabletLandscape:
+          isEditingMode: false
+          isPreviewMode: true
+          fusionRenderingPath: ''
+          title: 'Litespeed.Theme:Backend.Main:editPreviewModes.tabletLandscape'
+          width: 1024
+          height: 768
+          backgroundColor: '#222'
+        tabletPortrait:
+          isEditingMode: false
+          isPreviewMode: true
+          fusionRenderingPath: ''
+          title: 'Litespeed.Theme:Backend.Main:editPreviewModes.tabletPortrait'
+          width: 768
+          height: 1024
+          backgroundColor: '#222'
+        mobile:
+          isEditingMode: false
+          isPreviewMode: true
+          fusionRenderingPath: ''
+          title: 'Litespeed.Theme:Backend.Main:editPreviewModes.mobile'
+          width: 375
+          height: 667
+          backgroundColor: '#222'
+      defaultLanguage: de
+      navigateComponent:
+        nodeTree:
+          loadingDepth: 1
+        structureTree:
+          loadingDepth: 0
+      translation:
+        autoInclude:
+          Litespeed.Theme:
+            - 'NodeTypes/*'
+            - 'Backend/*'
+    nodeTypes:
+      groups:
+        teaser:
+          label: 'Litespeed.Theme:Backend.Main:nodeTypes.teaser'
+          position: 500
+        gallery:
+          label: 'Litespeed.Theme:Backend.Main:nodeTypes.gallery'
+          position: 600
+        form:
+          label: 'Litespeed.Theme:Backend.Main:nodeTypes.form'
+          position: 1200
+        special:
+          label: 'Litespeed.Theme:Backend.Main:nodeTypes.special'
+          position: 8000
+          collapsed: true
+        system:
+          label: 'Litespeed.Theme:Backend.Main:nodeTypes.system'
+          position: 9000
+          collapsed: true

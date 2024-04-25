@@ -1,0 +1,52 @@
+prototype(Litespeed.Theme:Document.ImageDirectory) < prototype(Litespeed.Theme:Document.AbstractPage) {
+    content = Neos.Fusion:Component {
+        imageWidth = ${q(node).property('imageDirectoryImageWidth')}
+
+        imageDirectory = Neos.Fusion:Case {
+            byAssets {
+                condition = ${q(node).property('sortBy') == 'assets'}
+                renderer = Garagist.ImageDirectory:ByAsset
+            }
+            byDocuments {
+                condition = true
+                renderer = Garagist.ImageDirectory:ByDocument
+            }
+        }
+
+        headline = ${q(node).property('title')}
+        inBackend = ${node.context.inBackend}
+        content = ''
+
+        class = ${BEM.modifier('-collection', 'main')}
+
+        renderer = afx`
+            <main class={props.class}>
+                <Litespeed.Presentation:Block.HeadlineAndLead {...props} />
+                <div
+                    class="empty:hidden"
+                    style={"--imagedirectory-width:" + props.imageWidth + "px"}
+                >
+                    <Neos.Fusion:Loop items={props.imageDirectory}>
+                        <Litespeed.Presentation:Block.ImageDirectory.Entry {...item} />
+                    </Neos.Fusion:Loop>
+                </div>
+                {props.content}
+            </main>
+        `
+    }
+
+    prototype(Neos.Neos:Page) {
+        @cache.mode = 'embed'
+    }
+
+     @cache {
+        mode = 'cached'
+        entryIdentifier {
+            documentNode = ${node}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', node)}
+        }
+    }
+}

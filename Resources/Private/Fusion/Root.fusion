@@ -1,0 +1,19 @@
+include: **/*.fusion
+include: nodetypes://Litespeed.Theme/**/*.fusion
+
+##
+# Calling a page that has no json representation will redirect to the html version
+#
+json = Neos.Fusion:Http.Message {
+    httpResponseHead.headers {
+        Status = '307 Temporary Redirect'
+        Location = Neos.Neos:NodeUri {
+            node = ${documentNode}
+            format = 'html'
+        }
+    }
+}
+
+prototype(Neos.Fusion:GlobalCacheIdentifiers) {
+    jsonView = ${!!request.arguments.json}
+}

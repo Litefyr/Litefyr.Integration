@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.contact" xml:space="preserve">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="groups.address" xml:space="preserve">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="groups.social" xml:space="preserve">
+                <source>Social networks</source>
+            </trans-unit>
+            <trans-unit id="groups.share" xml:space="preserve">
+                <source>Networks for sharing</source>
+            </trans-unit>
+            <trans-unit id="properties.mobile" xml:space="preserve">
+                <source>Cell phone</source>
+            </trans-unit>
+            <trans-unit id="properties.phone" xml:space="preserve">
+                <source>Telephone</source>
+            </trans-unit>
+            <trans-unit id="properties.email" xml:space="preserve">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="properties.socialNetworks.network" xml:space="preserve">
+                <source>Network</source>
+            </trans-unit>
+            <trans-unit id="properties.socialNetworks.url" xml:space="preserve">
+                <source>Link</source>
+            </trans-unit>
+
+            <trans-unit id="properties.socialShare.ui.help.message" xml:space="preserve">
+                <source>Native sharing is only displayed if the browser supports it</source>.
+            </trans-unit>
+            <trans-unit id="properties.socialShare.network" xml:space="preserve">
+                <source>Network</source>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.native" xml:space="preserve">
+                <source>Native sharing</source>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.email" xml:space="preserve">
+                <source>Open e-mail program</source>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.copy" xml:space="preserve">
+                <source>Copy link</source>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.print" xml:space="preserve">
+                <source>Print</source>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Content width</source>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.values.wide" xml:space="preserve">
+                <source>Wide</source>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.values.full" xml:space="preserve">
+                <source>Screen width</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

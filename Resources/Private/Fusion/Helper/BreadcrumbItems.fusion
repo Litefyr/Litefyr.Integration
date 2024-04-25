@@ -1,0 +1,35 @@
+prototype(Litespeed.Theme:Helper.BreadcrumbItems) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+
+    renderer = Neos.Fusion:Map {
+        items = Neos.Neos:MenuItems {
+            itemCollection = ${q(props.node).parents('[instanceof Neos.Neos:Document][!instanceof Litespeed.Theme:Mixin.NotInMenu]').get()}
+            itemCollection.@process {
+                removeSite = ${Array.pop(value)}
+                sortDesc = ${Array.reverse(value)}
+            }
+            // Show always the current node, event when it is hidden in index
+            @process.addCurrent = ${Array.push(value, {node:props.node})}
+        }
+        itemRenderer = Neos.Fusion:DataStructure {
+            href = Neos.Neos:NodeUri {
+                node = ${item.node}
+            }
+            title = Neos.Fusion:Case {
+                isPerson {
+                    condition = ${q(item.node).is('[instanceof Litespeed.Theme:Document.Person]')}
+                    renderer = Neos.Fusion:Map {
+                        items = ${['prefix', 'firstname', 'middlename', 'title', 'suffix']}
+                        itemName = 'part'
+                        itemRenderer = ${String.trim(q(item.node).property(part))}
+                        @process.merge = ${Carbon.String.classNames(value)}
+                    }
+                }
+                default {
+                    condition = true
+                    renderer = ${q(item.node).property('title')}
+                }
+            }
+        }
+    }
+}

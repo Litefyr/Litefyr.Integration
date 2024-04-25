@@ -1,0 +1,70 @@
+root {
+    themeFallback {
+        @position = 'before default'
+        @context.mixinName = ${'Litespeed.Theme:' + Array.last(String.split(documentNode.nodeType.name, ':'))}
+        condition = Neos.Fusion:CanRender {
+            type = ${mixinName}
+        }
+        type = ${mixinName}
+    }
+    json {
+        @position = 'start 2'
+        condition = Neos.Fusion:Value {
+            request = ${request.arguments.json}
+            canRender = Neos.Fusion:CanRender {
+                type = ${q(documentNode).property('_nodeType.name') + '.JSON'}
+            }
+            value = ${this.request && this.canRender}
+        }
+        type = ${q(node).property('_nodeType.name') + '.JSON'}
+    }
+    jsonSingle {
+        @position = 'after json'
+        condition = ${request.arguments.json && q(documentNode).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Single]')}
+        renderer = Litespeed.Theme:Document.ContentPage.JSON.Single
+    }
+    jsonTeaser {
+        @position = 'after jsonSingle'
+        condition = ${request.arguments.json && q(documentNode).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument]')}
+        renderer = Litespeed.Theme:Document.ContentPage.JSON
+    }
+    previewPage {
+        @position = 'after jsonTeaser'
+        condition = Neos.Fusion:Value {
+            request = ${request.arguments.preview}
+            canRender = Neos.Fusion:CanRender {
+                type = ${q(documentNode).property('_nodeType.name') + '.Preview'}
+            }
+            value = ${this.request && this.canRender}
+        }
+        type = ${q(node).property('_nodeType.name') + '.Preview'}
+    }
+    lightbox {
+        @position = 'after previewPage'
+        condition = Neos.Fusion:Value {
+            request = ${request.arguments.lightbox}
+            canRender = Neos.Fusion:CanRender {
+                type = ${q(documentNode).property('_nodeType.name') + '.PhotoSwipe'}
+            }
+            value = ${this.request && this.canRender}
+        }
+        type = ${q(node).property('_nodeType.name') + '.PhotoSwipe'}
+    }
+    lightboxFallback {
+        @position = 'after lightbox'
+        @context.mixinName = ${'Litespeed.Theme:' + Array.last(String.split(documentNode.nodeType.name, ':'))}
+        condition = Neos.Fusion:Value {
+            request = ${request.arguments.lightbox}
+            canRender = Neos.Fusion:CanRender {
+                type = ${mixinName + '.PhotoSwipe'}
+            }
+            value = ${this.request && this.canRender}
+        }
+       type = ${mixinName + '.PhotoSwipe'}
+    }
+
+    @cache.entryIdentifier {
+        previewView = ${request.arguments.preview ? 'preview' : 'default'}
+        lightboxView = ${request.arguments.lightbox ? 'lightbox' : 'default'}
+    }
+}

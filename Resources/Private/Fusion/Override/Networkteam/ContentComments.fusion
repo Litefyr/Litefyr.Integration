@@ -1,0 +1,11 @@
+prototype(Neos.Neos:Content) {
+    @process.showCommentIcon >
+}
+
+prototype(Neos.Neos:ContentComponent) {
+    @process.showCommentIcon >
+}
+
+prototype(Neos.Neos:Page) {
+    head.stylesheets.contentComments >
+}

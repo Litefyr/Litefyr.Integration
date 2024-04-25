@@ -1,0 +1,64 @@
+footer = Litespeed.Presentation:Section.Footer {
+    multiColumnEnabled = ${q(site).property('footerNavigationMultiColumnEnabled')}
+    items = Neos.Fusion:Map {
+        @process.filter = ${Array.filter(value)}
+        items = ${Carbon.Array.check(q(site).property('footerNavigation')) || []}
+        itemRenderer = Neos.Fusion:DataStructure {
+            label = ${q(item).property('title')}
+            isLightbox = ${q(item).is('[instanceof Litespeed.Theme:Document.Lightbox]')}
+            href = Neos.Neos:NodeUri {
+                node = ${item}
+            }
+        }
+    }
+    itemsMultiColumn = Neos.Fusion:Map {
+        @process.filter = ${Array.filter(value, entry => !!entry.items)}
+        items = ${Carbon.Array.check(q(site).property('footerNavigationMultiColumn')) || []}
+        itemRenderer = Neos.Fusion:DataStructure {
+            @if.set = ${Carbon.Array.check(item.items)}
+            headline = ${item.headline}
+            items = Neos.Fusion:Map {
+                @process.filter = ${Array.filter(value)}
+                items = ${Carbon.Array.check(item.items) || []}
+                itemRenderer = Neos.Fusion:DataStructure {
+                    label = ${q(item).property('title')}
+                    isLightbox = ${q(item).is('[instanceof Litespeed.Theme:Document.Lightbox]')}
+                    href = Neos.Neos:NodeUri {
+                        node = ${item}
+                    }
+                }
+            }
+        }
+    }
+
+    typeOfContact = ${q(site).property('typeOfContact')}
+    salutation = ${q(site).property('salutation')}
+    legalName = ${q(site).property('legalName')}
+    mobile = ${q(site).property('mobile')}
+    phone = ${q(site).property('phone')}
+    email = ${q(site).property('email')}
+    socialNetworks = ${q(site).property('socialNetworks')}
+    socialShare = ${q(site).property('socialShare')}
+    socialShare.@process.flatten = ${Array.unique(Array.filter(Carbon.Array.extractSubElements(value || [])))}
+
+    @context.footerNodes = ${Carbon.Array.check(this.multiColumnEnabled ? Array.reduce((q(site).property('footerNavigationMultiColumn') || []), (acc, item) => Carbon.Array.check(item.items) ? Array.concat(acc, item.items) : acc, []) : q(site).property('footerNavigation'))}
+
+    @cache {
+        mode = 'cached'
+        maximumLifetime = Neos.Fusion:Value {
+            nextYear = ${Carbon.Date.secondsUntil('first day of January next year', false)}
+            site = ${q(site).context({'invisibleContentShown': true}).cacheLifetime()}
+            nodes = ${footerNodes ? q(footerNodes).context({'invisibleContentShown': true}).cacheLifetime() : false}
+            value = ${Theme.smallestNumberFromArray([this.nextYear, this.site, this.nodes])}
+        }
+        entryIdentifier {
+            static = 'footer'
+            site = ${site}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+            2 = ${footerNodes ? Neos.Caching.nodeTag(footerNodes) : null}
+        }
+    }
+}

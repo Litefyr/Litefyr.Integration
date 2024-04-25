@@ -1,0 +1,99 @@
+prototype(Litespeed.Theme:Helper.Teaser.Data) < prototype(Neos.Fusion:Component) {
+    overviewData = null
+
+    node = ${this.overviewData ? this.overviewData.node : node}
+
+    dateProperty = ${q(this.node).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Date]') ? '_hiddenBeforeDateTime' : null}
+    category = ${q(this.node).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Category]') ? q(this.node).property('category') : null}
+    authors = ${q(this.node).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Authors]') ? q(this.node).property('authors') : null}
+    articleCount = ${q(this.node).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Articles]') ? Carbon.Array.length(q(this.node).property('articles')) : null}
+
+    category.@if.notFromOveview = ${!this.overviewData}
+    authors.@if.notFromOveview = ${!this.overviewData}
+    articleCount.@if.notFromOveview = ${!this.overviewData}
+
+    renderer = Neos.Fusion:DataStructure {
+        identifier = ${q(props.node).property('_identifier')}
+        headline = ${q(props.node).property('title')}
+        text = ${String.stripTags(q(props.node).property('teaserText') || q(props.node).property('lead'))}
+        images = Neos.Fusion:Case {
+            fromOverview {
+                condition = ${props.overviewData}
+                renderer = Neos.Fusion:Map {
+                    items = ${props.overviewData.authors}
+                    itemRenderer = Neos.Fusion:DataStructure {
+                        @if.hasImage = ${this.imageSource}
+                        label = ${item.label}
+                        imageSource = Carbon.Image:Helper.ImageSource {
+                            image = ${q(item.node).property('image')}
+                            dummyBaseWidth = 40
+                            dummyBaseHeight = 40
+                        }
+                        href = ${item.href}
+                    }
+                }
+            }
+            default {
+                condition = ${Carbon.Array.check(props.authors)}
+                renderer = Neos.Fusion:Map {
+                    items = ${props.authors}
+                    itemRenderer = Neos.Fusion:DataStructure {
+                        @if.hasImage = ${this.imageSource}
+                        label = ${q(item).property('title')}
+                        imageSource = Carbon.Image:Helper.ImageSource {
+                            image = ${q(item).property('image')}
+                            dummyBaseWidth = 40
+                            dummyBaseHeight = 40
+                        }
+                        href = Neos.Neos:NodeUri {
+                            @if.set = ${!q(item).property('_hiddenInIndex')}
+                            node = ${item}
+                            format = 'html'
+                        }
+                    }
+                }
+            }
+            @process.filter = ${Carbon.Array.check(value) ? Array.filter(value) : value}
+        }
+        label = ${props.articleCount ? Translation.translate('numberOfArticles', null, [props.articleCount], 'Main', 'Litespeed.Theme', props.articleCount) : null}
+        badges = Neos.Fusion:Case {
+            fromOverview {
+                condition = ${props.overviewData}
+                renderer = ${props.overviewData.categories}
+            }
+            default {
+                condition = ${Carbon.Array.check(props.category)}
+                renderer = Neos.Fusion:Map {
+                    items = ${props.category}
+                    itemRenderer = Neos.Fusion:DataStructure {
+                        label = ${Type.isString(item) ? item : q(item).property('title')}
+                        href = Neos.Neos:NodeUri {
+                            @if.set = ${!Type.isString(item) && !q(item).property('_hiddenInIndex')}
+                            node = ${item}
+                            format = 'html'
+                        }
+                    }
+                }
+            }
+        }
+        href = Neos.Fusion:Case {
+            fromOverview {
+                condition = ${props.overviewData}
+                renderer = ${props.overviewData.href}
+            }
+            default {
+                condition = true
+                renderer = Neos.Neos:NodeUri {
+                    node = ${props.node}
+                    format = 'html'
+                }
+            }
+        }
+        firstImage = Litespeed.Theme:Helper.FirstImage {
+            node = ${props.node}
+        }
+        date = ${props.dateProperty ? q(props.node).property(props.dateProperty) : null}
+        image = ${this.firstImage ? this.firstImage.asset : null}
+        alternativeText = ${this.firstImage ? this.firstImage.alternativeText : null}
+    }
+}

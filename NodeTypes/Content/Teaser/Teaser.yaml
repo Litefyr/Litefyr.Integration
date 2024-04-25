@@ -1,0 +1,101 @@
+'Litespeed.Theme:Content.Teaser':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Litespeed.Theme:Mixin.ThemeSelector': true
+  ui:
+    label: i18n
+    group: teaser
+    icon: images
+    position: 150
+    inspector:
+      groups:
+        settings:
+          label: i18n
+          icon: paint-brush
+  properties:
+    theme:
+      defaultValue: main
+      ui:
+        inspector:
+          editorOptions:
+            allowEmpty: true
+    headline:
+      options:
+        preset: text.headline
+    label:
+      options:
+        preset: text.label
+    text:
+      options:
+        preset: text.lead
+    showImages:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          position: 10
+    textbox:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        showInCreationDialog: false
+        inspector:
+          group: settings
+          hidden: 'ClientEval:!node.properties.showImages'
+          position: 15
+    subsites:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          position: 20
+    featured:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          position: 30
+          hidden: 'ClientEval:!node.properties.showImages'
+    nodes:
+      type: references
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          position: 40
+          editorOptions:
+            nodeTypes:
+              - Litespeed.Theme:Mixin.TeaserDocument
+    limit:
+      type: integer
+      defaultValue: 0
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: settings
+          editor: 'Carbon.RangeEditor/Editor'
+          position: 50
+          editorOptions:
+            min: 0
+            max: 30
+            step: 1
+            unit: 'Litespeed.Theme:NodeTypes.Content.Teaser:properties.limit.unit'
+            minLabel: 'Litespeed.Theme:NodeTypes.Content.Teaser:properties.limit.minLabel'
+            valueLabels:
+              1: 'Litespeed.Theme:NodeTypes.Content.Teaser:properties.limit.one'

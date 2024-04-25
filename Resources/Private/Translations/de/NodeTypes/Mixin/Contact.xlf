@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.contact" xml:space="preserve">
+                <source>Contact</source>
+                <target>Kontakt</target>
+            </trans-unit>
+            <trans-unit id="groups.address" xml:space="preserve">
+                <source>Address</source>
+                <target>Adresse</target>
+            </trans-unit>
+            <trans-unit id="groups.social" xml:space="preserve">
+                <source>Social networks</source>
+                <target>Soziale Netzwerke</target>
+            </trans-unit>
+            <trans-unit id="groups.share" xml:space="preserve">
+                <source>Networks for sharing</source>
+                <target>Netzwerke zum Teilen</target>
+            </trans-unit>
+            <trans-unit id="properties.mobile" xml:space="preserve">
+                <source>Cell phone</source>
+                <target>Mobiltelefon</target>
+            </trans-unit>
+            <trans-unit id="properties.phone" xml:space="preserve">
+                <source>Telephone</source>
+                <target>Telefon</target>
+            </trans-unit>
+            <trans-unit id="properties.email" xml:space="preserve">
+                <source>Email</source>
+                <target>E-Mail</target>
+            </trans-unit>
+            <trans-unit id="properties.socialNetworks.network" xml:space="preserve">
+                <source>Network</source>
+                <target>Netzwerk</target>
+            </trans-unit>
+            <trans-unit id="properties.socialNetworks.url" xml:space="preserve">
+                <source>Link</source>
+                <target>Link</target>
+            </trans-unit>
+
+            <trans-unit id="properties.socialShare.ui.help.message" xml:space="preserve">
+                <source>Native sharing is only displayed if the browser supports it</source>.
+                <target>Natives teilen wird nur angezeigt, falls der Browser dies unterstützt.</target>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.network" xml:space="preserve">
+                <source>Network</source>
+                <target>Netzwerk</target>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.native" xml:space="preserve">
+                <source>Native sharing</source>
+                <target>Natives teilen</target>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.email" xml:space="preserve">
+                <source>Open e-mail program</source>
+                <target>E-Mail Programm öffnen</target>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.copy" xml:space="preserve">
+                <source>Copy link</source>
+                <target>Link kopieren</target>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.print" xml:space="preserve">
+                <source>Print</source>
+                <target>Drucken</target>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Content width</source>
+                <target>Inhaltsbreite</target>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.values.wide" xml:space="preserve">
+                <source>Wide</source>
+                <target>Breit</target>
+            </trans-unit>
+            <trans-unit id="properties.breakout.selectBoxEditor.values.full" xml:space="preserve">
+                <source>Screen width</source>
+                <target>Bildschirmbreite</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

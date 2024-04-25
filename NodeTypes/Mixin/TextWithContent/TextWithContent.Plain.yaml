@@ -1,0 +1,38 @@
+'Litespeed.Theme:Mixin.TextWithContent.Plain':
+  abstract: true
+  superTypes:
+    'Litespeed.Theme:Mixin.Breakout': true
+    'Litespeed.Theme:Mixin.ThemeSelector': true
+    'Litespeed.Theme:Mixin.Links.Appearance': true
+  ui:
+    inspector:
+      groups:
+        look:
+          label: i18n
+          icon: paint-brush
+          position: 200
+        headline:
+          position: 210
+        link:
+          position: 220
+  properties:
+    headline:
+      options:
+        preset: 'text.headline'
+    text:
+      options:
+        preset: 'text.autoparagraph'
+    breakout:
+      ui:
+        inspector:
+          group: look
+          positon: 10
+    theme:
+      ui:
+        inspector:
+          group: look
+          position: 550
+          # This hides the field if the parent node is a content node
+          hidden: 'ClientEval: !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/))'
+          editorOptions:
+            allowEmpty: true

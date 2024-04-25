@@ -1,0 +1,10 @@
+prototype(Neos.Seo:StructuredData.Breadcrumb) < prototype(Neos.Fusion:Component) {
+    items.@process {
+        filter = ${Array.filter(value, node => !q(node).is('[instanceof Breadlesscode.NodeTypes.Folder:Mixin.HideUriSegment]'))}
+        values = ${Array.values(value)}
+    }
+
+    prototype(Neos.Seo:StructuredData.RootObject) {
+        @process.wrap = ${'<script type="application/ld+json" id="breadcrump-data">' + value +  '</script>'}
+    }
+}

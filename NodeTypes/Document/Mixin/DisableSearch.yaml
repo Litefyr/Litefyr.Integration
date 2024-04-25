@@ -1,0 +1,6 @@
+'Litespeed.Theme:Mixin.DisableSearch':
+  abstract: true
+  search:
+    fulltext:
+      enable: false
+      isRoot: false

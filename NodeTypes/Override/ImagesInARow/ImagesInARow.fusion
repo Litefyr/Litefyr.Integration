@@ -1,0 +1,14 @@
+prototype(Jonnitto.ImagesInARow:Container) {
+    breakout = ${q(node).property('breakout')}
+
+    container = ${!!this.breakout}
+    inBackend = ${node.context.inBackend}
+    baseWidth = ${this.inBackend || this.breakout == 'full' ? 1920 : this.breakout == 'wide' ? 1151 : 896}
+
+    renderer.@process.spacing = Litespeed.Presentation:Spacing {
+        width = ${props.breakout}
+        padding = 'auto'
+        class = 'jonnitto-imagesinarow'
+        waveSpacing = true
+    }
+}

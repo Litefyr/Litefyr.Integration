@@ -1,0 +1,11 @@
+# This is just to make everything works if the Templates package is not installed
+
+'Litespeed.Templates:Mixin.Template':
+  abstract: true
+  search:
+    fulltext:
+      isRoot: false
+      enable: false
+
+'Litespeed.Templates:Mixin.CreationDialog.Article':
+  abstract: true

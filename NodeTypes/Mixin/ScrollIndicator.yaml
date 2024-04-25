@@ -1,0 +1,94 @@
+'Litespeed.Theme:Mixin.ScollIndicator':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        scroll:
+          label: i18n
+          position: end
+          icon: chevron-down
+  properties:
+    scrollIndicatorEnabled:
+      type: boolean
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: scroll
+          position: 10
+    scrollIndicatorTheme:
+      type: string
+      ui:
+        label: 'Litespeed.Theme:NodeTypes.Colors:color'
+        reloadPageIfChanged: true
+        inspector:
+          position: 20
+          group: scroll
+          hidden: 'ClientEval: node.properties.scrollIndicatorEnabled !== true'
+          editor: 'Carbon.ColorValues/Editor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              main:
+                label: 'Litespeed.Theme:NodeTypes.Colors:color.main'
+                color: 'var(--color-theme-main)'
+              minor:
+                label: 'Litespeed.Theme:NodeTypes.Colors:color.minor'
+                color: 'var(--color-theme-minor)'
+              minor2:
+                label: 'Litespeed.Theme:NodeTypes.Colors:color.minor2'
+                color: 'var(--color-theme-minor2)'
+              gray:
+                label: 'Litespeed.Theme:NodeTypes.Colors:color.gray'
+                color: 'var(--color-theme-gray)'
+              default:
+                label: 'Litespeed.Theme:NodeTypes.Colors:color.text'
+                color: 'var(--color-theme-front)'
+    scrollIndicatorBottom:
+      type: integer
+      defaultValue: 1
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: scroll
+          position: 30
+          hidden: 'ClientEval: node.properties.scrollIndicatorEnabled !== true'
+          editor: 'Carbon.RangeEditor/Editor'
+          editorOptions:
+            min: 1
+            max: 80
+            step: 1
+            unit: vh
+    scrollIndicatorHideAfter:
+      type: integer
+      defaultValue: 20
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: scroll
+          position: 40
+          hidden: 'ClientEval: node.properties.scrollIndicatorEnabled !== true'
+          editor: 'Carbon.RangeEditor/Editor'
+          editorOptions:
+            min: 10
+            max: 90
+            step: 10
+            unit: vh
+    scrollIndicatorScrollAmount:
+      type: integer
+      defaultValue: 80
+      ui:
+        label: Scrolldistanz
+        reloadPageIfChanged: true
+        inspector:
+          group: scroll
+          position: 50
+          hidden: 'ClientEval: node.properties.scrollIndicatorEnabled !== true && node.properties.scrollIndicatorHideAfter < 90'
+          editor: 'Carbon.RangeEditor/Editor'
+          editorOptions:
+            min: 'ClientEval: node.properties.scrollIndicatorHideAfter + 10'
+            max: 100
+            step: 10
+            unit: vh

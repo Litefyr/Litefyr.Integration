@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Teaser</source>
+            </trans-unit>
+            <trans-unit id="groups.settings" xml:space="preserve">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="properties.showImages" xml:space="preserve">
+                <source>Show pictures</source>
+            </trans-unit>
+            <trans-unit id="properties.textbox" xml:space="preserve">
+                <source>Display text over image</source>
+            </trans-unit>
+            <trans-unit id="properties.subsites" xml:space="preserve">
+                <source>Get subpages of the page</source>
+            </trans-unit>
+            <trans-unit id="properties.featured" xml:space="preserve">
+                <source>Featured view</source>
+            </trans-unit>
+            <trans-unit id="properties.nodes" xml:space="preserve">
+                <source>Pages</source>
+            </trans-unit>
+            <trans-unit id="properties.limit" xml:space="preserve">
+                <source>Maximum number of pages</source>
+            </trans-unit>
+            <trans-unit id="properties.limit.minLabel" xml:space="preserve">
+                <source>Show all</source>
+            </trans-unit>
+            <trans-unit id="properties.limit.unit" xml:space="preserve">
+                <source> pages</source>
+            </trans-unit>
+            <trans-unit id="properties.limit.one" xml:space="preserve">
+                <source>1 page</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

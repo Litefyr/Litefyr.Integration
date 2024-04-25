@@ -1,0 +1,9 @@
+prototype(Neos.Neos:Editable) {
+    fallback = null
+    placeholder = ${this.fallback}
+
+    renderer {
+        editable.renderer.attributes.data-neos-placeholder-override = ${String.trim(String.stripTags(String.replace(props.placeholder, '<br>', ' \n '))) || null}
+        @process.fallback = ${value || props.fallback}
+    }
+}

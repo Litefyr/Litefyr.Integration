@@ -1,0 +1,76 @@
+prototype(Litespeed.Theme:Document.AbstractPage) < prototype(Neos.Fusion:Component) {
+    headTags = null
+    hero = null
+    content = null
+    aside = null
+    notification = null
+    htmlClass = null
+    preview = null
+
+    bodyRenderer = null
+
+    scrollIndicator = Litespeed.Theme:Component.ScrollIndicator
+
+    header = Neos.Fusion:Renderer {
+        renderPath = '/header'
+    }
+    footer  = Neos.Fusion:Renderer {
+        renderPath = '/footer'
+    }
+
+    replaceLogo = Neos.Fusion:Renderer {
+        renderPath = '/replaceLogo'
+    }
+
+    asideAttributes = Neos.Fusion:Attributes
+
+    renderer = Neos.Neos:Page {
+        htmlTag.attributes.class {
+            additionalClass = ${props.htmlClass}
+            preview = ${props.preview ? 'preview' : null}
+        }
+        head.headTags = ${props.headTags}
+        head.headTags.@position = 'after canonicalLink'
+        body >
+        body = Neos.Fusion:Case {
+            isPreview {
+                condition = ${props.preview}
+                renderer = ${props.preview}
+            }
+            bodyRenderer {
+                condition = ${props.bodyRenderer}
+                renderer = Neos.Fusion:Renderer {
+                    type = ${props.bodyRenderer}
+                    element {
+                        header = ${props.header}
+                        notification = ${props.notification}
+                        hero = ${props.hero}
+                        content = ${props.content}
+                        aside = ${props.aside}
+                        asideAttributes = ${props.asideAttributes}
+                        footer  = ${props.footer}
+                        scrollIndicator  = ${props.scrollIndicator}
+                    }
+                }
+            }
+
+            @process.replaceLogo = Litespeed.Theme:Helper.ReplaceTextWithComponent {
+                search = '⚑'
+                replace = ${props.replaceLogo}
+            }
+        }
+        @process.convertUris = Neos.Neos:ConvertUris
+        @cache.mode = 'embed'
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            documentNode = ${node}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+        }
+    }
+}

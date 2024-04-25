@@ -1,0 +1,10 @@
+prototype(Carbon.BackendDocument:Document) {
+    headTags = afx`
+        <Carbon.IncludeAssets:Internal.Assets location='HeadStart' />
+        <Carbon.IncludeAssets:Internal.Assets location='Head' />
+        <Carbon.IncludeAssets:Internal.Assets location='BodyStart' />
+        <Carbon.IncludeAssets:Internal.Assets location='Body' />
+    `
+    documentStyle.font-family = ${null}
+    style.@process.font = ${value + '.neos-backend strong{font-weight:600}'}
+}

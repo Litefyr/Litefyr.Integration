@@ -1,0 +1,26 @@
+prototype(Litespeed.Theme:Content.Text) < prototype(Neos.Neos:ContentComponent) {
+    content = Neos.Neos:Editable {
+        property = 'text'
+    }
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    label = Neos.Neos:Editable {
+        property = 'label'
+        block = false
+    }
+    lead = Neos.Neos:Editable {
+        property = 'lead'
+        block = false
+    }
+
+    links = Litespeed.Theme:Component.Links
+    theme = ${q(node).property('theme')}
+    position = ${q(node).property('position')}
+    inBackend = ${node.context.inBackend}
+
+    renderer = afx`
+        <Litespeed.Presentation:Block.Text {...props}/>
+    `
+}

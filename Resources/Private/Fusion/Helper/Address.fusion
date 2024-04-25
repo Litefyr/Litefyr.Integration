@@ -1,0 +1,44 @@
+prototype(Litespeed.Theme:Helper.Address) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+    nameItems = ${['title']}
+    descriptionItems = ${[]}
+    @if.hasNode = ${this.node}
+
+    renderer = Neos.Fusion:DataStructure {
+        name = Neos.Fusion:Map {
+            items = ${props.nameItems}
+            itemRenderer = ${String.trim(q(props.node).property(item))}
+            @process {
+                merge = ${Carbon.String.classNames(value)}
+                backend = ${!value && node.context.inBackend ? Carbon.Backend.translate('pleaseSetTitle', null, [], null, 'Litespeed.Theme') : value}
+            }
+        }
+        description = Neos.Fusion:Map {
+            items = ${props.descriptionItems}
+            itemRenderer = ${String.trim(q(props.node).property(item))}
+            @process.convertToString = ${String.trim(Array.join(Array.filter(value), ', '))}
+        }
+        street = ${q(props.node).property('street')}
+        city = ${q(props.node).property('city')}
+        country = ${q(props.node).property('country')}
+        location = ${q(props.node).property('location')}
+        website = ${q(props.node).property('website')}
+        phone = ${q(props.node).property('phone')}
+        mobile = ${q(props.node).property('mobile')}
+        iban = ${q(props.node).property('iban')}
+        phoneLink = ${this.phone}
+        phoneLink.@process.convert = Litespeed.Presentation:Helper.Phone
+        mobileLink = ${this.mobile}
+        mobileLink.@process.convert = Litespeed.Presentation:Helper.Phone
+        email = ${q(props.node).property('email')}
+        socialNetworks = ${q(props.node).property('socialNetworks')}
+
+        image = ${q(props.node).property('image')}
+        alternativeText = ${Translation.translate('imageFromAddress', null, [this.name], null, 'Litespeed.Presentation')}
+        link = Neos.Neos:NodeUri {
+            @if.set = ${documentNode != props.node}
+            node = ${props.node}
+        }
+        integration = true
+    }
+}

@@ -1,0 +1,18 @@
+'Litespeed.Theme:Mixin.TextWithContent.LeftColSize':
+  abstract: true
+  properties:
+    leftColSize:
+      type: integer
+      defaultValue: 50
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 540
+          editor: 'Carbon.RangeEditor/Editor'
+          editorOptions:
+            min: 25
+            max: 75
+            step: 5
+            unit: '%'

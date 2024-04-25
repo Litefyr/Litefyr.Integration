@@ -1,0 +1,12 @@
+'Litespeed.Theme:Mixin.TeaserDocument.Date':
+  abstract: true
+  properties:
+    _hiddenBeforeDateTime:
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: document
+          position: end
+          editorOptions:
+            minuteStep: 15

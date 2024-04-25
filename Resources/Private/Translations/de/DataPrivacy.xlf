@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="introduction.headline" xml:space="preserve">
+                <source>Vorwort</source>
+            </trans-unit>
+            <group id="introduction.text" restype="x-gettext-plurals">
+                <trans-unit id="introduction.text[0]" xml:space="preserve">
+                    <source><![CDATA[<a href="{imprintUrl}">Ich ({name})</a> nehme den Schutz privater Daten ernst. Die besondere Beachtung der Privatsphäre bei der Verarbeitung persönlicher Daten ist ein wichtiges Anliegen. Persönliche Daten werden gemäss den Bestimmungen des Datenschutzgesetzes verwendet; ich verpflichte mich zur Verschwiegenheit. Diese Web-Seiten können Links zu Web-Seiten anderer AnbieterInnen enthalten, auf die sich diese Datenschutzerklärung nicht erstreckt.]]></source>
+                </trans-unit>
+                <trans-unit id="introduction.text[1]" xml:space="preserve">
+                    <source><![CDATA[<a href="{imprintUrl}">Die Betreiber dieser Web-Seite</a> nehmen den Schutz privater Daten ernst. Die besondere Beachtung der Privatsphäre bei der Verarbeitung persönlicher Daten ist ein wichtiges Anliegen. Persönliche Daten werden gemäss den Bestimmungen des Datenschutzgesetzes verwendet; die Betreiber dieser Web-Seiten verpflichten sich zur Verschwiegenheit. Diese Web-Seiten können Links zu Web-Seiten anderer AnbieterInnen enthalten, auf die sich diese Datenschutzerklärung nicht erstreckt.]]></source>
+                </trans-unit>
+            </group>
+
+            <trans-unit id="personalData.headline" xml:space="preserve">
+                <source>Personenbezogene Daten</source>
+            </trans-unit>
+            <trans-unit id="personalData.intro" xml:space="preserve">
+                <source>Personenbezogene Daten sind Informationen, die dazu genutzt werden können, die Identität der jeweiligen Person zu erfahren. Darunter fallen Informationen wie Name, Adresse, Postanschrift, Telefonnummer. Informationen, die nicht direkt mit der Identität einer Person in Verbindung gebracht werden (wie zum Beispiel favorisierte Web-Seiten oder die Anzahl der NutzerInnen eines bestimmten Internet-Angebots) fallen nicht darunter. Man kann dieses Online-Angebot grundsätzlich ohne Offenlegung der Identität nutzen.</source>
+            </trans-unit>
+            <group id="personalData.newsletter" restype="x-gettext-plurals">
+                <trans-unit id="personalData.newsletter[0]" xml:space="preserve">
+                    <source>Wenn man sich für eine Registrierung für einen Newsletter entscheidet kann man im individuellen Benutzungsprofil persönliche Informationen und Interessen angeben. Es unterliegt der freien Entscheidung jedes Nutzers, ob diese Daten angegeben werden. Da von mir versucht wird, für die Nutzung des Angebots so wenig personenbezogene Daten wie möglich zu erheben, reicht für eine Registrierung die Angabe der E-Mail-Adresse.</source>
+                </trans-unit>
+                <trans-unit id="personalData.newsletter[1]" xml:space="preserve">
+                    <source>Wenn man sich für eine Registrierung für einen Newsletter entscheidet kann man im individuellen Benutzungsprofil persönliche Informationen und Interessen angeben. Es unterliegt der freien Entscheidung jedes Nutzers, ob diese Daten angegeben werden. Da seitens der Betreiber versucht wird, für die Nutzung des Angebots so wenig personenbezogene Daten wie möglich zu erheben, reicht für eine Registrierung die Angabe der E-Mail-Adresse.</source>
+                </trans-unit>
+            </group>
+            <trans-unit id="personalData.plausible" xml:space="preserve">
+                <source><![CDATA[In Verbindung mit dem Zugriff auf die Web-Seiten werden serverseitig Daten (z.B. Datum, Uhrzeit und betrachtete Seiten) gespeichert. Die Auswertung erfolgt durch <a href="https://plausible.io/privacy-focused-web-analytics">Plausible</a>. Es werden keine IP Adressen oder weiteren Nutzer-Informationen gespeichert. ]]></source>
+            </trans-unit>
+            <trans-unit id="personalData.usage" xml:space="preserve">
+                <source>Es findet keine personenbezogene Verwertung statt. Die statistische Auswertung anonymisierter Datensätze bleibt vorbehalten.</source>
+            </trans-unit>
+            <group id="personalData.saveData" restype="x-gettext-plurals">
+                <trans-unit id="personalData.saveData[0]" xml:space="preserve">
+                    <source><![CDATA[Ich nutze die persönlichen Daten zu Zwecken der technischen Administration der Web-Seiten nur im jeweils dafür erforderlichen Umfang. Darüber hinaus werden persönliche Daten nur dann gespeichert, wenn diese freiwillig angegeben werden.]]></source>
+                </trans-unit>
+                <trans-unit id="personalData.saveData[1]" xml:space="preserve">
+                    <source><![CDATA[Wir nutzen die persönlichen Daten zu Zwecken der technischen Administration der Web-Seiten nur im jeweils dafür erforderlichen Umfang. Darüber hinaus werden persönliche Daten nur dann gespeichert, wenn diese freiwillig angegeben werden.]]></source>
+                </trans-unit>
+            </group>
+            <group id="personalData.saveDataMembers" restype="x-gettext-plurals">
+                <trans-unit id="personalData.saveDataMembers[0]" xml:space="preserve">
+                    <source><![CDATA[Ich nutze die persönlichen Daten zu Zwecken der technischen Administration der Web-Seiten und zur Mitgliederverwaltung nur im jeweils dafür erforderlichen Umfang. Darüber hinaus werden persönliche Daten nur dann gespeichert, wenn diese freiwillig angegeben werden.]]></source>
+                </trans-unit>
+                <trans-unit id="personalData.saveDataMembers[1]" xml:space="preserve">
+                    <source><![CDATA[Wir nutzen die persönlichen Daten zu Zwecken der technischen Administration der Web-Seiten und zur Mitgliederverwaltung nur im jeweils dafür erforderlichen Umfang. Darüber hinaus werden persönliche Daten nur dann gespeichert, wenn diese freiwillig angegeben werden.]]></source>
+                </trans-unit>
+            </group>
+
+            <trans-unit id="processingPurposes.headline" xml:space="preserve">
+                <source>Zwecke der Verarbeitung</source>
+            </trans-unit>
+            <trans-unit id="processingPurposes.default" xml:space="preserve">
+                <source><![CDATA[<li>Bereitstellung, Verbesserung und Weiterentwicklung der Website</li><li>Erstellung von Nutzungsstatistiken</li><li>Erkennung, Verhinderung und Untersuchung von Angriffen auf die Website</li>]]></source>
+            </trans-unit>
+            <trans-unit id="processingPurposes.emailAndForm" xml:space="preserve">
+                <source><![CDATA[<li>Beantwortung von E-Mail- und Kontaktformular-Anfragen von NutzerInnen</li>]]></source>
+            </trans-unit>
+            <trans-unit id="processingPurposes.email" xml:space="preserve">
+                <source><![CDATA[<li>Beantwortung von E-Mail-Anfragen von NutzerInnen</li>]]></source>
+            </trans-unit>
+            <trans-unit id="processingPurposes.newsletter" xml:space="preserve">
+                <source><![CDATA[<li>Anmeldung und Versand des Newsletters</li>]]></source>
+            </trans-unit>
+
+            <trans-unit id="legalBasisOfProcessing.headline" xml:space="preserve">
+                <source>Rechtsgrundlage der Verarbeitung</source>
+            </trans-unit>
+            <group id="legalBasisOfProcessing.text" restype="x-gettext-plurals">
+                <trans-unit id="legalBasisOfProcessing.text[0]" xml:space="preserve">
+                    <source>Die rechtliche Grundlage für die Verarbeitung der personenbezogenen Daten ist mein berechtigtes Interesse (gemäß Art 6 Abs 1 lit f EU Datenschutz-Grundverordnung), welches darin besteht, die oben unter Punkt 2 genannten Zwecke zu erreichen.</source>
+                </trans-unit>
+                <trans-unit id="legalBasisOfProcessing.text[1]" xml:space="preserve">
+                    <source>Die rechtliche Grundlage für die Verarbeitung der personenbezogenen Daten ist unser überwiegendes berechtigtes Interesse (gemäß Art 6 Abs 1 lit f EU Datenschutz-Grundverordnung), welches darin besteht, die oben unter Punkt 2 genannten Zwecke zu erreichen.</source>
+                </trans-unit>
+            </group>
+
+            <trans-unit id="transmissionPersonalData.headline" xml:space="preserve">
+                <source>Die Übermittlung der personenbezogenen Daten</source>
+            </trans-unit>
+            <group id="transmissionPersonalData.text" restype="x-gettext-plurals">
+                <trans-unit id="transmissionPersonalData.text[0]" xml:space="preserve">
+                    <source>Zu den oben genannten Zwecken werde ich die personenbezogenen Daten an keine Empfänger übermitteln.</source>
+                </trans-unit>
+                <trans-unit id="transmissionPersonalData.text[1]" xml:space="preserve">
+                    <source>Zu den oben genannten Zwecken werden wir die personenbezogenen Daten an keine Empfänger übermitteln.</source>
+                </trans-unit>
+            </group>
+            <trans-unit id="transmissionPersonalData.newsletter" xml:space="preserve">
+                <source>Jegliche Daten, die zum Versand der Newsletter gespeichert werden, werden auf den eigenen Servern gesichert.</source>
+            </trans-unit>
+
+            <trans-unit id="storageDuration.headline" xml:space="preserve">
+                <source>Speicherdauer</source>
+            </trans-unit>
+            <group id="storageDuration.text" restype="x-gettext-plurals">
+                <trans-unit id="storageDuration.text[0]" xml:space="preserve">
+                    <source>Die personenbezogenen Daten werden von mir nur so lange aufbewahrt, wie dies nötig ist, um die unter Punkt 2 genannten Zwecke zu erreichen und wie dies nach anwendbarem Recht zulässig ist. Ich speichere die personenbezogenen Daten zudem jedenfalls so lange gesetzliche Aufbewahrungsfristen bestehen oder Verjährungsfristen potentieller Rechtsansprüche noch nicht abgelaufen sind.</source>
+                </trans-unit>
+                <trans-unit id="storageDuration.text[1]" xml:space="preserve">
+                    <source>Die personenbezogenen Daten werden von uns nur so lange aufbewahrt, wie dies nötig ist, um die unter Punkt 2 genannten Zwecke zu erreichen und wie dies nach anwendbarem Recht zulässig ist. Wir speichern Ihre personenbezogenen Daten zudem jedenfalls so lange gesetzliche Aufbewahrungsfristen bestehen oder Verjährungsfristen potentieller Rechtsansprüche noch nicht abgelaufen sind.</source>
+                </trans-unit>
+            </group>
+
+            <trans-unit id="cookies.headline" xml:space="preserve">
+                <source>Cookies und Server Logs</source>
+            </trans-unit>
+            <trans-unit id="cookies.newsletter" xml:space="preserve">
+                <source>Diese Seite verwendet im Rahmen der Anmeldung zum Newsletter technisch notwendige Cookies, die nach Sitzungsende gelöscht werden. Darüber hinaus werden keine Cookies verwendet. </source>
+            </trans-unit>
+            <trans-unit id="cookies.noCookie" xml:space="preserve">
+                <source>Diese Seite verwendet keine Cookies.</source>
+            </trans-unit>
+            <group id="cookies.external" restype="x-gettext-plurals">
+                <trans-unit id="cookies.external[0]" xml:space="preserve">
+                    <source>Cookies können jedoch von Fremdanbietern angewendet werden, deren Produkte auf meiner Seite verlinkt sind (Vimeo, YouTube, …). In diesem Fall werden die Nutzer darauf hingewiesen und stimmen somit den Bestimmungen des Fremdanbieters zu.</source>
+                </trans-unit>
+                <trans-unit id="cookies.external[1]" xml:space="preserve">
+                    <source>Cookies können jedoch von Fremdanbietern angewendet werden, deren Produkte auf unsere Seite verlinkt sind (Vimeo, YouTube, …). In diesem Fall werden die Nutzer darauf hingewiesen und stimmen somit den Bestimmungen des Fremdanbieters zu.</source>
+                </trans-unit>
+            </group>
+            <trans-unit id="cookies.logs" xml:space="preserve">
+                <source>Serverseitig werden die Besuche kurzfristig in Logs gespeichert. Dies dient der Abwehr von Angriffen.</source>
+            </trans-unit>
+
+            <trans-unit id="plausible.headline" xml:space="preserve">
+                <source>Websiteanalyse / Plausible </source>
+            </trans-unit>
+            <trans-unit id="plausible.text" xml:space="preserve">
+                <source><![CDATA[Die Website-Analyse erfolgt durch die Open-Source <a href="https://plausible.io/privacy-focused-web-analytics">Plattform Plausible</a>. Plausible ist ein leichtgewichtiges und quelloffenes Website-Analysetool. Keine Cookies und vollständig konform mit GDPR, CCPA und PECR. Hergestellt und gehostet in der EU. Es werden keine IP Adressen oder weiteren Nutzer-Informationen gespeichert. Es findet keine personenbezogene Verwertung statt. Die statistische Auswertung anonymisierter Datensätze bleibt vorbehalten.]]></source>
+            </trans-unit>
+
+            <trans-unit id="newsletter.headline" xml:space="preserve">
+                <source>Newsletter</source>
+            </trans-unit>
+            <group id="newsletter.intro" restype="x-gettext-plurals">
+                <trans-unit id="newsletter.intro[0]" xml:space="preserve">
+                    <source>Mit den nachfolgenden Hinweisen klären wir über die Inhalte unseres Newsletters sowie das Anmelde-, Versand- und das statistische Auswertungsverfahren sowie Ihre Widerspruchsrechte auf.</source>
+                </trans-unit>
+                <trans-unit id="newsletter.intro[1]" xml:space="preserve">
+                    <source>Mit den nachfolgenden Hinweisen kläre ich über die Inhalte unseres Newsletters sowie das Anmelde-, Versand- und das statistische Auswertungsverfahren sowie Ihre Widerspruchsrechte auf.</source>
+                </trans-unit>
+            </group>
+            <trans-unit id="newsletter.abo.formal" xml:space="preserve">
+                <source>Indem Sie den Newsletter abonnieren, erklären Sie sich mit dem Empfang und den beschriebenen Verfahren einverstanden.</source>
+            </trans-unit>
+            <trans-unit id="newsletter.abo.informal" xml:space="preserve">
+                <source>Indem du den Newsletter abonnierst, erklärst dudich mit dem Empfang und den beschriebenen Verfahren einverstanden.</source>
+            </trans-unit>
+            <trans-unit id="newsletter.content.headline" xml:space="preserve">
+                <source>Inhalt des Newsletters</source>
+            </trans-unit>
+            <group id="newsletter.content.text" restype="x-gettext-plurals">
+                <trans-unit id="newsletter.content.text[0]" xml:space="preserve">
+                    <source>Ich versende Newsletter, E-Mails und weitere elektronische Benachrichtigungen mit werblichen Informationen (nachfolgend „Newsletter“) nur mit der Einwilligung der EmpfängerInnen oder einer gesetzlichen Erlaubnis. Sofern im Rahmen einer Anmeldung zum Newsletter dessen Inhalte konkret umschrieben werden, sind sie für die Einwilligung der NutzererInnen maßgeblich. Ich sende Informationen z.B. rund um meine Projekte, Veranstaltungen, Kampagnen oder Mitmach-Aktionen.</source>
+                </trans-unit>
+                <trans-unit id="newsletter.content.text[1]" xml:space="preserve">
+                    <source>Wir versenden Newsletter, E-Mails und weitere elektronische Benachrichtigungen mit werblichen Informationen (nachfolgend „Newsletter“) nur mit der Einwilligung der EmpfängerInnen oder einer gesetzlichen Erlaubnis. Sofern im Rahmen einer Anmeldung zum Newsletter dessen Inhalte konkret umschrieben werden, sind sie für die Einwilligung der NutzererInnen maßgeblich. Wir senden Informationen z.B. rund um unsere Projekte, Veranstaltungen, Kampagnen oder Mitmach-Aktionen.</source>
+                </trans-unit>
+            </group>
+            <trans-unit id="newsletter.loginData.headline" xml:space="preserve">
+                <source>Anmeldedaten</source>
+            </trans-unit>
+            <group id="newsletter.loginData.text.formal" restype="x-gettext-plurals">
+                <trans-unit id="newsletter.loginData.text.formal[0]" xml:space="preserve">
+                    <source><![CDATA[<p>Um sich für den Newsletter anzumelden, reicht es aus, wenn Sie Ihre E-Mailadresse angeben.</p>
+                    <p>Optional bitte ich Sie, Ihren Titel, Vor- und Nachnamen anzugeben. Diese Angaben dienen lediglich der Personalisierung des Newsletters.</p>]]></source>
+                </trans-unit>
+                <trans-unit id="newsletter.loginData.text.formal[1]" xml:space="preserve">
+                    <source><![CDATA[<p>Um sich für den Newsletter anzumelden, reicht es aus, wenn Sie Ihre E-Mailadresse angeben.</p>
+                    <p>Optional bitten wir Sie, Ihren Titel, Vor- und Nachnamen anzugeben. Diese Angaben dienen lediglich der Personalisierung des Newsletters.</p>]]></source>
+                </trans-unit>
+            </group>
+            <group id="newsletter.loginData.text.informal" restype="x-gettext-plurals">
+                <trans-unit id="newsletter.loginData.text.informal[0]" xml:space="preserve">
+                    <source><![CDATA[<p>Um sich für den Newsletter anzumelden, reicht es aus, wenn du deine E-Mailadresse angibst.</p>
+<p>Optional bitte ich dich, deinen Titel, Vor- und Nachnamen anzugeben. Diese Angaben dienen lediglich der Personalisierung des Newsletters.</p>]]></source>
+                </trans-unit>
+                <trans-unit id="newsletter.loginData.text.informal[1]" xml:space="preserve">
+                    <source><![CDATA[<p>Um sich für den Newsletter anzumelden, reicht es aus, wenn du deine E-Mailadresse angibst.</p>
+<p>Optional bitten wir dich, deinen Titel, Vor- und Nachnamen anzugeben. Diese Angaben dienen lediglich der Personalisierung des Newsletters.</p>]]></source>
+                </trans-unit>
+            </group>
+            <trans-unit id="newsletter.doubleOptIn.headline" xml:space="preserve">
+                <source>Double-Opt-In und Protokollierung</source>
+            </trans-unit>
+            <trans-unit id="newsletter.doubleOptIn.intro" xml:space="preserve">
+                <source>Die Anmeldung zum Newsletter erfolgt in einem sogenannten Double-Opt-In-Verfahren.</source>
+            </trans-unit>
+            <trans-unit id="newsletter.doubleOptIn.recevieMail.formal" xml:space="preserve">
+                <source>D.h. Sie erhalten nach der Anmeldung eine E-Mail, in der Sie um die Bestätigung Ihrer Anmeldung gebeten werden.</source>
+            </trans-unit>
+            <trans-unit id="newsletter.doubleOptIn.recevieMail.informal" xml:space="preserve">
+                <source>D.h. du erhälst nach der Anmeldung eine E-Mail, in der du um die Bestätigung deiner Anmeldung gebeten wirst.</source>
+            </trans-unit>
+            <trans-unit id="newsletter.doubleOptIn.logs" xml:space="preserve">
+                <source>Die Anmeldungen zum Newsletter werden protokolliert, um den Anmeldeprozess entsprechend den rechtlichen Anforderungen nachweisen zu können. Hierzu gehört die Speicherung des Anmelde- und des Bestätigungszeitpunkts, als auch der IP-Adresse. Ebenso werden die Änderungen Ihrer gespeicherten Daten protokolliert.</source>
+            </trans-unit>
+            <trans-unit id="newsletter.mautic.headline" xml:space="preserve">
+                <source>Versand</source>
+            </trans-unit>
+            <group id="newsletter.mautic.text" restype="x-gettext-plurals">
+                <trans-unit id="newsletter.mautic.text[0]" xml:space="preserve">
+                    <source><![CDATA[Für den Versand verwende ich Strukturen der <a href="https://www.mautic.org">Open-Source Plattform Mautic</a>. Jegliche Daten vom Newsletter werden auf den eigenen Servern gesichert und nicht an Dritte weitergegeben.]]></source>
+                </trans-unit>
+                <trans-unit id="newsletter.mautic.text[1]" xml:space="preserve">
+                    <source><![CDATA[Für den Versand verwenden wir Strukturen der <a href="https://www.mautic.org">Open-Source Plattform Mautic</a>. Jegliche Daten vom Newsletter werden auf den eigenen Servern gesichert und nicht an Dritte weitergegeben.]]></source>
+                </trans-unit>
+            </group>
+            <trans-unit id="newsletter.cancel.headline" xml:space="preserve">
+                <source>Kündigung/Widerruf</source>
+            </trans-unit>
+            <trans-unit id="newsletter.cancel.text.formal" xml:space="preserve">
+                <source><![CDATA[<p>Sie können den Empfang des Newsletters jederzeit kündigen, d.h. Ihre Einwilligungen widerrufen.</p>
+                    <p>Einen Link zur Kündigung des Newsletters finden Sie am Ende eines jeden Newsletters.</p>]]></source>
+            </trans-unit>
+            <trans-unit id="newsletter.cancel.text.informal" xml:space="preserve">
+                <source><![CDATA[<p>Du kannst den Empfang des Newsletters jederzeit kündigen, d.h. deine Einwilligungen widerrufen.</p>
+                    <p>Einen Link zur Kündigung des Newsletters findest du am Ende eines jeden Newsletters.</p>]]></source>
+            </trans-unit>
+            <trans-unit id="newsletter.legal.headline" xml:space="preserve">
+                <source>Rechtsgrundlagen Datenschutzgrundverordnung</source>
+            </trans-unit>
+            <trans-unit id="newsletter.legal.intro" xml:space="preserve">
+                <source>Entsprechend den Vorgaben der ab dem 25. Mai 2018 geltenden Datenschutzgrundverordnung (DSGVO) informieren wir Sie, dass die Einwilligungen in den Versand der E-Mailadressen auf Grundlage der Art. 6 Abs. 1 lit. a, 7 DSGVO sowie § 7 Abs. 2 Nr. 3, bzw. Abs. 3 UWG erfolgt.</source>
+            </trans-unit>
+            <group id="newsletter.legal.interests" restype="x-gettext-plurals">
+                <trans-unit id="newsletter.legal.interests[0]" xml:space="preserve">
+                    <source><![CDATA[Mein Interesse richtet sich auf den Einsatz eines nutzerfreundlichen sowie sicheren Newslettersystems, das sowohl meinen  Interessen dient, als auch den Erwartungen der NutzerInnen entspricht.]]></source>
+                </trans-unit>
+                <trans-unit id="newsletter.legal.interests[1]" xml:space="preserve">
+                    <source><![CDATA[Unser Interesse richtet sich auf den Einsatz eines nutzerfreundlichen sowie sicheren Newslettersystems, das sowohl unseren  Interessen dient, als auch den Erwartungen der NutzerInnen entspricht.]]></source>
+                </trans-unit>
+            </group>
+
+            <trans-unit id="minors.headline" xml:space="preserve">
+                <source>Minderjährige</source>
+            </trans-unit>
+            <trans-unit id="minors.intro" xml:space="preserve">
+                <source>Personen unter 18 Jahren sollten ohne Zustimmung der Eltern oder Erziehungsberechtigten im Rahmen dieser Web-Seiten keine personenbezogenen Daten übermitteln.</source>
+            </trans-unit>
+            <group id="minors.data" restype="x-gettext-plurals">
+                <trans-unit id="minors.data[0]" xml:space="preserve">
+                    <source>Ich fordere keine personenbezogenen Daten von Minderjährigen an, sammle diese nicht und gebe sie nicht an Dritte weiter.</source>
+                </trans-unit>
+                <trans-unit id="minors.data[1]" xml:space="preserve">
+                    <source>Wir fordern keine personenbezogenen Daten von Minderjährigen an, sammeln diese nicht und geben sie nicht an Dritte weiter.</source>
+                </trans-unit>
+            </group>
+
+            <trans-unit id="links.headline" xml:space="preserve">
+                <source>Links zu anderen Websites</source>
+            </trans-unit>
+            <group id="links.text" restype="x-gettext-plurals">
+                <trans-unit id="links.text[0]" xml:space="preserve">
+                    <source>Dieses Online-Angebot enthält Verweise (Links) zu anderen, externen Web-Seiten. Ich habe keinen Einfluss darauf, ob die Datenschutzbestimmungen auf den anderen, externen Web-Seiten eingehalten werden.</source>
+                </trans-unit>
+                <trans-unit id="links.text[1]" xml:space="preserve">
+                    <source>Dieses Online-Angebot enthält Verweise (Links) zu anderen, externen Web-Seiten. Wir haben keinen Einfluss darauf, ob die Datenschutzbestimmungen auf den anderen, externen Web-Seiten eingehalten werden.</source>
+                </trans-unit>
+            </group>
+
+            <trans-unit id="rights.headline.formal" xml:space="preserve">
+                <source>Ihre Rechte im Zusammenhang mit personenbezogenen Daten</source>
+            </trans-unit>
+            <trans-unit id="rights.headline.informal" xml:space="preserve">
+                <source>Deine Rechte im Zusammenhang mit personenbezogenen Daten</source>
+            </trans-unit>
+            <group id="rights.text.formal" restype="x-gettext-plurals">
+                <trans-unit id="rights.text.formal[0]" xml:space="preserve">
+                    <source><![CDATA[<p>Nach dem geltenden Recht sind Sie unter anderem berechtigt:</p>
+<ol>
+<li>zu überprüfen, ob und welche personenbezogenen Daten ich über Sie gespeichert habe und Kopien dieser Daten zu erhalten</li>
+<li>die Einschränkung der Verarbeitung ihrer personenbezogenen Daten zu verlangen. Dies hilft insbesondere dabei, dass ich Sie künftig nicht mehr kontaktiere.</li>
+<li>die Berichtigung, Ergänzung, oder Löschung Ihrer personenbezogenen Daten, die falsch sind oder nicht rechtskonform verarbeitet werden, zu verlangen. Die Lösung Ihrer Daten kann erst dann erfolgen, wenn die gesetzlichen steuerrechtlichen Aufbewahrungsfristen abgelaufen sind. Bei einer Löschung Ihrer Daten kann zudem nicht verhindert werden, dass ich Sie künftig wieder kontaktiere.</li>
+<li>Sie haben zudem das Recht der Verarbeitung zu Zwecken der Direktwerbung jederzeit zu widersprechen. Sofern Verarbeitung auf Ihrer Einwilligung erfolgt, können Sie diese jederzeit widerrufen.</li>
+<li>Zudem können Sie verlangen, für die Zwecke der Datenübertragbarkeit die mir von Ihnen zur Verfügung gestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format erhalten.</li>
+<li>Sie haben zudem das Recht bei der zuständigen Aufsichtsbehörde Beschwerde zu erheben, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten rechtswidrig erfolgt.</li>
+</ol>]]></source>
+                </trans-unit>
+                <trans-unit id="rights.text.formal[1]" xml:space="preserve">
+                    <source><![CDATA[<p>Nach dem geltenden Recht sind Sie unter anderem berechtigt:</p>
+<ol>
+<li>zu überprüfen, ob und welche personenbezogenen Daten wir über Sie gespeichert haben und Kopien dieser Daten zu erhalten</li>
+<li>die Einschränkung der Verarbeitung ihrer personenbezogenen Daten zu verlangen. Dies hilft insbesondere dabei, dass wir Sie künftig nicht mehr kontaktieren.</li>
+<li>die Berichtigung, Ergänzung, oder Löschung Ihrer personenbezogenen Daten, die falsch sind oder nicht rechtskonform verarbeitet werden, zu verlangen. Die Lösung Ihrer Daten kann erst dann erfolgen, wenn die gesetzlichen steuerrechtlichen Aufbewahrungsfristen abgelaufen sind. Bei einer Löschung Ihrer Daten kann zudem nicht verhindert werden, dass wir Sie künftig wieder kontaktieren.</li>
+<li>Sie haben zudem das Recht der Verarbeitung zu Zwecken der Direktwerbung jederzeit zu widersprechen. Sofern Verarbeitung auf Ihrer Einwilligung erfolgt, können Sie diese jederzeit widerrufen.</li>
+<li>Zudem können Sie für die Zwecke der Datenübertragbarkeit die uns von Ihnen zur Verfügung gestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten bzw. sofern technisch möglich, die Übertragung auf einen anderen Verantwortlichen verlangen.</li>
+<li>Sie haben zudem das Recht bei der zuständigen Aufsichtsbehörde Beschwerde zu erheben, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten rechtswidrig erfolgt.</li>
+</ol>]]></source>
+                </trans-unit>
+            </group>
+            <group id="rights.text.informal" restype="x-gettext-plurals">
+                <trans-unit id="rights.text.informal[0]" xml:space="preserve">
+                    <source><![CDATA[<p>Nach dem geltenden Recht bist du unter anderem berechtigt:</p>
+<ol>
+<li>zu überprüfen, ob und welche personenbezogenen Daten ich über dich gespeichert habe und Kopien dieser Daten zu erhalten</li>
+<li>die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen. Dies hilft insbesondere dabei, dass ich dich künftig nicht mehr kontaktiere.</li>
+<li>die Berichtigung, Ergänzung, oder Löschung deiner personenbezogenen Daten, die falsch sind oder nicht rechtskonform verarbeitet werden, zu verlangen. Die Lösung deiner Daten kann erst dann erfolgen, wenn die gesetzlichen steuerrechtlichen Aufbewahrungsfristen abgelaufen sind. Bei einer Löschung deiner Daten kann zudem nicht verhindert werden, dass ich dich künftig wieder kontaktiere.</li>
+<li>du haben zudem das Recht der Verarbeitung zu Zwecken der Direktwerbung jederzeit zu widersprechen. Sofern Verarbeitung auf deiner Einwilligung erfolgt, kannst du diese jederzeit widerrufen.</li>
+<li>Zudem kannst du verlangen, für die Zwecke der Datenübertragbarkeit die mir von dir zur Verfügung gestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format erhalten.</li>
+<li>Du hast zudem das Recht bei der zuständigen Aufsichtsbehörde Beschwerde zu erheben, wenn du der Ansicht bist, dass die Verarbeitung deiner Daten rechtswidrig erfolgt.</li>
+</ol>]]></source>
+                </trans-unit>
+                <trans-unit id="rights.text.informal[1]" xml:space="preserve">
+                    <source><![CDATA[<p>Nach dem geltenden Recht bist du unter anderem berechtigt:</p>
+<ol>
+<li>zu überprüfen, ob und welche personenbezogenen Daten wir über dich gespeichert haben und Kopien dieser Daten zu erhalten</li>
+<li>die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen. Dies hilft insbesondere dabei, dass wir dich künftig nicht mehr kontaktieren.</li>
+<li>die Berichtigung, Ergänzung, oder Löschung deiner personenbezogenen Daten, die falsch sind oder nicht rechtskonform verarbeitet werden, zu verlangen. Die Lösung deiner Daten kann erst dann erfolgen, wenn die gesetzlichen steuerrechtlichen Aufbewahrungsfristen abgelaufen sind. Bei einer Löschung deiner Daten kann zudem nicht verhindert werden, dass wir dich künftig wieder kontaktieren.</li>
+<li>Du hast zudem das Recht der Verarbeitung zu Zwecken der Direktwerbung jederzeit zu widersprechen. Sofern Verarbeitung auf deiner Einwilligung erfolgt, kannst du diese jederzeit widerrufen.</li>
+<li>Zudem kannst du für die Zwecke der Datenübertragbarkeit die uns von dir zur Verfügung gestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten bzw. sofern technisch möglich, die Übertragung auf einen anderen Verantwortlichen verlangen.</li>
+<li>Du hast zudem das Recht bei der zuständigen Aufsichtsbehörde Beschwerde zu erheben, wenn du der Ansicht bist, dass die Verarbeitung deiner Daten rechtswidrig erfolgt.</li>
+</ol>]]></source>
+                </trans-unit>
+            </group>
+
+            <trans-unit id="questions.headline" xml:space="preserve">
+                <source>Fragen und Kommentare</source>
+            </trans-unit>
+            <trans-unit id="questions.text.formal" xml:space="preserve">
+                <source><![CDATA[Bei Fragen oder für Anregungen und Kommentare zum Thema Datenschutz wenden Sie sich bitte per E-Mail an den <a href="mailto:{webmasterEmail}">Webmaster</a>. Kontaktinformationen zu Medieninhaber & Herausgeber finden Sie im <a href="{imprintUrl}">Impressum</a>]]></source>
+            </trans-unit>
+            <trans-unit id="questions.text.informal" xml:space="preserve">
+                <source><![CDATA[Bei Fragen oder für Anregungen und Kommentare zum Thema Datenschutz wende dich bitte per E-Mail an den <a href="mailto:{webmasterEmail}">Webmaster</a>. Kontaktinformationen zu Medieninhaber & Herausgeber findest du im <a href="{imprintUrl}">Impressum</a>]]></source>
+            </trans-unit>
+            <trans-unit id="responsible.headline" xml:space="preserve">
+                <source>Verantwortlicher, Vertreter, Datenschutzbeauftragter</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme"  source-language="en" datatype="plaintext">
+        <body>
+            <group id="contentcollection.label" restype="x-gettext-plurals">
+                <trans-unit id="contentcollection.label[0]" xml:space="preserve">
+                    <source>{0} content element</source>
+                </trans-unit>
+                <trans-unit id="contentcollection.label[1]" xml:space="preserve">
+                    <source>{0} content elements</source>
+                </trans-unit>
+            </group>
+            <group id="numberOfArticles" restype="x-gettext-plurals">
+                <trans-unit id="numberOfArticles[0]" xml:space="preserve">
+                    <source>{0} article</source>
+                </trans-unit>
+                <trans-unit id="numberOfArticles[1]" xml:space="preserve">
+                    <source>{0} articles</source>
+                </trans-unit>
+            </group>
+            <trans-unit id="pleaseSetLink" xml:space="preserve">
+                <source>Please set a link in the inspector</source>
+            </trans-unit>
+            <trans-unit id="pleaseSetTitle" xml:space="preserve">
+                <source>Please set a title in the inspector</source>
+            </trans-unit>
+            <trans-unit id="pleaseSetName" xml:space="preserve">
+                <source>Please set a name in the inspector</source>
+            </trans-unit>
+            <trans-unit id="pageNotShowInFrontend" xml:space="preserve">
+                <source>This page is not displayed in the frontend.</source>
+            </trans-unit>
+            <trans-unit id="addContentElements" xml:space="preserve">
+                <source>Please insert content elements</source>
+            </trans-unit>
+            <trans-unit id="noDocumentsSelected" xml:space="preserve">
+                <source>No documents have been selected in the inspector.</source>
+            </trans-unit>
+            <trans-unit id="pleaseSetValues" xml:space="preserve">
+                <source>Please set values in the inspector for the display</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

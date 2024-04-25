@@ -1,0 +1,12 @@
+'Litespeed.Theme:Mixin.TextWithContent.Position':
+  abstract: true
+  properties:
+    textLeft:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 520

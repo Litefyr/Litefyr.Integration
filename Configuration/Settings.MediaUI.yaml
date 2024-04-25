@@ -1,0 +1,15 @@
+Neos:
+  Neos:
+    modules:
+      management:
+        submodules:
+          media:
+            # Disable the default media module and use the new media ui
+            enabled: false
+          mediaui:
+            # Moves the new module to top
+            position: start
+    Ui:
+      frontendConfiguration:
+        Flowpack.Media.Ui:
+          queryAssetUsage: true

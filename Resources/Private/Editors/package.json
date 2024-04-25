@@ -1,0 +1,15 @@
+{
+  "description": "Litespeed.Theme:Editors",
+  "license": "proprietary",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs --production",
+    "watch": "node build.mjs --watch",
+    "dev": "node build.mjs"
+  },
+  "devDependencies": {
+    "@ckeditor/ckeditor5-basic-styles": "^10.1.0",
+    "@neos-project/neos-ui-extensibility": "~8.3.7",
+    "esbuild": "^0.20.2"
+  }
+}

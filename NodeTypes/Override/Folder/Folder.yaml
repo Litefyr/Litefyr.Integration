@@ -1,0 +1,8 @@
+'Breadlesscode.NodeTypes.Folder:Document.Folder':
+  ui:
+    position: end
+    group: special
+
+'Breadlesscode.NodeTypes.Folder:Mixin.HideUriSegment':
+  superTypes:
+    'Litespeed.Theme:Mixin.HideSeo': true

@@ -1,0 +1,18 @@
+privilegeTargets:
+  'Neos\ContentRepository\Security\Authorization\Privilege\Node\EditNodePropertyPrivilege':
+    'Litespeed.Theme:PlausibleCustomEventProperties':
+      label: Edit the plausible event properties
+      matcher: 'nodePropertyIsIn(["plausibleCustomEventName", "plausibleCustomEventJSON"])'
+
+roles:
+  'Neos.Neos:Administrator':
+    privileges:
+      - privilegeTarget: 'Litespeed.Theme:PlausibleCustomEventProperties'
+        permission: GRANT
+
+  'Litespeed.Theme:PlausibleCustomEventsEditor':
+    label: Plausible Custom Events Properties
+    description: Grants access to the properties to add custom events with plausible
+    privileges:
+      - privilegeTarget: 'Litespeed.Theme:PlausibleCustomEventProperties'
+        permission: GRANT

@@ -1,0 +1,15 @@
+prototype(Litespeed.Theme:Document.NotFound) < prototype(Litespeed.Theme:Document.ContentPage) {
+    notfoundDocument = ${notfoundDocument || q(site).children('notfound').get(0)}
+    @context {
+        site = ${site}
+        node = ${this.notfoundDocument}
+        documentNode = ${this.notfoundDocument}
+    }
+    prototype(Neos.Neos:Page) {
+        plausibleTrackingCode.customEvents = 'plausible("404",{ props: { path: document.location.pathname } });'
+        httpResponseHead {
+            statusCode = 404
+            headers.X-Slipstream = 'disabled'
+        }
+    }
+}

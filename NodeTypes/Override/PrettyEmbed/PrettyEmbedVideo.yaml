@@ -1,0 +1,15 @@
+'Jonnitto.PrettyEmbedVideo:Content.Video':
+  superTypes:
+    'Litespeed.Theme:Mixin.Breakout': true
+    'Litespeed.Theme:Mixin.TextWithContent': true
+    'Litespeed.Theme:Mixin.TextWithContent.Position': true
+    'Litespeed.Theme:Mixin.TextWithContent.LeftColSize': true
+    'Litespeed.Theme:Mixin.TextWithContent.Label': true
+  ui:
+    position: 310
+    inspector:
+      groups:
+        look:
+          position: 110
+        links:
+          position: 120

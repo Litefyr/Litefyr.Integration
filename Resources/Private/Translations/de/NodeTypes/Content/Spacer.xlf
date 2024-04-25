@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Spacer</source>
+                <target>Abstand</target>
+            </trans-unit>
+            <trans-unit id="groups.look" xml:space="preserve">
+                <source><![CDATA[Look & Feel]]></source>
+                <target><![CDATA[Look & Feel]]></target>
+            </trans-unit>
+            <trans-unit id="properties.height" xml:space="preserve">
+                <source>Distance</source>
+                <target>Abstand</target>
+            </trans-unit>
+            <trans-unit id="properties.hr" xml:space="preserve">
+                <source>Display line</source>
+                <target>Linie darstellen</target>
+            </trans-unit>
+            <trans-unit id="properties.theme" xml:space="preserve">
+                <source>Color</source>
+                <target>Farbe</target>
+            </trans-unit>
+            <trans-unit id="properties.useResponsiveScale" xml:space="preserve">
+                <source>Use responsive scale</source>
+                <target>Responsive Skala verwenden</target>
+            </trans-unit>
+            <trans-unit id="properties.scale" xml:space="preserve">
+                <source>Responsive scale</source>
+                <target>Responsive Skala</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.scroll" xml:space="preserve">
+                <source>Scroll indicator</source>
+                <target>Scroll Indikator</target>
+            </trans-unit>
+            <trans-unit id="properties.scrollIndicatorEnabled" xml:space="preserve">
+                <source>Activate</source>
+                <target>Aktivieren</target>
+            </trans-unit>
+            <trans-unit id="properties.scrollIndicatorBottom" xml:space="preserve">
+                <source>Distance to the lower edge</source>
+                <target>Abstand zum unteren Rand</target>
+            </trans-unit>
+            <trans-unit id="properties.scrollIndicatorHideAfter" xml:space="preserve">
+                <source>Hide after scroll distance</source>
+                <target>Ausblenden nach Scrolldistanz</target>
+            </trans-unit>
+            <trans-unit id="properties.scrollIndicatorScrollAmount" xml:space="preserve">
+                <source>Scroll distance</source>
+                <target>Scrolldistanz</target>
+            </trans-unit>
+            <trans-unit id="properties.scrollIndicatorEnabled" xml:space="preserve">
+                <source>Aktivieren</source>
+                <target>Aktivieren</target>
+            </trans-unit>
+            <trans-unit id="properties.screenHeight.minLabel" xml:space="preserve">
+                <source>Do not specify</source>
+                <target>Nicht festlegen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

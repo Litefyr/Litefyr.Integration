@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.links" xml:space="preserve">
+                <source>Links</source>
+                <target>Links</target>
+            </trans-unit>
+            <trans-unit id="properties.links.label" xml:space="preserve">
+                <source>Link</source>
+                <target>Link</target>
+            </trans-unit>
+            <trans-unit id="properties.links.text" xml:space="preserve">
+                <source>Labeling</source>
+                <target>Beschriftung</target>
+            </trans-unit>
+            <trans-unit id="properties.links.text.placeholder" xml:space="preserve">
+                <source>Learn more</source>
+                <target>mehr erfahren</target>
+            </trans-unit>
+            <trans-unit id="properties.links.break" xml:space="preserve">
+                <source>Break after link</source>
+                <target>Umbruch nach Link</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

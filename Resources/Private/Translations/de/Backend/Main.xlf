@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme"  source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="insertLogo" xml:space="preserve">
+                <source>Insert logo</source>
+                <target>Logo einfügen</target>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.teaserView" xml:space="preserve">
+                <source>Teaser view</source>
+                <target>Teaser Ansicht</target>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.tabletLandscape" xml:space="preserve">
+                <source>Tablet (landscape)</source>
+                <target>Tablet (Querformat)</target>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.tabletLandscape" xml:space="preserve">
+                <source>Tablet (landscape)</source>
+                <target>Tablet (Querformat)</target>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.tabletPortrait" xml:space="preserve">
+                <source>Tablet (portrait)</source>
+                <target>Tablet (Hochformat)</target>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.mobile" xml:space="preserve">
+                <source>Mobile</source>
+                <target>Mobil</target>
+            </trans-unit>
+            <trans-unit id="editPreviewModes.mobile" xml:space="preserve">
+                <source>Mobile</source>
+                <target>Mobil</target>
+            </trans-unit>
+            <trans-unit id="nodeTypes.teaser" xml:space="preserve">
+                <source>Teaser</source>
+                <target>Teaser</target>
+            </trans-unit>
+            <trans-unit id="nodeTypes.gallery" xml:space="preserve">
+                <source>Gallery</source>
+                <target>Galerie</target>
+            </trans-unit>
+            <trans-unit id="nodeTypes.form" xml:space="preserve">
+                <source>Forms</source>
+                <target>Formulare</target>
+            </trans-unit>
+            <trans-unit id="nodeTypes.special" xml:space="preserve">
+                <source>Special content</source>
+                <target>Spezieller Inhalt</target>
+            </trans-unit>
+            <trans-unit id="nodeTypes.system" xml:space="preserve">
+                <source>System elements</source>
+                <target>Systemelemente</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

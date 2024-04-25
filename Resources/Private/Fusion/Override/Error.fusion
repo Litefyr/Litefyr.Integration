@@ -1,0 +1,12 @@
+##
+# Error matcher to render the 'notfound' child-document of the homepage
+# for exceptions with 4xx status code
+#
+
+error = Neos.Fusion:Case {
+    4xx {
+        @position = 'start'
+        condition = ${statusCode >= 400 && statusCode < 500}
+        renderer = Litespeed.Theme:Document.NotFound
+    }
+}

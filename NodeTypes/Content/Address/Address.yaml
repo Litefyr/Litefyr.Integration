@@ -1,0 +1,127 @@
+'Litespeed.Theme:Content.Address':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Litespeed.Theme:Mixin.TextWithContent': true
+    'Litespeed.Theme:Mixin.TextWithContent.Position': true
+    'Litespeed.Theme:Mixin.TextWithContent.LeftColSize': true
+    'Litespeed.Theme:Mixin.TextWithContent.Label': true
+    'Litespeed.Theme:Mixin.ScreenHeight': true
+  search:
+    fulltext:
+      enable: true
+  ui:
+    label: i18n
+    icon: address-card
+    inlineEditable: true
+    position: 1500
+    inspector:
+      groups:
+        settings:
+          label: i18n
+          icon: address-card
+          position: 10
+        additionalContent:
+          label: i18n
+          icon: file-text-o
+          position: 20
+        look:
+          position: 40
+  properties:
+    enableText: {}
+    breakout: {}
+    screenHeight:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+    textLeft:
+      defaultValue: true
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+    leftColSize:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+    theme:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/)) : true'
+          editorOptions:
+            values:
+              light: []
+    links:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+    textBesideAddress:
+      options:
+        preset: 'text.autoparagraph'
+    name:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: settings
+          position: 10
+    phone:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: settings
+          position: 20
+    mobile:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: settings
+          position: 30
+    email:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: settings
+          position: 40
+    address:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: settings
+          position: 50
+    country:
+      type: boolean
+      ui:
+        label: Land
+        reloadPageIfChanged: true
+        inspector:
+          group: settings
+          position: 60
+    social:
+      type: boolean
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: settings
+          position: 70
+    legal:
+      type: boolean
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: settings
+          position: 80

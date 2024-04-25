@@ -1,0 +1,14 @@
+##
+# Hide document in menu
+#
+##
+
+'Litespeed.Theme:Mixin.NotInMenu':
+  abstract: true
+  properties:
+    _hiddenInIndex:
+      defaultValue: true
+      ui:
+        inspector:
+          editorOptions:
+            disabled: true

@@ -1,0 +1,57 @@
+'Litespeed.Theme:Content.Text':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Carbon.FirstElement:Mixin': true
+    'Litespeed.Theme:Mixin.Links.Appearance': true
+    'Litespeed.Theme:Mixin.ThemeSelector': true
+  search:
+    fulltext:
+      enable: true
+  ui:
+    label: i18n
+    icon: file-alt
+    position: 20
+    inspector:
+      groups:
+        look:
+          label: i18n
+          icon: paint-brush
+          position: 10
+  properties:
+    theme:
+      ui:
+        inspector:
+          group: look
+          editorOptions:
+            allowEmpty: true
+    headline:
+      options:
+        preset: 'text.headline'
+    label:
+      options:
+        preset: 'text.label'
+    lead:
+      options:
+        preset: 'text.lead'
+    text:
+      options:
+        preset: 'text.autoparagraph'
+    position:
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          # This hides the field if the parent node is a content node
+          hidden: 'ClientEval: !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/))'
+          editorOptions:
+            allowEmpty: true
+            placeholder: i18n
+            values:
+              left:
+                label: i18n
+                icon: 'arrow-left'
+              right:
+                label: i18n
+                icon: 'arrow-right'

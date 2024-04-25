@@ -1,0 +1,96 @@
+prototype(Litespeed.Theme:Content.Image) < prototype(Neos.Neos:ContentComponent) {
+    image = ${q(node).property('image')}
+    alternativeText = ${q(node).property('alternativeText')}
+    lightbox = ${q(node).property('lightbox')}
+    lightboxCaption = ${q(node).property('caption')}
+    link = ${q(node).property('link')}
+    breakout = ${q(node).property('breakout')}
+    enableSpacing = true
+
+    class = ${null}
+
+    // For text / image combi
+    enableText = ${q(node).property('enableText')}
+    theme = ${q(node).property('theme')}
+    leftColSize = ${q(node).property('leftColSize')}
+    textLeft = ${q(node).property('textLeft')}
+    links = Litespeed.Theme:Component.Links
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    label = Neos.Neos:Editable {
+        property = 'label'
+        block = false
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+    textBoxText = Neos.Neos:Editable {
+        property = 'textBoxText'
+        block = false
+    }
+
+    rounded = true
+    inBackend = ${node.context.inBackend}
+    screenHeight = ${q(node).property('screenHeight')}
+
+    textBoxDirection = ${q(node).property('textBoxDirection')}
+    textBoxMaxWidth = ${q(node).property('textBoxMaxWidth')}
+    textBoxBreakpoint = ${q(node).property('textBoxBreakpoint')}
+
+    @private {
+        textWithContentImage = afx`
+            <Litespeed.Presentation:Atom.Image
+                {...props}
+                screenHeightBreakpoint="md"
+                objectFit="cover"
+                breakout={null}
+                rounded={false}
+            />
+        `
+    }
+
+    renderer = Neos.Fusion:Case {
+        textBox {
+            condition = ${!props.enableText && props.textBoxDirection && props.textBoxText}
+            renderer = afx`
+                <Litespeed.Presentation:Block.ImageWithTextOverlay
+                    {...props}
+                    boxDirection={props.textBoxDirection}
+                    boxMaxWidth={props.textBoxMaxWidth}
+                    boxBreakpoint={props.textBoxBreakpoint}
+                    text={props.textBoxText}
+                />
+            `
+        }
+        enableText {
+            condition = ${props.enableText}
+            renderer = afx`
+                <Litespeed.Presentation:Module.TextWithContent
+                    {...props}
+                    breakpoint="md"
+                    screenHeight={null}
+                    singleContent={private.textWithContentImage}
+                    stretchContent={true}
+                />
+            `
+        }
+        default {
+            condition = true
+            renderer = afx`
+                <Litespeed.Presentation:Spacing
+                    augmenter
+                    width={props.enableSpacing ? props.breakout : false}
+                    padding="auto"
+                    tailwind="mediacontent"
+                >
+                    <Litespeed.Presentation:Atom.Image objectFit={props.screenHeight ? "cover" : null} {...props} />
+                </Litespeed.Presentation:Spacing>
+            `
+        }
+    }
+}

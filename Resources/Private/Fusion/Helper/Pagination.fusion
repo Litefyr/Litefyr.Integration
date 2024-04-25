@@ -1,0 +1,103 @@
+prototype(Litespeed.Theme:Helper.Pagination) < prototype(Neos.Fusion:Component) {
+    totalCount = 0
+    maximumNumberOfLinks = 7
+    itemsPerPage = 15
+    showPreviousNextLinks = true
+
+    currentPage = ${request.arguments.currentPage || 1}
+
+    @if.paginationNeeded = ${(this.totalCount / this.itemsPerPage) > 1}
+
+    @private.map = Neos.Fusion:Map {
+        items = Flowpack.Listable:PaginationArray {
+            currentPage = ${props.currentPage}
+            maximumNumberOfLinks = ${props.maximumNumberOfLinks}
+            totalCount = ${props.totalCount}
+            itemsPerPage = ${props.itemsPerPage}
+            showPreviousNextLinks = ${props.showPreviousNextLinks}
+        }
+        itemName = 'i'
+        keyRenderer = ${i}
+        itemRenderer = Neos.Fusion:Case {
+            seperator {
+                condition = ${i == '...'}
+                renderer = Litespeed.Presentation:Block.Pager.Fragment.Item {
+                    type = 'separator'
+                }
+            }
+            currentPage {
+                condition = ${String.toInteger(i) == String.toInteger(props.currentPage)}
+                renderer = Litespeed.Presentation:Block.Pager.Fragment.Item {
+                    uri = Neos.Neos:NodeUri {
+                        node = ${documentNode}
+                        additionalParams = Flowpack.Listable:PaginationParameters {
+                            currentPage = ${i}
+                        }
+                    }
+                    label = ${String.toInteger(i)}
+                }
+            }
+            previous {
+                condition = ${i == 'previous'  && (props.showPreviousNextLinks == true)}
+                renderer = Litespeed.Presentation:Block.Pager.Fragment.PrevNext {
+                    type = 'prev'
+                    label = ${Translation.translate(i, i, [], 'Main', 'Flowpack.Listable')}
+                    uri = Neos.Neos:NodeUri {
+                        node = ${documentNode}
+                        additionalParams = Flowpack.Listable:PaginationParameters {
+                            currentPage = ${String.toInteger(props.currentPage) - 1}
+                        }
+                    }
+                }
+            }
+            next {
+                condition = ${i == 'next'  && (props.showPreviousNextLinks == true)}
+                renderer = Litespeed.Presentation:Block.Pager.Fragment.PrevNext {
+                    type = 'next'
+                    label = ${Translation.translate(i, i, [], 'Main', 'Flowpack.Listable')}
+                    uri = Neos.Neos:NodeUri {
+                        node = ${documentNode}
+                        additionalParams = Flowpack.Listable:PaginationParameters {
+                            currentPage = ${String.toInteger(props.currentPage) + 1}
+                        }
+                    }
+                }
+            }
+            link {
+                condition = ${(iterator.isFirst == false && iterator.isLast == false) || (props.showPreviousNextLinks == false)}
+                renderer = Litespeed.Presentation:Block.Pager.Fragment.Item {
+                    type = 'link'
+                    label = ${String.toInteger(i)}
+                    uri = Neos.Neos:NodeUri {
+                        node = ${documentNode}
+                        additionalParams = Flowpack.Listable:PaginationParameters {
+                            currentPage = ${String.toInteger(i)}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    renderer = afx`
+        <Litespeed.Presentation:Spacing tagName="nav" full padding tailwind="border-t border-theme-front/10 text-sm font-bold mt-16 pb-clippath">
+            <Litespeed.Presentation:Spacing wide class="flex items-center justify-between">
+                <div class="-mt-px w-0 flex-1 flex">
+                    <Neos.Fusion:Loop items={private.map} @if={props.showPreviousNextLinks}>
+                        {itemKey == 'previous' ? item : null}
+                    </Neos.Fusion:Loop>
+                </div>
+                <div class={props.showPreviousNextLinks ? "hidden md:-mt-px md:flex" : "-mt-px flex"}>
+                    <Neos.Fusion:Loop items={private.map}>
+                        {itemKey != 'next' && itemKey != 'previous' ? item : null}
+                    </Neos.Fusion:Loop>
+                </div>
+                <div class="-mt-px w-0 flex-1 flex justify-end">
+                    <Neos.Fusion:Loop items={private.map} @if={props.showPreviousNextLinks}>
+                        {itemKey == 'next' ? item : null}
+                    </Neos.Fusion:Loop>
+                </div>
+            </Litespeed.Presentation:Spacing>
+        </Litespeed.Presentation:Spacing>
+    `
+}

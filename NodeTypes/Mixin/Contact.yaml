@@ -1,0 +1,262 @@
+'Litespeed.Theme:Mixin.Contact':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        contact:
+          label: i18n
+          icon: paper-plane
+          position: 10
+        address:
+          label: i18n
+          icon: map
+          position: 20
+        social:
+          label: i18n
+          icon: hashtag
+          position: 30
+        share:
+          label: i18n
+          icon: share-square
+          position: 40
+  properties:
+    mobile:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          position: 100
+          group: contact
+    phone:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          position: 110
+          group: contact
+    email:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          position: 120
+          group: contact
+      validation:
+        'Neos.Neos/Validation/EmailAddressValidator': {}
+        'Neos.Neos/Validation/RegularExpressionValidator':
+          regularExpression: '/^[^A-Z]+$/'
+    socialNetworks:
+      type: repeatable
+      defaultValue: []
+      ui:
+        label: ''
+        reloadIfChanged: true
+        inspector:
+          group: social
+          editorOptions:
+            buttonAddLabel: '＋'
+            properties:
+              network:
+                type: string
+                label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialNetworks.network'
+                validation:
+                  'Neos.Neos/Validation/NotEmptyValidator': {}
+                editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+                editorOptions:
+                  allowEmpty: false
+                  values:
+                    facebook:
+                      label: Facebook
+                      icon: facebook
+                      group: Network
+                    instagram:
+                      label: Instagram
+                      icon: instagram
+                      group: Network
+                    linkedin:
+                      label: LinkedIn
+                      icon: linkedin
+                      group: Network
+                    mastodon:
+                      label: Mastodon
+                      icon: mastodon
+                      group: Network
+                    pinterest:
+                      label: Pinterest
+                      icon: pinterest
+                      group: Network
+                    tiktok:
+                      label: TikTok
+                      icon: tiktok
+                      group: Network
+                    x:
+                      label: X (Twitter)
+                      icon: twitter
+                      group: Network
+                    xing:
+                      label: Xing
+                      icon: xing
+                      group: Network
+
+                    twitch:
+                      label: Twitch
+                      icon: twitch
+                      group: Video & Streaming
+                    vimeo:
+                      label: Vimeo
+                      icon: vimeo
+                      group: Video & Streaming
+                    youtube:
+                      label: YouTube
+                      icon: youtube
+                      group: Video & Streaming
+
+                    appleMusic:
+                      label: Apple Music
+                      icon: itunes
+                      group: Music
+                    soundcloud:
+                      label: Soundcloud
+                      icon: soundcloud
+                      group: Music
+                    spotify:
+                      label: Spotify
+                      icon: spotify
+                      group: Music
+
+                    github:
+                      label: Github
+                      icon: github
+                      group: Development
+
+                    discord:
+                      label: Discord
+                      icon: discord
+                      group: Messenger
+                    element:
+                      label: Element
+                      icon: element
+                      group: Messenger
+                    mattermost:
+                      label: Mattermost
+                      icon: mattermost
+                      group: Messenger
+                    matrix:
+                      label: Matrix
+                      icon: matrix
+                      group: Messenger
+                    snapchat:
+                      label: Snapchat
+                      icon: snapchat
+                      group: Messenger
+                    slack:
+                      label: Slack
+                      icon: slack
+                      group: Messenger
+                    telegram:
+                      label: Telegram
+                      icon: telegram
+                      group: Messenger
+                    whatsapp:
+                      label: WhatsApp
+                      icon: whatsapp
+                      group: Messenger
+              url:
+                type: string
+                label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialNetworks.url'
+                validation:
+                  'Neos.Neos/Validation/NotEmptyValidator': {}
+    socialShare:
+      type: repeatable
+      defaultValue:
+        - action: native
+        - action: facebook
+        - action: mastodon
+        - action: x
+        - action: linkedin
+        - action: xing
+        - action: email
+        - action: copy
+      ui:
+        label: ''
+        help:
+          message: i18n
+        reloadIfChanged: true
+        inspector:
+          group: share
+          editorOptions:
+            buttonAddLabel: '＋'
+            properties:
+              action:
+                type: string
+                label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.network'
+                validation:
+                  'Neos.Neos/Validation/NotEmptyValidator': {}
+                editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+                editorOptions:
+                  allowEmpty: false
+                  values:
+                    native:
+                      label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.native'
+                      icon: share
+                      group: Systemaktion
+                    email:
+                      label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.email'
+                      icon: envelope
+                      group: Systemaktion
+                    copy:
+                      label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.copy'
+                      icon: copy
+                      group: Systemaktion
+                    print:
+                      label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.print'
+                      icon: print
+                      group: Systemaktion
+                    facebook:
+                      label: Facebook
+                      icon: facebook
+                      group: Link zu Platform
+                    linkedin:
+                      label: LinkedIn
+                      icon: linkedin
+                      group: Link zu Platform
+                    mastodon:
+                      label: Mastodon
+                      icon: mastodon
+                      group: Link zu Platform
+                    pinterest:
+                      label: Pinterest
+                      icon: pinterest
+                      group: Link zu Platform
+                    x:
+                      label: X (Twitter)
+                      icon: twitter
+                      group: Link zu Platform
+                    xing:
+                      label: Xing
+                      icon: xing
+                      group: Link zu Platform
+
+'Litespeed.Theme:Mixin.Contact.Tab':
+  abstract: true
+  superTypes:
+    'Litespeed.Theme:Mixin.Contact': true
+  ui:
+    inspector:
+      tabs:
+        contact:
+          label: i18n
+          icon: paper-plane
+          position: 10
+      groups:
+        contact:
+          tab: contact
+        address:
+          tab: contact
+        social:
+          tab: contact
+        share:
+          tab: contact

@@ -1,0 +1,132 @@
+'Litespeed.Theme:Document.DataPrivacy':
+  abstract: true
+  superTypes:
+    'Litespeed.Theme:Document.AbstractPage': true
+    'Litespeed.Theme:Constraint.Document.NoSubDocument': true
+    'Litespeed.Theme:Constraint.Document.Restricted': true
+    'Litespeed.Theme:Mixin.NotInMenu': true
+  ui:
+    label: Datenschutz
+    icon: gavel
+    group: ~
+    inspector:
+      groups:
+        settings:
+          label: i18n
+          icon: gavel
+  childNodes:
+    before:
+      type: 'Neos.Neos:ContentCollection'
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      position: 'after before'
+  properties:
+    title:
+      defaultValue: 'Datenschutzerklärung'
+    uriPathSegment:
+      defaultValue: 'datenschutzerklaerung'
+    useDefaultDataPrivacy:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        help:
+          message: i18n
+        inspector:
+          group: settings
+          position: 10
+    hasPlausible:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 20
+          hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
+    hasNewsletter:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 30
+          hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
+    hasForms:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 40
+          hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
+    hasMembers:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 50
+          hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
+    responsibleAddress:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 60
+          hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
+    name:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 70
+          hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
+          editor: Neos.Neos/Inspector/Editors/TextAreaEditor
+          editorOptions:
+            placeholder: i18n
+    webmasterEmail:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 80
+          hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
+      validation:
+        'Neos.Neos/Validation/EmailAddressValidator': {}
+        'Neos.Neos/Validation/RegularExpressionValidator':
+          regularExpression: '/^[^A-Z]+$/'
+    responsibleEmail:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 90
+          hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
+          editorOptions:
+            placeholder: 'Litespeed.Theme:NodeTypes.Document.DataPrivacy:properties.responsibleEmail.placeholder'
+      validation:
+        'Neos.Neos/Validation/EmailAddressValidator': {}
+        'Neos.Neos/Validation/RegularExpressionValidator':
+          regularExpression: '/^[^A-Z]+$/'
+    responsibleHeadline:
+      options:
+        preset: 'text.pure'
+    responsibleText:
+      options:
+        preset: 'text.pure'
+    text:
+      options:
+        preset: 'text.autoparagraph'

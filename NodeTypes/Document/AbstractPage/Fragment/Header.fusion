@@ -1,0 +1,30 @@
+header = Litespeed.Presentation:Section.Header {
+    homeUri = Neos.Neos:NodeUri {
+        node = ${site}
+    }
+
+    logo = Litespeed.Theme:Component.Logo
+
+    items = Neos.Neos:MenuItems {
+        maximumLevels = 2
+        filter = 'Neos.Neos:Document,!Litespeed.Theme:Mixin.NotInMenu,!Litespeed.Theme:Mixin.NotInMainMenu'
+    }
+
+    renderer.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
+    @cache {
+        mode = 'cached'
+        maximumLifetime = ${q(site).context({'invisibleContentShown': true}).find('[instanceof Neos.Neos:Document]').cacheLifetime()}
+        entryIdentifier {
+            static = 'header'
+            site = ${site}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+            2 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', site)}
+        }
+    }
+}

@@ -1,0 +1,7 @@
+##
+# Hide document in main menu (But show in teaser)
+#
+##
+
+'Litespeed.Theme:Mixin.NotInMainMenu':
+  abstract: true

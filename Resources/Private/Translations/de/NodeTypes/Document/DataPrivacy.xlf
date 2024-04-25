@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Data privacy</source>
+                <target>Datenschutz</target>
+            </trans-unit>
+            <trans-unit id="groups.settings" xml:space="preserve">
+                <source>Standard data protection</source>
+                <target>Standard Datenschutz</target>
+            </trans-unit>
+            <trans-unit id="properties.useDefaultDataPrivacy" xml:space="preserve">
+                <source>Use standard data protection</source>
+                <target>Standard Datenschutz verwenden</target>
+            </trans-unit>
+            <trans-unit id="properties.useDefaultDataPrivacy.ui.help.message" xml:space="preserve">
+                <source>No liability is assumed for the accuracy of the content. Please check the content for accuracy and completeness.</source>
+                <target>Es wird keine Haftung für die Richtigkeit der Inhalte übernommen. Bitte prüfen Sie die Inhalte auf Richtigkeit und Vollständigkeit.</target>
+            </trans-unit>
+            <trans-unit id="properties.hasPlausible" xml:space="preserve">
+                <source>Plausible</source>
+                <target>Plausible</target>
+            </trans-unit>
+            <trans-unit id="properties.hasNewsletter" xml:space="preserve">
+                <source>Newsletter mailing</source>
+                <target>Newsletterversand</target>
+            </trans-unit>
+            <trans-unit id="properties.hasForms" xml:space="preserve">
+                <source>Forms</source>
+                <target>Formulare</target>
+            </trans-unit>
+            <trans-unit id="properties.hasMembers" xml:space="preserve">
+                <source>Member administration</source>
+                <target>Mitgliederverwaltung</target>
+            </trans-unit>
+            <trans-unit id="properties.responsibleAddress" xml:space="preserve">
+                <source>Display address for person responsible</source>
+                <target>Adresse bei Verantwortlicher anzeigen</target>
+            </trans-unit>
+            <trans-unit id="properties.name" xml:space="preserve">
+                <source>Name of the person responsible</source>
+                <target>Name des Verantwortlichen</target>
+            </trans-unit>
+            <trans-unit id="properties.name.textAreaEditor.placeholder" xml:space="preserve">
+                <source>Take value from start page</source>
+                <target>Wert von Startseite übernehmen</target>
+            </trans-unit>
+            <trans-unit id="properties.webmasterEmail" xml:space="preserve">
+                <source>Webmaster email</source>
+                <target>Webmaster E-Mail</target>
+            </trans-unit>
+            <trans-unit id="properties.responsibleEmail" xml:space="preserve">
+                <source>Email data protection officer</source>
+                <target>E-Mail Datenschutzbeauftrager</target>
+            </trans-unit>
+            <trans-unit id="properties.responsibleEmail.placeholder" xml:space="preserve">
+                <source>Wert von Startseite übernehmen</source>
+                <target>Wert von Startseite übernehmen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

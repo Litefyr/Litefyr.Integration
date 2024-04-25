@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Address</source>
+                <target>Adresse</target>
+            </trans-unit>
+            <trans-unit id="groups.settings" xml:space="preserve">
+                <source>Representation</source>
+                <target>Darstellung</target>
+            </trans-unit>
+            <trans-unit id="groups.additionalContent" xml:space="preserve">
+                <source>Additional content</source>
+                <target>Zusätzlicher Inhalt</target>
+            </trans-unit>
+            <trans-unit id="properties.Name" xml:space="preserve">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="properties.phone" xml:space="preserve">
+                <source>Phone number</source>
+                <target>Telefonnummer</target>
+            </trans-unit>
+            <trans-unit id="properties.mobile" xml:space="preserve">
+                <source>Mobile number</source>
+                <target>Mobilenummer</target>
+            </trans-unit>
+            <trans-unit id="properties.email" xml:space="preserve">
+                <source>Email</source>
+                <target>E-Mail</target>
+            </trans-unit>
+            <trans-unit id="properties.address" xml:space="preserve">
+                <source>Street, postal code and city</source>
+                <target>Straße, PLZ und Ort</target>
+            </trans-unit>
+            <trans-unit id="properties.country" xml:space="preserve">
+                <source>Country</source>
+                <target>Land</target>
+            </trans-unit>
+            <trans-unit id="properties.social" xml:space="preserve">
+                <source>Social networks</source>
+                <target>Soziale Netzwerke</target>
+            </trans-unit>
+            <trans-unit id="properties.legal" xml:space="preserve">
+                <source>Legal matters</source>
+                <target>Rechtliches</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

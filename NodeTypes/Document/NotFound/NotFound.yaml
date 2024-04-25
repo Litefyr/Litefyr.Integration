@@ -1,0 +1,27 @@
+'Litespeed.Theme:Document.NotFound':
+  abstract: true
+  superTypes:
+    'Litespeed.Theme:Document.AbstractPage': true
+    'Litespeed.Theme:Constraint.Document.NoSubDocument': true
+    'Litespeed.Theme:Constraint.Document.Restricted': true
+    'Litespeed.Theme:Mixin.HideSeo': true
+    'Litespeed.Theme:Mixin.NotInMenu': true
+    'Neos.Seo:NoindexMixin': true
+    'Litespeed.Theme:Mixin.DisableSearch': true
+    'Carbon.Plausible:Mixin.CustomEvent': false
+  search:
+    fulltext:
+      isRoot: false
+      enable: false
+  ui:
+    label: i18n
+    icon: 'fas fa-times-circle'
+    group: ~
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+  properties:
+    title:
+      defaultValue: '404'
+    uriPathSegment:
+      defaultValue: '404'

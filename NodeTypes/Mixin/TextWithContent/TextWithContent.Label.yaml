@@ -1,0 +1,6 @@
+'Litespeed.Theme:Mixin.TextWithContent.Label':
+  abstract: true
+  properties:
+    label:
+      options:
+        preset: 'text.label'

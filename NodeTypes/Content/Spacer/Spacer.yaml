@@ -1,0 +1,69 @@
+'Litespeed.Theme:Content.Spacer':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Litespeed.Theme:Mixin.ThemeSelector': true
+  ui:
+    label: i18n
+    icon: expand-arrows-alt
+    position: end
+    inlineEditable: true
+    inspector:
+      groups:
+        look:
+          label: i18n
+          icon: paint-brush
+          position: 10
+  properties:
+    useResponsiveScale:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 10
+    scale:
+      type: integer
+      defaultValue: 0
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          hidden: 'ClientEval: !node.properties.useResponsiveScale'
+          group: look
+          position: 20
+          editor: 'Carbon.RangeEditor/Editor'
+          editorOptions:
+            valueLabelsFile: 'Litespeed.Presentation:Spacing'
+            min: -4
+            max: 4
+            step: 1
+    height:
+      type: string
+      defaultValue: '0'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval: node.properties.useResponsiveScale'
+          group: look
+          position: 30
+          editor: 'Carbon.Tailwind/Spacing'
+    hr:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 40
+    theme:
+      ui:
+        label: i18n
+        inspector:
+          group: look
+          position: 50
+          editorOptions:
+            allowEmpty: true

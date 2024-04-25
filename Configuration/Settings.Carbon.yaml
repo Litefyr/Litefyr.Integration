@@ -1,0 +1,21 @@
+Carbon:
+  GeoMap:
+    defaultCountry: AT
+  IncludeAssets:
+    Packages:
+      Carbon.CodePen:
+        Package: 'Litespeed.Theme'
+        Backend:
+          Head:
+            - https://cdn.tailwindcss.com(js)
+            - TailwindConfig.js
+
+Neos:
+  Neos:
+    Ui:
+      frontendConfiguration:
+        'Carbon.PreviewMode:Button':
+          teaserView:
+            nodeTypeName: 'Litespeed.Theme:Mixin.TeaserDocument'
+            icon: 'fas fa-images'
+            label: 'Litespeed.Theme:Backend.Main:editPreviewModes.teaserView'

@@ -1,0 +1,63 @@
+prototype(Litespeed.Theme:Content.Address) < prototype(Neos.Neos:ContentComponent) {
+    address = ${q(node).property('address')}
+    addressName = ${q(node).property('name') ? q(site).property('addressName') : null}
+    phone = ${q(node).property('phone') ? q(site).property('phone') : null}
+    mobile = ${q(node).property('mobile') ? q(site).property('mobile') : null}
+    email = ${q(node).property('email') ? q(site).property('email') : null}
+    street = ${this.address ? q(site).property('street') : null}
+    postCode = ${this.address ? q(site).property('postCode') : null}
+    city = ${this.address ? q(site).property('city') : null}
+    country = ${q(node).property('country') ? q(site).property('country') : null}
+    legal = ${q(node).property('legal')}
+    registerNumber = ${this.legal ? q(site).property('registerNumber') : null}
+    registerCourt = ${this.legal ? q(site).property('registerCourt') : null}
+    taxIdentificationNumber = ${this.legal ? q(site).property('taxIdentificationNumber') : null}
+    legalItems = ${this.legal ? (q(site).property('legalItems')) : null}
+    social = ${q(node).property('social')}
+
+    socialNetworks = ${this.social ? q(site).property('socialNetworks') : null}
+    plural = ${q(site).property('typeOfContact') != 'single'}
+    formal = ${q(site).property('salutation') != 'informal'}
+
+    screenHeight = ${q(node).property('screenHeight')}
+    theme = ${q(node).property('theme')}
+    leftColSize = ${q(node).property('leftColSize')}
+    textLeft = ${q(node).property('textLeft')}
+    links = Litespeed.Theme:Component.Links
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    label = Neos.Neos:Editable {
+        property = 'label'
+        block = false
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+    textBesideAddress = Neos.Neos:Editable {
+        property = 'textBesideAddress'
+    }
+
+
+   @private.content = afx`<Litespeed.Presentation:Module.Address {...props} />`
+   renderer = afx`
+        {private.content}
+        <Carbon.Notification:Backend
+            @if.set={!private.content}
+            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litespeed.Theme')}
+        />
+   `
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+            2 = ${Neos.Caching.nodeTag(node)}
+        }
+    }
+}

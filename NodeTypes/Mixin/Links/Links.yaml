@@ -1,0 +1,52 @@
+'Litespeed.Theme:Mixin.Links':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        links:
+          label: i18n
+          icon: link
+          position: 50
+          collapsed: true
+  properties:
+    links:
+      type: repeatable
+      defaultValue: []
+      ui:
+        label: ''
+        reloadIfChanged: true
+        inspector:
+          group: links
+          position: 10
+          editorOptions:
+            buttonAddLabel: '＋'
+            min: 0
+            properties:
+              href:
+                label: 'Litespeed.Theme:NodeTypes.Mixin.Links:properties.links.label'
+                editor: Sitegeist.Archaeopteryx/Inspector/Editors/LinkEditor
+                editorOptions:
+                  linkTypes:
+                    'Sitegeist.Archaeopteryx:PhoneNumber':
+                      defaultCountry: AT
+                      favoredCountries:
+                        - AT
+                        - CH
+                        - DE
+                        - FR
+                    'Sitegeist.Archaeopteryx:MailTo':
+                      enabledFields:
+                        subject: true
+                        cc: false
+                        bcc: false
+                        body: true
+              text:
+                label: 'Litespeed.Theme:NodeTypes.Mixin.Links:properties.links.text'
+                editorOptions:
+                  placeholder: 'Litespeed.Theme:NodeTypes.Mixin.Links:properties.links.text.placeholder'
+                validation:
+                  'Neos.Neos/Validation/LabelValidator': {}
+              break:
+                label: 'Litespeed.Theme:NodeTypes.Mixin.Links:properties.links.break'
+                type: boolean
+                editor: Neos.Neos/Inspector/Editors/BooleanEditor

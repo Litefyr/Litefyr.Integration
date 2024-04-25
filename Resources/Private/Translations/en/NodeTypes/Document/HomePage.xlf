@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Homepage</source>
+            </trans-unit>
+            <trans-unit id="groups.legal" xml:space="preserve">
+                <source>Legal</source>
+            </trans-unit>
+            <trans-unit id="groups.footer" xml:space="preserve">
+                <source>Footer</source>
+            </trans-unit>
+            <trans-unit id="properties.defaultCountryPhoneCode" xml:space="preserve">
+                <source>Phone country code</source>
+            </trans-unit>
+            <trans-unit id="properties.typeOfContact" xml:space="preserve">
+                <source>Typ</source>
+            </trans-unit>
+            <trans-unit id="properties.typeOfContact.selectBoxEditor.values.single" xml:space="preserve">
+                <source>Individual</source>
+            </trans-unit>
+            <trans-unit id="properties.typeOfContact.selectBoxEditor.values.group" xml:space="preserve">
+                <source>Group</source>
+            </trans-unit>
+            <trans-unit id="properties.salutation" xml:space="preserve">
+                <source>Type of salutation</source>
+            </trans-unit>
+            <trans-unit id="properties.salutation.selectBoxEditor.values.formal" xml:space="preserve">
+                <source>Formal</source>
+            </trans-unit>
+            <trans-unit id="properties.salutation.selectBoxEditor.values.informal" xml:space="preserve">
+                <source>Informal, personal</source>
+            </trans-unit>
+            <trans-unit id="properties.addressName" xml:space="preserve">
+                <source>Name for address</source>
+            </trans-unit>
+            <trans-unit id="properties.legalName" xml:space="preserve">
+                <source>Legal name</source>
+            </trans-unit>
+            <trans-unit id="properties.registerNumber" xml:space="preserve">
+                <source>Company register number</source>
+            </trans-unit>
+            <trans-unit id="properties.registerCourt" xml:space="preserve">
+                <source>Company Register Court</source>
+            </trans-unit>
+            <trans-unit id="properties.taxIdentificationNumber" xml:space="preserve">
+                <source>Tax identification number</source>
+            </trans-unit>
+            <trans-unit id="properties.legalItems" xml:space="preserve">
+                <source>More entries</source>
+            </trans-unit>
+            <trans-unit id="properties.legalItems.label" xml:space="preserve">
+                <source>Labeling</source>
+            </trans-unit>
+            <trans-unit id="properties.legalItems.text" xml:space="preserve">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="properties.footerSpacing" xml:space="preserve">
+                <source>Margin of the navigation</source>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumnEnabled" xml:space="preserve">
+                <source>Activate multi-column navigation</source>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigation" xml:space="preserve">
+                <source>Navigation</source>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumn" xml:space="preserve">
+                <source>Multi-column navigation</source>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumn.headline" xml:space="preserve">
+                <source>Headline</source>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumn.items" xml:space="preserve">
+                <source>Pages</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

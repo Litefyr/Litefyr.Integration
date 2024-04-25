@@ -1,0 +1,14 @@
+Neos:
+  Neos:
+    Ui:
+      frontendConfiguration:
+        'Shel.Neos.ImageChecker:ImageChecker':
+          enabled: true
+          defaults:
+            fileSize:
+              default: 4096
+            fileDimensions:
+              maxWidth: 6000
+              maxHeight: 6000
+              minWidth: 1000
+              minHeight: 500

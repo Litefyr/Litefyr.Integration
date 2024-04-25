@@ -1,0 +1,16 @@
+prototype(Neos.Neos:ContentCase) {
+    packageFallbackForAlexandria {
+        @context.suffix = '.Alexandria'
+        condition = Neos.Fusion:Component {
+            endsWithSuffix = ${String.endsWith(node.nodeType.name, '.Alexandria')}
+            hasOwnDefinition = Neos.Fusion:CanRender {
+                type = ${node.nodeType.name}
+            }
+            hasPackageDefinition = Neos.Fusion:CanRender {
+                type = ${String.replace(node.nodeType.name, '.Alexandria', '')}
+            }
+            renderer = ${props.endsWithSuffix && !props.hasOwnDefinition && props.hasPackageDefinition}
+        }
+        type = ${String.replace(node.nodeType.name, '.Alexandria', '')}
+    }
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Homepage</source>
+                <target>Startseite</target>
+            </trans-unit>
+            <trans-unit id="groups.legal" xml:space="preserve">
+                <source>Legal</source>
+                <target>Rechtliches</target>
+            </trans-unit>
+            <trans-unit id="groups.footer" xml:space="preserve">
+                <source>Footer</source>
+                <target>Fußzeile</target>
+            </trans-unit>
+            <trans-unit id="properties.defaultCountryPhoneCode" xml:space="preserve">
+                <source>Phone country code</source>
+                <target>Telefon Landesvorwahl</target>
+            </trans-unit>
+            <trans-unit id="properties.typeOfContact" xml:space="preserve">
+                <source>Typ</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="properties.typeOfContact.selectBoxEditor.values.single" xml:space="preserve">
+                <source>Individual</source>
+                <target>Einzelperson</target>
+            </trans-unit>
+            <trans-unit id="properties.typeOfContact.selectBoxEditor.values.group" xml:space="preserve">
+                <source>Group</source>
+                <target>Gruppe</target>
+            </trans-unit>
+            <trans-unit id="properties.salutation" xml:space="preserve">
+                <source>Type of salutation</source>
+                <target>Art der Anrede</target>
+            </trans-unit>
+            <trans-unit id="properties.salutation.selectBoxEditor.values.formal" xml:space="preserve">
+                <source>Formal</source>
+                <target>Förmlich (Sie)</target>
+            </trans-unit>
+            <trans-unit id="properties.salutation.selectBoxEditor.values.informal" xml:space="preserve">
+                <source>Informal, personal</source>
+                <target>Persönlich (Du)</target>
+            </trans-unit>
+            <trans-unit id="properties.addressName" xml:space="preserve">
+                <source>Name for address</source>
+                <target>Name für Adresse</target>
+            </trans-unit>
+            <trans-unit id="properties.legalName" xml:space="preserve">
+                <source>Legal name</source>
+                <target>Rechtlicher Name</target>
+            </trans-unit>
+            <trans-unit id="properties.registerNumber" xml:space="preserve">
+                <source>Company register number</source>
+                <target>Firmenbuchnummer</target>
+            </trans-unit>
+            <trans-unit id="properties.registerCourt" xml:space="preserve">
+                <source>Company Register Court</source>
+                <target>Firmenbuchgericht</target>
+            </trans-unit>
+            <trans-unit id="properties.taxIdentificationNumber" xml:space="preserve">
+                <source>Tax identification number</source>
+                <target>UID Nummer</target>
+            </trans-unit>
+            <trans-unit id="properties.legalItems" xml:space="preserve">
+                <source>More entries</source>
+                <target>Weitere Einträge</target>
+            </trans-unit>
+            <trans-unit id="properties.legalItems.label" xml:space="preserve">
+                <source>Labeling</source>
+                <target>Beschriftung</target>
+            </trans-unit>
+            <trans-unit id="properties.legalItems.text" xml:space="preserve">
+                <source>Text</source>
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="properties.footerSpacing" xml:space="preserve">
+                <source>Margin of the navigation</source>
+                <target>Abstand der Navigation</target>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumnEnabled" xml:space="preserve">
+                <source>Activate multi-column navigation</source>
+                <target>Mehrspaltige Navigation aktivieren</target>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigation" xml:space="preserve">
+                <source>Navigation</source>
+                <target>Navigation</target>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumn" xml:space="preserve">
+                <source>Multi-column navigation</source>
+                <target>Mehrspaltige Navigation</target>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumn.headline" xml:space="preserve">
+                <source>Headline</source>
+                <target>Überschrift</target>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumn.items" xml:space="preserve">
+                <source>Pages</source>
+                <target>Seiten</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

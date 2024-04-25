@@ -1,0 +1,22 @@
+prototype(Litespeed.Theme:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    label = Neos.Neos:Editable {
+        property = 'label'
+        block = false
+    }
+    lead = Neos.Neos:Editable {
+        property = 'lead'
+        block = false
+    }
+
+    inBackend = ${node.context.inBackend}
+
+    renderer = afx`
+        <Litespeed.Presentation:Spacing augmenter padding waveSpacing>
+            <Litespeed.Presentation:Block.HeadlineAndLead {...props}/>
+        </Litespeed.Presentation:Spacing>
+    `
+}

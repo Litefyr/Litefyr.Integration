@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Lightbox page</source>
+                <target>Lightboxseite</target>
+            </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>A lightbox page is a page that is displayed in a lightbox window. The page is hidden in the main menu</source>
+                <target>Eine Lightboxseite ist eine Seite, die in einem Lightbox-Fenster angezeigt wird. Die Seite wird im Hauptmenü ausgeblendet</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

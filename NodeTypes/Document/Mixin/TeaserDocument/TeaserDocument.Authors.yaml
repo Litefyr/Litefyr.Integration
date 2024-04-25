@@ -1,0 +1,19 @@
+'Litespeed.Theme:Mixin.TeaserDocument.Authors':
+  abstract: true
+  properties:
+    authors:
+      type: references
+      ui:
+        label: i18n
+        inspector:
+          group: document
+          position: end
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            multiple: true
+            dataSourceIdentifier: tms-select-nodedata
+            dataSourceDisableCaching: true
+            dataSourceAdditionalData:
+              labelPropertyName: title
+              setLabelPrefixByNodeContext: false
+              previewPropertyName: image

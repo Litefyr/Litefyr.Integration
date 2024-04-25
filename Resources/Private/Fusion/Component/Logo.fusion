@@ -1,0 +1,3 @@
+prototype(Litespeed.Theme:Component.Logo) < prototype(Litespeed.Presentation:Atom.Logo) {
+    name = ${site.context.currentSite.name}
+}

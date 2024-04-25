@@ -1,0 +1,8 @@
+'Litespeed.Theme:Document.AbstractPage':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: i18n
+    icon: file
+    position: 100

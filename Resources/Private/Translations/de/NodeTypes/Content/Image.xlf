@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.textBoxDirection" xml:space="preserve">
+                <source>Position of the text box</source>
+                <target>Position der Textbox</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxMaxWidth" xml:space="preserve">
+                <source>Maximum width of the text box</source>
+                <target>Maximale Breite der Textbox</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxBreakpoint" xml:space="preserve">
+                <source>Breakpoint of the text</source>
+                <target>Breakpoint von dem Text</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>No breakpoint</source>
+                <target>Kein Breakpoint</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.sm" xml:space="preserve">
+                <source>Tablet (640px)</source>
+                <target>Tablet (640px)</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.md" xml:space="preserve">
+                <source>Laptop (768px)</source>
+                <target>Laptop (768px)</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.lg" xml:space="preserve">
+                <source>Desktop (1024px)</source>
+                <target>Desktop (1024px)</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

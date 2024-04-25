@@ -1,0 +1,29 @@
+prototype(Litespeed.Theme:Helper.ShareImageAsset) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+
+    openGraphImage = true
+
+    renderer = Neos.Fusion:Case {
+        openGraphImage {
+            condition = ${props.openGraphImage && Type.instance(q(props.node).property('openGraphImage'), 'Neos\\Media\\Domain\\Model\\ImageInterface')}
+            renderer = ${q(props.node).property('openGraphImage')}
+        }
+        pageImage {
+            imageNode = ${q(props.node).filter('[image instanceof "Neos\\Media\\Domain\\Model\\ImageInterface"]').get(0)}
+            condition = ${this.imageNode}
+            renderer = ${q(this.imageNode).property('image')}
+        }
+        firstContentWithImage {
+            imageNode = ${q(props.node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Neos:Content][image instanceof "Neos\\Media\\Domain\\Model\\ImageInterface"]').get(0)}
+            condition = ${this.imageNode}
+            renderer = ${q(this.imageNode).property('image')}
+        }
+        siteFallback {
+            condition = ${props.node != site}
+            renderer = Litespeed.Theme:Helper.ShareImageAsset {
+                openGraphImage = ${props.openGraphImage}
+                node = ${site}
+            }
+        }
+    }
+}

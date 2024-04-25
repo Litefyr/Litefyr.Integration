@@ -1,0 +1,4 @@
+prototype(Neos.Seo:OpenGraphMetaTags) {
+    image >
+    image = Litespeed.Theme:Helper.ShareImageAsset
+}

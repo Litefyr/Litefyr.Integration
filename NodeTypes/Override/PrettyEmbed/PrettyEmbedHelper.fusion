@@ -1,0 +1,41 @@
+prototype(Jonnitto.PrettyEmbed:Content) {
+    breakout = ${q(node).property('breakout')}
+
+    enableText = ${q(node).property('enableText')}
+    enableSpacing = true
+    leftColSize = ${q(node).property('leftColSize')}
+    textLeft = ${q(node).property('textLeft')}
+    theme = ${q(node).property('theme')}
+
+    links = Litespeed.Theme:Component.Links
+    headline = Neos.Neos:Editable {
+        property = 'headline'
+        block = false
+    }
+    label = Neos.Neos:Editable {
+        property = 'label'
+        block = false
+    }
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+
+    wrapper {
+        @if.single = ${!this.enableText}
+        @process.rounded = ${this.breakout == 'full' ? Tailwind.merge('mediacontent', value) : Tailwind.merge('mediacontent', this.breakout == 'wide' ? 'xl:mediacontent:rounded-box xl:imagecontent:rounded-image' : 'mediacontent:rounded-box imagecontent:rounded-image', value)}
+    }
+
+    inBackend = ${node.context.inBackend}
+
+    renderer.@process {
+        spacing = Litespeed.Presentation:Spacing {
+            @if.set = ${props.enableSpacing && !props.enableText}
+            augmenter = true
+            width = ${props.breakout}
+            padding = 'auto'
+        }
+        textWithContent = afx`
+            <Litespeed.Presentation:Module.TextWithContent @if={props.enableText} {...props} singleContent={value} />
+        `
+    }
+}

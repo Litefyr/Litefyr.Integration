@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Theme" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.look" xml:space="preserve">
+                <source><![CDATA[Look & Feel]]></source>
+                <target><![CDATA[Look & Feel]]></target>
+            </trans-unit>
+            <trans-unit id="properties.screenHeight" xml:space="preserve">
+                <source>Minimum height</source>
+                <target>Minimale Höhe</target>
+            </trans-unit>
+            <trans-unit id="properties.screenHeight.minLabel" xml:space="preserve">
+                <source>Do not specify</source>
+                <target>Nicht festlegen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
