@@ -3,14 +3,14 @@
 #
 ##
 
-'Litespeed.Theme:Document.ContentPage':
+'Litespeed.Integration:Document.ContentPage':
   abstract: true
   superTypes:
-    'Litespeed.Theme:Document.AbstractPage': true
+    'Litespeed.Integration:Document.AbstractPage': true
     'Garagist.Mautic:Mixin.Email': true
     'Garagist.Mautic:Mixin.Category': true
-    'Litespeed.Theme:Mixin.TeaserDocument': true
-    'Litespeed.Theme:Constraint.Document.Restricted': true
+    'Litespeed.Integration:Mixin.TeaserDocument': true
+    'Litespeed.Integration:Constraint.Document.Restricted': true
   ui:
     label: i18n
     position: 10

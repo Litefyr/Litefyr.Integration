@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Theme\Fusion;
+namespace Litespeed\Integration\Fusion;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Neos\Domain\Exception;
@@ -146,7 +146,9 @@ class ConvertUrisImplementation extends AbstractFusionObject
                             );
                             $isLightboxNode = $targetObject
                                 ->getNodeType()
-                                ->isOfType('Litespeed.Theme:Document.Lightbox');
+                                ->isOfType(
+                                    'Litespeed.Integration:Document.Lightbox'
+                                );
                         }
                         $cacheTagIdentifier = sprintf(
                             '%s_%s',

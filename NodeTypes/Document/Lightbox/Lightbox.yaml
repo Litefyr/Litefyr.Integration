@@ -1,9 +1,9 @@
-'Litespeed.Theme:Document.Lightbox':
+'Litespeed.Integration:Document.Lightbox':
   abstract: true
   superTypes:
-    'Litespeed.Theme:Document.AbstractPage': true
-    'Litespeed.Theme:Constraint.Document.NoSubDocument': true
-    'Litespeed.Theme:Mixin.NotInMainMenu': true
+    'Litespeed.Integration:Document.AbstractPage': true
+    'Litespeed.Integration:Constraint.Document.NoSubDocument': true
+    'Litespeed.Integration:Mixin.NotInMainMenu': true
   ui:
     label: i18n
     icon: share-square

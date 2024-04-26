@@ -1,6 +1,6 @@
 # Don't use this prototype. This is for have an empty link editor
 
-'Litespeed.Theme:Document.Empty':
+'Litespeed.Integration:Document.Empty':
   abstract: true
   superTypes:
     'Neos.Neos:Document': true

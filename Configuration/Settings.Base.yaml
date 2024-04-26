@@ -1,5 +1,5 @@
 Base:
-  Theme:
+  Integration:
     flowCommandsOnStartup:
       AssetUsage: assetusage:update
       PrettyEmbed: prettyembed:metadata

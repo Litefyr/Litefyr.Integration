@@ -1,10 +1,10 @@
 'Jonnitto.ImagesInARow:Container':
   superTypes:
-    'Litespeed.Theme:Mixin.Breakout': true
+    'Litespeed.Integration:Mixin.Breakout': true
   ui:
     position: 600
   properties:
     breakout:
       ui:
-        label: 'Litespeed.Theme:NodeTypes.Override.Jonnitto:properties.breakout'
+        label: 'Litespeed.Integration:NodeTypes.Override.Jonnitto:properties.breakout'
         showInCreationDialog: true

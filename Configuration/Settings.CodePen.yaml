@@ -5,7 +5,7 @@ Neos:
         'Carbon.CodePen':
           tailwindcss:
             enabled: true
-            clientConfig: "${StaticResource.uri('Litespeed.Theme', 'Public/Scripts/TailwindConfig.js')}"
+            clientConfig: "${StaticResource.uri('Litespeed.Integration', 'Public/Scripts/TailwindConfig.js')}"
           afx:
             fusionObjects:
               'Background':

@@ -1,10 +1,10 @@
-'Litespeed.Theme:Document.DataPrivacy':
+'Litespeed.Integration:Document.DataPrivacy':
   abstract: true
   superTypes:
-    'Litespeed.Theme:Document.AbstractPage': true
-    'Litespeed.Theme:Constraint.Document.NoSubDocument': true
-    'Litespeed.Theme:Constraint.Document.Restricted': true
-    'Litespeed.Theme:Mixin.NotInMenu': true
+    'Litespeed.Integration:Document.AbstractPage': true
+    'Litespeed.Integration:Constraint.Document.NoSubDocument': true
+    'Litespeed.Integration:Constraint.Document.Restricted': true
+    'Litespeed.Integration:Mixin.NotInMenu': true
   ui:
     label: Datenschutz
     icon: gavel
@@ -116,7 +116,7 @@
           position: 90
           hidden: 'ClientEval: !node.properties.useDefaultDataPrivacy'
           editorOptions:
-            placeholder: 'Litespeed.Theme:NodeTypes.Document.DataPrivacy:properties.responsibleEmail.placeholder'
+            placeholder: 'Litespeed.Integration:NodeTypes.Document.DataPrivacy:properties.responsibleEmail.placeholder'
       validation:
         'Neos.Neos/Validation/EmailAddressValidator': {}
         'Neos.Neos/Validation/RegularExpressionValidator':

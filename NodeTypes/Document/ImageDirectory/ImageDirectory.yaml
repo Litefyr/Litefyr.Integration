@@ -1,12 +1,12 @@
-'Litespeed.Theme:Document.ImageDirectory':
+'Litespeed.Integration:Document.ImageDirectory':
   abstract: true
   superTypes:
-    'Litespeed.Theme:Document.AbstractPage': true
+    'Litespeed.Integration:Document.AbstractPage': true
     'Garagist.ImageDirectory:Mixin.Defaults': true
-    'Litespeed.Theme:Constraint.Document.NoSubDocument': true
-    'Litespeed.Theme:Constraint.Document.Restricted': true
-    'Litespeed.Theme:Mixin.NotInMenu': true
-    'Litespeed.Theme:Mixin.DisableSearch': true
+    'Litespeed.Integration:Constraint.Document.NoSubDocument': true
+    'Litespeed.Integration:Constraint.Document.Restricted': true
+    'Litespeed.Integration:Mixin.NotInMenu': true
+    'Litespeed.Integration:Mixin.DisableSearch': true
   ui:
     label: i18n
     icon: images

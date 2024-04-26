@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Content.Teaser) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litespeed.Integration:Content.Teaser) < prototype(Neos.Neos:ContentComponent) {
     inBackend = ${node.context.inBackend}
     nodes = ${q(node).property('nodes')}
     single = ${!q(node).property('subsites')}
@@ -32,8 +32,8 @@ prototype(Litespeed.Theme:Content.Teaser) < prototype(Neos.Neos:ContentComponent
                 node = ${item}
                 additionalParams {
                     json = true
-                    single = ${q(item).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Single]') ? null : props.single ? 'true' : null}
-                    limit = ${q(item).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Single]') ? null : props.single ? null : props.limit}
+                    single = ${q(item).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Single]') ? null : props.single ? 'true' : null}
+                    limit = ${q(item).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Single]') ? null : props.single ? null : props.limit}
                     variant = ${props.showImages ? (props.textbox ? 'Textbox' : null) : 'Plain'}
                 }
             }
@@ -49,7 +49,7 @@ prototype(Litespeed.Theme:Content.Teaser) < prototype(Neos.Neos:ContentComponent
         <Carbon.Notification:Backend
             @if={!private.jsonPath}
             type="alert"
-            content={Carbon.Backend.translate('noDocumentsSelected', null, [], 'Main', 'Litespeed.Theme')}
+            content={Carbon.Backend.translate('noDocumentsSelected', null, [], 'Main', 'Litespeed.Integration')}
         />
     `
 }

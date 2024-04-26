@@ -3,7 +3,7 @@
 #
 ##
 
-'Litespeed.Theme:Mixin.HideSeo':
+'Litespeed.Integration:Mixin.HideSeo':
   abstract: true
   ui:
     inspector:

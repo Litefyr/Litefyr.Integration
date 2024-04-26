@@ -1,4 +1,4 @@
-'Litespeed.Theme:Mixin.HideNodeTypeSelector':
+'Litespeed.Integration:Mixin.HideNodeTypeSelector':
   abstract: true
   properties:
     _nodeType:

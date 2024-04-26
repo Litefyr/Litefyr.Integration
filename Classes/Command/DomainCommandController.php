@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Theme\Command;
+namespace Litespeed\Integration\Command;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;

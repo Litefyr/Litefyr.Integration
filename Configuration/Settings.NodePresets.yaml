@@ -18,7 +18,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Litespeed.Theme:NodeTypes.Placeholder:headline'
+                    placeholder: 'Litespeed.Integration:NodeTypes.Placeholder:headline'
                     autoparagraph: false
                     hyphens: true
                     nbsp: true
@@ -69,7 +69,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Litespeed.Theme:NodeTypes.Placeholder:subheadline'
+                    placeholder: 'Litespeed.Integration:NodeTypes.Placeholder:subheadline'
                     autoparagraph: false
                     hyphens: true
                     nbsp: true
@@ -120,7 +120,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Litespeed.Theme:NodeTypes.Placeholder:lead'
+                    placeholder: 'Litespeed.Integration:NodeTypes.Placeholder:lead'
                     autoparagraph: false
                     hyphens: true
                     nbsp: true
@@ -172,7 +172,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Litespeed.Theme:NodeTypes.Placeholder:pure'
+                    placeholder: 'Litespeed.Integration:NodeTypes.Placeholder:pure'
                     autoparagraph: false
                     hyphens: true
                     nbsp: true
@@ -223,7 +223,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Litespeed.Theme:NodeTypes.Placeholder:label'
+                    placeholder: 'Litespeed.Integration:NodeTypes.Placeholder:label'
                     autoparagraph: false
                     hyphens: true
                     nbsp: true
@@ -257,7 +257,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Litespeed.Theme:NodeTypes.Placeholder:link'
+                    placeholder: 'Litespeed.Integration:NodeTypes.Placeholder:link'
                     autoparagraph: false
                     hyphens: true
                     nbsp: true
@@ -292,7 +292,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Litespeed.Theme:NodeTypes.Placeholder:text'
+                    placeholder: 'Litespeed.Integration:NodeTypes.Placeholder:text'
                     autoparagraph: true
                     hyphens: true
                     nbsp: true
@@ -348,7 +348,7 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
-                    placeholder: 'Litespeed.Theme:NodeTypes.Placeholder:list'
+                    placeholder: 'Litespeed.Integration:NodeTypes.Placeholder:list'
                     autoparagraph: true
                     hyphens: true
                     nbsp: true

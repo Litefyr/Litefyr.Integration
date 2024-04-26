@@ -1,11 +1,11 @@
-'Litespeed.Theme:Content.Address':
+'Litespeed.Integration:Content.Address':
   superTypes:
     'Neos.Neos:Content': true
-    'Litespeed.Theme:Mixin.TextWithContent': true
-    'Litespeed.Theme:Mixin.TextWithContent.Position': true
-    'Litespeed.Theme:Mixin.TextWithContent.LeftColSize': true
-    'Litespeed.Theme:Mixin.TextWithContent.Label': true
-    'Litespeed.Theme:Mixin.ScreenHeight': true
+    'Litespeed.Integration:Mixin.TextWithContent': true
+    'Litespeed.Integration:Mixin.TextWithContent.Position': true
+    'Litespeed.Integration:Mixin.TextWithContent.LeftColSize': true
+    'Litespeed.Integration:Mixin.TextWithContent.Label': true
+    'Litespeed.Integration:Mixin.ScreenHeight': true
   search:
     fulltext:
       enable: true

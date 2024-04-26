@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Component.Links) < prototype(Neos.Fusion:Component) {
+prototype(Litespeed.Integration:Component.Links) < prototype(Neos.Fusion:Component) {
     links = ${q(node).property('links') || []}
     linkInBackend = true
     fallbackContent = ${Translation.translate('more', null, [], null, 'Litespeed.Presentation')}

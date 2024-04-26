@@ -1,7 +1,7 @@
 root {
     themeFallback {
         @position = 'before default'
-        @context.mixinName = ${'Litespeed.Theme:' + Array.last(String.split(documentNode.nodeType.name, ':'))}
+        @context.mixinName = ${'Litespeed.Integration:' + Array.last(String.split(documentNode.nodeType.name, ':'))}
         condition = Neos.Fusion:CanRender {
             type = ${mixinName}
         }
@@ -20,13 +20,13 @@ root {
     }
     jsonSingle {
         @position = 'after json'
-        condition = ${request.arguments.json && q(documentNode).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument.Single]')}
-        renderer = Litespeed.Theme:Document.ContentPage.JSON.Single
+        condition = ${request.arguments.json && q(documentNode).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Single]')}
+        renderer = Litespeed.Integration:Document.ContentPage.JSON.Single
     }
     jsonTeaser {
         @position = 'after jsonSingle'
-        condition = ${request.arguments.json && q(documentNode).is('[instanceof Litespeed.Theme:Mixin.TeaserDocument]')}
-        renderer = Litespeed.Theme:Document.ContentPage.JSON
+        condition = ${request.arguments.json && q(documentNode).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument]')}
+        renderer = Litespeed.Integration:Document.ContentPage.JSON
     }
     previewPage {
         @position = 'after jsonTeaser'
@@ -52,7 +52,7 @@ root {
     }
     lightboxFallback {
         @position = 'after lightbox'
-        @context.mixinName = ${'Litespeed.Theme:' + Array.last(String.split(documentNode.nodeType.name, ':'))}
+        @context.mixinName = ${'Litespeed.Integration:' + Array.last(String.split(documentNode.nodeType.name, ':'))}
         condition = Neos.Fusion:Value {
             request = ${request.arguments.lightbox}
             canRender = Neos.Fusion:CanRender {

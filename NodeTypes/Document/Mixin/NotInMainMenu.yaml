@@ -3,5 +3,5 @@
 #
 ##
 
-'Litespeed.Theme:Mixin.NotInMainMenu':
+'Litespeed.Integration:Mixin.NotInMainMenu':
   abstract: true

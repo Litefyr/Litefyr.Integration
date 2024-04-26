@@ -1,6 +1,6 @@
 {
-  "name" : "litespeed/theme",
-  "description": "Base theme for Litespeed",
+  "name" : "litespeed/integration",
+  "description": "Baseic integration for Litespeed",
   "type" : "neos-litespeed",
   "license": "GPL-3.0-or-later",
   "require" : {
@@ -57,7 +57,7 @@
   },
   "autoload" : {
     "psr-4" : {
-      "Litespeed\\Theme\\" : "Classes/"
+      "Litespeed\\Integration\\" : "Classes/"
     }
   },
   "keywords": [

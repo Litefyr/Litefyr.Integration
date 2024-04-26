@@ -1,4 +1,4 @@
-'Litespeed.Theme:Content.Headline':
+'Litespeed.Integration:Content.Headline':
   superTypes:
     'Neos.Neos:Content': true
     'Carbon.FirstElement:Mixin': true

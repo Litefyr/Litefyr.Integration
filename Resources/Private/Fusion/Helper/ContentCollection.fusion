@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:ContentCollection) < prototype(Neos.Fusion:Case) {
+prototype(Litespeed.Integration:ContentCollection) < prototype(Neos.Fusion:Case) {
   nodePath = 'main'
 
   @context.nodePath = ${this.nodePath}

@@ -3,7 +3,7 @@
 #
 ##
 
-'Litespeed.Theme:Mixin.NotInMenu':
+'Litespeed.Integration:Mixin.NotInMenu':
   abstract: true
   properties:
     _hiddenInIndex:

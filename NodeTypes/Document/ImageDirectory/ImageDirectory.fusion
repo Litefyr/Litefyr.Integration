@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Document.ImageDirectory) < prototype(Litespeed.Theme:Document.AbstractPage) {
+prototype(Litespeed.Integration:Document.ImageDirectory) < prototype(Litespeed.Integration:Document.AbstractPage) {
     content = Neos.Fusion:Component {
         imageWidth = ${q(node).property('imageDirectoryImageWidth')}
 

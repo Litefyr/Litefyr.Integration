@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Content.Spacer) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litespeed.Integration:Content.Spacer) < prototype(Neos.Neos:ContentComponent) {
     useResponsiveScale = ${q(node).property('useResponsiveScale')}
     scale = ${q(node).property('scale')}
     height = ${q(node).property('height')}
@@ -10,7 +10,7 @@ prototype(Litespeed.Theme:Content.Spacer) < prototype(Neos.Neos:ContentComponent
         <Litespeed.Presentation:Atom.Spacer {...props}/>
         <Carbon.Notification:Backend
             @if={!props.height && !props.hr && !props.theme}
-            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litespeed.Theme')}
+            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litespeed.Integration')}
         />
     `
 }

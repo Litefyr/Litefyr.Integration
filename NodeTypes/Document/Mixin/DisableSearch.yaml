@@ -1,4 +1,4 @@
-'Litespeed.Theme:Mixin.DisableSearch':
+'Litespeed.Integration:Mixin.DisableSearch':
   abstract: true
   search:
     fulltext:

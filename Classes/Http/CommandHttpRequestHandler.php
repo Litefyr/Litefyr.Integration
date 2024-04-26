@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Theme\Http;
+namespace Litespeed\Integration\Http;
 
 use GuzzleHttp\Psr7\ServerRequest;
 use GuzzleHttp\Psr7\Uri;

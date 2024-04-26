@@ -1,9 +1,9 @@
-prototype(Litespeed.Theme:Document.ContentPage.JSON.Single) < prototype(Litespeed.Theme:Document.ContentPage.JSON) {
+prototype(Litespeed.Integration:Document.ContentPage.JSON.Single) < prototype(Litespeed.Integration:Document.ContentPage.JSON) {
     single = true
     limit = false
 }
 
-prototype(Litespeed.Theme:Document.ContentPage.JSON) < prototype(Neos.Fusion:Component) {
+prototype(Litespeed.Integration:Document.ContentPage.JSON) < prototype(Neos.Fusion:Component) {
     # If this page or the subsites should be shown as teaser
     single = ${request.arguments.single || false}
     limit = ${request.arguments.limit || false}
@@ -27,7 +27,7 @@ prototype(Litespeed.Theme:Document.ContentPage.JSON) < prototype(Neos.Fusion:Com
             keyRenderer = ${q(node).property('_identifier')}
             itemName = 'node'
             itemRenderer = Neos.Fusion:Component {
-                data = Litespeed.Theme:Helper.Teaser.Data
+                data = Litespeed.Integration:Helper.Teaser.Data
                 teaserNodeType = ${props.teaserNodeType}
                 @if.hasImageOrPlain = ${props.variant == 'Plain' || this.data.image}
                 renderer = Neos.Fusion:DataStructure {

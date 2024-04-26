@@ -1,7 +1,7 @@
-'Litespeed.Theme:Content.Spacer':
+'Litespeed.Integration:Content.Spacer':
   superTypes:
     'Neos.Neos:Content': true
-    'Litespeed.Theme:Mixin.ThemeSelector': true
+    'Litespeed.Integration:Mixin.ThemeSelector': true
   ui:
     label: i18n
     icon: expand-arrows-alt

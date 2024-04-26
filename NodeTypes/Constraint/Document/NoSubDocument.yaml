@@ -6,7 +6,7 @@
 #
 ##
 
-'Litespeed.Theme:Constraint.Document.NoSubDocument':
+'Litespeed.Integration:Constraint.Document.NoSubDocument':
   abstract: true
   constraints:
     nodeTypes:

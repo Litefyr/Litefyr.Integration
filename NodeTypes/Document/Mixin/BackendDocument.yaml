@@ -1,14 +1,14 @@
-'Litespeed.Theme:Mixin.BackendDocument':
+'Litespeed.Integration:Mixin.BackendDocument':
   abstract: true
   superTypes:
     'Neos.Neos:Document': true
-    'Litespeed.Theme:Constraint.Document.Restricted': true
-    'Litespeed.Theme:Constraint.Document.NoSubDocument': true
-    'Litespeed.Theme:Mixin.NotInMenu': true
-    'Litespeed.Theme:Mixin.SynUriPathSegmentWithTitle': true
-    'Litespeed.Theme:Mixin.DisableSearch': true
+    'Litespeed.Integration:Constraint.Document.Restricted': true
+    'Litespeed.Integration:Constraint.Document.NoSubDocument': true
+    'Litespeed.Integration:Mixin.NotInMenu': true
+    'Litespeed.Integration:Mixin.SynUriPathSegmentWithTitle': true
+    'Litespeed.Integration:Mixin.DisableSearch': true
     'Carbon.Plausible:Mixin.CustomEvent': false
-    'Litespeed.Theme:Mixin.HideSeo': true
+    'Litespeed.Integration:Mixin.HideSeo': true
   ui:
     icon: tags
     group: ~

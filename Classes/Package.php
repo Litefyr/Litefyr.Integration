@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Theme;
+namespace Litespeed\Integration;
 
 use Neos\ContentRepository\Domain\Model\Node;
 use Neos\Flow\Core\Bootstrap;
@@ -22,7 +22,7 @@ class Package extends BasePackage
         $dispatcher = $bootstrap->getSignalSlotDispatcher();
 
         // Sync uri with title
-        // - Litespeed.Theme:Mixin.SynUriPathSegmentWithTitle
+        // - Litespeed.Integration:Mixin.SynUriPathSegmentWithTitle
         $newUriPathSegment = null;
         $dispatcher->connect(Node::class, 'nodePropertyChanged', function (
             Node $node,
@@ -35,7 +35,7 @@ class Package extends BasePackage
                 $node
                     ->getNodeType()
                     ->isOfType(
-                        'Litespeed.Theme:Mixin.SynUriPathSegmentWithTitle'
+                        'Litespeed.Integration:Mixin.SynUriPathSegmentWithTitle'
                     )
             ) {
                 $nodeUriPathSegmentGenerator = $bootstrap

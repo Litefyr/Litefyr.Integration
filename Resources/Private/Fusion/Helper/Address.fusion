@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Helper.Address) < prototype(Neos.Fusion:Component) {
+prototype(Litespeed.Integration:Helper.Address) < prototype(Neos.Fusion:Component) {
     node = ${node}
     nameItems = ${['title']}
     descriptionItems = ${[]}
@@ -10,7 +10,7 @@ prototype(Litespeed.Theme:Helper.Address) < prototype(Neos.Fusion:Component) {
             itemRenderer = ${String.trim(q(props.node).property(item))}
             @process {
                 merge = ${Carbon.String.classNames(value)}
-                backend = ${!value && node.context.inBackend ? Carbon.Backend.translate('pleaseSetTitle', null, [], null, 'Litespeed.Theme') : value}
+                backend = ${!value && node.context.inBackend ? Carbon.Backend.translate('pleaseSetTitle', null, [], null, 'Litespeed.Integration') : value}
             }
         }
         description = Neos.Fusion:Map {

@@ -7,7 +7,7 @@ prototype(Jonnitto.PrettyEmbed:Content) {
     textLeft = ${q(node).property('textLeft')}
     theme = ${q(node).property('theme')}
 
-    links = Litespeed.Theme:Component.Links
+    links = Litespeed.Integration:Component.Links
     headline = Neos.Neos:Editable {
         property = 'headline'
         block = false

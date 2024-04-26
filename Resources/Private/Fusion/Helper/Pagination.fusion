@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Helper.Pagination) < prototype(Neos.Fusion:Component) {
+prototype(Litespeed.Integration:Helper.Pagination) < prototype(Neos.Fusion:Component) {
     totalCount = 0
     maximumNumberOfLinks = 7
     itemsPerPage = 15

@@ -1,4 +1,4 @@
-'Litespeed.Theme:Mixin.TeaserDocument':
+'Litespeed.Integration:Mixin.TeaserDocument':
   abstract: true
   superTypes:
     'Carbon.Image:AlternativeText': true

@@ -5,4 +5,4 @@
 
 'Breadlesscode.NodeTypes.Folder:Mixin.HideUriSegment':
   superTypes:
-    'Litespeed.Theme:Mixin.HideSeo': true
+    'Litespeed.Integration:Mixin.HideSeo': true

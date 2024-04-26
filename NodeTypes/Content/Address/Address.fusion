@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Content.Address) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litespeed.Integration:Content.Address) < prototype(Neos.Neos:ContentComponent) {
     address = ${q(node).property('address')}
     addressName = ${q(node).property('name') ? q(site).property('addressName') : null}
     phone = ${q(node).property('phone') ? q(site).property('phone') : null}
@@ -23,7 +23,7 @@ prototype(Litespeed.Theme:Content.Address) < prototype(Neos.Neos:ContentComponen
     theme = ${q(node).property('theme')}
     leftColSize = ${q(node).property('leftColSize')}
     textLeft = ${q(node).property('textLeft')}
-    links = Litespeed.Theme:Component.Links
+    links = Litespeed.Integration:Component.Links
     headline = Neos.Neos:Editable {
         property = 'headline'
         block = false
@@ -45,7 +45,7 @@ prototype(Litespeed.Theme:Content.Address) < prototype(Neos.Neos:ContentComponen
         {private.content}
         <Carbon.Notification:Backend
             @if.set={!private.content}
-            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litespeed.Theme')}
+            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litespeed.Integration')}
         />
    `
 

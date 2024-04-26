@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Document.NotFound) < prototype(Litespeed.Theme:Document.ContentPage) {
+prototype(Litespeed.Integration:Document.NotFound) < prototype(Litespeed.Integration:Document.ContentPage) {
     notfoundDocument = ${notfoundDocument || q(site).children('notfound').get(0)}
     @context {
         site = ${site}

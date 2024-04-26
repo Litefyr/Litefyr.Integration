@@ -1,4 +1,4 @@
-'Litespeed.Theme:Mixin.TeaserDocument.Category':
+'Litespeed.Integration:Mixin.TeaserDocument.Category':
   abstract: true
   properties:
     category:

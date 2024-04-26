@@ -6,10 +6,10 @@
 #
 ##
 
-'Litespeed.Theme:Constraint.Content.Restricted':
+'Litespeed.Integration:Constraint.Content.Restricted':
   abstract: true
 
 'Neos.Neos:ContentCollection':
   constraints:
     nodeTypes:
-      'Litespeed.Theme:Constraint.Content.Restricted': false
+      'Litespeed.Integration:Constraint.Content.Restricted': false

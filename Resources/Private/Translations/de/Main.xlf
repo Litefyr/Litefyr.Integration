@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2"
     xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file original="" product-name="Litespeed.Theme"  source-language="en" target-language="de" datatype="plaintext">
+    <file original="" product-name="Litespeed.Integration"  source-language="en" target-language="de" datatype="plaintext">
         <body>
             <group id="contentcollection.label" restype="x-gettext-plurals">
                 <trans-unit id="contentcollection.label[0]" xml:space="preserve">

@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Helper.Teaser.Nodes) < prototype(Neos.Fusion:Component) {
+prototype(Litespeed.Integration:Helper.Teaser.Nodes) < prototype(Neos.Fusion:Component) {
     limit = 3
     rootNode = null
 

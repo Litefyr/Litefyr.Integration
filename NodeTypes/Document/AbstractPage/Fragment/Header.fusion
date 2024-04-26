@@ -3,11 +3,11 @@ header = Litespeed.Presentation:Section.Header {
         node = ${site}
     }
 
-    logo = Litespeed.Theme:Component.Logo
+    logo = Litespeed.Integration:Component.Logo
 
     items = Neos.Neos:MenuItems {
         maximumLevels = 2
-        filter = 'Neos.Neos:Document,!Litespeed.Theme:Mixin.NotInMenu,!Litespeed.Theme:Mixin.NotInMainMenu'
+        filter = 'Neos.Neos:Document,!Litespeed.Integration:Mixin.NotInMenu,!Litespeed.Integration:Mixin.NotInMainMenu'
     }
 
     renderer.@process.convertUris = Neos.Neos:ConvertUris {

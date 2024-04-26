@@ -1,4 +1,4 @@
-'Litespeed.Theme:Mixin.TeaserDocument.Authors':
+'Litespeed.Integration:Mixin.TeaserDocument.Authors':
   abstract: true
   properties:
     authors:

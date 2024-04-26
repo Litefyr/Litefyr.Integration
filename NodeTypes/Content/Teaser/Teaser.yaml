@@ -1,7 +1,7 @@
-'Litespeed.Theme:Content.Teaser':
+'Litespeed.Integration:Content.Teaser':
   superTypes:
     'Neos.Neos:Content': true
-    'Litespeed.Theme:Mixin.ThemeSelector': true
+    'Litespeed.Integration:Mixin.ThemeSelector': true
   ui:
     label: i18n
     group: teaser
@@ -79,7 +79,7 @@
           position: 40
           editorOptions:
             nodeTypes:
-              - Litespeed.Theme:Mixin.TeaserDocument
+              - Litespeed.Integration:Mixin.TeaserDocument
     limit:
       type: integer
       defaultValue: 0
@@ -95,7 +95,7 @@
             min: 0
             max: 30
             step: 1
-            unit: 'Litespeed.Theme:NodeTypes.Content.Teaser:properties.limit.unit'
-            minLabel: 'Litespeed.Theme:NodeTypes.Content.Teaser:properties.limit.minLabel'
+            unit: 'Litespeed.Integration:NodeTypes.Content.Teaser:properties.limit.unit'
+            minLabel: 'Litespeed.Integration:NodeTypes.Content.Teaser:properties.limit.minLabel'
             valueLabels:
-              1: 'Litespeed.Theme:NodeTypes.Content.Teaser:properties.limit.one'
+              1: 'Litespeed.Integration:NodeTypes.Content.Teaser:properties.limit.one'

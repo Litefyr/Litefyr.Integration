@@ -1,14 +1,14 @@
-prototype(Litespeed.Theme:Document.Lightbox.PhotoSwipe) < prototype(Neos.Fusion:Component) {
+prototype(Litespeed.Integration:Document.Lightbox.PhotoSwipe) < prototype(Neos.Fusion:Component) {
     replaceLogo = Neos.Fusion:Renderer {
         renderPath = '/replaceLogo'
     }
 
-    content = Litespeed.Theme:ContentCollection
+    content = Litespeed.Integration:ContentCollection
 
     renderer = Neos.Fusion:Http.Message {
         httpResponseHead.headers.Content-Type = 'text/html'
 
-        content = Litespeed.Theme:Helper.ReplaceTextWithComponent {
+        content = Litespeed.Integration:Helper.ReplaceTextWithComponent {
             search = '⚑'
             replace = ${props.replaceLogo}
             value = ${props.content}

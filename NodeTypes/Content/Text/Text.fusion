@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Content.Text) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litespeed.Integration:Content.Text) < prototype(Neos.Neos:ContentComponent) {
     content = Neos.Neos:Editable {
         property = 'text'
     }
@@ -15,7 +15,7 @@ prototype(Litespeed.Theme:Content.Text) < prototype(Neos.Neos:ContentComponent) 
         block = false
     }
 
-    links = Litespeed.Theme:Component.Links
+    links = Litespeed.Integration:Component.Links
     theme = ${q(node).property('theme')}
     position = ${q(node).property('position')}
     inBackend = ${node.context.inBackend}

@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Content.Image) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litespeed.Integration:Content.Image) < prototype(Neos.Neos:ContentComponent) {
     image = ${q(node).property('image')}
     alternativeText = ${q(node).property('alternativeText')}
     lightbox = ${q(node).property('lightbox')}
@@ -14,7 +14,7 @@ prototype(Litespeed.Theme:Content.Image) < prototype(Neos.Neos:ContentComponent)
     theme = ${q(node).property('theme')}
     leftColSize = ${q(node).property('leftColSize')}
     textLeft = ${q(node).property('textLeft')}
-    links = Litespeed.Theme:Component.Links
+    links = Litespeed.Integration:Component.Links
     headline = Neos.Neos:Editable {
         property = 'headline'
         block = false

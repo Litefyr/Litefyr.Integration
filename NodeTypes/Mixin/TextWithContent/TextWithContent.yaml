@@ -1,7 +1,7 @@
-'Litespeed.Theme:Mixin.TextWithContent':
+'Litespeed.Integration:Mixin.TextWithContent':
   abstract: true
   superTypes:
-    'Litespeed.Theme:Mixin.TextWithContent.Plain': true
+    'Litespeed.Integration:Mixin.TextWithContent.Plain': true
   search:
     fulltext:
       enable: true

@@ -1,10 +1,10 @@
-'Litespeed.Theme:Mixin.ThemeSelector':
+'Litespeed.Integration:Mixin.ThemeSelector':
   abstract: true
   properties:
     theme:
       type: string
       ui:
-        label: 'Litespeed.Theme:NodeTypes.Colors:bgColor'
+        label: 'Litespeed.Integration:NodeTypes.Colors:bgColor'
         reloadIfChanged: true
         inspector:
           position: 1
@@ -14,14 +14,14 @@
             allowEmpty: false
             values:
               main:
-                label: 'Litespeed.Theme:NodeTypes.Colors:color.main'
+                label: 'Litespeed.Integration:NodeTypes.Colors:color.main'
                 color: 'var(--color-theme-main)'
               minor:
-                label: 'Litespeed.Theme:NodeTypes.Colors:color.minor'
+                label: 'Litespeed.Integration:NodeTypes.Colors:color.minor'
                 color: 'var(--color-theme-minor)'
               minor2:
-                label: 'Litespeed.Theme:NodeTypes.Colors:color.minor2'
+                label: 'Litespeed.Integration:NodeTypes.Colors:color.minor2'
                 color: 'var(--color-theme-minor2)'
               gray:
-                label: 'Litespeed.Theme:NodeTypes.Colors:color.gray'
+                label: 'Litespeed.Integration:NodeTypes.Colors:color.gray'
                 color: 'var(--color-theme-gray)'

@@ -1,13 +1,13 @@
-'Litespeed.Theme:Document.NotFound':
+'Litespeed.Integration:Document.NotFound':
   abstract: true
   superTypes:
-    'Litespeed.Theme:Document.AbstractPage': true
-    'Litespeed.Theme:Constraint.Document.NoSubDocument': true
-    'Litespeed.Theme:Constraint.Document.Restricted': true
-    'Litespeed.Theme:Mixin.HideSeo': true
-    'Litespeed.Theme:Mixin.NotInMenu': true
+    'Litespeed.Integration:Document.AbstractPage': true
+    'Litespeed.Integration:Constraint.Document.NoSubDocument': true
+    'Litespeed.Integration:Constraint.Document.Restricted': true
+    'Litespeed.Integration:Mixin.HideSeo': true
+    'Litespeed.Integration:Mixin.NotInMenu': true
     'Neos.Seo:NoindexMixin': true
-    'Litespeed.Theme:Mixin.DisableSearch': true
+    'Litespeed.Integration:Mixin.DisableSearch': true
     'Carbon.Plausible:Mixin.CustomEvent': false
   search:
     fulltext:

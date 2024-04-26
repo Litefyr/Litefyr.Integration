@@ -1,9 +1,9 @@
-prototype(Litespeed.Theme:Helper.BreadcrumbItems) < prototype(Neos.Fusion:Component) {
+prototype(Litespeed.Integration:Helper.BreadcrumbItems) < prototype(Neos.Fusion:Component) {
     node = ${node}
 
     renderer = Neos.Fusion:Map {
         items = Neos.Neos:MenuItems {
-            itemCollection = ${q(props.node).parents('[instanceof Neos.Neos:Document][!instanceof Litespeed.Theme:Mixin.NotInMenu]').get()}
+            itemCollection = ${q(props.node).parents('[instanceof Neos.Neos:Document][!instanceof Litespeed.Integration:Mixin.NotInMenu]').get()}
             itemCollection.@process {
                 removeSite = ${Array.pop(value)}
                 sortDesc = ${Array.reverse(value)}
@@ -17,7 +17,7 @@ prototype(Litespeed.Theme:Helper.BreadcrumbItems) < prototype(Neos.Fusion:Compon
             }
             title = Neos.Fusion:Case {
                 isPerson {
-                    condition = ${q(item.node).is('[instanceof Litespeed.Theme:Document.Person]')}
+                    condition = ${q(item.node).is('[instanceof Litespeed.Integration:Document.Person]')}
                     renderer = Neos.Fusion:Map {
                         items = ${['prefix', 'firstname', 'middlename', 'title', 'suffix']}
                         itemName = 'part'

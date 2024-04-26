@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Component.ScrollIndicator) < prototype(Litespeed.Presentation:Atom.ScrollIndicator) {
+prototype(Litespeed.Integration:Component.ScrollIndicator) < prototype(Litespeed.Presentation:Atom.ScrollIndicator) {
     enabled = ${q(node).property('scrollIndicatorEnabled')}
     bottom = ${q(node).property('scrollIndicatorBottom')}
     scrollAmount = ${q(node).property('scrollIndicatorScrollAmount')}

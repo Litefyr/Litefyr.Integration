@@ -1,4 +1,4 @@
-prototype(Litespeed.Theme:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litespeed.Integration:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
     headline = Neos.Neos:Editable {
         property = 'headline'
         block = false

@@ -1,4 +1,4 @@
-'Litespeed.Theme:Mixin.Contact':
+'Litespeed.Integration:Mixin.Contact':
   abstract: true
   ui:
     inspector:
@@ -61,7 +61,7 @@
             properties:
               network:
                 type: string
-                label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialNetworks.network'
+                label: 'Litespeed.Integration:NodeTypes.Mixin.Contact:properties.socialNetworks.network'
                 validation:
                   'Neos.Neos/Validation/NotEmptyValidator': {}
                 editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -166,7 +166,7 @@
                       group: Messenger
               url:
                 type: string
-                label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialNetworks.url'
+                label: 'Litespeed.Integration:NodeTypes.Mixin.Contact:properties.socialNetworks.url'
                 validation:
                   'Neos.Neos/Validation/NotEmptyValidator': {}
     socialShare:
@@ -192,7 +192,7 @@
             properties:
               action:
                 type: string
-                label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.network'
+                label: 'Litespeed.Integration:NodeTypes.Mixin.Contact:properties.socialShare.network'
                 validation:
                   'Neos.Neos/Validation/NotEmptyValidator': {}
                 editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -200,19 +200,19 @@
                   allowEmpty: false
                   values:
                     native:
-                      label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.native'
+                      label: 'Litespeed.Integration:NodeTypes.Mixin.Contact:properties.socialShare.native'
                       icon: share
                       group: Systemaktion
                     email:
-                      label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.email'
+                      label: 'Litespeed.Integration:NodeTypes.Mixin.Contact:properties.socialShare.email'
                       icon: envelope
                       group: Systemaktion
                     copy:
-                      label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.copy'
+                      label: 'Litespeed.Integration:NodeTypes.Mixin.Contact:properties.socialShare.copy'
                       icon: copy
                       group: Systemaktion
                     print:
-                      label: 'Litespeed.Theme:NodeTypes.Mixin.Contact:properties.socialShare.print'
+                      label: 'Litespeed.Integration:NodeTypes.Mixin.Contact:properties.socialShare.print'
                       icon: print
                       group: Systemaktion
                     facebook:
@@ -240,10 +240,10 @@
                       icon: xing
                       group: Link zu Platform
 
-'Litespeed.Theme:Mixin.Contact.Tab':
+'Litespeed.Integration:Mixin.Contact.Tab':
   abstract: true
   superTypes:
-    'Litespeed.Theme:Mixin.Contact': true
+    'Litespeed.Integration:Mixin.Contact': true
   ui:
     inspector:
       tabs:

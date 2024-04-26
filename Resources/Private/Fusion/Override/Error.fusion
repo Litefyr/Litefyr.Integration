@@ -7,6 +7,6 @@ error = Neos.Fusion:Case {
     4xx {
         @position = 'start'
         condition = ${statusCode >= 400 && statusCode < 500}
-        renderer = Litespeed.Theme:Document.NotFound
+        renderer = Litespeed.Integration:Document.NotFound
     }
 }

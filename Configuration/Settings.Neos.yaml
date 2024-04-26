@@ -5,9 +5,6 @@ Neos:
         defaultContext:
           Carbon.String: 'Carbon\Eel\EelHelper\StringHelper'
           Carbon.Array: 'Carbon\Eel\EelHelper\ArrayHelper'
-  Fusion:
-    defaultContext:
-      Theme: 'Litespeed\Theme\EelHelper\ThemeHelper'
   Flow:
     http:
       trustedProxies:
@@ -32,7 +29,7 @@ Neos:
         order: ['de', 'en']
     mvc:
       routes:
-        'Litespeed.Theme':
+        'Litespeed.Integration':
           position: 'start'
         'Neos.Neos':
           variables:
@@ -40,7 +37,7 @@ Neos:
   Neos:
     fusion:
       autoInclude:
-        Litespeed.Theme: true
+        Litespeed.Integration: true
     Ui:
       frontendConfiguration:
         Flowpack.Media.Ui:
@@ -48,21 +45,21 @@ Neos:
           queryAssetUsage: true
       resources:
         javascript:
-          Litespeed.Theme:
-            resource: resource://Litespeed.Theme/Public/Editors/Plugin.js
+          Litespeed.Integration:
+            resource: resource://Litespeed.Integration/Public/Editors/Plugin.js
     userInterface:
       editPreviewModes:
         teaserView:
           isEditingMode: true
           isPreviewMode: false
           fusionRenderingPath: teaserView
-          title: 'Litespeed.Theme:Backend.Main:editPreviewModes.teaserView'
+          title: 'Litespeed.Integration:Backend.Main:editPreviewModes.teaserView'
           position: 'after inPlace'
         tabletLandscape:
           isEditingMode: false
           isPreviewMode: true
           fusionRenderingPath: ''
-          title: 'Litespeed.Theme:Backend.Main:editPreviewModes.tabletLandscape'
+          title: 'Litespeed.Integration:Backend.Main:editPreviewModes.tabletLandscape'
           width: 1024
           height: 768
           backgroundColor: '#222'
@@ -70,7 +67,7 @@ Neos:
           isEditingMode: false
           isPreviewMode: true
           fusionRenderingPath: ''
-          title: 'Litespeed.Theme:Backend.Main:editPreviewModes.tabletPortrait'
+          title: 'Litespeed.Integration:Backend.Main:editPreviewModes.tabletPortrait'
           width: 768
           height: 1024
           backgroundColor: '#222'
@@ -78,7 +75,7 @@ Neos:
           isEditingMode: false
           isPreviewMode: true
           fusionRenderingPath: ''
-          title: 'Litespeed.Theme:Backend.Main:editPreviewModes.mobile'
+          title: 'Litespeed.Integration:Backend.Main:editPreviewModes.mobile'
           width: 375
           height: 667
           backgroundColor: '#222'
@@ -90,25 +87,25 @@ Neos:
           loadingDepth: 0
       translation:
         autoInclude:
-          Litespeed.Theme:
+          Litespeed.Integration:
             - 'NodeTypes/*'
             - 'Backend/*'
     nodeTypes:
       groups:
         teaser:
-          label: 'Litespeed.Theme:Backend.Main:nodeTypes.teaser'
+          label: 'Litespeed.Integration:Backend.Main:nodeTypes.teaser'
           position: 500
         gallery:
-          label: 'Litespeed.Theme:Backend.Main:nodeTypes.gallery'
+          label: 'Litespeed.Integration:Backend.Main:nodeTypes.gallery'
           position: 600
         form:
-          label: 'Litespeed.Theme:Backend.Main:nodeTypes.form'
+          label: 'Litespeed.Integration:Backend.Main:nodeTypes.form'
           position: 1200
         special:
-          label: 'Litespeed.Theme:Backend.Main:nodeTypes.special'
+          label: 'Litespeed.Integration:Backend.Main:nodeTypes.special'
           position: 8000
           collapsed: true
         system:
-          label: 'Litespeed.Theme:Backend.Main:nodeTypes.system'
+          label: 'Litespeed.Integration:Backend.Main:nodeTypes.system'
           position: 9000
           collapsed: true
