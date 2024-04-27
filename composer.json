@@ -1,5 +1,5 @@
 {
-  "name" : "litespeed/integration",
+  "name" : "lspeed/integration",
   "description": "Baseic integration for Litespeed",
   "type" : "neos-litespeed",
   "license": "GPL-3.0-or-later",
@@ -53,7 +53,7 @@
     "sitegeist/monocle" : "^7.1",
     "tms/select" : "^1.4",
     "mireo91/repeatablefields": "^2.2.1",
-    "litespeed/presentation": "self.version"
+    "lspeed/presentation": "self.version"
   },
   "autoload" : {
     "psr-4" : {
