@@ -1,9 +1,9 @@
-'Litespeed.Integration:Mixin.TextWithContent.Plain':
+'Litefyr.Integration:Mixin.TextWithContent.Plain':
   abstract: true
   superTypes:
-    'Litespeed.Integration:Mixin.Breakout': true
-    'Litespeed.Integration:Mixin.ThemeSelector': true
-    'Litespeed.Integration:Mixin.Links.Appearance': true
+    'Litefyr.Integration:Mixin.Breakout': true
+    'Litefyr.Integration:Mixin.ThemeSelector': true
+    'Litefyr.Integration:Mixin.Links.Appearance': true
   ui:
     inspector:
       groups:

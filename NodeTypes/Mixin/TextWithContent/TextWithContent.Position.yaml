@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.TextWithContent.Position':
+'Litefyr.Integration:Mixin.TextWithContent.Position':
   abstract: true
   properties:
     textLeft:

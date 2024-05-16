@@ -11,14 +11,14 @@ const tagsConfig = {
 
 const insertTextConfig = {
     logo: {
-        tooltip: "Litespeed.Integration:Backend.Main:insertLogo",
+        tooltip: "Litefyr.Integration:Backend.Main:insertLogo",
         icon: "flag",
         text: "⚑",
         position: "start",
     },
 };
 
-manifest("Litespeed.Integration:CkEditor", {}, (globalRegistry, { frontendConfiguration }) => {
+manifest("Litefyr.Integration:CkEditor", {}, (globalRegistry) => {
     const ckEditorRegistry = globalRegistry.get("ckEditor5");
 
     Tag(ckEditorRegistry, tagsConfig);

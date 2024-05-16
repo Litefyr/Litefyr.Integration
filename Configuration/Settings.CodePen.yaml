@@ -5,13 +5,13 @@ Neos:
         'Carbon.CodePen':
           tailwindcss:
             enabled: true
-            clientConfig: "${StaticResource.uri('Litespeed.Integration', 'Public/Scripts/TailwindConfig.js')}"
+            clientConfig: "${StaticResource.uri('Litefyr.Integration', 'Public/Scripts/TailwindConfig.js')}"
           afx:
             fusionObjects:
               'Background':
                 documentation: Add a background container
                 snippet: |
-                  <Litespeed.Presentation:Background
+                  <Litefyr.Presentation:Background
                     ${1|main,minor,minor2,gray,nested|}
                     ${2:padding}
                     ${3:waveSpacing}
@@ -20,11 +20,11 @@ Neos:
                     ${6:tailwind="${7}"}
                   >
                     ${8}
-                  </Litespeed.Presentation:Background>
+                  </Litefyr.Presentation:Background>
               'Spacing':
                 documentation: Add a spacing container
                 snippet: |
-                  <Litespeed.Presentation:Spacing
+                  <Litefyr.Presentation:Spacing
                     ${1|default,wide,full|}
                     ${2:waveSpacing}
                     ${3:padding=${4|"auto","autoForce","force",{true},{false}|}}
@@ -32,33 +32,33 @@ Neos:
                     ${6:tailwind="${7}"}
                   >
                     ${8}
-                  </Litespeed.Presentation:Spacing>
+                  </Litefyr.Presentation:Spacing>
               'Link':
                 documentation: Add a button-like link
                 snippet: |
-                  <Litespeed.Presentation:Atom.Link
+                  <Litefyr.Presentation:Atom.Link
                     href="${1}"
                     ${2|main,minor,minor2,ghost,link,nested|}
                     ${3:inline}
                   >
                     ${4}
-                  </Litespeed.Presentation:Atom.Link>
+                  </Litefyr.Presentation:Atom.Link>
               'Button':
                 documentation: Add a button
                 snippet: |
-                  <Litespeed.Presentation:Atom.Button
+                  <Litefyr.Presentation:Atom.Button
                     ${1|main,minor,minor2,ghost,link,nested|}
                     ${2:inline}
                   >
                     ${3}
-                  </Litespeed.Presentation:Atom.Button>
+                  </Litefyr.Presentation:Atom.Button>
               'DateAndTime':
                 documentation: Add a date and time
-                snippet: '<Litespeed.Presentation:Atom.DateAndTime date={Date.now()}${1: time="${2}"}${3: class="${4}"} />'
+                snippet: '<Litefyr.Presentation:Atom.DateAndTime date={Date.now()}${1: time="${2}"}${3: class="${4}"} />'
               'Image':
                 documentation: Add a image
                 snippet: |
-                  <Litespeed.Presentation:Atom.Image
+                  <Litefyr.Presentation:Atom.Image
                     image={assets[0]}
                     width={maximumWidth}
                     ${3:height={${4}}}
@@ -67,11 +67,11 @@ Neos:
                     ${9:rounded}
                   >
                     ${10}
-                  </Litespeed.Presentation:Atom.Image>
+                  </Litefyr.Presentation:Atom.Image>
               'Label':
                 documentation: Add a label
                 snippet: |
-                  <Litespeed.Presentation:Atom.Label
+                  <Litefyr.Presentation:Atom.Label
                     label="${1}"
                     ${2:currentColor}
                     ${3:class="${4}"}
@@ -79,13 +79,13 @@ Neos:
               'CountNumbersInText':
                 documentation: Count up numbers in text
                 snippet: |
-                  <Litespeed.Presentation:Block.CountNumbersInText>
+                  <Litefyr.Presentation:Block.CountNumbersInText>
                     ${1}
-                  </Litespeed.Presentation:Block.CountNumbersInText>
+                  </Litefyr.Presentation:Block.CountNumbersInText>
               'HeadlineAndLead':
                 documentation: Add a headline and lead
                 snippet: |
-                  <Litespeed.Presentation:Block.HeadlineAndLead
+                  <Litefyr.Presentation:Block.HeadlineAndLead
                     headline="${1}"
                     ${2:lead="${3}"}
                     ${4:label="${5}"}
@@ -93,7 +93,7 @@ Neos:
               'TextWithContent':
                 documentation: Add a text with content
                 snippet: |
-                  <Litespeed.Presentation:Module.TextWithContent
+                  <Litefyr.Presentation:Module.TextWithContent
                     ${1:breakpoint="${2|sm,md,lg,xl|}"}
                     ${3:theme="${4|main,minor,minor2,gray|}"}
                     ${5:align="${6|stretch,start,center,end,baseline|}"}
@@ -111,4 +111,4 @@ Neos:
                     <Neos.Fusion:Fragment @path="aside">
                       ${16}
                     </Neos.Fusion:Fragment>
-                  </Litespeed.Presentation:Module.TextWithContent>
+                  </Litefyr.Presentation:Module.TextWithContent>

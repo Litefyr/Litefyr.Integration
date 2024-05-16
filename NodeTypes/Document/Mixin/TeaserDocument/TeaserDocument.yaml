@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.TeaserDocument':
+'Litefyr.Integration:Mixin.TeaserDocument':
   abstract: true
   superTypes:
     'Carbon.Image:AlternativeText': true

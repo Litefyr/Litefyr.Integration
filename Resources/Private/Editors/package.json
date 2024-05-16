@@ -1,11 +1,12 @@
 {
-  "description": "Litespeed.Integration:Editors",
+  "description": "Litefyr.Integration:Editors",
   "license": "proprietary",
   "private": true,
   "scripts": {
     "build": "node build.mjs --production",
     "watch": "node build.mjs --watch",
-    "dev": "node build.mjs"
+    "dev": "node build.mjs",
+    "pipeline": "pnpm install; pnpm build"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-basic-styles": "^10.1.0",

@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Helper.ShareImageAsset) < prototype(Neos.Fusion:Component) {
+prototype(Litefyr.Integration:Helper.ShareImageAsset) < prototype(Neos.Fusion:Component) {
     node = ${node}
 
     openGraphImage = true
@@ -20,7 +20,7 @@ prototype(Litespeed.Integration:Helper.ShareImageAsset) < prototype(Neos.Fusion:
         }
         siteFallback {
             condition = ${props.node != site}
-            renderer = Litespeed.Integration:Helper.ShareImageAsset {
+            renderer = Litefyr.Integration:Helper.ShareImageAsset {
                 openGraphImage = ${props.openGraphImage}
                 node = ${site}
             }

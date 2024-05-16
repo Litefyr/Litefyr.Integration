@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Document.DataPrivacy) < prototype(Litespeed.Integration:Document.AbstractPage) {
+prototype(Litefyr.Integration:Document.DataPrivacy) < prototype(Litefyr.Integration:Document.AbstractPage) {
     content = Neos.Neos:ContentComponent {
         useDefaultDataPrivacy = ${q(node).property('useDefaultDataPrivacy')}
         hasNewsletter = ${q(node).property('hasNewsletter')}
@@ -15,7 +15,7 @@ prototype(Litespeed.Integration:Document.DataPrivacy) < prototype(Litespeed.Inte
         responsibleHeadline = Neos.Neos:Editable {
             property = 'responsibleHeadline'
             block = false
-            fallback = ${Translation.translate('responsible.headline', null, [], 'DataPrivacy', 'Litespeed.Integration')}
+            fallback = ${Translation.translate('responsible.headline', null, [], 'DataPrivacy', 'Litefyr.Integration')}
         }
         responsibleText = Neos.Neos:Editable {
             property = 'responsibleText'
@@ -47,7 +47,7 @@ prototype(Litespeed.Integration:Document.DataPrivacy) < prototype(Litespeed.Inte
         renderer = afx`
             <main class={props.class}>
                 <Neos.Neos:ContentCollection attributes.class="-collection -collection--top mb-20" nodePath="before" />
-                <Litespeed.Presentation:Module.DataPrivacy @if={props.useDefaultDataPrivacy || props.text} {...props} />
+                <Litefyr.Presentation:Module.DataPrivacy @if={props.useDefaultDataPrivacy || props.text} {...props} />
                 <Neos.Neos:ContentCollection attributes.class="-collection -collection--bottom empty:mb-12" nodePath="main" />
             </main>
         `

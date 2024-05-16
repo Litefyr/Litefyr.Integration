@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Content.Spacer) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litefyr.Integration:Content.Spacer) < prototype(Neos.Neos:ContentComponent) {
     useResponsiveScale = ${q(node).property('useResponsiveScale')}
     scale = ${q(node).property('scale')}
     height = ${q(node).property('height')}
@@ -7,10 +7,10 @@ prototype(Litespeed.Integration:Content.Spacer) < prototype(Neos.Neos:ContentCom
     inBackend = ${node.context.inBackend}
 
     renderer = afx`
-        <Litespeed.Presentation:Atom.Spacer {...props}/>
+        <Litefyr.Presentation:Atom.Spacer {...props}/>
         <Carbon.Notification:Backend
             @if={!props.height && !props.hr && !props.theme}
-            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litespeed.Integration')}
+            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litefyr.Integration')}
         />
     `
 }

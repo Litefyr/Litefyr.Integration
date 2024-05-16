@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Helper.Address) < prototype(Neos.Fusion:Component) {
+prototype(Litefyr.Integration:Helper.Address) < prototype(Neos.Fusion:Component) {
     node = ${node}
     nameItems = ${['title']}
     descriptionItems = ${[]}
@@ -10,7 +10,7 @@ prototype(Litespeed.Integration:Helper.Address) < prototype(Neos.Fusion:Componen
             itemRenderer = ${String.trim(q(props.node).property(item))}
             @process {
                 merge = ${Carbon.String.classNames(value)}
-                backend = ${!value && node.context.inBackend ? Carbon.Backend.translate('pleaseSetTitle', null, [], null, 'Litespeed.Integration') : value}
+                backend = ${!value && node.context.inBackend ? Carbon.Backend.translate('pleaseSetTitle', null, [], null, 'Litefyr.Integration') : value}
             }
         }
         description = Neos.Fusion:Map {
@@ -27,14 +27,14 @@ prototype(Litespeed.Integration:Helper.Address) < prototype(Neos.Fusion:Componen
         mobile = ${q(props.node).property('mobile')}
         iban = ${q(props.node).property('iban')}
         phoneLink = ${this.phone}
-        phoneLink.@process.convert = Litespeed.Presentation:Helper.Phone
+        phoneLink.@process.convert = Litefyr.Presentation:Helper.Phone
         mobileLink = ${this.mobile}
-        mobileLink.@process.convert = Litespeed.Presentation:Helper.Phone
+        mobileLink.@process.convert = Litefyr.Presentation:Helper.Phone
         email = ${q(props.node).property('email')}
         socialNetworks = ${q(props.node).property('socialNetworks')}
 
         image = ${q(props.node).property('image')}
-        alternativeText = ${Translation.translate('imageFromAddress', null, [this.name], null, 'Litespeed.Presentation')}
+        alternativeText = ${Translation.translate('imageFromAddress', null, [this.name], null, 'Litefyr.Presentation')}
         link = Neos.Neos:NodeUri {
             @if.set = ${documentNode != props.node}
             node = ${props.node}

@@ -1,4 +1,4 @@
-replaceLogo = Litespeed.Integration:Component.Logo {
+replaceLogo = Litefyr.Integration:Component.Logo {
     size = 600
     height = null
     width = ${this.size * 2}

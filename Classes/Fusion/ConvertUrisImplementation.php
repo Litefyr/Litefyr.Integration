@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Integration\Fusion;
+namespace Litefyr\Integration\Fusion;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Neos\Domain\Exception;
@@ -13,6 +13,9 @@ use Psr\Log\LoggerInterface;
 use function preg_replace;
 use function preg_replace_callback;
 use function str_contains;
+use function str_replace;
+use function preg_match;
+use function preg_match_all;
 
 /**
  * A Fusion Object that converts link references in the format "<type>://<UUID>" to proper URIs
@@ -77,10 +80,7 @@ class ConvertUrisImplementation extends AbstractFusionObject
 
         if (!is_string($text)) {
             throw new Exception(
-                sprintf(
-                    'Only strings can be processed by this Fusion object, given: "%s".',
-                    gettype($text)
-                ),
+                sprintf('Only strings can be processed by this Fusion object, given: "%s".', gettype($text)),
                 1382624081
             );
         }
@@ -89,18 +89,12 @@ class ConvertUrisImplementation extends AbstractFusionObject
 
         if (!$node instanceof NodeInterface) {
             throw new Exception(
-                sprintf(
-                    'The current node must be an instance of NodeInterface, given: "%s".',
-                    gettype($node)
-                ),
+                sprintf('The current node must be an instance of NodeInterface, given: "%s".', gettype($node)),
                 1382624088
             );
         }
 
-        if (
-            !$this->fusionValue('forceConversion') &&
-            $node->getContext()->getWorkspace()->getName() !== 'live'
-        ) {
+        if (!$this->fusionValue('forceConversion') && $node->getContext()->getWorkspace()->getName() !== 'live') {
             return $text;
         }
 
@@ -113,20 +107,11 @@ class ConvertUrisImplementation extends AbstractFusionObject
 
         $processedContent = preg_replace_callback(
             LinkingService::PATTERN_SUPPORTED_URIS,
-            function (array $matches) use (
-                $node,
-                $linkingService,
-                $controllerContext,
-                &$unresolvedUris,
-                $absolute
-            ) {
+            function (array $matches) use ($node, $linkingService, $controllerContext, &$unresolvedUris, $absolute) {
                 $isLightboxNode = false;
                 switch ($matches[1]) {
                     case 'node':
-                        $targetObject = $linkingService->convertUriToObject(
-                            $matches[0],
-                            $node
-                        );
+                        $targetObject = $linkingService->convertUriToObject($matches[0], $node);
                         if ($targetObject === null) {
                             $this->systemLogger->info(
                                 sprintf(
@@ -144,11 +129,10 @@ class ConvertUrisImplementation extends AbstractFusionObject
                                 null,
                                 $absolute
                             );
+                            //  @phpstan-ignore-next-line
                             $isLightboxNode = $targetObject
                                 ->getNodeType()
-                                ->isOfType(
-                                    'Litespeed.Integration:Document.Lightbox'
-                                );
+                                ->isOfType('Litefyr.Integration:Document.Lightbox');
                         }
                         $cacheTagIdentifier = sprintf(
                             '%s_%s',
@@ -157,15 +141,10 @@ class ConvertUrisImplementation extends AbstractFusionObject
                             ),
                             $matches[2]
                         );
-                        $this->runtime->addCacheTag(
-                            'node',
-                            $cacheTagIdentifier
-                        );
+                        $this->runtime->addCacheTag('node', $cacheTagIdentifier);
                         break;
                     case 'asset':
-                        $resolvedUri = $linkingService->resolveAssetUri(
-                            $matches[0]
-                        );
+                        $resolvedUri = $linkingService->resolveAssetUri($matches[0]);
                         $cacheTagIdentifier = sprintf(
                             '%s_%s',
                             $this->cachingHelper->renderWorkspaceTagForContextNode(
@@ -173,10 +152,7 @@ class ConvertUrisImplementation extends AbstractFusionObject
                             ),
                             $matches[2]
                         );
-                        $this->runtime->addCacheTag(
-                            'asset',
-                            $cacheTagIdentifier
-                        );
+                        $this->runtime->addCacheTag('asset', $cacheTagIdentifier);
                         break;
                     default:
                         $resolvedUri = null;
@@ -199,16 +175,12 @@ class ConvertUrisImplementation extends AbstractFusionObject
             $processedContent = preg_replace(
                 '/<a(?:\s+[^>]*)?\s+href="(node|asset):\/\/[^"]+"[^>]*>(.*?)<\/a>/',
                 '$2',
-                $processedContent
+                $processedContent ?? ''
             );
-            $processedContent = preg_replace(
-                LinkingService::PATTERN_SUPPORTED_URIS,
-                '',
-                $processedContent
-            );
+            $processedContent = preg_replace(LinkingService::PATTERN_SUPPORTED_URIS, '', $processedContent ?? '');
         }
 
-        return $this->replaceLinkTargets($processedContent);
+        return $this->replaceLinkTargets($processedContent ?? '');
     }
 
     /**
@@ -223,21 +195,13 @@ class ConvertUrisImplementation extends AbstractFusionObject
     {
         $setNoOpener = $this->fusionValue('setNoOpener');
         $setExternal = $this->fusionValue('setExternal');
-        $externalLinkTarget = \trim(
-            (string) $this->fusionValue('externalLinkTarget')
-        );
-        $resourceLinkTarget = \trim(
-            (string) $this->fusionValue('resourceLinkTarget')
-        );
+        $externalLinkTarget = \trim((string) $this->fusionValue('externalLinkTarget'));
+        $resourceLinkTarget = \trim((string) $this->fusionValue('resourceLinkTarget'));
         $lightboxAttributes = $this->lightboxAttributes;
         $attributesArray = $this->fusionValue('internAttributes') ?? [];
 
         $controllerContext = $this->runtime->getControllerContext();
-        $host = $controllerContext
-            ->getRequest()
-            ->getHttpRequest()
-            ->getUri()
-            ->getHost();
+        $host = $controllerContext->getRequest()->getHttpRequest()->getUri()->getHost();
         $processedContent = preg_replace_callback(
             '~<a\s+.*?href="(.*?)".*?>~i',
             static function ($matches) use (
@@ -258,40 +222,20 @@ class ConvertUrisImplementation extends AbstractFusionObject
                     str_contains($linkHref, '/_Resources/') ||
                     str_contains($linkHref, '/media/thumbnail/');
 
-                if (
-                    $externalLinkTarget &&
-                    $externalLinkTarget !== '' &&
-                    $isExternalLink
-                ) {
+                if ($externalLinkTarget && $externalLinkTarget !== '' && $isExternalLink) {
                     $target = $externalLinkTarget;
                 }
-                if (
-                    $resourceLinkTarget &&
-                    $resourceLinkTarget !== '' &&
-                    $isResourceLink
-                ) {
+                if ($resourceLinkTarget && $resourceLinkTarget !== '' && $isResourceLink) {
                     $target = $resourceLinkTarget;
                 }
                 if ($isExternalLink && $setNoOpener) {
-                    $linkText = self::setAttribute(
-                        'rel',
-                        'noopener',
-                        $linkText
-                    );
+                    $linkText = self::setAttribute('rel', 'noopener', $linkText);
                 }
                 if ($isExternalLink && $setExternal) {
-                    $linkText = self::setAttribute(
-                        'rel',
-                        'external',
-                        $linkText
-                    );
+                    $linkText = self::setAttribute('rel', 'external', $linkText);
                 }
 
-                if (
-                    !$isExternalLink &&
-                    !$isResourceLink &&
-                    strpos($linkText, $lightboxAttributes) === false
-                ) {
+                if (!$isExternalLink && !$isResourceLink && strpos($linkText, $lightboxAttributes) === false) {
                     foreach ($attributesArray as $key => $value) {
                         if (!$value) {
                             continue;
@@ -308,7 +252,7 @@ class ConvertUrisImplementation extends AbstractFusionObject
             $processedContent
         );
 
-        return $processedContent;
+        return $processedContent ?? '';
     }
 
     private function setLightboxAttributes(): void
@@ -337,46 +281,24 @@ class ConvertUrisImplementation extends AbstractFusionObject
      * @param string $content The content to parse
      * @return string
      */
-    private static function setAttribute(
-        string $attribute,
-        string|bool $value,
-        string $content
-    ): string {
+    private static function setAttribute(string $attribute, string|bool $value, string $content): string
+    {
         // The attribute is already set
-        if (
-            \preg_match_all(
-                '~\s+' . $attribute . '="(.*?)~i',
-                $content,
-                $matches
-            )
-        ) {
+        if (preg_match_all('~\s+' . $attribute . '="(.*?)~i', $content, $matches)) {
             // If the attribute is target or the value is already set, leave the attribute as it is
-            if (
-                $attribute === 'target' ||
-                \preg_match(
-                    '~' . $attribute . '=".*?' . $value . '.*?"~i',
-                    $content
-                )
-            ) {
+            if ($attribute === 'target' || preg_match('~' . $attribute . '=".*?' . $value . '.*?"~i', $content)) {
                 return $content;
             }
             // Add the attribute to the list
-            return \preg_replace(
-                '/' . $attribute . '="(.*?)"/',
-                sprintf('%s="$1 %s"', $attribute, $value),
-                $content
-            );
+            return preg_replace('/' . $attribute . '="(.*?)"/', sprintf('%s="$1 %s"', $attribute, $value), $content) ??
+                '';
         }
 
         if ($value === true) {
-            return \str_replace('<a', sprintf('<a %s', $attribute), $content);
+            return str_replace('<a', sprintf('<a %s', $attribute), $content);
         }
 
         // Add the missing attribute with the value
-        return \str_replace(
-            '<a',
-            sprintf('<a %s="%s"', $attribute, $value),
-            $content
-        );
+        return str_replace('<a', sprintf('<a %s="%s"', $attribute, $value), $content);
     }
 }

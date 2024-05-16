@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.Links':
+'Litefyr.Integration:Mixin.Links':
   abstract: true
   ui:
     inspector:
@@ -23,7 +23,7 @@
             min: 0
             properties:
               href:
-                label: 'Litespeed.Integration:NodeTypes.Mixin.Links:properties.links.label'
+                label: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.label'
                 editor: Sitegeist.Archaeopteryx/Inspector/Editors/LinkEditor
                 editorOptions:
                   linkTypes:
@@ -41,12 +41,12 @@
                         bcc: false
                         body: true
               text:
-                label: 'Litespeed.Integration:NodeTypes.Mixin.Links:properties.links.text'
+                label: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.text'
                 editorOptions:
-                  placeholder: 'Litespeed.Integration:NodeTypes.Mixin.Links:properties.links.text.placeholder'
+                  placeholder: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.text.placeholder'
                 validation:
                   'Neos.Neos/Validation/LabelValidator': {}
               break:
-                label: 'Litespeed.Integration:NodeTypes.Mixin.Links:properties.links.break'
+                label: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.break'
                 type: boolean
                 editor: Neos.Neos/Inspector/Editors/BooleanEditor

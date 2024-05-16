@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.ScollIndicator':
+'Litefyr.Integration:Mixin.ScollIndicator':
   abstract: true
   ui:
     inspector:
@@ -19,7 +19,7 @@
     scrollIndicatorTheme:
       type: string
       ui:
-        label: 'Litespeed.Integration:NodeTypes.Colors:color'
+        label: 'Litefyr.Integration:NodeTypes.Colors:color'
         reloadPageIfChanged: true
         inspector:
           position: 20
@@ -30,19 +30,19 @@
             allowEmpty: true
             values:
               main:
-                label: 'Litespeed.Integration:NodeTypes.Colors:color.main'
+                label: 'Litefyr.Integration:NodeTypes.Colors:color.main'
                 color: 'var(--color-theme-main)'
               minor:
-                label: 'Litespeed.Integration:NodeTypes.Colors:color.minor'
+                label: 'Litefyr.Integration:NodeTypes.Colors:color.minor'
                 color: 'var(--color-theme-minor)'
               minor2:
-                label: 'Litespeed.Integration:NodeTypes.Colors:color.minor2'
+                label: 'Litefyr.Integration:NodeTypes.Colors:color.minor2'
                 color: 'var(--color-theme-minor2)'
               gray:
-                label: 'Litespeed.Integration:NodeTypes.Colors:color.gray'
+                label: 'Litefyr.Integration:NodeTypes.Colors:color.gray'
                 color: 'var(--color-theme-gray)'
               default:
-                label: 'Litespeed.Integration:NodeTypes.Colors:color.text'
+                label: 'Litefyr.Integration:NodeTypes.Colors:color.text'
                 color: 'var(--color-theme-front)'
     scrollIndicatorBottom:
       type: integer

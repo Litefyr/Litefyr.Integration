@@ -1,13 +1,13 @@
-header = Litespeed.Presentation:Section.Header {
+header = Litefyr.Presentation:Section.Header {
     homeUri = Neos.Neos:NodeUri {
         node = ${site}
     }
 
-    logo = Litespeed.Integration:Component.Logo
+    logo = Litefyr.Integration:Component.Logo
 
     items = Neos.Neos:MenuItems {
         maximumLevels = 2
-        filter = 'Neos.Neos:Document,!Litespeed.Integration:Mixin.NotInMenu,!Litespeed.Integration:Mixin.NotInMainMenu'
+        filter = 'Neos.Neos:Document,!Litefyr.Integration:Mixin.NotInMenu,!Litefyr.Integration:Mixin.NotInMainMenu'
     }
 
     renderer.@process.convertUris = Neos.Neos:ConvertUris {

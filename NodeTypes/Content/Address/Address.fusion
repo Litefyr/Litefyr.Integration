@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Content.Address) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litefyr.Integration:Content.Address) < prototype(Neos.Neos:ContentComponent) {
     address = ${q(node).property('address')}
     addressName = ${q(node).property('name') ? q(site).property('addressName') : null}
     phone = ${q(node).property('phone') ? q(site).property('phone') : null}
@@ -23,7 +23,7 @@ prototype(Litespeed.Integration:Content.Address) < prototype(Neos.Neos:ContentCo
     theme = ${q(node).property('theme')}
     leftColSize = ${q(node).property('leftColSize')}
     textLeft = ${q(node).property('textLeft')}
-    links = Litespeed.Integration:Component.Links
+    links = Litefyr.Integration:Component.Links
     headline = Neos.Neos:Editable {
         property = 'headline'
         block = false
@@ -40,12 +40,12 @@ prototype(Litespeed.Integration:Content.Address) < prototype(Neos.Neos:ContentCo
     }
 
 
-   @private.content = afx`<Litespeed.Presentation:Module.Address {...props} />`
+   @private.content = afx`<Litefyr.Presentation:Module.Address {...props} />`
    renderer = afx`
         {private.content}
         <Carbon.Notification:Backend
             @if.set={!private.content}
-            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litespeed.Integration')}
+            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litefyr.Integration')}
         />
    `
 

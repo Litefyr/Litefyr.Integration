@@ -1,7 +1,7 @@
-prototype(Litespeed.Integration:Component.Links) < prototype(Neos.Fusion:Component) {
+prototype(Litefyr.Integration:Component.Links) < prototype(Neos.Fusion:Component) {
     links = ${q(node).property('links') || []}
     linkInBackend = true
-    fallbackContent = ${Translation.translate('more', null, [], null, 'Litespeed.Presentation')}
+    fallbackContent = ${Translation.translate('more', null, [], null, 'Litefyr.Presentation')}
 
     // Get applied on wrapper or onto a single button
     class = null
@@ -10,7 +10,7 @@ prototype(Litespeed.Integration:Component.Links) < prototype(Neos.Fusion:Compone
 
     @private.items = Neos.Fusion:Map {
         items = ${props.links}
-        itemRenderer = Litespeed.Presentation:Atom.Link {
+        itemRenderer = Litefyr.Presentation:Atom.Link {
             @if.set = Neos.Neos:ConvertUris {
                 value = ${item.href}
             }

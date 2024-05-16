@@ -1,7 +1,7 @@
-'Litespeed.Integration:Content.Spacer':
+'Litefyr.Integration:Content.Spacer':
   superTypes:
     'Neos.Neos:Content': true
-    'Litespeed.Integration:Mixin.ThemeSelector': true
+    'Litefyr.Integration:Mixin.ThemeSelector': true
   ui:
     label: i18n
     icon: expand-arrows-alt
@@ -35,7 +35,7 @@
           position: 20
           editor: 'Carbon.RangeEditor/Editor'
           editorOptions:
-            valueLabelsFile: 'Litespeed.Presentation:Spacing'
+            valueLabelsFile: 'Litefyr.Presentation:Spacing'
             min: -4
             max: 4
             step: 1

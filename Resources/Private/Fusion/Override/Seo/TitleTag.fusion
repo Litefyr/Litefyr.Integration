@@ -1,5 +1,5 @@
 prototype(Neos.Seo:TitleTag) {
     outputSuffixOnTitleOverride = false
 
-    title.default.renderer.items.@process.filter = ${Array.filter(value, (node, index) => index == 0 || !q(node).is('[instanceof Litespeed.Integration:Mixin.HideInTitleTag]'))}
+    title.default.renderer.items.@process.filter = ${Array.filter(value, (node, index) => index == 0 || !q(node).is('[instanceof Litefyr.Integration:Mixin.HideInTitleTag]'))}
 }

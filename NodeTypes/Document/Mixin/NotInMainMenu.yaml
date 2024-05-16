@@ -3,5 +3,5 @@
 #
 ##
 
-'Litespeed.Integration:Mixin.NotInMainMenu':
+'Litefyr.Integration:Mixin.NotInMainMenu':
   abstract: true

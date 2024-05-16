@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.TeaserDocument.Articles':
+'Litefyr.Integration:Mixin.TeaserDocument.Articles':
   abstract: true
   properties:
     articles:

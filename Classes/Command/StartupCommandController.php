@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Integration\Command;
+namespace Litefyr\Integration\Command;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
@@ -13,6 +13,7 @@ class StartupCommandController extends CommandController
     #[Flow\Inject]
     protected LoggerInterface $logger;
 
+    /** @var array<string, string|array<string>>|null $flowCommandsOnStartup */
     #[Flow\InjectConfiguration('flowCommandsOnStartup')]
     protected $flowCommandsOnStartup;
 
@@ -25,43 +26,37 @@ class StartupCommandController extends CommandController
     {
         $commands = $this->flowCommandsOnStartup;
         if (!isset($commands) || !is_array($commands) || !count($commands)) {
-            $this->outputFormatted(
-                '<comment> No CLI startup command set. </comment>'
-            );
+            $this->outputFormatted('<comment> No CLI startup command set. </comment>');
+            return;
         }
 
         ksort($commands);
 
         foreach ($commands as $key => $packagesCommands) {
-            if (!isset($packagesCommands)) {
-                break;
+            if (empty($packagesCommands)) {
+                continue;
             }
             if (is_string($packagesCommands)) {
                 $packagesCommands = [$packagesCommands];
             }
-            if (!is_array($commands) || !count($commands)) {
-                break;
+            if (!is_array($packagesCommands)) {
+                continue;
             }
 
-            $this->outputFormatted('');
-            $this->outputFormatted(
-                '<comment> Run following Flow commands for %s </comment>',
-                [$key]
-            );
+            $this->outputLine('');
+            $this->outputLine('');
+            $this->outputLine('<comment> Run following Flow commands for %s </comment>', [$key]);
+            foreach ($packagesCommands as $singleCommand) {
+                $this->outputFormatted('%s', [$singleCommand], 5);
+            }
 
             foreach ($packagesCommands as $singleCommand) {
-                exec(
-                    sprintf(
-                        'cd %s && php flow %s',
-                        FLOW_PATH_ROOT,
-                        $singleCommand
-                    )
-                );
+                // @phpstan-ignore-next-line
+                exec(sprintf('cd %s && php flow %s', FLOW_PATH_ROOT, $singleCommand));
                 $this->logger->info(
                     sprintf('Run Flow command: `%s`', $singleCommand),
                     LogEnvironment::fromMethodName(__METHOD__)
                 );
-                $this->outputFormatted('%s', [$singleCommand], 5);
             }
         }
     }

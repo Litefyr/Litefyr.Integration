@@ -1,11 +1,11 @@
-footer = Litespeed.Presentation:Section.Footer {
+footer = Litefyr.Presentation:Section.Footer {
     multiColumnEnabled = ${q(site).property('footerNavigationMultiColumnEnabled')}
     items = Neos.Fusion:Map {
         @process.filter = ${Array.filter(value)}
         items = ${Carbon.Array.check(q(site).property('footerNavigation')) || []}
         itemRenderer = Neos.Fusion:DataStructure {
             label = ${q(item).property('title')}
-            isLightbox = ${q(item).is('[instanceof Litespeed.Integration:Document.Lightbox]')}
+            isLightbox = ${q(item).is('[instanceof Litefyr.Integration:Document.Lightbox]')}
             href = Neos.Neos:NodeUri {
                 node = ${item}
             }
@@ -22,7 +22,7 @@ footer = Litespeed.Presentation:Section.Footer {
                 items = ${Carbon.Array.check(item.items) || []}
                 itemRenderer = Neos.Fusion:DataStructure {
                     label = ${q(item).property('title')}
-                    isLightbox = ${q(item).is('[instanceof Litespeed.Integration:Document.Lightbox]')}
+                    isLightbox = ${q(item).is('[instanceof Litefyr.Integration:Document.Lightbox]')}
                     href = Neos.Neos:NodeUri {
                         node = ${item}
                     }

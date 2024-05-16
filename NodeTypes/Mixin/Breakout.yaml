@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.Breakout':
+'Litefyr.Integration:Mixin.Breakout':
   abstract: true
   ui:
     inspector:

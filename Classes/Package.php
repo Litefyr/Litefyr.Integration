@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Integration;
+namespace Litefyr\Integration;
 
 use Neos\ContentRepository\Domain\Model\Node;
 use Neos\Flow\Core\Bootstrap;
@@ -22,7 +22,7 @@ class Package extends BasePackage
         $dispatcher = $bootstrap->getSignalSlotDispatcher();
 
         // Sync uri with title
-        // - Litespeed.Integration:Mixin.SynUriPathSegmentWithTitle
+        // - Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle
         $newUriPathSegment = null;
         $dispatcher->connect(Node::class, 'nodePropertyChanged', function (
             Node $node,
@@ -32,19 +32,13 @@ class Package extends BasePackage
         ) use ($bootstrap, &$newUriPathSegment) {
             if (
                 $propertyName === 'title' &&
-                $node
-                    ->getNodeType()
-                    ->isOfType(
-                        'Litespeed.Integration:Mixin.SynUriPathSegmentWithTitle'
-                    )
+                $node->getNodeType()->isOfType('Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle')
             ) {
-                $nodeUriPathSegmentGenerator = $bootstrap
-                    ->getObjectManager()
-                    ->get(NodeUriPathSegmentGenerator::class);
-                $newUriPathSegment = strtolower(
-                    $nodeUriPathSegmentGenerator->generateUriPathSegment($node)
-                );
+                $nodeUriPathSegmentGenerator = $bootstrap->getObjectManager()->get(NodeUriPathSegmentGenerator::class);
+                // @phpstan-ignore-next-line
+                $newUriPathSegment = strtolower($nodeUriPathSegmentGenerator->generateUriPathSegment($node));
                 $node->setProperty('uriPathSegment', $newUriPathSegment);
+                // @phpstan-ignore-next-line
                 $bootstrap
                     ->getObjectManager()
                     ->get(RouteCacheFlusher::class)

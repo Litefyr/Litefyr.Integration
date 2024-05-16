@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Helper.Pagination) < prototype(Neos.Fusion:Component) {
+prototype(Litefyr.Integration:Helper.Pagination) < prototype(Neos.Fusion:Component) {
     totalCount = 0
     maximumNumberOfLinks = 7
     itemsPerPage = 15
@@ -21,13 +21,13 @@ prototype(Litespeed.Integration:Helper.Pagination) < prototype(Neos.Fusion:Compo
         itemRenderer = Neos.Fusion:Case {
             seperator {
                 condition = ${i == '...'}
-                renderer = Litespeed.Presentation:Block.Pager.Fragment.Item {
+                renderer = Litefyr.Presentation:Block.Pager.Fragment.Item {
                     type = 'separator'
                 }
             }
             currentPage {
                 condition = ${String.toInteger(i) == String.toInteger(props.currentPage)}
-                renderer = Litespeed.Presentation:Block.Pager.Fragment.Item {
+                renderer = Litefyr.Presentation:Block.Pager.Fragment.Item {
                     uri = Neos.Neos:NodeUri {
                         node = ${documentNode}
                         additionalParams = Flowpack.Listable:PaginationParameters {
@@ -39,7 +39,7 @@ prototype(Litespeed.Integration:Helper.Pagination) < prototype(Neos.Fusion:Compo
             }
             previous {
                 condition = ${i == 'previous'  && (props.showPreviousNextLinks == true)}
-                renderer = Litespeed.Presentation:Block.Pager.Fragment.PrevNext {
+                renderer = Litefyr.Presentation:Block.Pager.Fragment.PrevNext {
                     type = 'prev'
                     label = ${Translation.translate(i, i, [], 'Main', 'Flowpack.Listable')}
                     uri = Neos.Neos:NodeUri {
@@ -52,7 +52,7 @@ prototype(Litespeed.Integration:Helper.Pagination) < prototype(Neos.Fusion:Compo
             }
             next {
                 condition = ${i == 'next'  && (props.showPreviousNextLinks == true)}
-                renderer = Litespeed.Presentation:Block.Pager.Fragment.PrevNext {
+                renderer = Litefyr.Presentation:Block.Pager.Fragment.PrevNext {
                     type = 'next'
                     label = ${Translation.translate(i, i, [], 'Main', 'Flowpack.Listable')}
                     uri = Neos.Neos:NodeUri {
@@ -65,7 +65,7 @@ prototype(Litespeed.Integration:Helper.Pagination) < prototype(Neos.Fusion:Compo
             }
             link {
                 condition = ${(iterator.isFirst == false && iterator.isLast == false) || (props.showPreviousNextLinks == false)}
-                renderer = Litespeed.Presentation:Block.Pager.Fragment.Item {
+                renderer = Litefyr.Presentation:Block.Pager.Fragment.Item {
                     type = 'link'
                     label = ${String.toInteger(i)}
                     uri = Neos.Neos:NodeUri {
@@ -80,8 +80,8 @@ prototype(Litespeed.Integration:Helper.Pagination) < prototype(Neos.Fusion:Compo
     }
 
     renderer = afx`
-        <Litespeed.Presentation:Spacing tagName="nav" full padding tailwind="border-t border-theme-front/10 text-sm font-bold mt-16 pb-clippath">
-            <Litespeed.Presentation:Spacing wide class="flex items-center justify-between">
+        <Litefyr.Presentation:Spacing tagName="nav" full padding tailwind="border-t border-theme-front/10 text-sm font-bold mt-16 pb-clippath">
+            <Litefyr.Presentation:Spacing wide class="flex items-center justify-between">
                 <div class="-mt-px w-0 flex-1 flex">
                     <Neos.Fusion:Loop items={private.map} @if={props.showPreviousNextLinks}>
                         {itemKey == 'previous' ? item : null}
@@ -97,7 +97,7 @@ prototype(Litespeed.Integration:Helper.Pagination) < prototype(Neos.Fusion:Compo
                         {itemKey == 'next' ? item : null}
                     </Neos.Fusion:Loop>
                 </div>
-            </Litespeed.Presentation:Spacing>
-        </Litespeed.Presentation:Spacing>
+            </Litefyr.Presentation:Spacing>
+        </Litefyr.Presentation:Spacing>
     `
 }

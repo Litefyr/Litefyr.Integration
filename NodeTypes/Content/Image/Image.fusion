@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Content.Image) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litefyr.Integration:Content.Image) < prototype(Neos.Neos:ContentComponent) {
     image = ${q(node).property('image')}
     alternativeText = ${q(node).property('alternativeText')}
     lightbox = ${q(node).property('lightbox')}
@@ -14,7 +14,7 @@ prototype(Litespeed.Integration:Content.Image) < prototype(Neos.Neos:ContentComp
     theme = ${q(node).property('theme')}
     leftColSize = ${q(node).property('leftColSize')}
     textLeft = ${q(node).property('textLeft')}
-    links = Litespeed.Integration:Component.Links
+    links = Litefyr.Integration:Component.Links
     headline = Neos.Neos:Editable {
         property = 'headline'
         block = false
@@ -44,7 +44,7 @@ prototype(Litespeed.Integration:Content.Image) < prototype(Neos.Neos:ContentComp
 
     @private {
         textWithContentImage = afx`
-            <Litespeed.Presentation:Atom.Image
+            <Litefyr.Presentation:Atom.Image
                 {...props}
                 screenHeightBreakpoint="md"
                 objectFit="cover"
@@ -58,7 +58,7 @@ prototype(Litespeed.Integration:Content.Image) < prototype(Neos.Neos:ContentComp
         textBox {
             condition = ${!props.enableText && props.textBoxDirection && props.textBoxText}
             renderer = afx`
-                <Litespeed.Presentation:Block.ImageWithTextOverlay
+                <Litefyr.Presentation:Block.ImageWithTextOverlay
                     {...props}
                     boxDirection={props.textBoxDirection}
                     boxMaxWidth={props.textBoxMaxWidth}
@@ -70,7 +70,7 @@ prototype(Litespeed.Integration:Content.Image) < prototype(Neos.Neos:ContentComp
         enableText {
             condition = ${props.enableText}
             renderer = afx`
-                <Litespeed.Presentation:Module.TextWithContent
+                <Litefyr.Presentation:Module.TextWithContent
                     {...props}
                     breakpoint="md"
                     screenHeight={null}
@@ -82,14 +82,14 @@ prototype(Litespeed.Integration:Content.Image) < prototype(Neos.Neos:ContentComp
         default {
             condition = true
             renderer = afx`
-                <Litespeed.Presentation:Spacing
+                <Litefyr.Presentation:Spacing
                     augmenter
                     width={props.enableSpacing ? props.breakout : false}
                     padding="auto"
                     tailwind="mediacontent"
                 >
-                    <Litespeed.Presentation:Atom.Image objectFit={props.screenHeight ? "cover" : null} {...props} />
-                </Litespeed.Presentation:Spacing>
+                    <Litefyr.Presentation:Atom.Image objectFit={props.screenHeight ? "cover" : null} {...props} />
+                </Litefyr.Presentation:Spacing>
             `
         }
     }

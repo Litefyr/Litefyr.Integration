@@ -1,16 +1,16 @@
-'Litespeed.Integration:Content.Image':
+'Litefyr.Integration:Content.Image':
   superTypes:
     'Neos.Neos:Content': true
     'Carbon.Image:AlternativeText': true
     'Carbon.Image:Image': true
     'Carbon.Image:Lightbox': true
     'Carbon.Image:Link': true
-    'Litespeed.Integration:Mixin.Breakout': true
-    'Litespeed.Integration:Mixin.TextWithContent': true
-    'Litespeed.Integration:Mixin.TextWithContent.Position': true
-    'Litespeed.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litespeed.Integration:Mixin.TextWithContent.Label': true
-    'Litespeed.Integration:Mixin.ScreenHeight': true
+    'Litefyr.Integration:Mixin.Breakout': true
+    'Litefyr.Integration:Mixin.TextWithContent': true
+    'Litefyr.Integration:Mixin.TextWithContent.Position': true
+    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
+    'Litefyr.Integration:Mixin.TextWithContent.Label': true
+    'Litefyr.Integration:Mixin.ScreenHeight': true
   label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text', 'alternativeText', 'caption')}"
   ui:
     position: 30

@@ -4,7 +4,7 @@ prototype(Breadlesscode.NodeTypes.Folder:Document.Folder) < prototype(Carbon.Bac
     content = Neos.Fusion:Component {
         title = ${q(node).property('title')}
         children = ${q(node).children('[instanceof Neos.Neos:Document]')}
-        styleAndIcon = ${Configuration.setting('Litespeed.Presentation.icons.backend.folder')}
+        styleAndIcon = ${Configuration.setting('Litefyr.Presentation.icons.backend.folder')}
 
         renderer = afx`
             <main class="mx-auto max-w-2xl">

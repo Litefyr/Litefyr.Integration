@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.TextWithContent.Label':
+'Litefyr.Integration:Mixin.TextWithContent.Label':
   abstract: true
   properties:
     label:

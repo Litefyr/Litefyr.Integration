@@ -1,14 +1,13 @@
 <?php
 
-namespace Litespeed\Integration\Http;
+namespace Litefyr\Integration\Http;
 
 use GuzzleHttp\Psr7\ServerRequest;
 use GuzzleHttp\Psr7\Uri;
 use Neos\Flow\Cli\CommandRequestHandler;
 use Neos\Flow\Http\HttpRequestHandlerInterface;
 
-class CommandHttpRequestHandler extends CommandRequestHandler implements
-    HttpRequestHandlerInterface
+class CommandHttpRequestHandler extends CommandRequestHandler implements HttpRequestHandlerInterface
 {
     public function getHttpRequest()
     {

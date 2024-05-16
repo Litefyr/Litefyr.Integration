@@ -1,9 +1,9 @@
-'Litespeed.Integration:Mixin.ContentWithContentCollection':
+'Litefyr.Integration:Mixin.ContentWithContentCollection':
   abstract: true
   superTypes:
     'Neos.Neos:Content': true
     'Neos.Neos:ContentCollection': true
-  label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text').postfix(' ' + I18n.translate('contentcollection.label', null, [q(node).children().count()], 'Main', 'Litespeed.Integration', q(node).children().count()))}"
+  label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text').postfix(' ' + I18n.translate('contentcollection.label', null, [q(node).children().count()], 'Main', 'Litefyr.Integration', q(node).children().count()))}"
   constraints:
     nodeTypes:
       'Neos.Neos:Content': false

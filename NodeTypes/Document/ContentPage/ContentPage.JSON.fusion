@@ -1,14 +1,14 @@
-prototype(Litespeed.Integration:Document.ContentPage.JSON.Single) < prototype(Litespeed.Integration:Document.ContentPage.JSON) {
+prototype(Litefyr.Integration:Document.ContentPage.JSON.Single) < prototype(Litefyr.Integration:Document.ContentPage.JSON) {
     single = true
     limit = false
 }
 
-prototype(Litespeed.Integration:Document.ContentPage.JSON) < prototype(Neos.Fusion:Component) {
+prototype(Litefyr.Integration:Document.ContentPage.JSON) < prototype(Neos.Fusion:Component) {
     # If this page or the subsites should be shown as teaser
     single = ${request.arguments.single || false}
     limit = ${request.arguments.limit || false}
     variant = ${request.arguments.variant || false}
-    teaserNodeType = ${request.arguments.nodeType || ('Litespeed.Presentation:Block.Teaser' + (this.variant ? ('.' + this.variant) : ''))}
+    teaserNodeType = ${request.arguments.nodeType || ('Litefyr.Presentation:Block.Teaser' + (this.variant ? ('.' + this.variant) : ''))}
 
     nodeType = 'Neos.Neos:Document'
     node = ${documentNode}
@@ -27,7 +27,7 @@ prototype(Litespeed.Integration:Document.ContentPage.JSON) < prototype(Neos.Fusi
             keyRenderer = ${q(node).property('_identifier')}
             itemName = 'node'
             itemRenderer = Neos.Fusion:Component {
-                data = Litespeed.Integration:Helper.Teaser.Data
+                data = Litefyr.Integration:Helper.Teaser.Data
                 teaserNodeType = ${props.teaserNodeType}
                 @if.hasImageOrPlain = ${props.variant == 'Plain' || this.data.image}
                 renderer = Neos.Fusion:DataStructure {

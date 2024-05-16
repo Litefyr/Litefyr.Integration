@@ -1,7 +1,7 @@
-'Litespeed.Integration:Mixin.TextWithContent.SecondBackground':
+'Litefyr.Integration:Mixin.TextWithContent.SecondBackground':
   abstract: true
   superTypes:
-    'Litespeed.Integration:Mixin.SecondThemeSelector': true
+    'Litefyr.Integration:Mixin.SecondThemeSelector': true
   properties:
     themeSecond:
       ui:

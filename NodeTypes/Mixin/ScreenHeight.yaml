@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.ScreenHeight':
+'Litefyr.Integration:Mixin.ScreenHeight':
   abstract: true
   ui:
     inspector:
@@ -19,7 +19,7 @@
           position: 530
           editor: 'Carbon.RangeEditor/Editor'
           editorOptions:
-            minLabel: 'Litespeed.Integration:NodeTypes.Mixin.ScreenHeight:properties.screenHeight.minLabel'
+            minLabel: 'Litefyr.Integration:NodeTypes.Mixin.ScreenHeight:properties.screenHeight.minLabel'
             min: 0
             max: 100
             step: 5

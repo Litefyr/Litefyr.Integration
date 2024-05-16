@@ -4,7 +4,7 @@ Carbon:
   IncludeAssets:
     Packages:
       Carbon.CodePen:
-        Package: 'Litespeed.Integration'
+        Package: 'Litefyr.Integration'
         Backend:
           Head:
             - https://cdn.tailwindcss.com(js)
@@ -16,6 +16,6 @@ Neos:
       frontendConfiguration:
         'Carbon.PreviewMode:Button':
           teaserView:
-            nodeTypeName: 'Litespeed.Integration:Mixin.TeaserDocument'
+            nodeTypeName: 'Litefyr.Integration:Mixin.TeaserDocument'
             icon: 'fas fa-images'
-            label: 'Litespeed.Integration:Backend.Main:editPreviewModes.teaserView'
+            label: 'Litefyr.Integration:Backend.Main:editPreviewModes.teaserView'

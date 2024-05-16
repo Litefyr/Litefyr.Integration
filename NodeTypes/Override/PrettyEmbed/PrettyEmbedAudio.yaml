@@ -1,9 +1,9 @@
 'Jonnitto.PrettyEmbedAudio:Content.Audio':
   superTypes:
-    'Litespeed.Integration:Mixin.TextWithContent': true
-    'Litespeed.Integration:Mixin.TextWithContent.Position': true
-    'Litespeed.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litespeed.Integration:Mixin.TextWithContent.Label': true
+    'Litefyr.Integration:Mixin.TextWithContent': true
+    'Litefyr.Integration:Mixin.TextWithContent.Position': true
+    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
+    'Litefyr.Integration:Mixin.TextWithContent.Label': true
   ui:
     position: 320
     inspector:

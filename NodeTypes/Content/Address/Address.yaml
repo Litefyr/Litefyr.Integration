@@ -1,11 +1,11 @@
-'Litespeed.Integration:Content.Address':
+'Litefyr.Integration:Content.Address':
   superTypes:
     'Neos.Neos:Content': true
-    'Litespeed.Integration:Mixin.TextWithContent': true
-    'Litespeed.Integration:Mixin.TextWithContent.Position': true
-    'Litespeed.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litespeed.Integration:Mixin.TextWithContent.Label': true
-    'Litespeed.Integration:Mixin.ScreenHeight': true
+    'Litefyr.Integration:Mixin.TextWithContent': true
+    'Litefyr.Integration:Mixin.TextWithContent.Position': true
+    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
+    'Litefyr.Integration:Mixin.TextWithContent.Label': true
+    'Litefyr.Integration:Mixin.ScreenHeight': true
   search:
     fulltext:
       enable: true

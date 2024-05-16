@@ -3,13 +3,13 @@
 #
 ##
 
-'Litespeed.Integration:Document.Meta':
+'Litefyr.Integration:Document.Meta':
   abstract: true
   superTypes:
-    'Litespeed.Integration:Document.ContentPage': true
-    'Litespeed.Integration:Mixin.TeaserDocument.Single': true
-    'Litespeed.Integration:Constraint.Document.NoSubDocument': true
-    'Litespeed.Integration:Mixin.NotInMenu': true
+    'Litefyr.Integration:Document.ContentPage': true
+    'Litefyr.Integration:Mixin.TeaserDocument.Single': true
+    'Litefyr.Integration:Constraint.Document.NoSubDocument': true
+    'Litefyr.Integration:Mixin.NotInMenu': true
     'Garagist.Mautic:Mixin.Email': false
     'Garagist.Mautic:Mixin.Category': false
   ui:

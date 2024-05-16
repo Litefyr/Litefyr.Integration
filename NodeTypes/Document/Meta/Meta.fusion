@@ -1,3 +1,3 @@
-prototype(Litespeed.Integration:Document.Meta) < prototype(Litespeed.Integration:Document.AbstractPage) {
-    content = Litespeed.Integration:ContentCollection
+prototype(Litefyr.Integration:Document.Meta) < prototype(Litefyr.Integration:Document.AbstractPage) {
+    content = Litefyr.Integration:ContentCollection
 }

@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.TeaserDocument.Date':
+'Litefyr.Integration:Mixin.TeaserDocument.Date':
   abstract: true
   properties:
     _hiddenBeforeDateTime:

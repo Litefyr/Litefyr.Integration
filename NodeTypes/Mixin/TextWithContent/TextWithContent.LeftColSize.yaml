@@ -1,4 +1,4 @@
-'Litespeed.Integration:Mixin.TextWithContent.LeftColSize':
+'Litefyr.Integration:Mixin.TextWithContent.LeftColSize':
   abstract: true
   properties:
     leftColSize:

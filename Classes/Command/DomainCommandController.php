@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Integration\Command;
+namespace Litefyr\Integration\Command;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
@@ -37,9 +37,7 @@ class DomainCommandController extends CommandController
                 $this->siteRepository->update($site);
             }
             $this->domainRepository->remove($domain);
-            $this->outputLine('Domain entry "%s" deleted.', [
-                $domain->getHostname(),
-            ]);
+            $this->outputLine('Domain entry "%s" deleted.', [$domain->getHostname()]);
         }
     }
 }

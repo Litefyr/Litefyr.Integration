@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litefyr.Integration:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
     headline = Neos.Neos:Editable {
         property = 'headline'
         block = false
@@ -15,8 +15,8 @@ prototype(Litespeed.Integration:Content.Headline) < prototype(Neos.Neos:ContentC
     inBackend = ${node.context.inBackend}
 
     renderer = afx`
-        <Litespeed.Presentation:Spacing augmenter padding waveSpacing>
-            <Litespeed.Presentation:Block.HeadlineAndLead {...props}/>
-        </Litespeed.Presentation:Spacing>
+        <Litefyr.Presentation:Spacing augmenter padding waveSpacing>
+            <Litefyr.Presentation:Block.HeadlineAndLead {...props}/>
+        </Litefyr.Presentation:Spacing>
     `
 }

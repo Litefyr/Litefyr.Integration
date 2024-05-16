@@ -1,4 +1,4 @@
 # This is just to make everything works if the Disturber package is not installed
 
-'Litespeed.Disturber:Mixin.Content':
+'Litefyr.Disturber:Mixin.Content':
   abstract: true

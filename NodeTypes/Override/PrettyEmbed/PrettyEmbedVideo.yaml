@@ -1,10 +1,10 @@
 'Jonnitto.PrettyEmbedVideo:Content.Video':
   superTypes:
-    'Litespeed.Integration:Mixin.Breakout': true
-    'Litespeed.Integration:Mixin.TextWithContent': true
-    'Litespeed.Integration:Mixin.TextWithContent.Position': true
-    'Litespeed.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litespeed.Integration:Mixin.TextWithContent.Label': true
+    'Litefyr.Integration:Mixin.Breakout': true
+    'Litefyr.Integration:Mixin.TextWithContent': true
+    'Litefyr.Integration:Mixin.TextWithContent.Position': true
+    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
+    'Litefyr.Integration:Mixin.TextWithContent.Label': true
   ui:
     position: 310
     inspector:

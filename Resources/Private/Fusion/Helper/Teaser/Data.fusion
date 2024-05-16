@@ -1,12 +1,12 @@
-prototype(Litespeed.Integration:Helper.Teaser.Data) < prototype(Neos.Fusion:Component) {
+prototype(Litefyr.Integration:Helper.Teaser.Data) < prototype(Neos.Fusion:Component) {
     overviewData = null
 
     node = ${this.overviewData ? this.overviewData.node : node}
 
-    dateProperty = ${q(this.node).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Date]') ? '_hiddenBeforeDateTime' : null}
-    category = ${q(this.node).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Category]') ? q(this.node).property('category') : null}
-    authors = ${q(this.node).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Authors]') ? q(this.node).property('authors') : null}
-    articleCount = ${q(this.node).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Articles]') ? Carbon.Array.length(q(this.node).property('articles')) : null}
+    dateProperty = ${q(this.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Date]') ? '_hiddenBeforeDateTime' : null}
+    category = ${q(this.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Category]') ? q(this.node).property('category') : null}
+    authors = ${q(this.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Authors]') ? q(this.node).property('authors') : null}
+    articleCount = ${q(this.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Articles]') ? Carbon.Array.length(q(this.node).property('articles')) : null}
 
     category.@if.notFromOveview = ${!this.overviewData}
     authors.@if.notFromOveview = ${!this.overviewData}
@@ -55,7 +55,7 @@ prototype(Litespeed.Integration:Helper.Teaser.Data) < prototype(Neos.Fusion:Comp
             }
             @process.filter = ${Carbon.Array.check(value) ? Array.filter(value) : value}
         }
-        label = ${props.articleCount ? Translation.translate('numberOfArticles', null, [props.articleCount], 'Main', 'Litespeed.Integration', props.articleCount) : null}
+        label = ${props.articleCount ? Translation.translate('numberOfArticles', null, [props.articleCount], 'Main', 'Litefyr.Integration', props.articleCount) : null}
         badges = Neos.Fusion:Case {
             fromOverview {
                 condition = ${props.overviewData}
@@ -89,7 +89,7 @@ prototype(Litespeed.Integration:Helper.Teaser.Data) < prototype(Neos.Fusion:Comp
                 }
             }
         }
-        firstImage = Litespeed.Integration:Helper.FirstImage {
+        firstImage = Litefyr.Integration:Helper.FirstImage {
             node = ${props.node}
         }
         date = ${props.dateProperty ? q(props.node).property(props.dateProperty) : null}

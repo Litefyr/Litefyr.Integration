@@ -1,5 +1,5 @@
 include: **/*.fusion
-include: nodetypes://Litespeed.Integration/**/*.fusion
+include: nodetypes://Litefyr.Integration/**/*.fusion
 
 ##
 # Calling a page that has no json representation will redirect to the html version

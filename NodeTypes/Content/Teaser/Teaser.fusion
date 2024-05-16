@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Content.Teaser) < prototype(Neos.Neos:ContentComponent) {
+prototype(Litefyr.Integration:Content.Teaser) < prototype(Neos.Neos:ContentComponent) {
     inBackend = ${node.context.inBackend}
     nodes = ${q(node).property('nodes')}
     single = ${!q(node).property('subsites')}
@@ -8,7 +8,7 @@ prototype(Litespeed.Integration:Content.Teaser) < prototype(Neos.Neos:ContentCom
     featured = ${this.showImages && q(node).property('featured')}
     limit = ${q(node).property('limit')}
     numberOfPlaceholder = ${(this.single ? Carbon.Array.length(this.nodes) : 3) || 3}
-    teaserNodeType = ${this.showImages ? (this.textbox ? 'Litespeed.Presentation:Block.Teaser.Textbox' : 'Litespeed.Presentation:Block.Teaser') : 'Litespeed.Presentation:Block.Teaser.Plain'}
+    teaserNodeType = ${this.showImages ? (this.textbox ? 'Litefyr.Presentation:Block.Teaser.Textbox' : 'Litefyr.Presentation:Block.Teaser') : 'Litefyr.Presentation:Block.Teaser.Plain'}
 
     headline = Neos.Neos:Editable {
         property = 'headline'
@@ -32,8 +32,8 @@ prototype(Litespeed.Integration:Content.Teaser) < prototype(Neos.Neos:ContentCom
                 node = ${item}
                 additionalParams {
                     json = true
-                    single = ${q(item).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Single]') ? null : props.single ? 'true' : null}
-                    limit = ${q(item).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Single]') ? null : props.single ? null : props.limit}
+                    single = ${q(item).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Single]') ? null : props.single ? 'true' : null}
+                    limit = ${q(item).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Single]') ? null : props.single ? null : props.limit}
                     variant = ${props.showImages ? (props.textbox ? 'Textbox' : null) : 'Plain'}
                 }
             }
@@ -41,15 +41,15 @@ prototype(Litespeed.Integration:Content.Teaser) < prototype(Neos.Neos:ContentCom
     }
 
     renderer = afx`
-        <Litespeed.Presentation:Module.TeaserContainer @if={private.jsonPath} jsonPath={private.jsonPath} {...props} bottomTheme={props.theme}>
+        <Litefyr.Presentation:Module.TeaserContainer @if={private.jsonPath} jsonPath={private.jsonPath} {...props} bottomTheme={props.theme}>
             <Neos.Fusion:Loop items={private.placeHolderItems}>
                 <Neos.Fusion:Renderer type={props.teaserNodeType} element.placeholder={true} />
             </Neos.Fusion:Loop>
-        </Litespeed.Presentation:Module.TeaserContainer>
+        </Litefyr.Presentation:Module.TeaserContainer>
         <Carbon.Notification:Backend
             @if={!private.jsonPath}
             type="alert"
-            content={Carbon.Backend.translate('noDocumentsSelected', null, [], 'Main', 'Litespeed.Integration')}
+            content={Carbon.Backend.translate('noDocumentsSelected', null, [], 'Main', 'Litefyr.Integration')}
         />
     `
 }

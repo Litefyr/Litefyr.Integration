@@ -5,12 +5,12 @@ teaserView = Carbon.BackendDocument:Document {
         image = ${q(node).property('image')}
         alternativeText = ${q(node).property('alternativeText')}
         text = ${String.stripTags(q(node).property('teaserText') || q(node).property('lead'))}
-        date = ${q(node).is('[instanceof Litespeed.Integration:Mixin.TeaserDocument.Date]') ? q(node).property('_hiddenBeforeDateTime') : null}
+        date = ${q(node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Date]') ? q(node).property('_hiddenBeforeDateTime') : null}
         href = '#'
 
         renderer = afx`
             <div class="max-w-xs text-black mx-auto">
-                <Litespeed.Presentation:Block.Teaser {...props} />
+                <Litefyr.Presentation:Block.Teaser {...props} />
             </div>
         `
     }

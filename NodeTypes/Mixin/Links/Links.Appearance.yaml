@@ -1,7 +1,7 @@
-'Litespeed.Integration:Mixin.Links.Appearance':
+'Litefyr.Integration:Mixin.Links.Appearance':
   abstract: true
   superTypes:
-    'Litespeed.Integration:Mixin.Links': true
+    'Litefyr.Integration:Mixin.Links': true
   properties:
     links:
       ui:
@@ -9,26 +9,26 @@
           editorOptions:
             properties:
               appearance:
-                label: 'Litespeed.Integration:NodeTypes.Colors:appearance'
+                label: 'Litefyr.Integration:NodeTypes.Colors:appearance'
                 editor: 'Carbon.ColorValues/Editor'
                 defaultValue: ghost
                 editorOptions:
                   allowEmpty: false
                   values:
                     main:
-                      label: 'Litespeed.Integration:NodeTypes.Colors:button.main'
+                      label: 'Litefyr.Integration:NodeTypes.Colors:button.main'
                       color: 'var(--color-theme-main)'
                     minor:
-                      label: 'Litespeed.Integration:NodeTypes.Colors:button.minor'
+                      label: 'Litefyr.Integration:NodeTypes.Colors:button.minor'
                       color: 'var(--color-theme-minor)'
                     minor2:
-                      label: 'Litespeed.Integration:NodeTypes.Colors:button.minor2'
+                      label: 'Litefyr.Integration:NodeTypes.Colors:button.minor2'
                       color: 'var(--color-theme-minor2)'
                     ghost:
-                      label: 'Litespeed.Integration:NodeTypes.Colors:button.ghost'
+                      label: 'Litefyr.Integration:NodeTypes.Colors:button.ghost'
                       color: '#fff'
                     link:
-                      label: 'Litespeed.Integration:NodeTypes.Colors:button.link'
+                      label: 'Litefyr.Integration:NodeTypes.Colors:button.link'
                       color: 'var(--color-theme-main)'
                 validation:
                   Neos.Neos/Validation/NotEmptyValidator: {}

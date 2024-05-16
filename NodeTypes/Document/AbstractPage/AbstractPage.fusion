@@ -1,4 +1,4 @@
-prototype(Litespeed.Integration:Document.AbstractPage) < prototype(Neos.Fusion:Component) {
+prototype(Litefyr.Integration:Document.AbstractPage) < prototype(Neos.Fusion:Component) {
     headTags = null
     hero = null
     content = null
@@ -9,7 +9,7 @@ prototype(Litespeed.Integration:Document.AbstractPage) < prototype(Neos.Fusion:C
 
     bodyRenderer = null
 
-    scrollIndicator = Litespeed.Integration:Component.ScrollIndicator
+    scrollIndicator = Litefyr.Integration:Component.ScrollIndicator
 
     header = Neos.Fusion:Renderer {
         renderPath = '/header'
@@ -54,7 +54,7 @@ prototype(Litespeed.Integration:Document.AbstractPage) < prototype(Neos.Fusion:C
                 }
             }
 
-            @process.replaceLogo = Litespeed.Integration:Helper.ReplaceTextWithComponent {
+            @process.replaceLogo = Litefyr.Integration:Helper.ReplaceTextWithComponent {
                 search = '⚑'
                 replace = ${props.replaceLogo}
             }

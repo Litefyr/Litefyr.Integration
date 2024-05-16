@@ -1,7 +1,7 @@
-'Litespeed.Integration:Mixin.TextWithContent':
+'Litefyr.Integration:Mixin.TextWithContent':
   abstract: true
   superTypes:
-    'Litespeed.Integration:Mixin.TextWithContent.Plain': true
+    'Litefyr.Integration:Mixin.TextWithContent.Plain': true
   search:
     fulltext:
       enable: true

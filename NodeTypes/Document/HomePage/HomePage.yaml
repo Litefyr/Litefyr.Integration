@@ -1,9 +1,9 @@
-'Litespeed.Integration:Document.HomePage':
+'Litefyr.Integration:Document.HomePage':
   abstract: true
   superTypes:
-    'Litespeed.Integration:Document.AbstractPage': true
-    'Litespeed.Integration:Constraint.Document.Restricted': true
-    'Litespeed.Integration:Mixin.Contact.Tab': true
+    'Litefyr.Integration:Document.AbstractPage': true
+    'Litefyr.Integration:Constraint.Document.Restricted': true
+    'Litefyr.Integration:Mixin.Contact.Tab': true
     'Carbon.GeoMap:Mixin.Address': true
   ui:
     label: i18n
@@ -137,11 +137,11 @@
             buttonAddLabel: '＋'
             properties:
               key:
-                label: 'Litespeed.Integration:NodeTypes.Document.HomePage:properties.legalItems.label'
+                label: 'Litefyr.Integration:NodeTypes.Document.HomePage:properties.legalItems.label'
                 validation:
                   Neos.Neos/Validation/NotEmptyValidator: {}
               value:
-                label: 'Litespeed.Integration:NodeTypes.Document.HomePage:properties.legalItems.text'
+                label: 'Litefyr.Integration:NodeTypes.Document.HomePage:properties.legalItems.text'
                 validation:
                   Neos.Neos/Validation/NotEmptyValidator: {}
     footerNavigationMultiColumnEnabled:
@@ -163,7 +163,7 @@
           hidden: 'ClientEval: !!node.properties.footerNavigationMultiColumnEnabled'
           editorOptions:
             nodeTypes:
-              - 'Litespeed.Integration:Document.AbstractPage'
+              - 'Litefyr.Integration:Document.AbstractPage'
               - 'Neos.Neos:Shortcut'
     footerNavigationMultiColumn:
       type: repeatable
@@ -181,12 +181,12 @@
             max: 4
             properties:
               headline:
-                label: 'Litespeed.Integration:NodeTypes.Document.HomePage:properties.footerNavigationMultiColumn.headline'
+                label: 'Litefyr.Integration:NodeTypes.Document.HomePage:properties.footerNavigationMultiColumn.headline'
               items:
-                label: 'Litespeed.Integration:NodeTypes.Document.HomePage:properties.footerNavigationMultiColumn.items'
+                label: 'Litefyr.Integration:NodeTypes.Document.HomePage:properties.footerNavigationMultiColumn.items'
                 type: references
                 editor: 'Neos.Neos/Inspector/Editors/ReferencesEditor'
                 editorOptions:
                   nodeTypes:
-                    - 'Litespeed.Integration:Document.AbstractPage'
+                    - 'Litefyr.Integration:Document.AbstractPage'
                     - 'Neos.Neos:Shortcut'

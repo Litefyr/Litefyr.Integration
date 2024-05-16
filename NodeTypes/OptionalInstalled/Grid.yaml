@@ -1,4 +1,4 @@
 # This is just to make everything works if the Grid package is not installed
 
-'Litespeed.Grid:Mixin.Item':
+'Litefyr.Grid:Mixin.Item':
   abstract: true
