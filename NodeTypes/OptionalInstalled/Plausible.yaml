@@ -1,0 +1,7 @@
+# This is just to make everything works if the Carbon.Plausible package is not installed
+
+'Carbon.Plausible:Mixin.DoNotTrack':
+  abstract: true
+
+'Carbon.Plausible:Mixin.CustomEvent':
+  abstract: true

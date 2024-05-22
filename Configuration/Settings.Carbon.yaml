@@ -3,10 +3,10 @@ Carbon:
     defaultCountry: AT
   IncludeAssets:
     Packages:
-      Carbon.CodePen:
+      00_Carbon.CodePen:
         Package: 'Litefyr.Integration'
         Backend:
-          Head:
+          HeadStart:
             - https://cdn.tailwindcss.com(js)
             - TailwindConfig.js
 
