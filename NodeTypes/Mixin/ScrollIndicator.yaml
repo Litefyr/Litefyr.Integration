@@ -80,7 +80,7 @@
       type: integer
       defaultValue: 80
       ui:
-        label: Scrolldistanz
+        label: i18n
         reloadPageIfChanged: true
         inspector:
           group: scroll

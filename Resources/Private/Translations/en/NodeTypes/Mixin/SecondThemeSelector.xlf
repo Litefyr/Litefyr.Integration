@@ -15,7 +15,7 @@
                 <source>Scroll distance</source>
             </trans-unit>
             <trans-unit id="properties.scrollIndicatorEnabled" xml:space="preserve">
-                <source>Aktivieren</source>
+                <source>Activate</source>
             </trans-unit>
             <trans-unit id="properties.screenHeight.minLabel" xml:space="preserve">
                 <source>Do not specify</source>
