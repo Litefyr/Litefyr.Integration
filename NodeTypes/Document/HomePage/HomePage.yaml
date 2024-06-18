@@ -38,8 +38,28 @@
       ui:
         inspector:
           hidden: true
+    street:
+      search:
+        indexing: false
+    mobile:
+      search:
+        indexing: false
+    phone:
+      search:
+        indexing: false
+    city:
+      search:
+        indexing: false
+    country:
+      search:
+        indexing: false
+    email:
+      search:
+        indexing: false
     defaultCountryPhoneCode:
       type: string
+      search:
+        indexing: false
       ui:
         label: i18n
         inspector:
@@ -50,6 +70,8 @@
     typeOfContact:
       type: string
       defaultValue: group
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadIfChanged: true
@@ -68,6 +90,8 @@
     salutation:
       type: string
       defaultValue: formal
+      search:
+        indexing: false
       ui:
         label: Art der Anrede
         reloadIfChanged: true
@@ -85,6 +109,8 @@
                 icon: handshake
     addressName:
       type: string
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadIfChanged: true
@@ -94,6 +120,8 @@
           editor: Neos.Neos/Inspector/Editors/TextAreaEditor
     legalName:
       type: string
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadIfChanged: true
@@ -103,6 +131,8 @@
           editor: Neos.Neos/Inspector/Editors/TextAreaEditor
     registerNumber:
       type: string
+      search:
+        indexing: false
       ui:
         label: i18n
         inspector:
@@ -110,6 +140,8 @@
           position: 20
     registerCourt:
       type: string
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadIfChanged: true
@@ -118,6 +150,8 @@
           position: 30
     taxIdentificationNumber:
       type: string
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadIfChanged: true
@@ -127,6 +161,8 @@
     legalItems:
       type: repeatable
       defaultValue: []
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadIfChanged: true
@@ -146,6 +182,8 @@
                   Neos.Neos/Validation/NotEmptyValidator: {}
     footerNavigationMultiColumnEnabled:
       type: boolean
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadPageIfChanged: true
@@ -154,12 +192,14 @@
           position: 30
     footerNavigation:
       type: references
+      search:
+        indexing: false
       ui:
         label: i18n
+        reloadPageIfChanged: true
         inspector:
           group: footer
           position: 40
-          reloadPageIfChanged: true
           hidden: 'ClientEval: !!node.properties.footerNavigationMultiColumnEnabled'
           editorOptions:
             nodeTypes:
@@ -168,6 +208,8 @@
     footerNavigationMultiColumn:
       type: repeatable
       defaultValue: []
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadPageIfChanged: true

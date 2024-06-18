@@ -2,10 +2,8 @@
 
 'Litefyr.Templates:Mixin.Template':
   abstract: true
-  search:
-    fulltext:
-      isRoot: false
-      enable: false
+  superTypes:
+    'Litefyr.Integration:Mixin.DisableSearch': true
 
 'Litefyr.Templates:Mixin.CreationDialog.Article':
   abstract: true

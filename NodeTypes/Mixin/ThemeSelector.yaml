@@ -3,6 +3,8 @@
   properties:
     theme:
       type: string
+      search:
+        indexing: false
       ui:
         label: 'Litefyr.Integration:NodeTypes.Colors:bgColor'
         reloadIfChanged: true

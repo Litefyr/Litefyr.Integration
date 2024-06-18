@@ -9,10 +9,6 @@
     'Neos.Seo:NoindexMixin': true
     'Litefyr.Integration:Mixin.DisableSearch': true
     'Carbon.Plausible:Mixin.CustomEvent': false
-  search:
-    fulltext:
-      isRoot: false
-      enable: false
   ui:
     label: i18n
     icon: 'fas fa-times-circle'

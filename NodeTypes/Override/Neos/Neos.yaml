@@ -1,5 +1,9 @@
 'Neos.Neos:Node':
   label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text')}"
+  properties:
+    comments:
+      search:
+        indexing: false
 
 'Neos.Neos:Document':
   superTypes:
@@ -21,10 +25,8 @@
 
 'Neos.Neos:Shortcut':
   abstract: true
-  search:
-    fulltext:
-      isRoot: false
-      enable: false
+  superTypes:
+    'Litefyr.Integration:Mixin.DisableSearch': true
   properties:
     titleOverride: {}
 

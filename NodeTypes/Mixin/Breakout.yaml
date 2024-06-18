@@ -10,6 +10,8 @@
   properties:
     breakout:
       type: string
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadIfChanged: true

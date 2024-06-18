@@ -11,6 +11,8 @@
     screenHeight:
       type: integer
       defaultValue: 0
+      search:
+        indexing: false
       ui:
         label: i18n
         reloadIfChanged: true
