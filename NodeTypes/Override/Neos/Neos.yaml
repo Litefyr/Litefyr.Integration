@@ -13,12 +13,22 @@
   properties:
     title:
       ui:
+        label: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.title'
         inspector:
           position: 10
+    titleOverride:
+      ui:
+        label: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.titleOverride'
+        help:
+          message: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.titleOverride.ui.help.message'
+        inspector:
+          position: 20
+          editorOptions:
+            placeholder: 'ClientEval: node.properties.title'
     uriPathSegment:
       ui:
         inspector:
-          position: 20
+          position: 30
       validation:
         'Neos.Neos/Validation/RegularExpressionValidator':
           regularExpression: '/^[a-z0-9\-]+$/'

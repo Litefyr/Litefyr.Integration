@@ -1,5 +1,10 @@
 prototype(Neos.Seo:TitleTag) {
     outputSuffixOnTitleOverride = false
 
+    title.noBreadcrumb {
+        condition = true
+        renderer = ${q(node).property('title')}
+    }
+
     title.default.renderer.items.@process.filter = ${Array.filter(value, (node, index) => index == 0 || !q(node).is('[instanceof Litefyr.Integration:Mixin.HideInTitleTag]'))}
 }
