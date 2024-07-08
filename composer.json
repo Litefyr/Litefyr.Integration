@@ -37,6 +37,7 @@
     "neos/redirecthandler-neosadapter" : "^4.3",
     "neos/redirecthandler-ui" : "^2.4",
     "neos/seo" : "^3.2",
+    "neosidekick/ui-reverse-search" : "^1.0",
     "packagefactory/atomicfusion-proptypes" : "^2.0",
     "psmb/splitadd" : "^1.0",
     "shel/neos-commandbar": "^1.0",
