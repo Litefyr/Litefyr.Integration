@@ -14,7 +14,7 @@
                 <source>Additional content</source>
                 <target>Zusätzlicher Inhalt</target>
             </trans-unit>
-            <trans-unit id="properties.Name" xml:space="preserve">
+            <trans-unit id="properties.name" xml:space="preserve">
                 <source>Name</source>
                 <target>Name</target>
             </trans-unit>

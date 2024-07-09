@@ -11,7 +11,7 @@
             <trans-unit id="groups.additionalContent" xml:space="preserve">
                 <source>Additional content</source>
             </trans-unit>
-            <trans-unit id="properties.Name" xml:space="preserve">
+            <trans-unit id="properties.name" xml:space="preserve">
                 <source>Name</source>
             </trans-unit>
             <trans-unit id="properties.phone" xml:space="preserve">
