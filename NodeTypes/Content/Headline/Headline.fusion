@@ -11,6 +11,7 @@ prototype(Litefyr.Integration:Content.Headline) < prototype(Neos.Neos:ContentCom
         property = 'lead'
         block = false
     }
+    headlineLinks = Litefyr.Integration:Component.Links
 
     inBackend = ${node.context.inBackend}
 
