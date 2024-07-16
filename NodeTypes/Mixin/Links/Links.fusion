@@ -9,7 +9,7 @@ prototype(Litefyr.Integration:Component.Links) < prototype(Neos.Fusion:Component
     wrapperClass = 'flex flex-wrap gap-x-6 gap-y-3'
 
     @private.items = Neos.Fusion:Map {
-        items = ${props.links}
+        items = ${Array.filter(props.links)}
         itemRenderer = Litefyr.Presentation:Atom.Link {
             @if.set = Neos.Neos:ConvertUris {
                 value = ${item.href}
