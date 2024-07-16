@@ -33,6 +33,7 @@ prototype(Litefyr.Integration:Document.AbstractPage) < prototype(Neos.Fusion:Com
         head.headTags.@position = 'after canonicalLink'
         body >
         body = Neos.Fusion:Case {
+            @position = 'after bodyTag'
             isPreview {
                 condition = ${props.preview}
                 renderer = ${props.preview}

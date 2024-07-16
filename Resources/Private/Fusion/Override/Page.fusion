@@ -1,7 +1,11 @@
 prototype(Neos.Neos:Page) {
     lastVisitedNodeScript >
     htmlTag.attributes.class.@process.clipPath = ${Array.push(value, 'is-flat')}
-    head.stylesheets.carbonNotification = Carbon.Notification:Style
+    head {
+        stylesheets.carbonNotification = Carbon.Notification:Style
+        # We set the charset set with carbon.include assets, so it can be at the very start
+        characterSetMetaTag >
+    }
     container = Litefyr.Presentation:Atom.Tooltip {
         @position = 'before closingBodyTag'
     }
