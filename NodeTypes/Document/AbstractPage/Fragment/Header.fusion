@@ -5,9 +5,11 @@ header = Litefyr.Presentation:Section.Header {
 
     logo = Litefyr.Integration:Component.Logo
 
-    items = Neos.Neos:MenuItems {
-        maximumLevels = 2
-        filter = 'Neos.Neos:Document,!Litefyr.Integration:Mixin.NotInMenu,!Litefyr.Integration:Mixin.NotInMainMenu'
+    items = Litefyr.Integration:Helper.MenuItems {
+        items = Neos.Neos:MenuItems {
+            maximumLevels = 2
+            filter = 'Neos.Neos:Document,!Litefyr.Integration:Mixin.NotInMenu,!Litefyr.Integration:Mixin.NotInMainMenu'
+        }
     }
 
     renderer.@process.convertUris = Neos.Neos:ConvertUris {

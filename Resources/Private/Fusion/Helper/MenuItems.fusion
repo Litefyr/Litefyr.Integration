@@ -1,0 +1,19 @@
+prototype(Litefyr.Integration:Helper.MenuItems) < prototype(Neos.Fusion:Map) {
+    items = ${[]}
+    itemRenderer = Neos.Fusion:DataStructure {
+        @apply.itemValue {
+            @position = 'start'
+            expression = ${item}
+        }
+        @apply.override {
+            @position = 'end'
+            expression = Neos.Fusion:DataStructure {
+                isLightbox = ${q(item.node).is('[instanceof Litefyr.Integration:Document.Lightbox]')}
+                subItems = Litefyr.Integration:Helper.MenuItems {
+                    @if.set = ${this.items}
+                    items = ${item.subItems}
+                }
+            }
+        }
+    }
+}
