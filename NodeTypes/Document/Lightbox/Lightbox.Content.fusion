@@ -1,0 +1,10 @@
+prototype(Litefyr.Integration:Document.Lightbox.Content) < prototype(Neos.Fusion:Component) {
+    iframeSrc = ${q(node).property('iframeSrc')}
+
+    renderer = afx`
+        <main @if={props.iframeSrc}>
+            <iframe src={props.iframeSrc} class="photoswipe-iframe" frameborder="0" allowfullscreen></iframe>
+        </main>
+        <Litefyr.Integration:ContentCollection @if={!props.iframeSrc} />
+    `
+}

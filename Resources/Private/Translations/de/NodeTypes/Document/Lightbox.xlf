@@ -10,6 +10,14 @@
                 <source>A lightbox page is a page that is displayed in a lightbox window. The page is hidden in the main menu</source>
                 <target>Eine Lightboxseite ist eine Seite, die in einem Lightbox-Fenster angezeigt wird. Die Seite wird im Hauptmenü ausgeblendet</target>
             </trans-unit>
+            <trans-unit id="properties.iframeSrc" xml:space="preserve">
+                <source>Embed external website</source>
+                <target>Externe Website einbetten</target>
+            </trans-unit>
+            <trans-unit id="properties.iframeSrc.placeholder" xml:space="preserve">
+                <source>Paste a link</source>
+                <target>Einen Link einfügen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -3,7 +3,7 @@ prototype(Litefyr.Integration:Document.Lightbox.PhotoSwipe) < prototype(Neos.Fus
         renderPath = '/replaceLogo'
     }
 
-    content = Litefyr.Integration:ContentCollection
+    content = Litefyr.Integration:Document.Lightbox.Content
 
     renderer = Neos.Fusion:Http.Message {
         httpResponseHead.headers.Content-Type = 'text/html'

@@ -1,3 +1,3 @@
 prototype(Litefyr.Integration:Document.Lightbox) < prototype(Litefyr.Integration:Document.AbstractPage) {
-    content = Litefyr.Integration:ContentCollection
+    content = Litefyr.Integration:Document.Lightbox.Content
 }

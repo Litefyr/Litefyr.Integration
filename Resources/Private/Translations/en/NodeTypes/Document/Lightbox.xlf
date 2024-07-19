@@ -8,6 +8,12 @@
             <trans-unit id="ui.help.message" xml:space="preserve">
                 <source>A lightbox page is a page that is displayed in a lightbox window. The page is hidden in the main menu</source>
             </trans-unit>
+            <trans-unit id="properties.iframeSrc" xml:space="preserve">
+                <source>Embed external website</source>
+            </trans-unit>
+            <trans-unit id="properties.iframeSrc.placeholder" xml:space="preserve">
+                <source>Paste a link</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
