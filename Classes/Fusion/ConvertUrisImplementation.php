@@ -111,6 +111,7 @@ class ConvertUrisImplementation extends AbstractFusionObject
                 $isLightboxNode = false;
                 switch ($matches[1]) {
                     case 'node':
+                        // @var NodeInterface $targetObject
                         $targetObject = $linkingService->convertUriToObject($matches[0], $node);
                         if ($targetObject === null) {
                             $this->systemLogger->info(
@@ -122,17 +123,24 @@ class ConvertUrisImplementation extends AbstractFusionObject
                             );
                             $resolvedUri = null;
                         } else {
-                            $resolvedUri = $linkingService->createNodeUri(
+                            $isLightboxNode = $targetObject
+                                ->getNodeType()
+                                ->isOfType('Litefyr.Integration:Document.Lightbox');
+                            $iframeSrc = $isLightboxNode ? $targetObject->getProperty('iframeSrc') : null;
+
+                            $nodeUri = $linkingService->createNodeUri(
                                 $controllerContext,
                                 $targetObject,
                                 null,
                                 null,
                                 $absolute
                             );
-                            //  @phpstan-ignore-next-line
-                            $isLightboxNode = $targetObject
-                                ->getNodeType()
-                                ->isOfType('Litefyr.Integration:Document.Lightbox');
+
+                            if ($nodeUri === null || !$iframeSrc) {
+                                $resolvedUri = $nodeUri;
+                            } else {
+                                $resolvedUri = sprintf('%s" data-pwsp-src="%s', $iframeSrc, $nodeUri);
+                            }
                         }
                         $cacheTagIdentifier = sprintf(
                             '%s_%s',

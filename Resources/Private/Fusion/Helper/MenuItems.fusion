@@ -9,6 +9,7 @@ prototype(Litefyr.Integration:Helper.MenuItems) < prototype(Neos.Fusion:Map) {
             @position = 'end'
             expression = Neos.Fusion:DataStructure {
                 isLightbox = ${q(item.node).is('[instanceof Litefyr.Integration:Document.Lightbox]')}
+                lightboxIframeSrc = ${this.isLightbox ? q(item.node).property('iframeSrc') : null}
                 subItems = Litefyr.Integration:Helper.MenuItems {
                     @if.set = ${this.items}
                     items = ${item.subItems}

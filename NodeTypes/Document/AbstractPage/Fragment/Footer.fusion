@@ -6,6 +6,7 @@ footer = Litefyr.Presentation:Section.Footer {
         itemRenderer = Neos.Fusion:DataStructure {
             label = ${q(item).property('title')}
             isLightbox = ${q(item).is('[instanceof Litefyr.Integration:Document.Lightbox]')}
+            lightboxIframeSrc = ${this.isLightbox ? q(item).property('iframeSrc') : null}
             href = Neos.Neos:NodeUri {
                 node = ${item}
             }
@@ -23,6 +24,7 @@ footer = Litefyr.Presentation:Section.Footer {
                 itemRenderer = Neos.Fusion:DataStructure {
                     label = ${q(item).property('title')}
                     isLightbox = ${q(item).is('[instanceof Litefyr.Integration:Document.Lightbox]')}
+                    lightboxIframeSrc = ${this.isLightbox ? q(item).property('iframeSrc') : null}
                     href = Neos.Neos:NodeUri {
                         node = ${item}
                     }
