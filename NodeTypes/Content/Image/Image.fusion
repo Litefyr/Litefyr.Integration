@@ -4,8 +4,8 @@ prototype(Litefyr.Integration:Content.Image) < prototype(Neos.Neos:ContentCompon
     lightbox = ${q(node).property('lightbox')}
     lightboxCaption = ${q(node).property('caption')}
     link = ${q(node).property('link')}
-    breakout = ${q(node).property('breakout')}
-    enableSpacing = true
+    breakout = ${this.inSlider ? null : q(node).property('breakout')}
+    enableSpacing = ${!this.inSlider}
 
     class = ${null}
 
@@ -26,15 +26,12 @@ prototype(Litefyr.Integration:Content.Image) < prototype(Neos.Neos:ContentCompon
     text = Neos.Neos:Editable {
         property = 'text'
     }
-    text = Neos.Neos:Editable {
-        property = 'text'
-    }
     textBoxText = Neos.Neos:Editable {
         property = 'textBoxText'
         block = false
     }
 
-    rounded = true
+    rounded = ${this.inSlider ? false : true}
     inBackend = ${node.context.inBackend}
     screenHeight = ${q(node).property('screenHeight')}
 
@@ -42,55 +39,7 @@ prototype(Litefyr.Integration:Content.Image) < prototype(Neos.Neos:ContentCompon
     textBoxMaxWidth = ${q(node).property('textBoxMaxWidth')}
     textBoxBreakpoint = ${q(node).property('textBoxBreakpoint')}
 
-    @private {
-        textWithContentImage = afx`
-            <Litefyr.Presentation:Atom.Image
-                {...props}
-                screenHeightBreakpoint="md"
-                objectFit="cover"
-                breakout={null}
-                rounded={false}
-            />
-        `
-    }
-
-    renderer = Neos.Fusion:Case {
-        textBox {
-            condition = ${!props.enableText && props.textBoxDirection && props.textBoxText}
-            renderer = afx`
-                <Litefyr.Presentation:Block.ImageWithTextOverlay
-                    {...props}
-                    boxDirection={props.textBoxDirection}
-                    boxMaxWidth={props.textBoxMaxWidth}
-                    boxBreakpoint={props.textBoxBreakpoint}
-                    text={props.textBoxText}
-                />
-            `
-        }
-        enableText {
-            condition = ${props.enableText}
-            renderer = afx`
-                <Litefyr.Presentation:Module.TextWithContent
-                    {...props}
-                    breakpoint="md"
-                    screenHeight={null}
-                    singleContent={private.textWithContentImage}
-                    stretchContent={true}
-                />
-            `
-        }
-        default {
-            condition = true
-            renderer = afx`
-                <Litefyr.Presentation:Spacing
-                    augmenter
-                    width={props.enableSpacing ? props.breakout : false}
-                    padding="auto"
-                    tailwind="mediacontent"
-                >
-                    <Litefyr.Presentation:Atom.Image objectFit={props.screenHeight ? "cover" : null} {...props} />
-                </Litefyr.Presentation:Spacing>
-            `
-        }
+    renderer = Litefyr.Presentation:Block.ImageCombinations {
+        @apply.props = ${props}
     }
 }

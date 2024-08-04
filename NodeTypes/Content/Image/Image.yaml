@@ -4,6 +4,7 @@
     'Carbon.Image:AlternativeText': true
     'Carbon.Image:Image': true
     'Carbon.Image:Lightbox': true
+    'Carbon.Image:Caption': true
     'Carbon.Image:Link': true
     'Litefyr.Integration:Mixin.Breakout': true
     'Litefyr.Integration:Mixin.TextWithContent': true
@@ -11,6 +12,7 @@
     'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
     'Litefyr.Integration:Mixin.TextWithContent.Label': true
     'Litefyr.Integration:Mixin.ScreenHeight': true
+    'Litefyr.Integration:Mixin.TextBox': true
   label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text', 'alternativeText', 'caption')}"
   ui:
     position: 30
@@ -33,59 +35,3 @@
       ui:
         inspector:
           position: 'after textBoxBreakpoint'
-    textBoxText:
-      options:
-        preset: 'text.pure'
-    textBoxDirection:
-      defaultValue: false
-      ui:
-        label: i18n
-        reloadIfChanged: true
-        inspector:
-          group: look
-          position: 3
-          editor: 'Carbon.DirectionEditor/Editor'
-          hidden: 'ClientEval: node.properties.enableText'
-          editorOptions:
-            north: false
-            east: false
-            west: false
-    textBoxMaxWidth:
-      type: integer
-      defaultValue: 75
-      ui:
-        label: i18n
-        reloadIfChanged: true
-        inspector:
-          group: look
-          position: 4
-          editor: 'Carbon.RangeEditor/Editor'
-          hidden: 'ClientEval: node.properties.enableText || !node.properties.textBoxDirection || node.properties.textBoxDirection == "south"'
-          editorOptions:
-            min: 40
-            max: 100
-            step: 1
-            unit: '%'
-    textBoxBreakpoint:
-      type: string
-      ui:
-        label: 'Breakpoint Text'
-        reloadIfChanged: true
-        inspector:
-          group: look
-          position: 5
-          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
-          hidden: 'ClientEval: node.properties.enableText || !node.properties.textBoxDirection || node.properties.textBoxDirection == "south"'
-          editorOptions:
-            allowEmpty: true
-            placeholder: i18n
-            values:
-              sm:
-                label: i18n
-                icon: tablet
-              md:
-                label: i18n
-                icon: laptop
-              lg:
-                label: i18n
-                icon: desktop

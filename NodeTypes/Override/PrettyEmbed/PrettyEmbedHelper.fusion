@@ -29,7 +29,7 @@ prototype(Jonnitto.PrettyEmbed:Content) {
 
     renderer.@process {
         spacing = Litefyr.Presentation:Spacing {
-            @if.set = ${props.enableSpacing && !props.enableText}
+            @if.set = ${props.enableSpacing && !props.enableText && !props.inSlider}
             augmenter = true
             width = ${props.breakout}
             padding = 'auto'

@@ -1,17 +1,3 @@
-##
-# Constraint-supertype that makes contents available in sliders
-#
-# this allows to define the usage on the content nodetypes and
-# is recommended if a collection contains many different types
-#
-'Litefyr.Slider:Constraint.Content.Slider':
-  abstract: true
-
-'Neos.Neos:ContentCollection':
-  constraints:
-    nodeTypes:
-      'Litefyr.Slider:Constraint.Content.Slider': false
-
 # This is just to make everything works if the Slider package is not installed
 
 'Litefyr.Slider:Mixin.Interval':
