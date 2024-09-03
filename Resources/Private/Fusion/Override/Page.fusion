@@ -1,6 +1,9 @@
 prototype(Neos.Neos:Page) {
     lastVisitedNodeScript >
-    htmlTag.attributes.class.@process.clipPath = ${Array.push(value, 'is-flat')}
+    htmlTag.attributes.class.@process {
+        clipPath = ${Array.push(value, 'is-flat')}
+        nodeType = ${Array.push(value, Presentation.cssClass(documentNode))}
+    }
     head {
         stylesheets.carbonNotification = Carbon.Notification:Style
         # We set the charset set with carbon.include assets, so it can be at the very start
