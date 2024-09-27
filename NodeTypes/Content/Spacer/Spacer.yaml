@@ -36,6 +36,8 @@
           editor: 'Carbon.RangeEditor/Editor'
           editorOptions:
             valueLabelsFile: 'Litefyr.Presentation:Spacing'
+            showMinLabel: false
+            showMaxLabel: false
             min: -4
             max: 4
             step: 1

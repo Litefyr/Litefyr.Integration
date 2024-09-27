@@ -13,7 +13,6 @@
           group: look
           position: 3
           editor: 'Carbon.DirectionEditor/Editor'
-          hidden: 'ClientEval: node.properties.enableText'
           editorOptions:
             north: false
             east: false
@@ -28,7 +27,7 @@
           group: look
           position: 4
           editor: 'Carbon.RangeEditor/Editor'
-          hidden: 'ClientEval: node.properties.enableText || !node.properties.textBoxDirection || node.properties.textBoxDirection == "south"'
+          hidden: 'ClientEval: !node.properties.textBoxDirection || node.properties.textBoxDirection == "south"'
           editorOptions:
             min: 40
             max: 100
@@ -43,7 +42,7 @@
           group: look
           position: 5
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
-          hidden: 'ClientEval: node.properties.enableText || !node.properties.textBoxDirection || node.properties.textBoxDirection == "south"'
+          hidden: 'ClientEval: !node.properties.textBoxDirection || node.properties.textBoxDirection == "south"'
           editorOptions:
             allowEmpty: true
             placeholder: i18n

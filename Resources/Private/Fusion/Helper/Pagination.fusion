@@ -80,7 +80,7 @@ prototype(Litefyr.Integration:Helper.Pagination) < prototype(Neos.Fusion:Compone
     }
 
     renderer = afx`
-        <Litefyr.Presentation:Spacing tagName="nav" full padding tailwind="border-t border-theme-front/10 text-sm font-bold mt-16 pb-clippath">
+        <Litefyr.Presentation:Spacing tagName="nav" full padding tailwind="border-t border-theme-front/10 text-sm font-bold mt-16 !mb-8 pb-clippath">
             <Litefyr.Presentation:Spacing wide class="flex items-center justify-between">
                 <div class="-mt-px w-0 flex-1 flex">
                     <Neos.Fusion:Loop items={private.map} @if={props.showPreviousNextLinks}>

@@ -12,7 +12,7 @@ prototype(Jonnitto.PrettyEmbed:Content) {
         property = 'headline'
         block = false
     }
-    label = Neos.Neos:Editable {
+    editableLabel = Neos.Neos:Editable {
         property = 'label'
         block = false
     }
@@ -35,7 +35,7 @@ prototype(Jonnitto.PrettyEmbed:Content) {
             padding = 'auto'
         }
         textWithContent = afx`
-            <Litefyr.Presentation:Module.TextWithContent @if={props.enableText} {...props} singleContent={value} />
+            <Litefyr.Presentation:Module.TextWithContent @if={props.enableText} {...props} label={props.editableLabel} singleContent={value} />
         `
     }
 }

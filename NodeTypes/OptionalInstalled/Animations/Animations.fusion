@@ -1,0 +1,16 @@
+prototype(Litefyr.Animations:Helper.Attribute) {
+   @class = 'Neos\\Fusion\\FusionObjects\\ValueImplementation'
+   value = false
+ }
+
+ prototype(Litefyr.Animations:Helper.Media) < prototype(Litefyr.Animations:Helper.Attribute) {
+     type = 'Media'
+ }
+
+ prototype(Litefyr.Animations:Helper.Text) < prototype(Litefyr.Animations:Helper.Attribute) {
+     type = 'Text'
+ }
+
+ prototype(Litefyr.Animations:Helper.Elements) < prototype(Litefyr.Animations:Helper.Attribute) {
+     type = 'Elements'
+ }

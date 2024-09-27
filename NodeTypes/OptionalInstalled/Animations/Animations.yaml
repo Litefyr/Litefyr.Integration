@@ -1,0 +1,37 @@
+# This is just to make everything works if the Animations package is not installed
+
+'Litefyr.Animations:Mixin.Text':
+  abstract: true
+
+'Litefyr.Animations:Mixin.Video':
+  abstract: true
+
+'Litefyr.Animations:Mixin.Audio':
+  abstract: true
+
+'Litefyr.Animations:Mixin.Image':
+  abstract: true
+
+'Litefyr.Animations:Mixin.TextWithContent':
+  abstract: true
+
+'Litefyr.Animations:Mixin.Element':
+  abstract: true
+
+'Litefyr.Animations:Mixin.Elements':
+  abstract: true
+
+'Litefyr.Animations:Mixin.TextWithOptionalImage':
+  abstract: true
+
+'Litefyr.Animations:Mixin.HideScrollTriggerOnChildren':
+  abstract: true
+
+'Litefyr.Animations:Mixin.HideViewTriggerOnChildren':
+  abstract: true
+
+'Litefyr.Animations:Mixin.HideScrollTrigger':
+  abstract: true
+
+'Litefyr.Animations:Mixin.HideViewTrigger':
+  abstract: true
