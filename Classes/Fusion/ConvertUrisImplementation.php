@@ -111,7 +111,7 @@ class ConvertUrisImplementation extends AbstractFusionObject
                 $isLightboxNode = false;
                 switch ($matches[1]) {
                     case 'node':
-                        // @var NodeInterface $targetObject
+                        /** @var NodeInterface $targetObject */
                         $targetObject = $linkingService->convertUriToObject($matches[0], $node);
                         if ($targetObject === null) {
                             $this->systemLogger->info(
