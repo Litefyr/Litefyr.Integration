@@ -39,6 +39,9 @@
             <trans-unit id="nodeTypes.system" xml:space="preserve">
                 <source>System elements</source>
             </trans-unit>
+            <trans-unit id="help.codepen.svg" xml:space="preserve">
+                <source>Define size without `width` and `height` but with `viewBox`. [More information](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox)</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -51,6 +51,10 @@
                 <source>System elements</source>
                 <target>Systemelemente</target>
             </trans-unit>
+            <trans-unit id="help.codepen.svg" xml:space="preserve">
+                <source>Define size without `width` and `height` but with `viewBox`. [More information](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox)</source>
+                <target>Die Größe ohne `width` und `height` sondern mit `viewBox` definieren. [Mehr Informationen](https://www.mediaevent.de/tutorial/svg-viewbox-koordinaten.html)</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
