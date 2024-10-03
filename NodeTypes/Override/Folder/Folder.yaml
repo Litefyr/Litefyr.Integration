@@ -1,4 +1,6 @@
 'Breadlesscode.NodeTypes.Folder:Document.Folder':
+  superTypes:
+    'Litefyr.Integration:Mixin.DisableSearch': true
   ui:
     position: end
     group: special

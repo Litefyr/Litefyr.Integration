@@ -1,5 +1,6 @@
 Litefyr:
   Integration:
     flowCommandsOnStartup:
-      AssetUsage: assetusage:update
-      PrettyEmbed: prettyembed:metadata
+      Integration:
+        - 'assetusage:update'
+        - 'prettyembed:metadata'
