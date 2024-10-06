@@ -18,14 +18,15 @@
         inspector:
           group: look
           position: 1
-          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editor: 'Beromir.ToggleEditor/Editor'
           editorOptions:
-            allowEmpty: true
-            placeholder: i18n
             values:
+              '':
+                description: 'Litefyr.Integration:NodeTypes.Mixin.Breakout:breakout.none'
+                icon: align-justify
               wide:
-                label: i18n
+                description: 'Litefyr.Integration:NodeTypes.Mixin.Breakout:breakout.wide'
                 icon: arrows-alt-h
               full:
-                label: i18n
+                description: 'Litefyr.Integration:NodeTypes.Mixin.Breakout:breakout.full'
                 icon: desktop

@@ -10,15 +10,15 @@
                 <source>Width</source>
                 <target>Breite</target>
             </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.placeholder" xml:space="preserve">
+            <trans-unit id="breakout.none" xml:space="preserve">
                 <source>Content width</source>
                 <target>Inhaltsbreite</target>
             </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.values.wide" xml:space="preserve">
+            <trans-unit id="breakout.wide" xml:space="preserve">
                 <source>Wide</source>
                 <target>Breit</target>
             </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.values.full" xml:space="preserve">
+            <trans-unit id="breakout.full" xml:space="preserve">
                 <source>Screen width</source>
                 <target>Bildschirmbreite</target>
             </trans-unit>

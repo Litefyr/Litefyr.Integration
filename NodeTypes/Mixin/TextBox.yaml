@@ -5,18 +5,38 @@
       options:
         preset: 'text.pure'
     textBoxDirection:
-      defaultValue: false
+      type: string
       ui:
         label: i18n
         reloadIfChanged: true
         inspector:
           group: look
           position: 3
-          editor: 'Carbon.DirectionEditor/Editor'
+          editor: 'Beromir.ToggleEditor/Editor'
           editorOptions:
-            north: false
-            east: false
-            west: false
+            values:
+              '':
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxDirection.none'
+                icon: times
+              inline:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxDirection.inline'
+                icon: align-left
+              topLeft:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxDirection.topLeft'
+                icon: arrow-up
+                iconRotate: -45
+              topRight:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxDirection.topRight'
+                icon: arrow-up
+                iconRotate: 45
+              bottomLeft:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxDirection.bottomLeft'
+                icon: arrow-down
+                iconRotate: 45
+              bottomRight:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxDirection.bottomRight'
+                icon: arrow-down
+                iconRotate: -45
     textBoxMaxWidth:
       type: integer
       defaultValue: 75

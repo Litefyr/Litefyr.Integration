@@ -6,6 +6,7 @@
   "require" : {
     "sandstorm/lazydatasource" : "^2.0.0",
     "guzzlehttp/psr7": "^1.8.4 || ^2.1.1",
+    "beromir/neos-toggle-editor": "^1.1",
     "breadlesscode/neos-nodetypes-folder": "^1.3",
     "networkteam/contentcomments": "^2.1",
     "carbon/rangeeditor": "^0.1",

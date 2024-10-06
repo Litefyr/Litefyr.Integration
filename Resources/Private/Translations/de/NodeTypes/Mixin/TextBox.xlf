@@ -6,6 +6,46 @@
                 <source>Position of the text box</source>
                 <target>Position der Textbox</target>
             </trans-unit>
+            <trans-unit id="properties.textBoxDirection.none" xml:space="preserve">
+                <source>No text box</source>
+                <target>Keine Textbox</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.inline" xml:space="preserve">
+                <source>Inline text box</source>
+                <target>Inline-Textbox</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.topLeft" xml:space="preserve">
+                <source>Top left</source>
+                <target>Oben links</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.topRight" xml:space="preserve">
+                <source>Top right</source>
+                <target>Oben rechts</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.top" xml:space="preserve">
+                <source>Top</source>
+                <target>Oben</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.bottomLeft" xml:space="preserve">
+                <source>Bottom left</source>
+                <target>Unten links</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.bottomRight" xml:space="preserve">
+                <source>Bottom right</source>
+                <target>Unten rechts</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.bottom" xml:space="preserve">
+                <source>Bottom</source>
+                <target>Unten</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.left" xml:space="preserve">
+                <source>Left</source>
+                <target>Links</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.right" xml:space="preserve">
+                <source>Right</source>
+                <target>Rechts</target>
+            </trans-unit>
             <trans-unit id="properties.textBoxMaxWidth" xml:space="preserve">
                 <source>Maximum width of the text box</source>
                 <target>Maximale Breite der Textbox</target>
