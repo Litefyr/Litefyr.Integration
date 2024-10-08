@@ -62,7 +62,14 @@
                 <source>Desktop (1024px)</source>
                 <target>Desktop (1024px)</target>
             </trans-unit>
-
+            <trans-unit id="properties.textBoxOverrideOpacity" xml:space="preserve">
+                <source>Override background opacity</source>
+                <target>Deckkraft des Hintergrundes überschreiben</target>
+            </trans-unit>
+            <trans-unit id="properties.textBoxOpacity" xml:space="preserve">
+                <source>Background opacity</source>
+                <target>Deckkraft des Hintergrundes</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

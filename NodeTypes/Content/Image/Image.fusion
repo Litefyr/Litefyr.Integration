@@ -38,6 +38,7 @@ prototype(Litefyr.Integration:Content.Image) < prototype(Neos.Neos:ContentCompon
     textBoxDirection = ${q(node).property('textBoxDirection')}
     textBoxMaxWidth = ${q(node).property('textBoxMaxWidth')}
     textBoxBreakpoint = ${q(node).property('textBoxBreakpoint')}
+    textBoxOpacity = ${q(node).property('textBoxOverrideOpacity') ? q(node).property('textBoxOpacity') : null}
 
     renderer = Litefyr.Presentation:Block.ImageCombinations {
         @apply.props = ${props}

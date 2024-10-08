@@ -75,3 +75,28 @@
               lg:
                 description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxBreakpoint.lg'
                 icon: desktop
+    textBoxOverrideOpacity:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 6
+          hidden: 'ClientEval: !node.properties.textBoxDirection'
+    textBoxOpacity:
+      type: integer
+      defaultValue: 100
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 7
+          editor: 'Carbon.RangeEditor/Editor'
+          hidden: 'ClientEval: !node.properties.textBoxDirection || !node.properties.textBoxOverrideOpacity'
+          editorOptions:
+            min: 0
+            max: 100
+            step: 5
+            unit: '%'
