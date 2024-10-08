@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litefyr.Integration" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="enable" xml:space="preserve">
+                <source>Count up numbers</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -42,16 +42,15 @@
         reloadIfChanged: true
         inspector:
           group: look
-          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editor: 'Beromir.ToggleEditor/Editor'
           # This hides the field if the parent node is a content node
           hidden: 'ClientEval: !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/))'
           editorOptions:
             allowEmpty: true
-            placeholder: i18n
             values:
               left:
-                label: i18n
+                description: 'Litefyr.Integration:NodeTypes.Content.Text:properties.position.left'
                 icon: 'arrow-left'
               right:
-                label: i18n
+                description: 'Litefyr.Integration:NodeTypes.Content.Text:properties.position.right'
                 icon: 'arrow-right'

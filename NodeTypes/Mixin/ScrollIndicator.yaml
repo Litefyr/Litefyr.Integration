@@ -29,25 +29,18 @@
           position: 20
           group: scroll
           hidden: 'ClientEval: node.properties.scrollIndicatorEnabled !== true'
-          editor: 'Carbon.ColorValues/Editor'
+          editor: 'Beromir.ToggleEditor/Editor'
           editorOptions:
             allowEmpty: true
-            values:
-              main:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.main'
-                color: 'var(--color-theme-main)'
-              minor:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.minor'
-                color: 'var(--color-theme-minor)'
-              minor2:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.minor2'
-                color: 'var(--color-theme-minor2)'
-              gray:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.gray'
-                color: 'var(--color-theme-gray)'
-              default:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.text'
-                color: 'var(--color-theme-front)'
+            maximalColumns: '{items} > 4 ? 3 : 4'
+            layout: 'color'
+            dataSourceIdentifier: litefyr-style-color
+            dataSourceAdditionalData:
+              main: true
+              minor: true
+              minor2: true
+              gray: true
+              default: 'Litefyr.Style:NodeTypes.Mixin.Colors:text'
     scrollIndicatorBottom:
       type: integer
       defaultValue: 1

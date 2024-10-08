@@ -14,15 +14,11 @@
                 <source>Position of the text</source>
                 <target>Position vom Text</target>
             </trans-unit>
-            <trans-unit id="properties.position.selectBoxEditor.placeholder" xml:space="preserve">
-                <source>Full width</source>
-                <target>Volle Breite</target>
-            </trans-unit>
-            <trans-unit id="properties.position.selectBoxEditor.values.left" xml:space="preserve">
+            <trans-unit id="properties.position.left" xml:space="preserve">
                 <source>Left</source>
                 <target>Links</target>
             </trans-unit>
-            <trans-unit id="properties.position.selectBoxEditor.values.right" xml:space="preserve">
+            <trans-unit id="properties.position.right" xml:space="preserve">
                 <source>Right</source>
                 <target>Rechts</target>
             </trans-unit>

@@ -8,27 +8,6 @@
             <trans-unit id="bgColor" xml:space="preserve">
                 <source>Background color</source>
             </trans-unit>
-            <trans-unit id="color.default" xml:space="preserve">
-                <source>Default color</source>
-            </trans-unit>
-            <trans-unit id="color.inverted" xml:space="preserve">
-                <source>Invert default color</source>
-            </trans-unit>
-            <trans-unit id="color.main" xml:space="preserve">
-                <source>Main accent color</source>
-            </trans-unit>
-            <trans-unit id="color.minor" xml:space="preserve">
-                <source>Minor accent color</source>
-            </trans-unit>
-            <trans-unit id="color.minor2" xml:space="preserve">
-                <source>Third accent color</source>
-            </trans-unit>
-            <trans-unit id="color.gray" xml:space="preserve">
-                <source>Grayscale</source>
-            </trans-unit>
-            <trans-unit id="color.text" xml:space="preserve">
-                <source>Text color</source>
-            </trans-unit>
             <trans-unit id="appearance" xml:space="preserve">
                 <source>Appearance</source>
             </trans-unit>
@@ -37,6 +16,9 @@
             </trans-unit>
             <trans-unit id="button.minor" xml:space="preserve">
                 <source>Minor Button</source>
+            </trans-unit>
+            <trans-unit id="button.minor2" xml:space="preserve">
+                <source>Tertiary Button</source>
             </trans-unit>
             <trans-unit id="button.ghost" xml:space="preserve">
                 <source>Ghost Button</source>

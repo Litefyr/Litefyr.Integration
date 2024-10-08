@@ -5,7 +5,7 @@
   ui:
     label: i18n
     group: teaser
-    icon: images
+    icon: th-large
     position: 150
     inspector:
       groups:

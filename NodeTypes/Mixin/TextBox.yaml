@@ -14,10 +14,9 @@
           position: 3
           editor: 'Beromir.ToggleEditor/Editor'
           editorOptions:
+            maximalColumns: 5
+            allowEmpty: true
             values:
-              '':
-                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxDirection.none'
-                icon: times
               inline:
                 description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxDirection.inline'
                 icon: align-left
@@ -47,7 +46,7 @@
           group: look
           position: 4
           editor: 'Carbon.RangeEditor/Editor'
-          hidden: 'ClientEval: !node.properties.textBoxDirection || node.properties.textBoxDirection == "south"'
+          hidden: 'ClientEval: !node.properties.textBoxDirection || node.properties.textBoxDirection == "inline"'
           editorOptions:
             min: 40
             max: 100
@@ -61,18 +60,18 @@
         inspector:
           group: look
           position: 5
-          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
-          hidden: 'ClientEval: !node.properties.textBoxDirection || node.properties.textBoxDirection == "south"'
+          editor: 'Beromir.ToggleEditor/Editor'
+          hidden: 'ClientEval: !node.properties.textBoxDirection || node.properties.textBoxDirection == "inline"'
           editorOptions:
             allowEmpty: true
             placeholder: i18n
             values:
               sm:
-                label: i18n
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxBreakpoint.sm'
                 icon: tablet
               md:
-                label: i18n
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxBreakpoint.md'
                 icon: laptop
               lg:
-                label: i18n
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextBox:properties.textBoxBreakpoint.lg'
                 icon: desktop

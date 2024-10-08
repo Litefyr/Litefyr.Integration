@@ -10,25 +10,23 @@
             properties:
               appearance:
                 label: 'Litefyr.Integration:NodeTypes.Colors:appearance'
-                editor: 'Carbon.ColorValues/Editor'
+                editor: 'Beromir.ToggleEditor/Editor'
                 defaultValue: ghost
                 editorOptions:
                   allowEmpty: false
-                  values:
+                  maximalColumns: '{items} > 4 ? 3 : 4'
+                  layout: 'color'
+                  dataSourceIdentifier: litefyr-style-color
+                  dataSourceAdditionalData:
                     main:
                       label: 'Litefyr.Integration:NodeTypes.Colors:button.main'
-                      color: 'var(--color-theme-main)'
                     minor:
                       label: 'Litefyr.Integration:NodeTypes.Colors:button.minor'
-                      color: 'var(--color-theme-minor)'
                     minor2:
                       label: 'Litefyr.Integration:NodeTypes.Colors:button.minor2'
-                      color: 'var(--color-theme-minor2)'
                     ghost:
                       label: 'Litefyr.Integration:NodeTypes.Colors:button.ghost'
-                      color: '#fff'
                     link:
                       label: 'Litefyr.Integration:NodeTypes.Colors:button.link'
-                      color: 'var(--color-theme-main)'
                 validation:
                   Neos.Neos/Validation/NotEmptyValidator: {}

@@ -6,10 +6,6 @@
                 <source>Position of the text box</source>
                 <target>Position der Textbox</target>
             </trans-unit>
-            <trans-unit id="properties.textBoxDirection.none" xml:space="preserve">
-                <source>No text box</source>
-                <target>Keine Textbox</target>
-            </trans-unit>
             <trans-unit id="properties.textBoxDirection.inline" xml:space="preserve">
                 <source>Inline text box</source>
                 <target>Inline-Textbox</target>
@@ -54,19 +50,15 @@
                 <source>Breakpoint of the text</source>
                 <target>Breakpoint von dem Text</target>
             </trans-unit>
-            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.placeholder" xml:space="preserve">
-                <source>No breakpoint</source>
-                <target>Kein Breakpoint</target>
-            </trans-unit>
-            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.sm" xml:space="preserve">
+            <trans-unit id="properties.textBoxBreakpoint.sm" xml:space="preserve">
                 <source>Tablet (640px)</source>
                 <target>Tablet (640px)</target>
             </trans-unit>
-            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.md" xml:space="preserve">
+            <trans-unit id="properties.textBoxBreakpoint.md" xml:space="preserve">
                 <source>Laptop (768px)</source>
                 <target>Laptop (768px)</target>
             </trans-unit>
-            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.lg" xml:space="preserve">
+            <trans-unit id="properties.textBoxBreakpoint.lg" xml:space="preserve">
                 <source>Desktop (1024px)</source>
                 <target>Desktop (1024px)</target>
             </trans-unit>

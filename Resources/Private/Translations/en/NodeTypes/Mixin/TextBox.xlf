@@ -5,25 +5,48 @@
             <trans-unit id="properties.textBoxDirection" xml:space="preserve">
                 <source>Position of the text box</source>
             </trans-unit>
+            <trans-unit id="properties.textBoxDirection.inline" xml:space="preserve">
+                <source>Inline text box</source>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.topLeft" xml:space="preserve">
+                <source>Top left</source>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.topRight" xml:space="preserve">
+                <source>Top right</source>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.top" xml:space="preserve">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.bottomLeft" xml:space="preserve">
+                <source>Bottom left</source>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.bottomRight" xml:space="preserve">
+                <source>Bottom right</source>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.bottom" xml:space="preserve">
+                <source>Bottom</source>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.left" xml:space="preserve">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="properties.textBoxDirection.right" xml:space="preserve">
+                <source>Right</source>
+            </trans-unit>
             <trans-unit id="properties.textBoxMaxWidth" xml:space="preserve">
                 <source>Maximum width of the text box</source>
             </trans-unit>
             <trans-unit id="properties.textBoxBreakpoint" xml:space="preserve">
                 <source>Breakpoint of the text</source>
             </trans-unit>
-            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.placeholder" xml:space="preserve">
-                <source>No breakpoint</source>
-            </trans-unit>
-            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.sm" xml:space="preserve">
+            <trans-unit id="properties.textBoxBreakpoint.sm" xml:space="preserve">
                 <source>Tablet (640px)</source>
             </trans-unit>
-            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.md" xml:space="preserve">
+            <trans-unit id="properties.textBoxBreakpoint.md" xml:space="preserve">
                 <source>Laptop (768px)</source>
             </trans-unit>
-            <trans-unit id="properties.textBoxBreakpoint.selectBoxEditor.values.lg" xml:space="preserve">
+            <trans-unit id="properties.textBoxBreakpoint.lg" xml:space="preserve">
                 <source>Desktop (1024px)</source>
             </trans-unit>
-
         </body>
     </file>
 </xliff>

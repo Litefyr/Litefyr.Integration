@@ -2,13 +2,14 @@
 
 namespace Litefyr\Integration\Fusion;
 
+use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\Flow\Annotations as Flow;
-use Neos\Neos\Domain\Exception;
+use Neos\Flow\Log\Utility\LogEnvironment;
+use Neos\Fusion\FusionObjects\AbstractFusionObject;
+use Neos\Neos\Domain\Exception as DomainException;
+use Neos\Neos\Domain\Service\UserInterfaceModeService;
 use Neos\Neos\Fusion\Helper\CachingHelper;
 use Neos\Neos\Service\LinkingService;
-use Neos\Flow\Log\Utility\LogEnvironment;
-use Neos\ContentRepository\Domain\Model\NodeInterface;
-use Neos\Fusion\FusionObjects\AbstractFusionObject;
 use Psr\Log\LoggerInterface;
 use function preg_replace;
 use function preg_replace_callback;
@@ -59,6 +60,9 @@ class ConvertUrisImplementation extends AbstractFusionObject
     #[Flow\Inject]
     protected LoggerInterface $systemLogger;
 
+    #[Flow\Inject]
+    protected UserInterfaceModeService $interfaceRenderModeService;
+
     protected string $lightboxAttributes = '';
 
     /**
@@ -68,10 +72,18 @@ class ConvertUrisImplementation extends AbstractFusionObject
      * set. This is needed to show the editable links with metadata in the content module.
      *
      * @return string
-     * @throws Exception
+     * @throws DomainException
      */
     public function evaluate()
     {
+        // Enable support for flownative/workspace-preview
+        $currentRenderingMode = $this->interfaceRenderModeService->findModeByCurrentUser();
+        $forceConversionPathPart = 'forceConversion';
+        if ($currentRenderingMode->isEdit() === false) {
+            $fullPath = $this->path . '/' . $forceConversionPathPart;
+            $this->fusionValueCache[$fullPath] = true;
+        }
+
         $text = $this->fusionValue('value');
 
         if ($text === '' || $text === null) {

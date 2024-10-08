@@ -12,19 +12,14 @@
           position: 2
           group: settings
           hidden: 'ClientEval:!node.properties.theme'
-          editor: 'Carbon.ColorValues/Editor'
+          editor: 'Beromir.ToggleEditor/Editor'
           editorOptions:
             allowEmpty: true
-            values:
-              main:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.main'
-                color: 'var(--color-theme-main)'
-              minor:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.minor'
-                color: 'var(--color-theme-minor)'
-              minor2:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.minor2'
-                color: 'var(--color-theme-minor2)'
-              gray:
-                label: 'Litefyr.Integration:NodeTypes.Colors:color.gray'
-                color: 'var(--color-theme-gray)'
+            maximalColumns: '{items} > 4 ? 3 : 4'
+            layout: 'color'
+            dataSourceIdentifier: litefyr-style-color
+            dataSourceAdditionalData:
+              main: true
+              minor: true
+              minor2: true
+              gray: true

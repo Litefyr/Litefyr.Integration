@@ -3,6 +3,14 @@ Neos:
     nodeTypes:
       presets:
         properties:
+          boolean:
+            enableCounter:
+              type: boolean
+              defaultValue: true
+              search:
+                indexing: false
+              ui:
+                label: 'Litefyr.Integration:NodeTypes.Counter:enable'
           text:
             inlineEditable:
               type: string

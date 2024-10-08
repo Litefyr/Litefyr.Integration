@@ -11,13 +11,10 @@
             <trans-unit id="properties.position" xml:space="preserve">
                 <source>Position of the text</source>
             </trans-unit>
-            <trans-unit id="properties.position.selectBoxEditor.placeholder" xml:space="preserve">
-                <source>Full width</source>
-            </trans-unit>
-            <trans-unit id="properties.position.selectBoxEditor.values.left" xml:space="preserve">
+            <trans-unit id="properties.position.left" xml:space="preserve">
                 <source>Left</source>
             </trans-unit>
-            <trans-unit id="properties.position.selectBoxEditor.values.right" xml:space="preserve">
+            <trans-unit id="properties.position.right" xml:space="preserve">
                 <source>Right</source>
             </trans-unit>
         </body>
