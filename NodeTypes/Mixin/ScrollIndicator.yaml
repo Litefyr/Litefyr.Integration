@@ -40,7 +40,7 @@
               minor: true
               minor2: true
               gray: true
-              default: 'Litefyr.Style:NodeTypes.Mixin.Colors:text'
+              text: true
     scrollIndicatorBottom:
       type: integer
       defaultValue: 1

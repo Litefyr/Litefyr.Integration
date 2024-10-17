@@ -14,9 +14,10 @@ prototype(Litefyr.Integration:Content.Headline) < prototype(Neos.Neos:ContentCom
     headlineLinks = Litefyr.Integration:Component.Links
 
     inBackend = ${node.context.inBackend}
+    colorGradient = null
 
     renderer = afx`
-        <Litefyr.Presentation:Spacing augmenter padding waveSpacing>
+        <Litefyr.Presentation:Spacing augmenter padding waveSpacing colorGradient={props.colorGradient}>
             <Litefyr.Presentation:Block.HeadlineAndLead {...props}/>
         </Litefyr.Presentation:Spacing>
     `

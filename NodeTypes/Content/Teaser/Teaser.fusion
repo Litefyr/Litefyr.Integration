@@ -23,6 +23,8 @@ prototype(Litefyr.Integration:Content.Teaser) < prototype(Neos.Neos:ContentCompo
         block = false
     }
 
+    colorGradient = null
+
     @private {
         placeHolderItems = ${Array.range(1, Math.max(props.numberOfPlaceholder, Carbon.Array.length(props.nodes)))}
         jsonPath = Neos.Fusion:Map {
@@ -41,7 +43,7 @@ prototype(Litefyr.Integration:Content.Teaser) < prototype(Neos.Neos:ContentCompo
     }
 
     renderer = afx`
-        <Litefyr.Presentation:Module.TeaserContainer @if={private.jsonPath} jsonPath={private.jsonPath} {...props} bottomTheme={props.theme}>
+        <Litefyr.Presentation:Module.TeaserContainer @if={private.jsonPath} jsonPath={private.jsonPath} {...props} bottomTheme={props.theme} colorGradient={props.colorGradient}>
             <Neos.Fusion:Loop items={private.placeHolderItems}>
                 <Neos.Fusion:Renderer type={props.teaserNodeType} element.placeholder={true} />
             </Neos.Fusion:Loop>
