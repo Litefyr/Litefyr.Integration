@@ -30,6 +30,10 @@
                 <source>Email</source>
                 <target>E-Mail</target>
             </trans-unit>
+            <trans-unit id="properties.socialNetworks.add" xml:space="preserve">
+                <source>Add entry</source>
+                <target>Eintrag hinzufügen</target>
+            </trans-unit>
             <trans-unit id="properties.socialNetworks.network" xml:space="preserve">
                 <source>Network</source>
                 <target>Netzwerk</target>
@@ -38,10 +42,13 @@
                 <source>Link</source>
                 <target>Link</target>
             </trans-unit>
-
             <trans-unit id="properties.socialShare.ui.help.message" xml:space="preserve">
                 <source>Native sharing is only displayed if the browser supports it</source>.
                 <target>Natives teilen wird nur angezeigt, falls der Browser dies unterstützt.</target>
+            </trans-unit>
+            <trans-unit id="properties.socialShare.add" xml:space="preserve">
+                <source>Add entry</source>
+                <target>Eintrag hinzufügen</target>
             </trans-unit>
             <trans-unit id="properties.socialShare.network" xml:space="preserve">
                 <source>Network</source>
@@ -62,18 +69,6 @@
             <trans-unit id="properties.socialShare.print" xml:space="preserve">
                 <source>Print</source>
                 <target>Drucken</target>
-            </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.placeholder" xml:space="preserve">
-                <source>Content width</source>
-                <target>Inhaltsbreite</target>
-            </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.values.wide" xml:space="preserve">
-                <source>Wide</source>
-                <target>Breit</target>
-            </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.values.full" xml:space="preserve">
-                <source>Screen width</source>
-                <target>Bildschirmbreite</target>
             </trans-unit>
         </body>
     </file>

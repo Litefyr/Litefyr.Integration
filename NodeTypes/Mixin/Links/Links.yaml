@@ -19,7 +19,7 @@
           group: links
           position: 10
           editorOptions:
-            buttonAddLabel: '＋'
+            buttonAddLabel: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.add'
             min: 0
             properties:
               href:

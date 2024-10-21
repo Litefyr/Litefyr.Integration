@@ -57,7 +57,7 @@
         inspector:
           group: social
           editorOptions:
-            buttonAddLabel: '＋'
+            buttonAddLabel: 'Litefyr.Integration:NodeTypes.Mixin.Contact:properties.socialNetworks.add'
             properties:
               network:
                 type: string
@@ -188,7 +188,7 @@
         inspector:
           group: share
           editorOptions:
-            buttonAddLabel: '＋'
+            buttonAddLabel: 'Litefyr.Integration:NodeTypes.Mixin.Contact:properties.socialShare.add'
             properties:
               action:
                 type: string

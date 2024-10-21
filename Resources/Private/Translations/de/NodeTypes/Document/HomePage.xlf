@@ -66,6 +66,10 @@
                 <source>More entries</source>
                 <target>Weitere Einträge</target>
             </trans-unit>
+            <trans-unit id="properties.legalItems.add" xml:space="preserve">
+                <source>Add entry</source>
+                <target>Eintrag hinzufügen</target>
+            </trans-unit>
             <trans-unit id="properties.legalItems.label" xml:space="preserve">
                 <source>Labeling</source>
                 <target>Beschriftung</target>
@@ -89,6 +93,10 @@
             <trans-unit id="properties.footerNavigationMultiColumn" xml:space="preserve">
                 <source>Multi-column navigation</source>
                 <target>Mehrspaltige Navigation</target>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumn.add" xml:space="preserve">
+                <source>Add column</source>
+                <target>Spalte hinzufügen</target>
             </trans-unit>
             <trans-unit id="properties.footerNavigationMultiColumn.headline" xml:space="preserve">
                 <source>Headline</source>

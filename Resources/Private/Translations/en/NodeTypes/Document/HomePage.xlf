@@ -50,6 +50,9 @@
             <trans-unit id="properties.legalItems" xml:space="preserve">
                 <source>More entries</source>
             </trans-unit>
+            <trans-unit id="properties.legalItems.add" xml:space="preserve">
+                <source>Add entry</source>
+            </trans-unit>
             <trans-unit id="properties.legalItems.label" xml:space="preserve">
                 <source>Labeling</source>
             </trans-unit>
@@ -67,6 +70,9 @@
             </trans-unit>
             <trans-unit id="properties.footerNavigationMultiColumn" xml:space="preserve">
                 <source>Multi-column navigation</source>
+            </trans-unit>
+            <trans-unit id="properties.footerNavigationMultiColumn.add" xml:space="preserve">
+                <source>Add column</source>
             </trans-unit>
             <trans-unit id="properties.footerNavigationMultiColumn.headline" xml:space="preserve">
                 <source>Headline</source>

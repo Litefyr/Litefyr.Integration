@@ -170,7 +170,7 @@
           group: legal
           position: 50
           editorOptions:
-            buttonAddLabel: '＋'
+            buttonAddLabel: 'Litefyr.Integration:NodeTypes.Document.HomePage:properties.legalItems.add'
             properties:
               key:
                 label: 'Litefyr.Integration:NodeTypes.Document.HomePage:properties.legalItems.label'
@@ -218,7 +218,7 @@
           position: 50
           hidden: 'ClientEval: !node.properties.footerNavigationMultiColumnEnabled'
           editorOptions:
-            buttonAddLabel: '＋'
+            buttonAddLabel: 'Litefyr.Integration:NodeTypes.Document.HomePage:properties.footerNavigationMultiColumn.add'
             min: 2
             max: 4
             properties:

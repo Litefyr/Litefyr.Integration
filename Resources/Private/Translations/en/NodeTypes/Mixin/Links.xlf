@@ -5,6 +5,9 @@
             <trans-unit id="groups.links" xml:space="preserve">
                 <source>Links</source>
             </trans-unit>
+            <trans-unit id="properties.links.add" xml:space="preserve">
+                <source>Add link</source>
+            </trans-unit>
             <trans-unit id="properties.links.label" xml:space="preserve">
                 <source>Link</source>
             </trans-unit>

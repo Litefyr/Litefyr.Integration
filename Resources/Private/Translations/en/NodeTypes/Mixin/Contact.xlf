@@ -23,15 +23,20 @@
             <trans-unit id="properties.email" xml:space="preserve">
                 <source>Email</source>
             </trans-unit>
+            <trans-unit id="properties.socialNetworks.add" xml:space="preserve">
+                <source>Add entry</source>
+            </trans-unit>
             <trans-unit id="properties.socialNetworks.network" xml:space="preserve">
                 <source>Network</source>
             </trans-unit>
             <trans-unit id="properties.socialNetworks.url" xml:space="preserve">
                 <source>Link</source>
             </trans-unit>
-
             <trans-unit id="properties.socialShare.ui.help.message" xml:space="preserve">
                 <source>Native sharing is only displayed if the browser supports it</source>.
+            </trans-unit>
+            <trans-unit id="properties.socialShare.add" xml:space="preserve">
+                <source>Add entry</source>
             </trans-unit>
             <trans-unit id="properties.socialShare.network" xml:space="preserve">
                 <source>Network</source>
@@ -47,15 +52,6 @@
             </trans-unit>
             <trans-unit id="properties.socialShare.print" xml:space="preserve">
                 <source>Print</source>
-            </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.placeholder" xml:space="preserve">
-                <source>Content width</source>
-            </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.values.wide" xml:space="preserve">
-                <source>Wide</source>
-            </trans-unit>
-            <trans-unit id="properties.breakout.selectBoxEditor.values.full" xml:space="preserve">
-                <source>Screen width</source>
             </trans-unit>
         </body>
     </file>

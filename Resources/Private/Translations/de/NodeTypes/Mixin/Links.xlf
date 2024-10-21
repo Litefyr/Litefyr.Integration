@@ -6,9 +6,9 @@
                 <source>Links</source>
                 <target>Links</target>
             </trans-unit>
-            <trans-unit id="properties.links.label" xml:space="preserve">
-                <source>Link</source>
-                <target>Link</target>
+            <trans-unit id="properties.links.add" xml:space="preserve">
+                <source>Add link</source>
+                <target>Link hinzufügen</target>
             </trans-unit>
             <trans-unit id="properties.links.text" xml:space="preserve">
                 <source>Labeling</source>
