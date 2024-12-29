@@ -2,9 +2,6 @@
   superTypes:
     'Litefyr.Integration:Mixin.Breakout': true
     'Litefyr.Integration:Mixin.TextWithContent': true
-    'Litefyr.Integration:Mixin.TextWithContent.Position': true
-    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litefyr.Integration:Mixin.TextWithContent.Label': true
   label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'metadataTitle', 'text')}"
   ui:
     position: 300

@@ -47,6 +47,8 @@ Neos:
         javascript:
           Litefyr.Integration:
             resource: resource://Litefyr.Integration/Public/Editors/Plugin.js
+            attributes:
+              type: 'module'
     userInterface:
       editPreviewModes:
         teaserView:

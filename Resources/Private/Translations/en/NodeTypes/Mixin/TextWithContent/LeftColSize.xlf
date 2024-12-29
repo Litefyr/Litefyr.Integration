@@ -3,7 +3,7 @@
     <file original="" product-name="Litefyr.Integration" source-language="en" datatype="plaintext">
         <body>
             <trans-unit id="properties.leftColSize" xml:space="preserve">
-                <source>Left column size</source>
+                <source>Column ratio</source>
             </trans-unit>
         </body>
     </file>

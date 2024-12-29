@@ -2,6 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" product-name="Litefyr.Integration" source-language="en" datatype="plaintext">
         <body>
+            <trans-unit id="groups.text" xml:space="preserve">
+                <source>Text field</source>
+            </trans-unit>
             <trans-unit id="properties.enableText" xml:space="preserve">
                 <source>Add text field</source>
             </trans-unit>

@@ -23,6 +23,9 @@ prototype(Litefyr.Integration:Content.Address) < prototype(Neos.Neos:ContentComp
     theme = ${q(node).property('theme')}
     leftColSize = ${q(node).property('leftColSize')}
     textLeft = ${q(node).property('textLeft')}
+    enableHeadline = ${q(node).property('enableHeadline')}
+    headlineFontSize = ${q(node).property('headlineFontSize')}
+    align = ${q(node).property('align')}
     links = Litefyr.Integration:Component.Links
     headline = Neos.Neos:Editable {
         property = 'headline'
@@ -38,7 +41,6 @@ prototype(Litefyr.Integration:Content.Address) < prototype(Neos.Neos:ContentComp
     textBesideAddress = Neos.Neos:Editable {
         property = 'textBesideAddress'
     }
-
 
    @private.content = afx`<Litefyr.Presentation:Module.Address {...props} />`
    renderer = afx`

@@ -2,11 +2,8 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" product-name="Litefyr.Integration" source-language="en" datatype="plaintext">
         <body>
-            <trans-unit id="properties.screenHeight" xml:space="preserve">
-                <source>Minimum height</source>
-            </trans-unit>
-            <trans-unit id="properties.screenHeight.minLabel" xml:space="preserve">
-                <source>Do not specify</source>
+            <trans-unit id="properties.enableHeadline" xml:space="preserve">
+                <source>Enable Headline</source>
             </trans-unit>
         </body>
     </file>

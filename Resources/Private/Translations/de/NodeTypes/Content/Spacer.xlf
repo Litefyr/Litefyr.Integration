@@ -6,9 +6,9 @@
                 <source>Spacer</source>
                 <target>Abstand</target>
             </trans-unit>
-            <trans-unit id="groups.look" xml:space="preserve">
-                <source><![CDATA[Look & Feel]]></source>
-                <target><![CDATA[Look & Feel]]></target>
+            <trans-unit id="properties.removeSpacing" xml:space="preserve">
+                <source>Remove spacing between elements</source>
+                <target>Abstand zwischen Elementen entfernen</target>
             </trans-unit>
             <trans-unit id="properties.height" xml:space="preserve">
                 <source>Distance</source>

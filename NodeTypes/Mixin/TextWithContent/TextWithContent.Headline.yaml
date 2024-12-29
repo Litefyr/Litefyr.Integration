@@ -1,0 +1,21 @@
+'Litefyr.Integration:Mixin.TextWithContent.Headline':
+  abstract: true
+  properties:
+    enableHeadline:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: text
+          position: 40
+          hidden: 'ClientEval: !node.properties.enableText'
+    headlineFontSize:
+      options:
+        preset: 'font.sizeHeadline'
+      ui:
+        inspector:
+          group: text
+          position: 41
+          hidden: 'ClientEval: !(node.properties.enableText && node.properties.enableHeadline)'

@@ -2,6 +2,8 @@
   superTypes:
     'Neos.Neos:Content': true
     'Litefyr.Integration:Mixin.ThemeSelector': true
+    'Litefyr.Integration:Mixin.Links': true
+    'Carbon.FirstElement:Mixin': true
   ui:
     label: i18n
     group: teaser
@@ -99,3 +101,10 @@
             minLabel: 'Litefyr.Integration:NodeTypes.Content.Teaser:properties.limit.minLabel'
             valueLabels:
               1: 'Litefyr.Integration:NodeTypes.Content.Teaser:properties.limit.one'
+    headlineFontSize:
+      options:
+        preset: 'font.sizeHeadline'
+      ui:
+        inspector:
+          group: settings
+          position: 60

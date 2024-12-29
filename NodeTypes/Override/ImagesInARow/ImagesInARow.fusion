@@ -9,6 +9,5 @@ prototype(Jonnitto.ImagesInARow:Container) {
         width = ${props.breakout}
         padding = 'auto'
         class = 'jonnitto-imagesinarow'
-        waveSpacing = true
     }
 }

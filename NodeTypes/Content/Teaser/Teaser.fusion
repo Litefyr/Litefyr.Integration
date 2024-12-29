@@ -5,10 +5,12 @@ prototype(Litefyr.Integration:Content.Teaser) < prototype(Neos.Neos:ContentCompo
     showImages = ${q(node).property('showImages')}
     textbox = ${q(node).property('textbox')}
     theme = ${q(node).property('theme')}
+    headlineFontSize = ${q(node).property('headlineFontSize')}
     featured = ${this.showImages && q(node).property('featured')}
     limit = ${q(node).property('limit')}
     numberOfPlaceholder = ${(this.single ? Carbon.Array.length(this.nodes) : 3) || 3}
     teaserNodeType = ${this.showImages ? (this.textbox ? 'Litefyr.Presentation:Block.Teaser.Textbox' : 'Litefyr.Presentation:Block.Teaser') : 'Litefyr.Presentation:Block.Teaser.Plain'}
+    links = Litefyr.Integration:Component.Links
 
     headline = Neos.Neos:Editable {
         property = 'headline'

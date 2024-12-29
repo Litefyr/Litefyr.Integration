@@ -2,19 +2,15 @@
   superTypes:
     'Neos.Neos:Content': true
     'Litefyr.Integration:Mixin.ThemeSelector': true
+    'Litefyr.Integration:Mixin.LookGroup': true
+    'Litefyr.Integration:Mixin.DisableSearch': true
   ui:
     label: i18n
     icon: expand-arrows-alt
     position: end
     inlineEditable: true
-    inspector:
-      groups:
-        look:
-          label: i18n
-          icon: paint-brush
-          position: 10
   properties:
-    useResponsiveScale:
+    removeSpacing:
       type: boolean
       defaultValue: false
       ui:
@@ -23,23 +19,33 @@
         inspector:
           group: look
           position: 10
+    useResponsiveScale:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 20
+          hidden: 'ClientEval: node.properties.removeSpacing'
     scale:
       type: integer
       defaultValue: 0
       ui:
         label: i18n
-        reloadPageIfChanged: true
+        reloadIfChanged: true
         inspector:
-          hidden: 'ClientEval: !node.properties.useResponsiveScale'
+          hidden: 'ClientEval: node.properties.removeSpacing || !node.properties.useResponsiveScale'
           group: look
-          position: 20
+          position: 30
           editor: 'Carbon.RangeEditor/Editor'
           editorOptions:
             valueLabelsFile: 'Litefyr.Presentation:Spacing'
             showMinLabel: false
             showMaxLabel: false
-            min: -4
-            max: 4
+            min: 'ClientEval: node.properties.hr ? -2 : -4'
+            max: 5
             step: 1
     height:
       type: string
@@ -48,10 +54,12 @@
         label: i18n
         reloadIfChanged: true
         inspector:
-          hidden: 'ClientEval: node.properties.useResponsiveScale'
+          hidden: 'ClientEval: node.properties.removeSpacing || node.properties.useResponsiveScale'
           group: look
-          position: 30
+          position: 40
           editor: 'Carbon.Tailwind/Spacing'
+          editorOptions:
+            spacing: 'ClientEval: node.properties.hr ? [2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96] : [0, "px", 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96]'
     hr:
       type: boolean
       defaultValue: true
@@ -59,13 +67,15 @@
         label: i18n
         reloadIfChanged: true
         inspector:
+          hidden: 'ClientEval: node.properties.removeSpacing'
           group: look
-          position: 40
+          position: 50
     theme:
       ui:
         label: i18n
         inspector:
+          hidden: 'ClientEval: node.properties.removeSpacing'
           group: look
-          position: 50
+          position: 60
           editorOptions:
             allowEmpty: true

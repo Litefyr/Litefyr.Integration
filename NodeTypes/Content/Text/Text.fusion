@@ -16,8 +16,11 @@ prototype(Litefyr.Integration:Content.Text) < prototype(Neos.Neos:ContentCompone
     }
 
     links = Litefyr.Integration:Component.Links
-    theme = ${q(node).property('theme')}
+    theme = ${this.inSlider ? null : q(node).property('theme')}
+    columns = ${q(node).property('columns') || 1}
     position = ${q(node).property('position')}
+    enableHeadline = ${q(node).property('enableHeadline')}
+    headlineFontSize = ${q(node).property('headlineFontSize')}
     inBackend = ${node.context.inBackend}
 
     renderer = afx`

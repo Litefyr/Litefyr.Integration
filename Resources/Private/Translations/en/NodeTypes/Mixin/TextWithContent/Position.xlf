@@ -3,7 +3,7 @@
     <file original="" product-name="Litefyr.Integration" source-language="en" datatype="plaintext">
         <body>
             <trans-unit id="properties.textLeft" xml:space="preserve">
-                <source>Text left</source>
+                <source>Text left on desktop</source>
             </trans-unit>
         </body>
     </file>

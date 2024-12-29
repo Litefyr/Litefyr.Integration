@@ -17,6 +17,9 @@
             <trans-unit id="properties.links.text.placeholder" xml:space="preserve">
                 <source>Learn more</source>
             </trans-unit>
+            <trans-unit id="properties.links.network" xml:space="preserve">
+                <source>Network icon</source>
+            </trans-unit>
             <trans-unit id="properties.links.break" xml:space="preserve">
                 <source>Break after link</source>
             </trans-unit>

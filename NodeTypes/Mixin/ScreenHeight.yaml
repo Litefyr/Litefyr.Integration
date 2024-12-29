@@ -1,12 +1,7 @@
 'Litefyr.Integration:Mixin.ScreenHeight':
   abstract: true
-  ui:
-    inspector:
-      groups:
-        look:
-          label: i18n
-          icon: paint-brush
-          position: 200
+  superTypes:
+    'Litefyr.Integration:Mixin.LookGroup': true
   properties:
     screenHeight:
       type: integer

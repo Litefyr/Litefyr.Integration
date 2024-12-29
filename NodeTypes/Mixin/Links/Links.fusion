@@ -3,42 +3,63 @@ prototype(Litefyr.Integration:Component.Links) < prototype(Neos.Fusion:Component
     linkInBackend = true
     fallbackContent = ${Translation.translate('more', null, [], null, 'Litefyr.Presentation')}
 
-    // Get applied on wrapper or onto a single button
     class = null
 
-    wrapperClass = 'flex flex-wrap gap-x-6 gap-y-3'
+    wrapperClass = 'flex flex-wrap items-center gap-x-6 gap-y-3'
 
     @private.items = Neos.Fusion:Map {
         items = ${Array.filter(props.links)}
-        itemRenderer = Litefyr.Presentation:Atom.Link {
-            @if.set = Neos.Neos:ConvertUris {
+        itemRenderer = Neos.Fusion:Component {
+            @if.linkIsValid = Neos.Neos:ConvertUris {
                 value = ${item.href}
             }
+            network = ${item.network}
             href = ${item.href}
             appearance = ${item.appearance}
-            content = ${item.text || props.fallbackContent}
-            @process {
-                breakAfterLink = ${item.break && !iterator.isLast ? value + '<hr class="basis-full border-none m-0 p-0" />' : value}
-                convertUris = Neos.Neos:ConvertUris {
-                    @if.set = ${props.linkInBackend}
-                    forceConversion = true
-                }
+            break = ${item.break && !iterator.isLast}
+            text = ${item.text}
+            content = ${item.text || Carbon.String.getPropertyFromNodeLink(site, item.href) || props.fallbackContent}
+
+            networkData = Litefyr.Presentation:Helper.SocialNetwork {
+                network = ${item.network}
+                url = ${item.href}
+                plainLabel = true
+            }
+
+            renderer = afx`
+                <Litefyr.Presentation:Atom.Link
+                    @if={props.text || !props.network}
+                    href={props.href}
+                    appearance={props.appearance}
+                >
+                    <Litefyr.Presentation:Block.SocialNetworks.Fragment.Icon
+                        class={props.appearance == "link" ? "block size-[2em]" : "block size-[1em] -ml-fl-3xs"}
+                        network={props.network}
+                    />
+                    <span @if={props.network}>{props.content}</span>
+                    {props.network ? '': props.content}
+                </Litefyr.Presentation:Atom.Link>
+                <a
+                    @if={props.network && !props.text}
+                    href={props.href}
+                    aria-label={props.networkData.label}
+                    class="block transition-transform hocus:scale-110"
+                >
+                    <Litefyr.Presentation:Block.SocialNetworks.Fragment.Icon class="block size-[2em]" network={props.network} />
+                </a>
+                <hr @if={props.break} class="basis-full border-none m-0 p-0" />
+            `
+            @process.convertUris = Neos.Neos:ConvertUris {
+                @if.set = ${props.linkInBackend}
+                forceConversion = true
             }
         }
         @process.filter = ${Array.filter(value)}
     }
 
     renderer = afx`
-        <Neos.Fusion:Augmenter
-            @if={Carbon.Array.check(private.items)}
-            class={props.class}
-        >
-            <Carbon.Eel:Tag
-                tagName={props.wrapperClass && Carbon.Array.length(private.items) > 1 ? 'div' : null}
-                attributes.class={props.wrapperClass}
-            >
-                {Array.join(private.items, '')}
-            </Carbon.Eel:Tag>
-        </Neos.Fusion:Augmenter>
+        <div @if={Carbon.Array.check(private.items)} class={Carbon.String.classNames(props.wrapperClass, props.class)} x-data x-tooltips>
+            {Array.join(private.items, '')}
+        </div>
     `
 }

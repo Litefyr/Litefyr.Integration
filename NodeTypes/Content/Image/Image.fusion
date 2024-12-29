@@ -11,9 +11,14 @@ prototype(Litefyr.Integration:Content.Image) < prototype(Neos.Neos:ContentCompon
 
     // For text / image combi
     enableText = ${q(node).property('enableText')}
+    float = ${q(node).property('float')}
+    textMobileBottom = ${q(node).property('textMobileBottom')}
+    enableHeadline = ${q(node).property('enableHeadline')}
+    headlineFontSize = ${q(node).property('headlineFontSize')}
     theme = ${q(node).property('theme')}
     leftColSize = ${q(node).property('leftColSize')}
     textLeft = ${q(node).property('textLeft')}
+    align = ${q(node).property('align')}
     links = Litefyr.Integration:Component.Links
     headline = Neos.Neos:Editable {
         property = 'headline'
@@ -39,6 +44,9 @@ prototype(Litefyr.Integration:Content.Image) < prototype(Neos.Neos:ContentCompon
     textBoxMaxWidth = ${q(node).property('textBoxMaxWidth')}
     textBoxBreakpoint = ${q(node).property('textBoxBreakpoint')}
     textBoxOpacity = ${q(node).property('textBoxOverrideOpacity') ? q(node).property('textBoxOpacity') : null}
+
+    customRounded = ${q(node).property('rounded')}
+    circleShapeOutside = ${this.customRounded == '9999px'}
 
     renderer = Litefyr.Presentation:Block.ImageCombinations {
         @apply.props = ${props}

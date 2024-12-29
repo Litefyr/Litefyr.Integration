@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file original="" product-name="Litefyr.Integration" source-language="en" datatype="plaintext">
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file product-name="Litefyr.Integration" source-language="en" datatype="plaintext">
         <body>
             <trans-unit id="groups.look" xml:space="preserve">
                 <source><![CDATA[Look & Feel]]></source>

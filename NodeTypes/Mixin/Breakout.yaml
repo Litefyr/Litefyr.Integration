@@ -1,12 +1,7 @@
 'Litefyr.Integration:Mixin.Breakout':
   abstract: true
-  ui:
-    inspector:
-      groups:
-        look:
-          label: i18n
-          icon: paint-brush
-          position: 200
+  superTypes:
+    'Litefyr.Integration:Mixin.LookGroup': true
   properties:
     breakout:
       type: string
@@ -18,6 +13,8 @@
         inspector:
           group: look
           position: 1
+          # This hides the field if the parent node is a content node
+          hidden: 'ClientEval: !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/))'
           editor: 'Beromir.ToggleEditor/Editor'
           editorOptions:
             values:
@@ -30,3 +27,23 @@
               full:
                 description: 'Litefyr.Integration:NodeTypes.Mixin.Breakout:breakout.full'
                 icon: desktop
+
+'Litefyr.Integration:Mixin.Breakout.IfTextEnabled':
+  abstract: true
+  superTypes:
+    'Litefyr.Integration:Mixin.Breakout': true
+  properties:
+    breakout:
+      ui:
+        inspector:
+          hidden: 'ClientEval: !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/) || !node.properties.enableText)'
+
+'Litefyr.Integration:Mixin.Breakout.IfHasImage':
+  abstract: true
+  superTypes:
+    'Litefyr.Integration:Mixin.Breakout': true
+  properties:
+    breakout:
+      ui:
+        inspector:
+          hidden: 'ClientEval: !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/) || !node.properties.image)'

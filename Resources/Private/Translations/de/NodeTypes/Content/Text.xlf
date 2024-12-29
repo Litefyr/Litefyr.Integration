@@ -6,13 +6,17 @@
                 <source>Text</source>
                 <target>Text</target>
             </trans-unit>
-            <trans-unit id="groups.look" xml:space="preserve">
-                <source><![CDATA[Look & Feel]]></source>
-                <target><![CDATA[Look & Feel]]></target>
+            <trans-unit id="properties.enableHeadline" xml:space="preserve">
+                <source>Enable Headline</source>
+                <target>Überschrift aktivieren</target>
             </trans-unit>
             <trans-unit id="properties.position" xml:space="preserve">
                 <source>Position of the text</source>
                 <target>Position vom Text</target>
+            </trans-unit>
+            <trans-unit id="properties.columns" xml:space="preserve">
+                <source>Number of columns</source>
+                <target>Anzahl Spalten</target>
             </trans-unit>
             <trans-unit id="properties.position.left" xml:space="preserve">
                 <source>Left</source>
@@ -21,6 +25,14 @@
             <trans-unit id="properties.position.right" xml:space="preserve">
                 <source>Right</source>
                 <target>Rechts</target>
+            </trans-unit>
+            <trans-unit id="properties.position.veryLeft" xml:space="preserve">
+                <source>Far left</source>
+                <target>Ganz Links</target>
+            </trans-unit>
+            <trans-unit id="properties.position.veryRight" xml:space="preserve">
+                <source>Far right</source>
+                <target>Ganz Rechts</target>
             </trans-unit>
         </body>
     </file>

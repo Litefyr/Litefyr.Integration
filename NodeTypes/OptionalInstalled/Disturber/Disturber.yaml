@@ -2,3 +2,6 @@
 
 'Litefyr.Disturber:Mixin.Content':
   abstract: true
+
+'Litefyr.Disturber:Mixin.OnDocument':
+  abstract: true

@@ -18,6 +18,10 @@
                 <source>Learn more</source>
                 <target>mehr erfahren</target>
             </trans-unit>
+            <trans-unit id="properties.links.network" xml:space="preserve">
+                <source>Network icon</source>
+                <target>Netzwerk Icon</target>
+            </trans-unit>
             <trans-unit id="properties.links.break" xml:space="preserve">
                 <source>Break after link</source>
                 <target>Umbruch nach Link</target>

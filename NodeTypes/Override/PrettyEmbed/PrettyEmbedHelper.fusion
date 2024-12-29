@@ -2,10 +2,15 @@ prototype(Jonnitto.PrettyEmbed:Content) {
     breakout = ${q(node).property('breakout')}
 
     enableText = ${q(node).property('enableText')}
+    float = ${q(node).property('float')}
+    textMobileBottom = ${q(node).property('textMobileBottom')}
+    enableHeadline = ${q(node).property('enableHeadline')}
+    headlineFontSize = ${q(node).property('headlineFontSize')}
     enableSpacing = true
     leftColSize = ${q(node).property('leftColSize')}
     textLeft = ${q(node).property('textLeft')}
     theme = ${q(node).property('theme')}
+    align = ${q(node).property('align')}
 
     links = Litefyr.Integration:Component.Links
     headline = Neos.Neos:Editable {
@@ -22,7 +27,7 @@ prototype(Jonnitto.PrettyEmbed:Content) {
 
     wrapper {
         @if.single = ${!this.enableText}
-        @process.rounded = ${this.breakout == 'full' ? Tailwind.merge('mediacontent', value) : Tailwind.merge('mediacontent', this.breakout == 'wide' ? 'xl:mediacontent:rounded-box xl:imagecontent:rounded-image' : 'mediacontent:rounded-box imagecontent:rounded-image', value)}
+        @process.rounded = ${this.breakout == 'full' ? Tailwind.merge('mediacontent', value) : Tailwind.merge('mediacontent roundimage', this.breakout == 'wide' ? 'wide:mediacontent:rounded-box wide:imagecontent:rounded-image' : 'mediacontent:rounded-box imagecontent:rounded-image', value)}
     }
 
     inBackend = ${node.context.inBackend}
@@ -33,9 +38,10 @@ prototype(Jonnitto.PrettyEmbed:Content) {
             augmenter = true
             width = ${props.breakout}
             padding = 'auto'
+            class = ${props.breakout == 'full' ? Presentation.clippathClass('content', 'media') : null}
         }
         textWithContent = afx`
-            <Litefyr.Presentation:Module.TextWithContent @if={props.enableText} {...props} label={props.editableLabel} singleContent={value} />
+            <Litefyr.Presentation:Module.TextWithContent @if={props.enableText} stretchContent={true} {...props} label={props.editableLabel} singleContent={value} />
         `
     }
 }

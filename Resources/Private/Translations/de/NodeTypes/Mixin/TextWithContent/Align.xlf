@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litefyr.Integration" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.textMobileBottom" xml:space="preserve">
+                <source>Text on bottom on mobile</source>
+                <target>Text unten auf dem Handy</target>
+            </trans-unit>
+            <trans-unit id="properties.float" xml:space="preserve">
+                <source>Float text arround content</source>
+                <target>Fließender Text um den Inhalt</target>
+            </trans-unit>
+            <trans-unit id="properties.align" xml:space="preserve">
+                <source>Vertical alignment</source>
+                <target>Vertikale Ausrichtung</target>
+            </trans-unit>
+            <trans-unit id="properties.align.start" xml:space="preserve">
+                <source>Top</source>
+                <target>Oben</target>
+            </trans-unit>
+            <trans-unit id="properties.align.baseline" xml:space="preserve">
+                <source>Font baseline</source>
+                <target>Schrift Grundlinie</target>
+            </trans-unit>
+            <trans-unit id="properties.align.center" xml:space="preserve">
+                <source>Center</source>
+                <target>Zentriert</target>
+            </trans-unit>
+            <trans-unit id="properties.align.stretch" xml:space="preserve">
+                <source>Stretch</source>
+                <target>Dehnen</target>
+            </trans-unit>
+            <trans-unit id="properties.align.start" xml:space="preserve">
+                <source>Bottom</source>
+                <target>Unten</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

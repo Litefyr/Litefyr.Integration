@@ -3,8 +3,8 @@
     <file original="" product-name="Litefyr.Integration" source-language="en" target-language="de" datatype="plaintext">
         <body>
             <trans-unit id="properties.textLeft" xml:space="preserve">
-                <source>Text left</source>
-                <target>Text links</target>
+                <source>Text left on desktop</source>
+                <target>Text links auf dem Desktop</target>
             </trans-unit>
         </body>
     </file>

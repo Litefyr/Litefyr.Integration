@@ -1,0 +1,50 @@
+'Litefyr.Integration:Mixin.TextWithContent.Align':
+  abstract: true
+  properties:
+    textMobileBottom:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: text
+          position: 34
+          hidden: 'ClientEval: !node.properties.enableText'
+    float:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: text
+          position: 35
+          hidden: 'ClientEval: !node.properties.enableText'
+    align:
+      type: string
+      defaultValue: 'center'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: text
+          position: 10
+          editor: 'Beromir.ToggleEditor/Editor'
+          hidden: 'ClientEval:node.properties.enableText ? !!node.properties.float : true'
+          editorOptions:
+            maximalColumns: 5
+            values:
+              baseline:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextWithContent.Align:properties.align.baseline'
+                icon: font
+              start:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextWithContent.Align:properties.align.start'
+                icon: arrow-up
+              center:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextWithContent.Align:properties.align.center'
+                icon: grip-lines
+              # stretch:
+              #   description: 'Litefyr.Integration:NodeTypes.Mixin.TextWithContent.Align:properties.align.stretch'
+              #   icon: arrows-alt-v
+              end:
+                description: 'Litefyr.Integration:NodeTypes.Mixin.TextWithContent.Align:properties.align.end'
+                icon: arrow-down

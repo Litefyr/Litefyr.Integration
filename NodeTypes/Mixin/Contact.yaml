@@ -68,6 +68,10 @@
                 editorOptions:
                   allowEmpty: false
                   values:
+                    bluesky:
+                      label: Bluesky
+                      icon: bluesky
+                      group: Network
                     facebook:
                       label: Facebook
                       icon: facebook
@@ -87,6 +91,10 @@
                     pinterest:
                       label: Pinterest
                       icon: pinterest
+                      group: Network
+                    threads:
+                      label: Threads
+                      icon: threads
                       group: Network
                     tiktok:
                       label: TikTok
@@ -173,7 +181,9 @@
       type: repeatable
       defaultValue:
         - action: native
+        - action: bluesky
         - action: facebook
+        - action: threads
         - action: mastodon
         - action: x
         - action: linkedin
@@ -215,6 +225,10 @@
                       label: 'Litefyr.Integration:NodeTypes.Mixin.Contact:properties.socialShare.print'
                       icon: print
                       group: Systemaktion
+                    bluesky:
+                      label: Bluesky
+                      icon: bluesky
+                      group: Link zu Platform
                     facebook:
                       label: Facebook
                       icon: facebook
@@ -230,6 +244,10 @@
                     pinterest:
                       label: Pinterest
                       icon: pinterest
+                      group: Link zu Platform
+                    threads:
+                      label: Threads
+                      icon: threads
                       group: Link zu Platform
                     x:
                       label: X (Twitter)

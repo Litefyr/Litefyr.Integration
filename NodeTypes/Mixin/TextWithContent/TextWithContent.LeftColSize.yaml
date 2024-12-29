@@ -8,10 +8,12 @@
         label: i18n
         reloadIfChanged: true
         inspector:
-          group: look
-          position: 540
+          group: text
+          position: 20
+          hidden: 'ClientEval:node.properties.enableText ? false : true'
           editor: 'Carbon.RangeEditor/Editor'
           editorOptions:
+            ratio: true
             min: 25
             max: 75
             step: 5

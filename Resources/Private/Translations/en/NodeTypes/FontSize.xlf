@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litefyr.Integration" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="fontSize" xml:space="preserve">
+                <source>Font size</source>
+            </trans-unit>
+            <trans-unit id="fontSizeHeadline" xml:space="preserve">
+                <source>Headline font size</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

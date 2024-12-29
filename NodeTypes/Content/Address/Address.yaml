@@ -2,9 +2,6 @@
   superTypes:
     'Neos.Neos:Content': true
     'Litefyr.Integration:Mixin.TextWithContent': true
-    'Litefyr.Integration:Mixin.TextWithContent.Position': true
-    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litefyr.Integration:Mixin.TextWithContent.Label': true
     'Litefyr.Integration:Mixin.ScreenHeight': true
   search:
     fulltext:
@@ -29,30 +26,42 @@
   properties:
     enableText: {}
     breakout: {}
+    align:
+      ui:
+        inspector:
+          hidden: 'ClientEval: node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+    enableHeadline:
+      ui:
+        inspector:
+          hidden: 'ClientEval: node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+    headlineFontSize:
+      ui:
+        inspector:
+          hidden: 'ClientEval: node.properties.additionalMap || node.properties.additionalPaperTiger ? !node.properties.enableHeadline : true'
     screenHeight:
       ui:
         inspector:
-          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+          hidden: 'ClientEval: node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
     textLeft:
       defaultValue: true
       ui:
         inspector:
-          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+          hidden: 'ClientEval: node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
     leftColSize:
       ui:
         inspector:
-          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+          hidden: 'ClientEval: node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
     theme:
       ui:
         inspector:
-          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/)) : true'
+          hidden: 'ClientEval: node.properties.additionalMap || node.properties.additionalPaperTiger ? !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/)) : true'
           editorOptions:
             values:
               light: []
     links:
       ui:
         inspector:
-          hidden: 'ClientEval:node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
+          hidden: 'ClientEval: node.properties.additionalMap || node.properties.additionalPaperTiger ? false : true'
     textBesideAddress:
       options:
         preset: 'text.autoparagraph'

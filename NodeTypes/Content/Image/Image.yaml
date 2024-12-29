@@ -8,9 +8,6 @@
     'Carbon.Image:Link': true
     'Litefyr.Integration:Mixin.Breakout': true
     'Litefyr.Integration:Mixin.TextWithContent': true
-    'Litefyr.Integration:Mixin.TextWithContent.Position': true
-    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litefyr.Integration:Mixin.TextWithContent.Label': true
     'Litefyr.Integration:Mixin.ScreenHeight': true
     'Litefyr.Integration:Mixin.TextBox': true
   label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text', 'alternativeText', 'caption')}"
@@ -35,3 +32,6 @@
       ui:
         inspector:
           position: 'after textBoxBreakpoint'
+    rounded:
+      options:
+        preset: 'image.rounded'

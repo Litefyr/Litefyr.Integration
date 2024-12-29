@@ -2,8 +2,9 @@
   superTypes:
     'Neos.Neos:Content': true
     'Carbon.FirstElement:Mixin': true
-    'Litefyr.Integration:Mixin.Links.Appearance': true
+    'Litefyr.Integration:Mixin.Links': true
     'Litefyr.Integration:Mixin.ThemeSelector': true
+    'Litefyr.Integration:Mixin.LookGroup': true
   search:
     fulltext:
       enable: true
@@ -11,12 +12,6 @@
     label: i18n
     icon: file-alt
     position: 20
-    inspector:
-      groups:
-        look:
-          label: i18n
-          icon: paint-brush
-          position: 10
   properties:
     theme:
       ui:
@@ -24,6 +19,36 @@
           group: look
           editorOptions:
             allowEmpty: true
+    enableHeadline:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 'after theme'
+    headlineFontSize:
+      options:
+        preset: 'font.sizeHeadline'
+      ui:
+        inspector:
+          position: 'after enableHeadline'
+          hidden: 'ClientEval: !node.properties.enableHeadline'
+    columns:
+      type: integer
+      defaultValue: 1
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: look
+          position: 'after headlineFontSize'
+          editor: 'Carbon.RangeEditor/Editor'
+          editorOptions:
+            min: 1
+            max: 3
+            step: 1
     headline:
       options:
         preset: 'text.headline'
@@ -44,13 +69,19 @@
           group: look
           editor: 'Beromir.ToggleEditor/Editor'
           # This hides the field if the parent node is a content node
-          hidden: 'ClientEval: !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/))'
+          hidden: 'ClientEval: !!(node.parent.match(/\/node-[a-zA-Z0-9]*@/) || node.properties.columns > 1)'
           editorOptions:
             allowEmpty: true
             values:
+              veryLeft:
+                description: 'Litefyr.Integration:NodeTypes.Content.Text:properties.position.veryLeft'
+                icon: 'angle-double-left'
               left:
                 description: 'Litefyr.Integration:NodeTypes.Content.Text:properties.position.left'
-                icon: 'arrow-left'
+                icon: 'angle-left'
               right:
                 description: 'Litefyr.Integration:NodeTypes.Content.Text:properties.position.right'
-                icon: 'arrow-right'
+                icon: 'angle-right'
+              veryRight:
+                description: 'Litefyr.Integration:NodeTypes.Content.Text:properties.position.veryLeft'
+                icon: 'angle-double-right'

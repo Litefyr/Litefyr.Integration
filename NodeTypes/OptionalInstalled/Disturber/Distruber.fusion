@@ -1,0 +1,3 @@
+prototype(Litefyr.Distruber:Component.OnDocument) < prototype(Neos.Fusion:Value) {
+    value = ''
+}

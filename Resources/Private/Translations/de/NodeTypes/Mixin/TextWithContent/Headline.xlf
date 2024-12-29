@@ -2,9 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" product-name="Litefyr.Integration" source-language="en" target-language="de" datatype="plaintext">
         <body>
-            <trans-unit id="properties.leftColSize" xml:space="preserve">
-                <source>Column ratio</source>
-                <target>Spalten Verhältnis</target>
+            <trans-unit id="properties.enableHeadline" xml:space="preserve">
+                <source>Enable Headline</source>
+                <target>Überschrift aktivieren</target>
             </trans-unit>
         </body>
     </file>

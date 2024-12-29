@@ -1,0 +1,9 @@
+'Litefyr.Integration:Mixin.LookGroup':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        look:
+          label: i18n
+          icon: paint-brush
+          position: 20

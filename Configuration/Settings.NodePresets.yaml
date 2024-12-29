@@ -3,6 +3,66 @@ Neos:
     nodeTypes:
       presets:
         properties:
+          image:
+            rounded:
+              type: string
+              search:
+                indexing: false
+              ui:
+                label: 'Litefyr.Integration:NodeTypes.Image:rounded'
+                reloadPageIfChanged: true
+                inspector:
+                  group: image
+                  position: 'after image'
+                  editor: 'Carbon.Editor.Styling/BorderRadius'
+                  hidden: 'ClientEval: !node.properties.image'
+                  editorOptions:
+                    placeholder: 'Litefyr.Integration:NodeTypes.Image:rounded.placeholder'
+                    allowEmpty: true
+                    allowFullRounded: true
+                    allowPercentage: true
+                    allowMultiple: true
+                    allowOrganic: true
+                    convertPxToRem: true
+          font:
+            size:
+              type: integer
+              defaultValue: 0
+              search:
+                indexing: false
+              ui:
+                label: 'Litefyr.Integration:NodeTypes.FontSize:fontSize'
+                reloadIfChanged: true
+                inspector:
+                  group: look
+                  position: 10
+                  editor: 'Carbon.RangeEditor/Editor'
+                  editorOptions:
+                    valueLabelsFile: 'Litefyr.Presentation:Spacing'
+                    showMinLabel: false
+                    showMaxLabel: false
+                    min: -2
+                    max: 5
+                    step: 1
+            sizeHeadline:
+              type: integer
+              defaultValue: 0
+              search:
+                indexing: false
+              ui:
+                label: 'Litefyr.Integration:NodeTypes.FontSize:fontSizeHeadline'
+                reloadIfChanged: true
+                inspector:
+                  group: look
+                  position: 10
+                  editor: 'Carbon.RangeEditor/Editor'
+                  editorOptions:
+                    valueLabelsFile: 'Litefyr.Presentation:Spacing'
+                    showMinLabel: false
+                    showMaxLabel: false
+                    min: -1
+                    max: 3
+                    step: 1
           boolean:
             enableCounter:
               type: boolean
@@ -48,7 +108,7 @@ Neos:
                               bcc: false
                               body: true
                     formatting:
-                      strong: false
+                      strong: true
                       em: false
                       underline: false
                       sub: true
@@ -401,3 +461,176 @@ Neos:
                       center: false
                       justify: false
                       removeFormat: true
+          links:
+            type: repeatable
+            defaultValue: []
+            ui:
+              label: ''
+              reloadIfChanged: true
+              inspector:
+                group: links
+                position: 10
+                editorOptions:
+                  buttonAddLabel: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.add'
+                  min: 0
+                  properties:
+                    href:
+                      label: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.label'
+                      editor: Sitegeist.Archaeopteryx/Inspector/Editors/LinkEditor
+                      editorOptions:
+                        linkTypes:
+                          'Sitegeist.Archaeopteryx:PhoneNumber':
+                            defaultCountry: AT
+                            favoredCountries:
+                              - AT
+                              - CH
+                              - DE
+                              - FR
+                          'Sitegeist.Archaeopteryx:MailTo':
+                            enabledFields:
+                              subject: true
+                              cc: false
+                              bcc: false
+                              body: true
+                    text:
+                      label: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.text'
+                      editorOptions:
+                        placeholder: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.text.placeholder'
+                      validation:
+                        'Neos.Neos/Validation/LabelValidator': {}
+                    network:
+                      label: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.network'
+                      editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+                      editorOptions:
+                        allowEmpty: true
+                        values:
+                          bluesky:
+                            label: Bluesky
+                            icon: bluesky
+                            group: Network
+                          facebook:
+                            label: Facebook
+                            icon: facebook
+                            group: Network
+                          instagram:
+                            label: Instagram
+                            icon: instagram
+                            group: Network
+                          linkedin:
+                            label: LinkedIn
+                            icon: linkedin
+                            group: Network
+                          mastodon:
+                            label: Mastodon
+                            icon: mastodon
+                            group: Network
+                          pinterest:
+                            label: Pinterest
+                            icon: pinterest
+                            group: Network
+                          threads:
+                            label: Threads
+                            icon: threads
+                            group: Network
+                          tiktok:
+                            label: TikTok
+                            icon: tiktok
+                            group: Network
+                          x:
+                            label: X (Twitter)
+                            icon: twitter
+                            group: Network
+                          xing:
+                            label: Xing
+                            icon: xing
+                            group: Network
+
+                          twitch:
+                            label: Twitch
+                            icon: twitch
+                            group: Video & Streaming
+                          vimeo:
+                            label: Vimeo
+                            icon: vimeo
+                            group: Video & Streaming
+                          youtube:
+                            label: YouTube
+                            icon: youtube
+                            group: Video & Streaming
+
+                          appleMusic:
+                            label: Apple Music
+                            icon: itunes
+                            group: Music
+                          soundcloud:
+                            label: Soundcloud
+                            icon: soundcloud
+                            group: Music
+                          spotify:
+                            label: Spotify
+                            icon: spotify
+                            group: Music
+
+                          github:
+                            label: Github
+                            icon: github
+                            group: Development
+
+                          discord:
+                            label: Discord
+                            icon: discord
+                            group: Messenger
+                          element:
+                            label: Element
+                            icon: element
+                            group: Messenger
+                          mattermost:
+                            label: Mattermost
+                            icon: mattermost
+                            group: Messenger
+                          matrix:
+                            label: Matrix
+                            icon: matrix
+                            group: Messenger
+                          snapchat:
+                            label: Snapchat
+                            icon: snapchat
+                            group: Messenger
+                          slack:
+                            label: Slack
+                            icon: slack
+                            group: Messenger
+                          telegram:
+                            label: Telegram
+                            icon: telegram
+                            group: Messenger
+                          whatsapp:
+                            label: WhatsApp
+                            icon: whatsapp
+                            group: Messenger
+                    appearance:
+                      label: 'Litefyr.Integration:NodeTypes.Colors:appearance'
+                      editor: 'Beromir.ToggleEditor/Editor'
+                      defaultValue: ghost
+                      editorOptions:
+                        allowEmpty: false
+                        maximalColumns: '{items} > 4 ? 3 : 4'
+                        layout: 'color'
+                        dataSourceIdentifier: litefyr-style-color
+                        dataSourceAdditionalData:
+                          main:
+                            label: 'Litefyr.Integration:NodeTypes.Colors:button.main'
+                          minor:
+                            label: 'Litefyr.Integration:NodeTypes.Colors:button.minor'
+                          minor2:
+                            label: 'Litefyr.Integration:NodeTypes.Colors:button.minor2'
+                          ghost:
+                            label: 'Litefyr.Integration:NodeTypes.Colors:button.ghost'
+                          link:
+                            label: 'Litefyr.Integration:NodeTypes.Colors:button.link'
+                      validation:
+                        Neos.Neos/Validation/NotEmptyValidator: {}
+                    break:
+                      label: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.break'
+                      type: boolean
+                      editor: Neos.Neos/Inspector/Editors/BooleanEditor

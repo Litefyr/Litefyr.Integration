@@ -2,15 +2,12 @@ prototype(Litefyr.Integration:Content.Spacer) < prototype(Neos.Neos:ContentCompo
     useResponsiveScale = ${q(node).property('useResponsiveScale')}
     scale = ${q(node).property('scale')}
     height = ${q(node).property('height')}
+    removeSpacing = ${q(node).property('removeSpacing')}
     hr = ${q(node).property('hr')}
     theme = ${q(node).property('theme')}
     inBackend = ${node.context.inBackend}
 
     renderer = afx`
         <Litefyr.Presentation:Atom.Spacer {...props}/>
-        <Carbon.Notification:Backend
-            @if={!props.useResponsiveScale && !props.height && !props.hr && !props.theme}
-            content={Carbon.Backend.translate('pleaseSetValues', null, [], 'Main', 'Litefyr.Integration')}
-        />
     `
 }

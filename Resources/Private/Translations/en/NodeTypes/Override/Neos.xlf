@@ -11,6 +11,18 @@
             <trans-unit id="properties.titleOverride.ui.help.message" xml:space="preserve">
                 <source><![CDATA[This title is displayed in the browser window and in search engines. It is set as the &lt;title&gt; tag in the HTML.]]></source>
             </trans-unit>
+            <trans-unit id="properties.metaDescription.placeholder" xml:space="preserve">
+                <source>Ideally 120 - 160 characters</source>
+            </trans-unit>
+            <trans-unit id="properties.metaDescription.help.message" xml:space="preserve">
+                <source>A meta description generally informs and interests users with a short, relevant summary of what a particular page is about. They are like a pitch that convince the user that the page is exactly what they're looking for.</source>
+            </trans-unit>
+            <trans-unit id="properties.metaKeywords.placeholder" xml:space="preserve">
+                <source>comma separated, max. 255 chars</source>
+            </trans-unit>
+            <trans-unit id="properties.metaKeywords.help.message" xml:space="preserve">
+                <source>This value has no influence on search engines such as Google. However, it is used by the integrated search engine.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

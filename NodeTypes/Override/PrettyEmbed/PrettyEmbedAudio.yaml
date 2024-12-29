@@ -1,9 +1,7 @@
 'Jonnitto.PrettyEmbedAudio:Content.Audio':
   superTypes:
     'Litefyr.Integration:Mixin.TextWithContent': true
-    'Litefyr.Integration:Mixin.TextWithContent.Position': true
-    'Litefyr.Integration:Mixin.TextWithContent.LeftColSize': true
-    'Litefyr.Integration:Mixin.TextWithContent.Label': true
+    'Litefyr.Integration:Mixin.Breakout.IfTextEnabled': true
   ui:
     position: 320
     inspector:
@@ -13,4 +11,10 @@
         links:
           position: 120
   properties:
-    breakout: {}
+    breakout:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              full:
+                hidden: true

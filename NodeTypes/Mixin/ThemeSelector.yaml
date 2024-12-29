@@ -22,3 +22,12 @@
               minor: true
               minor2: true
               gray: true
+
+'Litefyr.Integration:Mixin.ThemeSelector.HideBelow':
+  abstract: true
+
+'Litefyr.Integration:Mixin.ThemeSelector.HideOnChildren':
+  abstract: true
+
+'Litefyr.Integration:Mixin.ThemeSelector.Nested':
+  abstract: true

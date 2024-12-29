@@ -2,11 +2,71 @@
   abstract: true
   properties:
     titleOverride:
+      ui:
+        label: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.titleOverride'
+        help:
+          message: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.titleOverride.ui.help.message'
+        inspector:
+          position: 20
+          editor: 'Carbon.Editor.Styling/TextAreaWithCounter'
+          editorOptions:
+            placeholder: 'ClientEval: node.properties.title'
+            countPlaceholder: true
+            allowLineBreaks: false
+            errorLengthMin: 5
+            warningLengthMin: 50
+            warningLengthMax: 60
+            errorLengthMax: 100
       validation: ~
 
 'Neos.Seo:SeoMetaTagsMixin':
   properties:
     metaDescription:
+      ui:
+        help:
+          message: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.metaDescription.help.message'
+        inspector:
+          editor: 'Carbon.Editor.Styling/TextAreaWithCounter'
+          editorOptions:
+            warningLengthMin: 120
+            warningLengthMax: 160
+            errorLengthMax: 240
+            allowLineBreaks: false
+            placeholder: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.metaDescription.placeholder'
+      validation: ~
+    metaKeywords:
+      ui:
+        help:
+          message: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.metaKeywords.help.message'
+        inspector:
+          editor: 'Carbon.Editor.Styling/TextAreaWithCounter'
+          hidden: true
+          editorOptions:
+            placeholder: 'Litefyr.Integration:NodeTypes.Override.Neos:properties.metaKeywords.placeholder'
+
+'Neos.Seo:OpenGraphMixin':
+  properties:
+    openGraphTitle:
+      ui:
+        reloadIfChanged: false
+        inspector:
+          editor: 'Carbon.Editor.Styling/TextAreaWithCounter'
+          editorOptions:
+            countPlaceholder: true
+            allowLineBreaks: false
+            warningLengthMax: 60
+            errorLengthMax: 70
+      validation: ~
+    openGraphDescription:
+      ui:
+        inspector:
+          editor: 'Carbon.Editor.Styling/TextAreaWithCounter'
+          editorOptions:
+            placeholder: 'ClientEval: node.properties.metaDescription'
+            countPlaceholder: true
+            allowLineBreaks: false
+            warningLengthMax: 200
+            errorLengthMax: 210
       validation: ~
 
 'Neos.Neos:Document':

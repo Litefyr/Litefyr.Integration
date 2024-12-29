@@ -14,24 +14,22 @@ Neos:
                   <Litefyr.Presentation:Background
                     ${1|main,minor,minor2,gray,nested|}
                     ${2:padding}
-                    ${3:waveSpacing}
-                    ${4:augmenter}
-                    ${5:firstHeaderCollapse}
-                    ${6:tailwind="${7}"}
+                    ${3:augmenter}
+                    ${4:firstHeaderCollapse}
+                    ${5:tailwind="${7}"}
                   >
-                    ${8}
+                    ${6}
                   </Litefyr.Presentation:Background>
               'Spacing':
                 documentation: Add a spacing container
                 snippet: |
                   <Litefyr.Presentation:Spacing
                     ${1|default,wide,full|}
-                    ${2:waveSpacing}
-                    ${3:padding=${4|"auto","autoForce","force",{true},{false}|}}
-                    ${5:augmenter}
-                    ${6:tailwind="${7}"}
+                    ${2:padding=${3|"auto","autoForce","force",{true},{false}|}}
+                    ${4:augmenter}
+                    ${5:tailwind="${6}"}
                   >
-                    ${8}
+                    ${7}
                   </Litefyr.Presentation:Spacing>
               'Link':
                 documentation: Add a button-like link
@@ -68,14 +66,6 @@ Neos:
                   >
                     ${10}
                   </Litefyr.Presentation:Atom.Image>
-              'Label':
-                documentation: Add a label
-                snippet: |
-                  <Litefyr.Presentation:Atom.Label
-                    label="${1}"
-                    ${2:currentColor}
-                    ${3:class="${4}"}
-                  />
               'CountNumbersInText':
                 documentation: Count up numbers in text
                 snippet: |

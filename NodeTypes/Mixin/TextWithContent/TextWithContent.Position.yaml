@@ -8,5 +8,6 @@
         label: i18n
         reloadIfChanged: true
         inspector:
-          group: look
-          position: 520
+          group: text
+          position: 30
+          hidden: 'ClientEval:node.properties.enableText ? false : true'

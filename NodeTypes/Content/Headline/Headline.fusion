@@ -1,4 +1,7 @@
 prototype(Litefyr.Integration:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+    fontSize = ${q(node).property('fontSize')}
+    fontSize.@process.fallback = ${Type.isInteger(value) ? value : 2}
+
     headline = Neos.Neos:Editable {
         property = 'headline'
         block = false
@@ -11,13 +14,15 @@ prototype(Litefyr.Integration:Content.Headline) < prototype(Neos.Neos:ContentCom
         property = 'lead'
         block = false
     }
-    headlineLinks = Litefyr.Integration:Component.Links
+    headlineLinks = Litefyr.Integration:Component.Links {
+        class = 'inline-flex mt-5 headline-alignment-margin'
+    }
 
     inBackend = ${node.context.inBackend}
     colorGradient = null
 
     renderer = afx`
-        <Litefyr.Presentation:Spacing augmenter padding waveSpacing colorGradient={props.colorGradient}>
+        <Litefyr.Presentation:Spacing augmenter padding colorGradient={props.colorGradient}>
             <Litefyr.Presentation:Block.HeadlineAndLead {...props}/>
         </Litefyr.Presentation:Spacing>
     `

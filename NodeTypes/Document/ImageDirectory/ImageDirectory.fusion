@@ -21,7 +21,7 @@ prototype(Litefyr.Integration:Document.ImageDirectory) < prototype(Litefyr.Integ
 
         renderer = afx`
             <main class={props.class}>
-                <Litefyr.Presentation:Block.HeadlineAndLead {...props} />
+                <Litefyr.Presentation:Block.HeadlineAndLead width="wide" {...props} />
                 <div
                     class="empty:hidden"
                     style={"--imagedirectory-width:" + props.imageWidth + "px"}
