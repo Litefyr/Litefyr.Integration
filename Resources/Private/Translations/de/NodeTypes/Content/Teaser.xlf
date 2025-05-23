@@ -6,6 +6,22 @@
                 <source>Teaser</source>
                 <target>Teaser</target>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Link several pages or their subpages
+* Limitation of the maximum number of pages
+* Different layouts and presentation
+* Selectable background color
+* Heading, label and introductory text
+* Selectable font size
+* Buttons and social icons</source>
+                <target>* Mehrere Seiten oder deren Unterseiten verlinken
+* Beschränkung der maximal Anzahl an Seiten
+* Verschiedene Layouts und Darstellung
+* Wählbare Hintergrundfarbe
+* Überschrift, Label und Einleitungstext
+* Wählbare Schriftgröße
+* Buttons und Social Icons</target>
+            </trans-unit>
             <trans-unit id="groups.settings" xml:space="preserve">
                 <source>Settings</source>
                 <target>Einstellungen</target>

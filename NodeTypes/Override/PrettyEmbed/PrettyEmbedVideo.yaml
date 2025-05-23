@@ -2,8 +2,11 @@
   superTypes:
     'Litefyr.Integration:Mixin.Breakout': true
     'Litefyr.Integration:Mixin.TextWithContent': true
+    'Litefyr.Integration:Mixin.PrettyEmbedGroup.Video': true
   ui:
-    position: 310
+    position: 110
+    help:
+      message: 'Litefyr.Integration:NodeTypes.Override.Jonnitto:video.help.message'
     inspector:
       groups:
         look:

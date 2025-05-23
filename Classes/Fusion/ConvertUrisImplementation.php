@@ -4,6 +4,7 @@ namespace Litefyr\Integration\Fusion;
 
 use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\Flow\Annotations as Flow;
+use Neos\Flow\Exception;
 use Neos\Flow\Log\Utility\LogEnvironment;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
 use Neos\Neos\Domain\Exception as DomainException;

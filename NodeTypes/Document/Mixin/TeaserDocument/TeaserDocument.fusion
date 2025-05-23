@@ -9,7 +9,7 @@ teaserView = Carbon.BackendDocument:Document {
         href = '#'
 
         renderer = afx`
-            <div class="max-w-xs text-black mx-auto">
+            <div class="max-w-xs text-black mx-auto mt-[--content-space]">
                 <Litefyr.Presentation:Block.Teaser {...props} />
             </div>
         `

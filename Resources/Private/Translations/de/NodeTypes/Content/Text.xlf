@@ -6,6 +6,16 @@
                 <source>Text</source>
                 <target>Text</target>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Optional heading, label and lead text
+* 1 - 3 columns
+* Selectable background color
+* Buttons and social icons</source>
+                <target>* Optionale Überschrift, Label und Einleitungstext
+* 1 - 3 Spalten
+* Wählbare Hintergrundfarbe
+* Buttons und Social Icons</target>
+            </trans-unit>
             <trans-unit id="properties.enableHeadline" xml:space="preserve">
                 <source>Enable Headline</source>
                 <target>Überschrift aktivieren</target>

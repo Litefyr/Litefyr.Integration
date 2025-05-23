@@ -1,0 +1,33 @@
+'Litefyr.Integration:Mixin.HeaderStyle':
+  abstract: true
+  properties:
+    hideLogoInHeader:
+      type: boolean
+      search:
+        indexing: false
+      ui:
+        label: i18n
+        inspector:
+          group: document
+          position: 'start 1'
+    transparentHeader:
+      type: string
+      search:
+        indexing: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: document
+          position: 'after hideLogoInHeader'
+          editor: 'Beromir.ToggleEditor/Editor'
+          editorOptions:
+            allowEmpty: true
+            layout: 'color'
+            dataSourceIdentifier: litefyr-style-color
+            dataSourceAdditionalData:
+              alwaysShow: true
+              black: true
+              white: true
+              blackAndWhite: true
+              whiteAndBlack: true

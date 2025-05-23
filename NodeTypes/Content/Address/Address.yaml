@@ -11,6 +11,8 @@
     icon: address-card
     inlineEditable: true
     position: 1500
+    help:
+      message: i18n
     inspector:
       groups:
         settings:

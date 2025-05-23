@@ -1,0 +1,21 @@
+# Disable the NodeType
+
+'Litefyr.Integration:Mixin.PrettyEmbedGroup.Audio':
+  abstract: true
+  ui:
+    group: ~
+
+'Litefyr.Integration:Mixin.PrettyEmbedGroup.Video':
+  abstract: true
+  ui:
+    group: ~
+
+'Litefyr.Integration:Mixin.PrettyEmbedGroup.VideoStreaming':
+  abstract: true
+  ui:
+    group: ~
+
+'Litefyr.Integration:Mixin.PrettyEmbedGroup.VideoPlatforms':
+  abstract: true
+  ui:
+    group: ~

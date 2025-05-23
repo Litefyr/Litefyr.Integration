@@ -12,7 +12,7 @@ class StartingPointDataSource extends AbstractDataSource
 
     /**
      * @param NodeInterface|null $node
-     * @param array{rootNodeType?:string,nodeTypes?:string[]} $arguments
+     * @param array{rootNodeType?:string,nodeTypes?:string[],path?:string} $arguments
      * @return array<string, array{label:string}>
      */
     public function getData(NodeInterface $node = null, array $arguments = []): array

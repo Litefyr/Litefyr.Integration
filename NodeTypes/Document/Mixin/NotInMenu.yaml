@@ -6,6 +6,9 @@
 'Litefyr.Integration:Mixin.NotInMenu':
   abstract: true
   properties:
+    title:
+      ui:
+        label: 'Neos.Neos:NodeTypes.Document:properties.title'
     _hiddenInIndex:
       defaultValue: true
       ui:

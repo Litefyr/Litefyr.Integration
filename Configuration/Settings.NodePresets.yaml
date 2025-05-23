@@ -478,6 +478,7 @@ Neos:
                       label: 'Litefyr.Integration:NodeTypes.Mixin.Links:properties.links.label'
                       editor: Sitegeist.Archaeopteryx/Inspector/Editors/LinkEditor
                       editorOptions:
+                        anchor: true
                         linkTypes:
                           'Sitegeist.Archaeopteryx:PhoneNumber':
                             defaultCountry: AT

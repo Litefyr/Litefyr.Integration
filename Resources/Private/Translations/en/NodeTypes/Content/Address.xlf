@@ -5,6 +5,10 @@
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Address</source>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Display address details that are saved on the start page
+* You can choose what type of information is displayed</source>
+            </trans-unit>
             <trans-unit id="groups.settings" xml:space="preserve">
                 <source>Representation</source>
             </trans-unit>

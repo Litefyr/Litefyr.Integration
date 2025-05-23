@@ -3,18 +3,33 @@ prototype(Litefyr.Integration:Helper.Teaser.Data) < prototype(Neos.Fusion:Compon
 
     node = ${this.overviewData ? this.overviewData.node : node}
 
-    dateProperty = ${q(this.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Date]') ? '_hiddenBeforeDateTime' : null}
+    dateProperty = null
+    /// string Can every string property. If set to getLabel, the label of the node is used
+    titleProperty = 'title'
+
+    /// string Process title with a prototype. The title will be passed to value, the node to node and the titleProperty to titleProperty
+    processTitlePrototype = null
+
     category = ${q(this.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Category]') ? q(this.node).property('category') : null}
     authors = ${q(this.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Authors]') ? q(this.node).property('authors') : null}
     articleCount = ${q(this.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Articles]') ? Carbon.Array.length(q(this.node).property('articles')) : null}
+
+    isLightbox = ${q(this.node).is('[instanceof Litefyr.Integration:Document.Lightbox]')}
+    lightboxIframeSrc = ${this.isLightbox ? q(this.node).property('iframeSrc') : null}
 
     category.@if.notFromOveview = ${!this.overviewData}
     authors.@if.notFromOveview = ${!this.overviewData}
     articleCount.@if.notFromOveview = ${!this.overviewData}
 
+    @private.dateProperty = ${props.dateProperty ? props.dateProperty : (q(props.node).is('[instanceof Litefyr.Integration:Mixin.TeaserDocument.Date]') ? '_hiddenBeforeDateTime' : null)}
+
     renderer = Neos.Fusion:DataStructure {
         identifier = ${q(props.node).property('_identifier')}
-        headline = ${q(props.node).property('title')}
+        headline = Litefyr.Integration:Helper.Teaser.Data.Title {
+            node = ${props.node}
+            titleProperty = ${props.titleProperty}
+            processTitlePrototype = ${props.processTitlePrototype}
+        }
         text = ${String.stripTags(q(props.node).property('teaserText') || q(props.node).property('lead'))}
         images = Neos.Fusion:Case {
             fromOverview {
@@ -76,6 +91,8 @@ prototype(Litefyr.Integration:Helper.Teaser.Data) < prototype(Neos.Fusion:Compon
                 }
             }
         }
+        isLightbox = ${props.isLightbox}
+        lightboxIframeSrc = ${props.lightboxIframeSrc}
         href = Neos.Fusion:Case {
             fromOverview {
                 condition = ${props.overviewData}
@@ -92,7 +109,7 @@ prototype(Litefyr.Integration:Helper.Teaser.Data) < prototype(Neos.Fusion:Compon
         firstImage = Litefyr.Integration:Helper.FirstImage {
             node = ${props.node}
         }
-        date = ${props.dateProperty ? q(props.node).property(props.dateProperty) : null}
+        date = ${private.dateProperty ? q(props.node).property(private.dateProperty) : null}
         image = ${this.firstImage ? this.firstImage.asset : null}
         alternativeText = ${this.firstImage ? this.firstImage.alternativeText : null}
     }

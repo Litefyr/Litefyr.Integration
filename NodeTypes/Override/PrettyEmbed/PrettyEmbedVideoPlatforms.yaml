@@ -2,9 +2,12 @@
   superTypes:
     'Litefyr.Integration:Mixin.Breakout': true
     'Litefyr.Integration:Mixin.TextWithContent': true
-  label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'metadataTitle', 'text')}"
+    'Litefyr.Integration:Mixin.PrettyEmbedGroup.VideoPlatforms': true
+  label: "${String.cropAtWord(String.trim(String.stripTags(String.pregReplace(q(node).property('title') || q(node).property('headline') || q(node).property('text') || (q(node).property('prettyembedMetadata') ? q(node).property('prettyembedMetadata').title : null) || ((I18n.translate(node.nodeType.label) || node.nodeType.name) + (node.autoCreated ? ' (' + node.name + ')' : '')) + ' ' + String.firstLetterToUpperCase(q(node).property('type')), '/<br\\W*?\\/?>|\\x{00a0}|[[^:print:]]|\\s+/u', ' '))), 100, '...')}"
   ui:
-    position: 300
+    position: 100
+    help:
+      message: 'Litefyr.Integration:NodeTypes.Override.Jonnitto:videoplatforms.help.message'
     inspector:
       groups:
         look:

@@ -5,6 +5,11 @@
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Headline</source>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Heading, label and lead text
+* Selectable font size
+* Buttons and social icons</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

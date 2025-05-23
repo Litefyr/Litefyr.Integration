@@ -24,11 +24,17 @@
             <trans-unit id="editPreviewModes.mobile" xml:space="preserve">
                 <source>Mobile</source>
             </trans-unit>
+            <trans-unit id="nodeTypes.multimedia" xml:space="preserve">
+                <source>Multimedia</source>
+            </trans-unit>
             <trans-unit id="nodeTypes.teaser" xml:space="preserve">
                 <source>Teaser</source>
             </trans-unit>
             <trans-unit id="nodeTypes.gallery" xml:space="preserve">
                 <source>Gallery</source>
+            </trans-unit>
+            <trans-unit id="nodeTypes.structure" xml:space="preserve">
+                <source>Structure</source>
             </trans-unit>
             <trans-unit id="nodeTypes.form" xml:space="preserve">
                 <source>Forms</source>

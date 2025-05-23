@@ -59,7 +59,7 @@
                 <target>Natives teilen</target>
             </trans-unit>
             <trans-unit id="properties.socialShare.email" xml:space="preserve">
-                <source>Open e-mail program</source>
+                <source>Open email program</source>
                 <target>E-Mail Programm öffnen</target>
             </trans-unit>
             <trans-unit id="properties.socialShare.copy" xml:space="preserve">

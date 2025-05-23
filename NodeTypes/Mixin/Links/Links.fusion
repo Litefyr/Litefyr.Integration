@@ -9,50 +9,16 @@ prototype(Litefyr.Integration:Component.Links) < prototype(Neos.Fusion:Component
 
     @private.items = Neos.Fusion:Map {
         items = ${Array.filter(props.links)}
-        itemRenderer = Neos.Fusion:Component {
-            @if.linkIsValid = Neos.Neos:ConvertUris {
-                value = ${item.href}
-            }
-            network = ${item.network}
-            href = ${item.href}
-            appearance = ${item.appearance}
-            break = ${item.break && !iterator.isLast}
-            text = ${item.text}
-            content = ${item.text || Carbon.String.getPropertyFromNodeLink(site, item.href) || props.fallbackContent}
-
-            networkData = Litefyr.Presentation:Helper.SocialNetwork {
-                network = ${item.network}
-                url = ${item.href}
-                plainLabel = true
-            }
-
-            renderer = afx`
-                <Litefyr.Presentation:Atom.Link
-                    @if={props.text || !props.network}
-                    href={props.href}
-                    appearance={props.appearance}
-                >
-                    <Litefyr.Presentation:Block.SocialNetworks.Fragment.Icon
-                        class={props.appearance == "link" ? "block size-[2em]" : "block size-[1em] -ml-fl-3xs"}
-                        network={props.network}
-                    />
-                    <span @if={props.network}>{props.content}</span>
-                    {props.network ? '': props.content}
-                </Litefyr.Presentation:Atom.Link>
-                <a
-                    @if={props.network && !props.text}
-                    href={props.href}
-                    aria-label={props.networkData.label}
-                    class="block transition-transform hocus:scale-110"
-                >
-                    <Litefyr.Presentation:Block.SocialNetworks.Fragment.Icon class="block size-[2em]" network={props.network} />
-                </a>
-                <hr @if={props.break} class="basis-full border-none m-0 p-0" />
-            `
-            @process.convertUris = Neos.Neos:ConvertUris {
-                @if.set = ${props.linkInBackend}
-                forceConversion = true
-            }
+        itemRenderer = afx`
+            <Litefyr.Integration:Component.Links.Item
+                {...item}
+                fallbackContent={props.fallbackContent}
+                break={item.break && !iterator.isLast}
+            />
+        `
+        itemRenderer.@process.convertUris = Neos.Neos:ConvertUris {
+            @if.set = ${props.linkInBackend}
+            forceConversion = true
         }
         @process.filter = ${Array.filter(value)}
     }

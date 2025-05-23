@@ -5,6 +5,12 @@
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Spacer</source>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* With or without line
+* Line color or background color selectable
+* Fixed pixel value or responsive scale
+* Can also remove space between two elements</source>
+            </trans-unit>
             <trans-unit id="properties.removeSpacing" xml:space="preserve">
                 <source>Remove spacing between elements</source>
             </trans-unit>

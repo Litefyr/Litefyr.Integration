@@ -4,6 +4,17 @@ prototype(Litefyr.Integration:Helper.ShareImageAsset) < prototype(Neos.Fusion:Co
     openGraphImage = true
 
     renderer = Neos.Fusion:Case {
+        noNodeAndNoSite {
+            condition = ${!props.node && !site}
+            renderer = null
+        }
+        noNode {
+            condition = ${!props.node}
+            renderer = Litefyr.Integration:Helper.ShareImageAsset {
+                openGraphImage = ${props.openGraphImage}
+                node = ${site}
+            }
+        }
         openGraphImage {
             condition = ${props.openGraphImage && Type.instance(q(props.node).property('openGraphImage'), 'Neos\\Media\\Domain\\Model\\ImageInterface')}
             renderer = ${q(props.node).property('openGraphImage')}
@@ -19,7 +30,7 @@ prototype(Litefyr.Integration:Helper.ShareImageAsset) < prototype(Neos.Fusion:Co
             renderer = ${q(this.imageNode).property('image')}
         }
         siteFallback {
-            condition = ${props.node != site}
+            condition = ${site && props.node != site}
             renderer = Litefyr.Integration:Helper.ShareImageAsset {
                 openGraphImage = ${props.openGraphImage}
                 node = ${site}

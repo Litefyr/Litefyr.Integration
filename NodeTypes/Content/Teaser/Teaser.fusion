@@ -33,6 +33,7 @@ prototype(Litefyr.Integration:Content.Teaser) < prototype(Neos.Neos:ContentCompo
             @if.hasNodes = ${Carbon.Array.check(props.nodes)}
             items = ${Array.unique(props.nodes)}
             itemRenderer = Neos.Neos:NodeUri {
+                @process.jsonOnRoot = ${String.startsWith(value, '/.json?') ? String.replace(value, '/.json?', '/?json=1&') : value}
                 node = ${item}
                 additionalParams {
                     json = true

@@ -5,6 +5,7 @@
     'Litefyr.Integration:Constraint.Document.NoSubDocument': true
     'Litefyr.Integration:Constraint.Document.Restricted': true
     'Litefyr.Integration:Mixin.NotInMenu': true
+    'Litefyr.Integration:Mixin.HeaderStyle': true
   ui:
     label: i18n
     icon: gavel

@@ -6,6 +6,12 @@
                 <source>Meta page</source>
                 <target>Metaseite</target>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Not visible in the navigation
+* No subpages possible</source>
+                <target>* In der Navigation nicht sichtbar
+* Keine Unterseiten möglich</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

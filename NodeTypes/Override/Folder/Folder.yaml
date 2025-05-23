@@ -2,8 +2,7 @@
   superTypes:
     'Litefyr.Integration:Mixin.DisableSearch': true
   ui:
-    position: end
-    group: special
+    group: ~
 
 'Breadlesscode.NodeTypes.Folder:Mixin.HideUriSegment':
   superTypes:

@@ -6,6 +6,14 @@
                 <source>Headline</source>
                 <target>Überschrift</target>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Heading, label and lead text
+* Selectable font size
+* Buttons and social icons</source>
+                <target>* Überschrift, Label und Einleitungstext
+* Wählbare Schriftgröße
+* Buttons und Social Icons</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

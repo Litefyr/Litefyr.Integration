@@ -5,6 +5,12 @@
             <trans-unit id="properties.breakout" xml:space="preserve">
                 <source>Gallery width</source>
             </trans-unit>
+            <trans-unit id="audio.help.message" xml:space="preserve">
+                <source>* Internal and external audio files can be integrated
+* Optional text field</source>
+                <target>* Es können interne und externe Audio-Dateien eingebunden werden
+* Optionales Textfeld</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,0 +1,12 @@
+'Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle.Backend':
+  abstract: true
+  properties:
+    uriPathSegment:
+      ui:
+        inspector:
+          hidden: true
+          editorOptions:
+            disabled: true
+      validation:
+        'Neos.Neos/Validation/RegularExpressionValidator':
+          regularExpression: '/^[_a-z0-9\-]+$/i'

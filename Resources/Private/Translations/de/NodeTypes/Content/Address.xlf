@@ -6,6 +6,12 @@
                 <source>Address</source>
                 <target>Adresse</target>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Display address details that are saved on the start page
+* You can choose what type of information is displayed</source>
+                <target>* Stelle Adressdetails welche auf der Startseite gespeichert sind, dar
+* Es kann gewählt welche Art von Informationen dargestellt werden</target>
+            </trans-unit>
             <trans-unit id="groups.settings" xml:space="preserve">
                 <source>Representation</source>
                 <target>Darstellung</target>

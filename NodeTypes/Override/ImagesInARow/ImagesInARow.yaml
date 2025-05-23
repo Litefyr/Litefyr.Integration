@@ -2,7 +2,7 @@
   superTypes:
     'Litefyr.Integration:Mixin.Breakout': true
   ui:
-    position: 600
+    position: 100
   properties:
     breakout:
       ui:

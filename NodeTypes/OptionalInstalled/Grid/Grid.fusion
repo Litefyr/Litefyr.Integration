@@ -1,0 +1,1 @@
+prototype(Litefyr.Grid:Mixin.Item) < prototype(Neos.Fusion:Component)

@@ -31,6 +31,10 @@
                 <source>Mobile</source>
                 <target>Mobil</target>
             </trans-unit>
+            <trans-unit id="nodeTypes.multimedia" xml:space="preserve">
+                <source>Multimedia</source>
+                <target>Multimedia</target>
+            </trans-unit>
             <trans-unit id="nodeTypes.teaser" xml:space="preserve">
                 <source>Teaser</source>
                 <target>Teaser</target>
@@ -38,6 +42,10 @@
             <trans-unit id="nodeTypes.gallery" xml:space="preserve">
                 <source>Gallery</source>
                 <target>Galerie</target>
+            </trans-unit>
+            <trans-unit id="nodeTypes.structure" xml:space="preserve">
+                <source>Structure</source>
+                <target>Struktur</target>
             </trans-unit>
             <trans-unit id="nodeTypes.form" xml:space="preserve">
                 <source>Forms</source>

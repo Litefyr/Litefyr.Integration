@@ -5,8 +5,10 @@
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Lightbox page</source>
             </trans-unit>
-            <trans-unit id="ui.help.message" xml:space="preserve">
-                <source>A lightbox page is a page that is displayed in a lightbox window. The page is hidden in the main menu</source>
+             <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Content of the page is displayed in an overlay
+* Optionally, a URL can also be specified as iframe content
+* The page is displayed as normal when called up directly</source>
             </trans-unit>
             <trans-unit id="properties.iframeSrc" xml:space="preserve">
                 <source>Embed external website</source>

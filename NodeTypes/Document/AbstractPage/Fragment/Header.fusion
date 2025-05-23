@@ -1,12 +1,14 @@
 header = Litefyr.Presentation:Section.Header {
     homeUri = Neos.Neos:NodeUri {
         node = ${site}
+        absolute = true
     }
 
     logo = Litefyr.Integration:Component.Logo
 
     items = Litefyr.Integration:Helper.MenuItems {
         items = Neos.Neos:MenuItems {
+            itemUriRenderer.absolute = true
             maximumLevels = 2
             filter = 'Neos.Neos:Document,!Litefyr.Integration:Mixin.NotInMenu,!Litefyr.Integration:Mixin.NotInMainMenu'
         }
@@ -14,6 +16,7 @@ header = Litefyr.Presentation:Section.Header {
 
     renderer.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
+        absolute = true
     }
 
     @cache {

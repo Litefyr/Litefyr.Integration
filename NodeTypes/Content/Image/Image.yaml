@@ -13,6 +13,8 @@
   label: "${Neos.Node.labelForNode(node).properties('title', 'headline', 'text', 'alternativeText', 'caption')}"
   ui:
     position: 30
+    help:
+      message: i18n
     inspector:
       groups:
         image:

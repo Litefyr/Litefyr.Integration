@@ -9,7 +9,6 @@
   superTypes:
     'Carbon.Plausible:Mixin.DoNotTrack': true
     'Carbon.Plausible:Mixin.CustomEvent': true
-    'Garagist.Mautic:Mixin.DoNotTrack': true
   properties:
     title:
       ui:

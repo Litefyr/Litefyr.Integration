@@ -24,7 +24,7 @@ Neos:
         defaultTableOptions:
           charset: '%env:NEOS_DB_CHARSET%'
     i18n:
-      defaultLocale: de
+      defaultLocale: '%env:DEFAULT_LOCALE%'
       fallbackRule:
         order: ['de', 'en']
     mvc:
@@ -50,38 +50,7 @@ Neos:
             attributes:
               type: 'module'
     userInterface:
-      editPreviewModes:
-        teaserView:
-          isEditingMode: true
-          isPreviewMode: false
-          fusionRenderingPath: teaserView
-          title: 'Litefyr.Integration:Backend.Main:editPreviewModes.teaserView'
-          position: 'after inPlace'
-        tabletLandscape:
-          isEditingMode: false
-          isPreviewMode: true
-          fusionRenderingPath: ''
-          title: 'Litefyr.Integration:Backend.Main:editPreviewModes.tabletLandscape'
-          width: 1024
-          height: 768
-          backgroundColor: '#222'
-        tabletPortrait:
-          isEditingMode: false
-          isPreviewMode: true
-          fusionRenderingPath: ''
-          title: 'Litefyr.Integration:Backend.Main:editPreviewModes.tabletPortrait'
-          width: 768
-          height: 1024
-          backgroundColor: '#222'
-        mobile:
-          isEditingMode: false
-          isPreviewMode: true
-          fusionRenderingPath: ''
-          title: 'Litefyr.Integration:Backend.Main:editPreviewModes.mobile'
-          width: 375
-          height: 667
-          backgroundColor: '#222'
-      defaultLanguage: de
+      defaultLanguage: '%env:DEFAULT_LOCALE%'
       navigateComponent:
         nodeTree:
           loadingDepth: 1
@@ -94,6 +63,12 @@ Neos:
             - 'Backend/*'
     nodeTypes:
       groups:
+        structure:
+          label: 'Litefyr.Integration:Backend.Main:nodeTypes.structure'
+          position: 300
+        multimedia:
+          label: 'Litefyr.Integration:Backend.Main:nodeTypes.multimedia'
+          position: 400
         teaser:
           label: 'Litefyr.Integration:Backend.Main:nodeTypes.teaser'
           position: 500
@@ -103,6 +78,7 @@ Neos:
         form:
           label: 'Litefyr.Integration:Backend.Main:nodeTypes.form'
           position: 1200
+          collapsed: true
         special:
           label: 'Litefyr.Integration:Backend.Main:nodeTypes.special'
           position: 8000

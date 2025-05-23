@@ -5,6 +5,15 @@
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Teaser</source>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* Link several pages or their subpages
+* Limitation of the maximum number of pages
+* Different layouts and presentation
+* Selectable background color
+* Heading, label and introductory text
+* Selectable font size
+* Buttons and social icons</source>
+            </trans-unit>
             <trans-unit id="groups.settings" xml:space="preserve">
                 <source>Settings</source>
             </trans-unit>

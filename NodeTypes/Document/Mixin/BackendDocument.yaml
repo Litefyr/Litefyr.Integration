@@ -5,10 +5,11 @@
     'Litefyr.Integration:Constraint.Document.Restricted': true
     'Litefyr.Integration:Constraint.Document.NoSubDocument': true
     'Litefyr.Integration:Mixin.NotInMenu': true
-    'Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle': true
+    'Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle.Backend': true
     'Litefyr.Integration:Mixin.DisableSearch': true
     'Carbon.Plausible:Mixin.CustomEvent': false
     'Litefyr.Integration:Mixin.HideSeo': true
+    'Garagist.ImageDirectory:Mixin.Ignore': true
   ui:
     icon: tags
     group: ~
@@ -31,6 +32,9 @@
         type:
           tab: hidden
   properties:
+    title:
+      ui:
+        label: 'Neos.Neos:NodeTypes.Document:properties.title'
     titleOverride: []
     metaDescription: []
     metaKeywords: []
@@ -38,8 +42,3 @@
       defaultValue: true
     metaRobotsNofollow:
       defaultValue: true
-    uriPathSegment:
-      ui:
-        inspector:
-          editorOptions:
-            disabled: true

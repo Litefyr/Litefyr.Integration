@@ -7,8 +7,11 @@
   ui:
     label: i18n
     icon: expand-arrows-alt
+    group: structure
     position: end
     inlineEditable: true
+    help:
+      message: i18n
   properties:
     removeSpacing:
       type: boolean

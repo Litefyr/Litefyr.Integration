@@ -1,0 +1,28 @@
+prototype(Litefyr.Integration:Helper.Teaser.Data.Title) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+
+    /// string Can every string property. If set to getLabel, the label of the node is used
+    titleProperty = 'title'
+
+    /// string Process title with a prototype. The title will be passed to value
+    processTitlePrototype = null
+
+    @private.title = ${props.titleProperty == 'getLabel' ? props.node.label : q(props.node).property(props.titleProperty)}
+
+    renderer = Neos.Fusion:Case {
+        processTitle {
+            condition = ${props.processTitlePrototype}
+            renderer = Neos.Fusion:Renderer {
+                type = ${props.processTitlePrototype}
+                element.value = ${private.title}
+                element.titleProperty = ${props.titleProperty}
+                element.node = ${props.node}
+            }
+        }
+
+        default {
+            condition = true
+            renderer = ${private.title}
+        }
+    }
+}

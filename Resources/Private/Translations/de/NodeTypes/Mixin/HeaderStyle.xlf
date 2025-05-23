@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litefyr.Integration" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.hideLogoInHeader" xml:space="preserve">
+                <source>Hide logo in header</source>
+                <target>Logo in der Kopfzeile ausblenden</target>
+            </trans-unit>
+            <trans-unit id="properties.transparentHeader" xml:space="preserve">
+                <source>Transparent header text color</source>
+                <target>Transparente Kopfzeilentextfarbe</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

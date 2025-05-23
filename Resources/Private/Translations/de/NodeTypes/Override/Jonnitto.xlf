@@ -6,6 +6,44 @@
                 <source>Gallery width</source>
                 <target>Galeriebreite</target>
             </trans-unit>
+            <trans-unit id="audio.help.message" xml:space="preserve">
+                <source>* Internal and external audio files can be integrated
+* Optional text field</source>
+                <target>* Es können interne und externe Audio-Dateien eingebunden werden
+* Optionales Textfeld</target>
+            </trans-unit>
+            <trans-unit id="video.help.message" xml:space="preserve">
+                <source>* Internal and external video files can be integrated
+* Selectable width
+* Play video on the page or in a lightbox
+* Optional subtitles
+* Optional text field</source>
+                <target>* Es können interne und externe Video-Dateien eingebunden werden
+* Wählbare Breite
+* Video auf der Seite oder in einer Lightbox abspielen
+* Optionale Untertitel
+* Optionales Textfeld</target>
+            </trans-unit>
+            <trans-unit id="videostreaming.help.message" xml:space="preserve">
+                <source>* Selectable width
+* Play video on the page or in a lightbox
+* Optional text field</source>
+                <target>* Wählbare Breite
+* Video auf der Seite oder in einer Lightbox abspielen
+* Optionales Textfeld</target>
+            </trans-unit>
+            <trans-unit id="videoplatforms.help.message" xml:space="preserve">
+                <source>* Automatic detection of the platform based on the URL
+* Automatic import of the preview image
+* Selectable width
+* Play video on the page or in a lightbox
+* Optional text field</source>
+                <target>* Automatische Erkennung der Plattform aufgrund der URL
+* Automatischer Import des Vorschau-Bildes
+* Wählbare Breite
+* Video auf der Seite oder in einer Lightbox abspielen
+* Optionales Textfeld</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

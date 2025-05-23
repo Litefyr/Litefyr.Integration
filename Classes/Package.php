@@ -23,6 +23,8 @@ class Package extends BasePackage
 
         // Sync uri with title
         // - Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle
+        // - Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle.Backend
+
         $newUriPathSegment = null;
         $dispatcher->connect(Node::class, 'nodePropertyChanged', function (
             Node $node,
@@ -30,27 +32,29 @@ class Package extends BasePackage
             $oldValue,
             $newValue
         ) use ($bootstrap, &$newUriPathSegment) {
-            if (
-                $propertyName === 'title' &&
-                $node->getNodeType()->isOfType('Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle')
-            ) {
-                $nodeUriPathSegmentGenerator = $bootstrap->getObjectManager()->get(NodeUriPathSegmentGenerator::class);
-                // @phpstan-ignore-next-line
-                $newUriPathSegment = strtolower($nodeUriPathSegmentGenerator->generateUriPathSegment($node));
-                $node->setProperty('uriPathSegment', $newUriPathSegment);
-                // @phpstan-ignore-next-line
-                $bootstrap
-                    ->getObjectManager()
-                    ->get(RouteCacheFlusher::class)
-                    ->registerNodeChange($node);
-            } elseif (
-                $propertyName === 'uriPathSegment' &&
-                $newUriPathSegment !== null &&
-                $newValue !== $newUriPathSegment
-            ) {
+            if ($propertyName === 'uriPathSegment' && isset($newUriPathSegment) && $newValue !== $newUriPathSegment) {
                 $node->setProperty('uriPathSegment', $newUriPathSegment);
                 $newUriPathSegment = null;
+            } elseif ($propertyName !== 'title') {
+                return;
             }
+
+            $isSync = $node->getNodeType()->isOfType('Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle');
+            $isBackendSync = $node
+                ->getNodeType()
+                ->isOfType('Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle.Backend');
+
+            if (!$isSync && !$isBackendSync) {
+                return;
+            }
+
+            $nodeUriPathSegmentGenerator = $bootstrap->getObjectManager()->get(NodeUriPathSegmentGenerator::class);
+            $prefix = $isBackendSync ? '_' : '';
+            // @phpstan-ignore-next-line
+            $newUriPathSegment = $prefix . strtolower($nodeUriPathSegmentGenerator->generateUriPathSegment($node));
+            $node->setProperty('uriPathSegment', $newUriPathSegment);
+            // @phpstan-ignore-next-line
+            $bootstrap->getObjectManager()->get(RouteCacheFlusher::class)->registerNodeChange($node);
         });
     }
 }

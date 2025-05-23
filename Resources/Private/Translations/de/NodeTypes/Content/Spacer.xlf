@@ -6,6 +6,16 @@
                 <source>Spacer</source>
                 <target>Abstand</target>
             </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>* With or without line
+* Line color or background color selectable
+* Fixed pixel value or responsive scale
+* Can also remove space between two elements</source>
+                <target>* Mit oder ohne Linie
+* Linienfarbe oder Hintergrundfarbe wählbar
+* Fixer Pixelwert oder responsive Skala
+* Kann auch Abstand zwischen zwei Elementen entfernen</target>
+            </trans-unit>
             <trans-unit id="properties.removeSpacing" xml:space="preserve">
                 <source>Remove spacing between elements</source>
                 <target>Abstand zwischen Elementen entfernen</target>

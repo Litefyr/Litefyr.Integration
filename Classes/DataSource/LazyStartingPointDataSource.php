@@ -18,7 +18,7 @@ class LazyStartingPointDataSource extends AbstractDataSource
     /**
      * @param array<string> $identifiers
      * @param NodeInterface|null $node
-     * @param array<mixed> $arguments
+     * @param array<mixed> $arguments, not used
      * @return array<int|string, array{label: string}>
      */
     protected function getDataForIdentifiers(array $identifiers, NodeInterface $node = null, array $arguments = [])
@@ -46,7 +46,7 @@ class LazyStartingPointDataSource extends AbstractDataSource
     /**
      * @param string $searchTerm
      * @param NodeInterface|null $node
-     * @param array{rootNodeType?:string,nodeTypes?:string[]} $arguments
+     * @param array{rootNodeType?:string,nodeTypes?:string[],path?:string} $arguments
      * @return array<int|string, array{label: string}>
      */
     protected function searchData(string $searchTerm, NodeInterface $node = null, array $arguments = [])

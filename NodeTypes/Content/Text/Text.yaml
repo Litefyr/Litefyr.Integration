@@ -12,6 +12,8 @@
     label: i18n
     icon: file-alt
     position: 20
+    help:
+      message: i18n
   properties:
     theme:
       ui:

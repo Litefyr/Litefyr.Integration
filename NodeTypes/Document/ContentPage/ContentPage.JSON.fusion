@@ -9,25 +9,45 @@ prototype(Litefyr.Integration:Document.ContentPage.JSON) < prototype(Neos.Fusion
     limit = ${request.arguments.limit || false}
     variant = ${request.arguments.variant || false}
     teaserNodeType = ${request.arguments.nodeType || ('Litefyr.Presentation:Block.Teaser' + (this.variant ? ('.' + this.variant) : ''))}
+    dateProperty = ${request.arguments.dateProperty || null}
+    filterByDateProperty = true
 
     nodeType = 'Neos.Neos:Document'
+    /// string Can every string property. If set to getLabel, the label of the node is used
+    titleProperty = 'title'
+
+    /// string Process title with a prototype. The title will be passed to value, the node to node and the titleProperty to titleProperty
+    processTitlePrototype = null
+
     node = ${documentNode}
     useFind = false
     sortBy = null
+    filter = null
+
+    @private {
+        filterByDateProperty = ${props.filterByDateProperty && props.dateProperty && props.dateProperty != '_hiddenBeforeDateTime'}
+        limit = ${!props.single && props.limit ? String.toInteger(props.limit) + 1 : null}
+    }
 
     renderer = Neos.Fusion:Http.Message {
         httpResponseHead.headers.Content-Type = 'application/json'
         data = Neos.Fusion:Map {
-            items = ${props.single ? [props.node] : props.useFind ? q(props.node).find('[instanceof ' + props.nodeType + '][_hiddenInIndex=false]') : q(props.node).children('[instanceof ' + props.nodeType + '][_hiddenInIndex=false]')}
+            items = ${props.single ? q(props.node) : props.useFind ? q(props.node).find('[instanceof ' + props.nodeType + '][_hiddenInIndex=false]') : q(props.node).children('[instanceof ' + props.nodeType + '][_hiddenInIndex=false]')}
             items.@process {
-                sortBy = ${!props.single && props.sortBy ? value.sort(props.sortBy[0], props.sortBy[1]) : value}
+                filter = ${value && props.filter ? value.filter(props.filter) : value}
+                sortBy = ${value && !props.single && props.sortBy ? value.sort(props.sortBy[0], props.sortBy[1]) : value}
+                dateProperty = ${value && private.filterByDateProperty ? value.filterByDateBefore(props.dateProperty) : value}
                 // If limit is set, add one to the limit to check if there are more items
-                limit = ${!props.single && props.limit ? value.slice(0, String.toInteger(props.limit) + 1) : value}
+                limit = ${value && private.limit ? value.slice(0, private.limit) : value}
             }
             keyRenderer = ${q(node).property('_identifier')}
             itemName = 'node'
             itemRenderer = Neos.Fusion:Component {
-                data = Litefyr.Integration:Helper.Teaser.Data
+                data = Litefyr.Integration:Helper.Teaser.Data {
+                    dateProperty = ${props.dateProperty}
+                    titleProperty = ${props.titleProperty}
+                    processTitlePrototype = ${props.processTitlePrototype}
+                }
                 teaserNodeType = ${props.teaserNodeType}
                 @if.hasImageOrPlain = ${props.variant == 'Plain' || this.data.image}
                 renderer = Neos.Fusion:DataStructure {
@@ -52,6 +72,7 @@ prototype(Litefyr.Integration:Document.ContentPage.JSON) < prototype(Neos.Fusion
         limit = ${this.limit}
         teaserNodeType = ${this.teaserNodeType}
         variant = ${this.variant ? this.variant : 'images'}
+        dateProperty = ${this.dateProperty}
     }
     @cache {
         mode = 'dynamic'
@@ -63,8 +84,9 @@ prototype(Litefyr.Integration:Document.ContentPage.JSON) < prototype(Neos.Fusion
             limit = ${limit || 'all'}
             variant = ${variant}
             teaserNodeType = ${teaserNodeType}
+            dateProperty = ${dateProperty ? dateProperty : 'defaultDateProperty'}
         }
-        maximumLifetime = ${single ? q(node).context({'invisibleContentShown': true}).cacheLifetime() : q(node).context({'invisibleContentShown': true}).children('[instanceof Neos.Neos:Document]').cacheLifetime()}
+        maximumLifetime = ${single ? q(node).context({'invisibleContentShown': true}).cacheLifetimeWithProperties({'hiddenBeforeDateTimes': [dateProperty]}) : q(node).context({'invisibleContentShown': true}).children('[instanceof Neos.Neos:Document]').cacheLifetimeWithProperties({'hiddenBeforeDateTimes': [dateProperty]})}
         entryDiscriminator = ${single ? 'single' : 'subsites' + (limit || 'all') + teaserNodeType + variant}
         context {
             1 = 'node'

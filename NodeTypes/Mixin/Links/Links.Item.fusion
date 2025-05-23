@@ -1,0 +1,54 @@
+prototype(Litefyr.Integration:Component.Links.Item) < prototype(Neos.Fusion:Component) {
+    fallbackContent = ${Translation.translate('more', null, [], null, 'Litefyr.Presentation')}
+
+    href = null
+    mauticForm = null
+
+    network = null
+    appearance = null
+    break = null
+    text = null
+
+    @private {
+        break = afx`<hr @if={props.break} class="basis-full border-none m-0 p-0" />`
+        content = ${props.text || Carbon.String.getPropertyFromNodeLink(site, props.href, 'title', props.fallbackContent)}
+        networkData = Litefyr.Presentation:Helper.SocialNetwork {
+            network = ${props.network}
+            url = ${props.href}
+            plainLabel = true
+        }
+    }
+
+    renderer = Neos.Fusion:Case {
+        @process.break = ${value && private.break ? value + private.break : value}
+        href {
+            condition = Neos.Neos:ConvertUris {
+                @if.set = ${props.href}
+                value = ${props.href}
+                forceConversion = true
+            }
+            renderer = afx`
+                <Litefyr.Presentation:Atom.Link
+                    @if={props.text || !props.network}
+                    href={props.href}
+                    appearance={props.appearance}
+                >
+                    <Litefyr.Presentation:Block.SocialNetworks.Fragment.Icon
+                        class={props.appearance == "link" ? "block size-[2em]" : "block size-[1em] -ml-fl-3xs"}
+                        network={props.network}
+                    />
+                    <span @if={props.network}>{private.content}</span>
+                    {props.network ? '': private.content}
+                </Litefyr.Presentation:Atom.Link>
+                <a
+                    @if={props.network && !props.text}
+                    href={props.href}
+                    aria-label={private.networkData.label}
+                    class="block transition-transform hocus:scale-110"
+                >
+                    <Litefyr.Presentation:Block.SocialNetworks.Fragment.Icon class="block size-[2em]" network={props.network} />
+                </a>
+            `
+        }
+    }
+}

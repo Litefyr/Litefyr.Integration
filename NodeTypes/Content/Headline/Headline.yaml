@@ -9,6 +9,8 @@
     label: i18n
     icon: heading
     position: 10
+    help:
+      message: i18n
   search:
     fulltext:
       enable: true

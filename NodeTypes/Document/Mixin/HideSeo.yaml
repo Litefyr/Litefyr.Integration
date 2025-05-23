@@ -27,7 +27,6 @@
           editorOptions:
             disabled: true
     metaRobotsNofollow: {}
-    mauticDoNotTrack: {}
     xmlSitemapChangeFrequency: {}
     xmlSitemapPriority: {}
     plausibleDoNotTrack: {}

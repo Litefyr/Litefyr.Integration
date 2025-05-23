@@ -45,7 +45,7 @@
                 <source>Native sharing</source>
             </trans-unit>
             <trans-unit id="properties.socialShare.email" xml:space="preserve">
-                <source>Open e-mail program</source>
+                <source>Open email program</source>
             </trans-unit>
             <trans-unit id="properties.socialShare.copy" xml:space="preserve">
                 <source>Copy link</source>

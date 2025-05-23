@@ -1,0 +1,46 @@
+Neos:
+  Neos:
+    Ui:
+      frontendConfiguration:
+        'Carbon.PreviewMode:Button':
+          teaserView:
+            nodeTypeName: 'Litefyr.Integration:Mixin.TeaserDocument'
+            icon: 'fas fa-images'
+            label: 'Litefyr.Integration:Backend.Main:editPreviewModes.teaserView'
+    userInterface:
+      editPreviewModes:
+        desktop: null
+        rawContent: null
+        teaserView:
+          isEditingMode: true
+          isPreviewMode: false
+          fusionRenderingPath: teaserView
+          title: 'Litefyr.Integration:Backend.Main:editPreviewModes.teaserView'
+          position: 200
+        tabletLandscape:
+          isEditingMode: true
+          isPreviewMode: false
+          fusionRenderingPath: ''
+          title: 'Litefyr.Integration:Backend.Main:editPreviewModes.tabletLandscape'
+          width: 1024
+          height: 768
+          backgroundColor: '#222'
+          position: 300
+        tabletPortrait:
+          isEditingMode: true
+          isPreviewMode: false
+          fusionRenderingPath: ''
+          title: 'Litefyr.Integration:Backend.Main:editPreviewModes.tabletPortrait'
+          width: 768
+          height: 1024
+          backgroundColor: '#222'
+          position: 310
+        mobile:
+          isEditingMode: true
+          isPreviewMode: false
+          fusionRenderingPath: ''
+          title: 'Litefyr.Integration:Backend.Main:editPreviewModes.mobile'
+          width: 375
+          height: 667
+          backgroundColor: '#222'
+          position: 320

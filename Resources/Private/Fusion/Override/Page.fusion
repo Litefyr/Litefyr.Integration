@@ -1,6 +1,6 @@
 prototype(Neos.Neos:Page) {
     lastVisitedNodeScript >
-    htmlTag.attributes.class.@process.nodeType = ${Array.push(value, Presentation.cssClass(documentNode))}
+    htmlTag.attributes.class.@process.nodeType = ${Carbon.String.classNames(value, Presentation.cssClass(documentNode), q(documentNode).property('transparentHeader') && BEM.modifier('transparent-header', q(documentNode).property('transparentHeader')), q(documentNode).property('hideLogoInHeader') && 'hide-logo-in-header')}
     head {
         stylesheets.carbonNotification = Carbon.Notification:Style
         # We set the charset set with carbon.include assets, so it can be at the very start

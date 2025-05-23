@@ -8,7 +8,9 @@
     label: i18n
     group: teaser
     icon: th-large
-    position: 150
+    position: 100
+    help:
+      message: i18n
     inspector:
       groups:
         settings:

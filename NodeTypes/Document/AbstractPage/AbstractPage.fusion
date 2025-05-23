@@ -5,11 +5,13 @@ prototype(Litefyr.Integration:Document.AbstractPage) < prototype(Neos.Fusion:Com
     aside = null
     notification = null
     htmlClass = null
+    inlineStyle = null
     preview = null
 
     bodyRenderer = null
 
     scrollIndicator = Litefyr.Integration:Component.ScrollIndicator
+    disableBreadcrumb = ${q(documentNode).is('[instanceof Litefyr.Integration:Mixin.DisableBreadcrumb]')}
 
     header = Neos.Fusion:Renderer {
         renderPath = '/header'
@@ -28,9 +30,14 @@ prototype(Litefyr.Integration:Document.AbstractPage) < prototype(Neos.Fusion:Com
         htmlTag.attributes.class {
             additionalClass = ${props.htmlClass}
             preview = ${props.preview ? 'preview' : null}
+            disableBreadcrumb = ${props.disableBreadcrumb ? 'disable-breadcrumb' : null}
         }
-        head.headTags = ${props.headTags}
-        head.headTags.@position = 'after canonicalLink'
+        head {
+            headTags = ${props.headTags}
+            headTags.@position = 'after titleTag'
+            inlineStyle = afx`<style @if={props.inlineStyle}>{props.inlineStyle}</style>`
+            inlineStyle.@position = 'end'
+        }
         body >
         body = Neos.Fusion:Case {
             @position = 'after bodyTag'
